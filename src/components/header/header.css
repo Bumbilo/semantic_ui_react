@@ -1,0 +1,113 @@
+header {
+    background: #7f64b5;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+header .header_top_profile {
+    float: right;
+    margin: 5px 0;
+}
+
+header .header_top_profile i {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 25px;
+    vertical-align: middle;
+}
+
+header .header_top_profile .ui.dropdown .menu {
+    top: 43px;
+}
+
+/*header .header_top_profile .ui.dropdown>.dropdown.icon {*/
+    /*display: none;*/
+/*}*/
+
+header .header_top_profile .profile_name {
+    color: #fff;
+    padding-right: 15px;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+header .header_top_menu {
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+header .header_top_menu .item {
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    padding-right: 30px;
+    line-height: 45px;
+}
+
+header .header_top_menu .header_top_menu_link .logo {
+    padding: 5px 45px 5px 5px;
+    margin-right: 20px;
+    border-right: 1px solid #cfd2d5;
+}
+
+header .header_top_menu .header_top_menu_link .logo img {
+    position: absolute;
+    top: 9px;
+}
+
+header .header_top_inform {
+    border-top: 1px solid #9879d6;
+    line-height: 71px;
+}
+
+header .header_top_inform .item.emp_title {
+    font-size: 16px;
+}
+
+header .header_top_inform .header_top_addEmp {
+    float: right;
+}
+
+header .header_top_inform .header_top_addEmp span.add {
+    padding-right: 15px;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+header .header_top_inform .header_top_addEmp .item {
+    padding: 0;
+}
+
+header .header_top_inform .ui.button {
+    background: #35eaab;
+    color: #7f64b5;
+    padding: 0.6em;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+header .header_top_search {
+    min-height: 45px;
+    background: #fff;
+    border-bottom: 1px solid #d6d7d8;
+}
+
+header .header_top_search .celected_count {
+    color: #7f64b5;
+}
+
+header .header_top_search .header_top_deleteDown {
+    color: #7f64b5;
+    float: right;
+}
+
+header .header_top_search .header_top_deleteDown i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+header .header_top_search .header_top_searchDown {
+    color: #a1a1a1;
+    float: right;
+}
