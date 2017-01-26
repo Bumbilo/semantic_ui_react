@@ -1,58 +1,73 @@
 import React from 'react'
-import {Button, Form, Segment} from 'semantic-ui-react'
-import {ValidMessage, ButtonLogin, ButtonLoader} from './login_form';
+import {Button, Form, Segment, Image, Input} from 'semantic-ui-react'
 import logo from '../../images/lobo_bottom.png';
+import load from '../../images/loadinfo.net3.gif';
 import './forms.css';
 
+// Button Loader
+class ButtonLoader extends React.Component {
+    render() {
+        return (
+            <Button fluid className="login_btn load" type='submit'>
+                <Image src={load}/>
+            </Button>
+        )
+    }
+}
+
+// Default button login
+class ButtonLogin extends React.Component {
+    render() {
+        return (
+            <Button fluid className="login_btn" type='submit'>
+                {this.props.text}
+            </Button>
+        )
+    }
+}
+
+// Messages
+class ValidMessageTrue extends React.Component {
+    render() {
+        return (
+            <div className="fullInput">
+                <Segment basic textAlign='center'>{this.props.text}</Segment>
+            </div>
+        );
+    }
+}
+
+// Attention Messages Error
+class ValidMessage extends React.Component {
+    render() {
+        return (
+            <div className="emptyInput">
+                <Segment basic textAlign='center'>{this.props.text}</Segment>
+            </div>
+        );
+    }
+}
+
+const InputPassword = () => (
+   <Input fluid placeholder='Enter password' type="password"/>
+);
+const InputRepeat = () => (
+   <Input fluid placeholder='Repeat password' type="password"/>
+);
 
 // Form
-class FormForgot extends React.Component {
+class FormReset extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            btnText: true,
-            empty: false,
-            changeContentPasswrod: '',
-            changeContentRepeat: ''
-        };
-        this.getChangeBtn = this.getChangeBtn.bind(this);
-        this.changeContentPass = this.changeContentPass.bind(this);
-        this.changeContentReap = this.changeContentReap.bind(this);
-    }
-
-    changeContentPass(e) {
-        this.setState({changeContentPasswrod: e.target.value})
-    }
-    changeContentReap(e) {
-        this.setState({changeContentRepeat: e.target.value})
-    }
-
-    getChangeBtn(e) {
-        e.preventDefault();
-        let password = this.state.changeContentPasswrod;
-        let passwordRepeat = this.state.changeContentRepeat;
-        let self = this;
-        if (password !== passwordRepeat) {
-            this.setState({btnText: self.state.btnText = false});
-            setTimeout(() => {
-                this.setState({empty: self.state.empty = true});
-                this.setState({btnText: self.state.btnText = true});
-            }, 1000);
-        } else {
-            this.setState({btnText: this.state.btnText = true});
-            this.setState({empty: this.state.empty = false});
-        }
+        this.state = {};
     }
 
     render() {
-        let btn_login = this.state.btnText ? <ButtonLogin text="Reset password" onLoad={this.getChangeBtn}/> :
-            <ButtonLoader text="Reset password" onLoad={this.getChangeBtn}/>;
-        let InputMessage = this.state.empty ? <ValidMessage text="Password incorrect" /> : null;
-
         return (
             <div className="form_wrapper">
                 <div className="emptyInput">
-                    {InputMessage}
+                    <ValidMessageTrue text="Your password has been reset. Pleas check your email"/>
+                    <ValidMessage text="Invalid email address format."/>
                 </div>
                 <Form className="form_login">
                     <div className="header_form_forgot">
@@ -62,25 +77,25 @@ class FormForgot extends React.Component {
                     </div>
                     <div className="form_login_content">
                         <div className="form_forgot_attention">
-                            <p>You have requested that your password be reset. <br/> Please enter a new password below.
+                            <p>You have requested that your password be reset.
+                                <br/>
+                                Please enter a new password below.
                             </p>
-                            <p>You password must be at least 10 characters and cannot contain common words or your email
-                                address.</p>
+                            <p>You password must be at least 10 characters and cannot contain common words or your email address.</p>
                         </div>
-                        <input placeholder='Enter password' type="password" onChange={this.changeContentPass}
-                               value={this.changeContentPasswrod}/>
-                        <input placeholder='Repeat password' type="password" onChange={this.changeContentReap}
-                               value={this.changeContentRepeat}/>
-                        {btn_login}
+                        <InputPassword/>
+                        <InputRepeat/>
+                        <ButtonLogin text="Reset password"/>
+                        <ButtonLoader/>
                     </div>
                 </Form>
                 <div className="form_login_bottom">
                     <Segment basic textAlign='center'>
-                        <img src={logo} alt=""/>
+                        <Image src={logo}/>
                         <span className="form_bottom_text">
-								Having trouble?
-								<a className="help_link">We can help!</a>
-						</span>
+                            Having trouble?
+                            <a className="help_link">We can help!</a>
+                        </span>
                     </Segment>
                 </div>
             </div>
@@ -90,9 +105,7 @@ class FormForgot extends React.Component {
 
 class LoginReset extends React.Component {
     render() {
-        return (
-            <FormForgot />
-        );
+        return (<FormReset/>);
     }
 }
 

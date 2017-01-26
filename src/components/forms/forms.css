@@ -17,7 +17,8 @@
     background: #fff url('../../images/logo_form.png') no-repeat 50%;
     border-bottom: 2px solid #dcdcdc;
 }
-.form_login .header_form_forgot{
+
+.form_login .header_form_forgot {
     border-bottom: 2px solid #dcdcdc;
     background: #fff;
     line-height: 30px;
@@ -38,6 +39,7 @@
 .form_forgot_attention span {
     font-weight: bold;
 }
+
 .form_login_bottom {
     box-shadow: 0 0 1px 2px #DCDCDC;
     border-radius: 3px;
@@ -46,7 +48,8 @@
     background: #fff;
 }
 
-.form_login_bottom img {
+.form_login_bottom img.ui.image  {
+   display: inline-block;
     vertical-align: middle;
     margin-bottom: 5px;
 }
@@ -90,9 +93,16 @@
 .form_login.ui.form .form_login_content .login_btn.load {
     background: #7f64b5;
 }
+
+.form_login.ui.form .form_login_content .login_btn.load img {
+    width: 48px;
+    margin: 0 auto;
+}
+
 .form_login.ui.form .form_login_content .login_btn.load:hover {
     background: #7f64b5;
 }
+
 .form_login.ui.form .form_login_content .login_btn:hover {
     background: #62A820;
 }

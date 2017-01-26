@@ -22,9 +22,18 @@ header .header_top_profile i {
     vertical-align: middle;
 }
 
+.ui .dropdown img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px;
+}
+
 header .header_top_profile .ui.dropdown .menu {
     top: 35px;
     left: -65px;
+}
+header .header_top_profile .ui.dropdown .menu.prifileDropdown {
+    top: 40px;
 }
 
 .header_top_profile .ui.dropdown .menu.DropdownMenu {
@@ -105,8 +114,11 @@ header .header_top_menu .item {
 }
 
 header .header_top_menu .header_top_menu_link .logo {
+    display: inline-block;
     padding: 5px 45px 5px 5px;
     margin-right: 20px;
+    height: 25px;
+    vertical-align: middle;
     border-right: 1px solid #cfd2d5;
 }
 
@@ -127,6 +139,7 @@ header .header_top_inform .item.emp_title {
 header .header_top_inform .header_top_addEmp {
     float: right;
 }
+
 
 header .header_top_inform .header_top_addEmp span.add {
     padding-right: 15px;

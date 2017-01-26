@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
-import {Container, Menu, Grid, Item, Dropdown, Image, Icon} from 'semantic-ui-react'
+import { Dropdown,  Grid, Image, Container, Button, Input } from 'semantic-ui-react';
 import mainLogo from '../../images/logo.png';
 import ava2 from '../../images/ava3.png';
+import appImg from '../../images/apps.svg';
+import dottedImg from '../../images/dotted.svg';
+import bellImg from '../../images/bell.svg';
 import './header.css';
-
 
 // Dropdown profile
 const trigger = (
-    <div>
-        <img className="ui avatar image mini" src={ava2}/>
-    </div>
+    <Image src={ava2} size='mini' avatar />
 );
 const DropdownProfile = () => (
     <Dropdown trigger={trigger} icon={null}>
-        <Dropdown.Menu>
+        <Dropdown.Menu className="prifileDropdown">
             <Dropdown.Item> Your Profile </Dropdown.Item>
             <Dropdown.Item> Integrations </Dropdown.Item>
             <Dropdown.Item> Help </Dropdown.Item>
@@ -23,19 +23,14 @@ const DropdownProfile = () => (
         </Dropdown.Menu>
     </Dropdown>
 );
-// Dropdown All employees
-const DropdownEmployees = () => (
-    <Dropdown text='All employees'>
-        <Dropdown.Menu>
-            <Dropdown.Item>All employees</Dropdown.Item>
-            <Dropdown.Item>All employees</Dropdown.Item>
-        </Dropdown.Menu>
-    </Dropdown>
+
+const triger2= (
+    <Image src={dottedImg} />
 );
 
 // Dropdown Option
 const DropdownOption = () => (
-    <Dropdown icon='ellipsis vertical'>
+    <Dropdown trigger={triger2} icon={null}>
         <Dropdown.Menu>
             <Dropdown.Item>All employees</Dropdown.Item>
             <Dropdown.Item>All employees</Dropdown.Item>
@@ -43,9 +38,12 @@ const DropdownOption = () => (
     </Dropdown>
 );
 
+const triger3 = (
+    <Image src={appImg} />
+);
 // Dropdown Menu
 const DropdownMenu = () => (
-    <Dropdown icon='grid layout'>
+    <Dropdown trigger={triger3} icon={null}>
         <Dropdown.Menu className="DropdownMenu">
             <div className="MenuItem">
                 <span>HR</span>
@@ -67,9 +65,21 @@ const DropdownMenu = () => (
     </Dropdown>
 );
 
+const triger4 = (
+    <Image src={bellImg} />
+);
 // Dropdown Menu
 const DropdownNotice = () => (
-    <Dropdown icon='alarm outline'>
+    <Dropdown trigger={triger4} icon={null}>
+        <Dropdown.Menu>
+            <Dropdown.Item>All employees</Dropdown.Item>
+            <Dropdown.Item>All employees</Dropdown.Item>
+        </Dropdown.Menu>
+    </Dropdown>
+);
+// Dropdown All employees
+const DropdownEmployees = () => (
+    <Dropdown text='All employees'>
         <Dropdown.Menu>
             <Dropdown.Item>All employees</Dropdown.Item>
             <Dropdown.Item>All employees</Dropdown.Item>
@@ -77,66 +87,69 @@ const DropdownNotice = () => (
     </Dropdown>
 );
 
+const ButtonCircularAdd = () => (
+  <Button circular icon='plus' />
+)
+
+const InputSearch = () => (
+  <Input icon='search' iconPosition='left' placeholder='Search...' transparent />
+)
+
 const GridExampleColumns = () => (
     <header className="header">
         <div className="header_top_menu">
             <div className="ui container grid">
-                <div className="ui row">
-                    <div className="twelve wide column">
+                <Grid.Row>
+                    <Grid.Column mobile={16} tablet={10} computer={12}>
                         <div className="header_top_menu_link">
                             <a className="item logo">
-                                <img src={mainLogo}/>
+                                <Image src={mainLogo}/>
                             </a>
                             <a href="#" className="item">Employees</a>
                             <a href="#" className="item">Time & Attendance</a>
                             <a href="#" className="item">Calendar</a>
                         </div>
-                    </div>
-                    <div className="four wide column">
+                    </Grid.Column>
+                    <Grid.Column mobile={16} tablet={6} computer={4}>
                         <div className="header_top_profile">
                             <DropdownNotice />
                             <DropdownMenu />
                             <DropdownOption />
                             <DropdownProfile />
                         </div>
-                    </div>
-                </div>
+                    </Grid.Column>
+                </Grid.Row>
             </div>
             <div className="header_top_inform">
-                <div className="ui container grid">
-                    <div className="ui row">
-                        <div className="twelve wide computer six wide tablet seven wide mobile column">
-                            <a href="#" className="item emp_title">Employees (10)</a>
-                        </div>
-                        <div className="four wide computer ten wide tablet nine wide mobile column">
-                            <div className="header_top_addEmp">
-                                <a className="item" href="#">
-                                    <span className="add">Add Employee</span>
-                                    <button className="circular ui icon button">
-                                        <i className="icon plus"></i>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Container className="grid">
+                    <Grid.Row>
+                        <Grid.Column mobile={7} tablet={6} computer={12}>
+                           <a href="#" className="item emp_title">Employees (10)</a>
+                        </Grid.Column>
+                        <Grid.Column mobile={9} tablet={10} computer={4}>
+                           <div className="header_top_addEmp">
+                               <a className="item" href="#">
+                                   <span className="add">Add Employee</span>
+                                   <ButtonCircularAdd />
+                               </a>
+                           </div>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Container>
             </div>
             <div className="header_top_search">
-                <div className="ui container grid">
-                    <div className="ui row">
-                        <div className="twelve wide computer six wide tablet eight wide mobile column ">
-                            <div className="ui transparent left icon input">
-                                <input type="text" placeholder="Search..."/>
-                                <i className="search icon"></i>
-                            </div>
+                <Container className="grid">
+                    <Grid.Row>
+                        <Grid.Column mobile={8} tablet={6} computer={12}>
+                           <InputSearch />
+                        </Grid.Column>
+                        <Grid.Column mobile={8} tablet={10} computer={4}>
+                        <div className="header_top_searchDown">
+                            <DropdownEmployees />
                         </div>
-                        <div className=" four wide computer ten wide tablet eight wide mobile column ">
-                            <div className="header_top_searchDown">
-                                <DropdownEmployees />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Container>
             </div>
         </div>
     </header>
@@ -145,7 +158,6 @@ const GridExampleColumns = () => (
 export default class MenuExampleBasic extends Component {
     state = {};
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
-
     render() {
         const {activeItem} = this.state;
         return (
@@ -154,8 +166,7 @@ export default class MenuExampleBasic extends Component {
     }
 }
 
-
-class Header extends React.Component {
+ class Header extends React.Component {
     render() {
         return (
             <MenuExampleBasic />
