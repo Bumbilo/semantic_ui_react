@@ -32,6 +32,7 @@ header .header_top_profile .ui.dropdown .menu {
     top: 35px;
     left: -65px;
 }
+
 header .header_top_profile .ui.dropdown .menu.prifileDropdown {
     top: 40px;
 }
@@ -51,7 +52,7 @@ header .header_top_profile .ui.dropdown .menu.prifileDropdown {
     display: inline-block;
     width: 100%;
     color: #4c4c4c;
-    font:normal 13px "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    font: normal 13px "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -68,16 +69,20 @@ header .header_top_profile .ui.dropdown .menu.prifileDropdown {
     overflow: hidden;
     transition: all .3s;
 }
+
 .MenuItem:nth-child(2) {
     background: url('../../images/Items2.png') no-repeat -253px -10px;
 }
+
 .MenuItem:nth-child(3) {
     background: url('../../images/Items2.png') no-repeat -364px -10px;
 }
+
 .MenuItem:nth-child(4) {
     background: url('../../images/Items2.png') no-repeat -3px -10px;
     margin-bottom: 10px;
 }
+
 .MenuItem:hover {
     box-shadow: 0 0 1px 1px #e5e5e5;
 }
@@ -139,7 +144,6 @@ header .header_top_inform .item.emp_title {
 header .header_top_inform .header_top_addEmp {
     float: right;
 }
-
 
 header .header_top_inform .header_top_addEmp span.add {
     padding-right: 15px;
