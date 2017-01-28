@@ -1,0 +1,28 @@
+/* Semantic default classes*/
+
+.ui.modal > .header {
+   padding: 0;
+}
+
+.ui.active.modal {
+
+   border-radius: 3px;
+   border: 1px solid rgba(34,36,38,.15);
+}
+
+.ui.basic.segment.invalid_message {
+   background-color: #f24b60;
+   color: #fff;
+   text-align: center;
+}
+
+/* Modal header */
+
+.ui.header.header_title {
+   color: #7f64b5;
+   text-align: center;
+}
+
+.ui.modal>.content.modal_content {
+   background: #f3f8fc;
+}
