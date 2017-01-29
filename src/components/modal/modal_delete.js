@@ -116,7 +116,7 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 )
 
-const ModalWindow = () => (
+const ModalWindowDelete = () => (
     <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
         <Header>
             <InvalidMessage/>
@@ -129,4 +129,4 @@ const ModalWindow = () => (
     </Modal>
 )
 
-export default ModalWindow;
+export default ModalWindowDelete;

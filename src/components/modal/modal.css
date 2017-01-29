@@ -1,28 +1,106 @@
 /* Semantic default classes*/
 
-.ui.modal > .header {
-   padding: 0;
+.ui.modal>.header {
+    padding: 0;
 }
 
 .ui.active.modal {
+    border-radius: 3px;
+    border: 1px solid rgba(34, 36, 38, .15);
+}
 
-   border-radius: 3px;
-   border: 1px solid rgba(34,36,38,.15);
+.ui.active.modal .dropdown.icon {
+   top: 1em
+}
+
+.ui.active.modal .ui.grid>.row {
+   padding: 0;
 }
 
 .ui.basic.segment.invalid_message {
-   background-color: #f24b60;
-   color: #fff;
-   text-align: center;
+    background-color: #f24b60;
+    color: #fff;
+    text-align: center;
 }
+
+.ui.selection.dropdown {
+    padding: .4em .9em .4em;
+    display: inline-block;
+    width: 20em;
+    margin: 5px;
+    min-width: 230px;
+}
+
+.ui.green.button, .ui.green.buttons .button {
+   background-color: #7ed321;
+}
+
+.ui.active.modal .ui.button,
+.ui.basic.button {
+   padding: 1em 5em;
+   font-weight: bold;
+   margin: 0 5px 0 10px;
+}
+
+.ui.dropdown:not(.button)>.default.text, .ui.dropdown>.text {
+    line-height: 2;
+}
+
+.ui[class*="vertically divided"].grid>.row:before {
+   box-shadow: none;
+}
+
 
 /* Modal header */
 
 .ui.header.header_title {
-   color: #7f64b5;
-   text-align: center;
+    color: #7f64b5;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.img_header {
+   width: 49px;
+   margin: 0 auto;
+   display: block;
 }
 
 .ui.modal>.content.modal_content {
-   background: #f3f8fc;
+    background: #f3f8fc;
+    padding: 3rem;
+}
+
+.status_icon {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: baseline;
+    padding: .2em .3em;
+    color: #7ed321;
+    text-transform: none;
+    font-weight: 700;
+    border: 1px solid #7ed321;
+    border-radius: .2rem;
+    -webkit-transition: background .1s ease;
+    transition: background .1s ease;
+}
+
+.status_icon span {
+    color: #4F4F4F;
+    font-size: 12px;
+}
+
+.label_dropdown {
+   color: #4f4f4f;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 0 10px;
+    line-height: 2;
+}
+
+.checkbox_modal {
+   padding: 1.2em;
+}
+
+.floatRight {
+    float: right;
 }

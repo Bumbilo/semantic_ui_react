@@ -47,12 +47,8 @@ export class ButtonLoader extends React.Component {
     }
 }
 
-const InputEmail = () => (
-   <Input fluid placeholder='Enter email address'/>
-)
-const InputPassword = () => (
-   <Input fluid placeholder='Enter password' type="password"/>
-)
+const InputEmail = () => (<Input fluid placeholder='Enter email address'/>)
+const InputPassword = () => (<Input fluid placeholder='Enter password' type="password"/>)
 
 class FormExampleForm extends React.Component {
     constructor(props, context) {
@@ -73,7 +69,7 @@ class FormExampleForm extends React.Component {
                         <InputEmail/>
                         <InputPassword/>
                         <ButtonLogin text="Login"/>
-                        <ButtonLoader />
+                        <ButtonLoader/>
                         <div className="form_login_link">
                             <Button type='submit' compact floated='right'>
                                 Forgot Password
