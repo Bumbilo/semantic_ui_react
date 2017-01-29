@@ -8,7 +8,7 @@ import {
     Grid,
     Dropdown,
     Label,
-	 Checkbox
+    Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/slice-1.png';
 import './modal.css';
@@ -20,18 +20,11 @@ const InvalidMessage = () => (
 )
 const HeaderTitle = () => (
     <div className='header_title'>
-         <img src={varning} className="img_header" />
+        <img src={varning} className="img_header"/>
         <Header as='h3' className="header_title">Update record infromation!</Header>
-
     </div>
 )
 
-const LabelExampleBasic = () => (
-    <Label>
-        <Icon name='mail'/>
-        23
-    </Label>
-)
 
 const IconStatus = () => (
     <div className='status_icon'>
@@ -50,7 +43,7 @@ const status = [
 
 const DropdownStatus = () => (
     <div className='floatRight'>
-        <span className="label_dropdown">Status</span><Dropdown placeholder='Select status'  selection options={status}/>
+        <span className="label_dropdown">Status</span><Dropdown placeholder='Select status' selection options={status}/>
     </div>
 )
 
@@ -82,13 +75,9 @@ const DropdownSupervisor2 = () => (
     </div>
 )
 
-const CheckboxModal = () => (
-  <Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal" />
-)
+const CheckboxModal = () => (<Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>)
 
-const CheckboxModal2 = () => (
-  <Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>
-)
+const CheckboxModal2 = () => (<Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>)
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -99,19 +88,19 @@ const GridExampleVerticallyDivided = () => (
                 <DropdownSupervisor/>
             </Grid.Column>
             <Grid.Column floated='left'>
-                <CheckboxModal />
-					 <CheckboxModal2 />
-					 <DropdownSupervisor2/>
+                <CheckboxModal/>
+                <CheckboxModal2/>
+                <DropdownSupervisor2/>
             </Grid.Column>
         </Grid.Row>
-		  <Grid.Row columns={2}>
-				<Grid.Column floated='right'>
-					<Button basic floated='right'>Cancel</Button>
-				</Grid.Column>
-				<Grid.Column floated='left'>
-					<Button color='green'>Update</Button>
-				</Grid.Column>
-		  </Grid.Row>
+        <Grid.Row columns={2}>
+            <Grid.Column floated='right'>
+                <Button basic floated='right'>Cancel</Button>
+            </Grid.Column>
+            <Grid.Column floated='left'>
+                <Button color='green'>Update</Button>
+            </Grid.Column>
+        </Grid.Row>
 
     </Grid>
 )
@@ -124,7 +113,6 @@ const ModalWindow = () => (
         </Header>
         <Modal.Content className="modal_content">
             <GridExampleVerticallyDivided/>
-            <iconStatus/>
         </Modal.Content>
     </Modal>
 )

@@ -3,14 +3,13 @@ import {
     Button,
     Header,
     Icon,
+    Image,
     Modal,
     Segment,
-    Grid,
-    Dropdown,
-    Label,
-	 Checkbox
+    Grid
 } from 'semantic-ui-react';
 import varning from '../../images/slice-1.png';
+import ava from '../../images/avaBig.png';
 import './modal.css';
 
 const InvalidMessage = () => (
@@ -20,99 +19,57 @@ const InvalidMessage = () => (
 )
 const HeaderTitle = () => (
     <div className='header_title'>
-         <img src={varning} className="img_header" />
+        <img src={varning} className="img_header"/>
         <Header as='h3' className="header_title">Update record infromation!</Header>
-
     </div>
 )
 
-const LabelExampleBasic = () => (
-    <Label>
-        <Icon name='mail'/>
-        23
-    </Label>
-)
-
-const IconStatus = () => (
-    <div className='status_icon'>
-        <Icon name='check circle outline'/>
-        <span>
-            Active</span>
+const ProfileDays = () => (
+    <div className="count_days floatRight">
+        <div className="date_day">8.5</div>
+        <div className="full_day">days</div>
     </div>
 )
 
-const status = [
-    {
-        value: 'articles',
-        text: <IconStatus/>
-    }
-];
+const ProfileOption = () => (
+    <div className="count_days floatRight"></div>
+)
 
-const DropdownStatus = () => (
-    <div className='floatRight'>
-        <span className="label_dropdown">Status</span><Dropdown placeholder='Select status'  selection options={status}/>
+const ImageAvatar = () => (
+    <div className='profile_avatar'>
+        <Image src={ava} avatar size='mini'/>
+        <span className="profile_info">
+            <span className="profile_name">James Smith</span>
+            <br/>
+            <span className="profile_position">Mechanical Designer</span>
+        </span>
     </div>
 )
 
-const positon = [
-    {
-        value: 'articles1',
-        text: 'Position'
-    }, {
-        value: 'articles2',
-        text: 'Supervisor'
-    }
-]
-
-const DropdownPosition = () => (
-    <div className='floatRight'>
-        <span className="label_dropdown">Position</span><Dropdown placeholder='Select position' selection options={positon}/>
+const ProfileBlock = () => (
+    <div className="profile">
+        <ImageAvatar/>
+        <ProfileDays/>
+        <ProfileOption/>
     </div>
-)
-
-const DropdownSupervisor = () => (
-    <div className='floatRight'>
-        <span className="label_dropdown">Supervisor</span><Dropdown placeholder='Select supervisor' selection options={positon}/>
-    </div>
-)
-
-const DropdownSupervisor2 = () => (
-    <div>
-        <span className="label_dropdown">Drop down</span><Dropdown placeholder='Select supervisor' selection options={positon}/>
-    </div>
-)
-
-const CheckboxModal = () => (
-  <Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal" />
-)
-
-const CheckboxModal2 = () => (
-  <Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>
 )
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
         <Grid.Row columns={2}>
             <Grid.Column floated='right'>
-                <DropdownStatus/>
-                <DropdownPosition/>
-                <DropdownSupervisor/>
+                <ProfileBlock/>
+            </Grid.Column>
+            <Grid.Column floated='left'></Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={2}>
+            <Grid.Column floated='right'>
+                <Button basic floated='right'>Cancel</Button>
             </Grid.Column>
             <Grid.Column floated='left'>
-                <CheckboxModal />
-					 <CheckboxModal2 />
-					 <DropdownSupervisor2/>
+                <Button color='green'>Update</Button>
             </Grid.Column>
         </Grid.Row>
-		  <Grid.Row columns={2}>
-				<Grid.Column floated='right'>
-					<Button basic floated='right'>Cancel</Button>
-				</Grid.Column>
-				<Grid.Column floated='left'>
-					<Button color='green'>Update</Button>
-				</Grid.Column>
-		  </Grid.Row>
-
     </Grid>
 )
 
@@ -124,7 +81,6 @@ const ModalWindowDelete = () => (
         </Header>
         <Modal.Content className="modal_content">
             <GridExampleVerticallyDivided/>
-            <iconStatus/>
         </Modal.Content>
     </Modal>
 )
