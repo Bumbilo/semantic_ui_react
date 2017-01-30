@@ -7,25 +7,24 @@ import {
     Segment,
     Grid,
     Dropdown,
-    Label,
     Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/slice-1.png';
-import '../../CSS/fonts.css'
+import '../../CSS/fonts.css';
 import './modal.css';
 
 const InvalidMessage = () => (
     <Segment basic className="invalid_message">
         Invalid email address format.
     </Segment>
-)
+);
 
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
         <Header as='h2' className="header_title">Update record infromation!</Header>
     </div>
-)
+);
 
 const IconStatus = () => (
     <div className='status_icon'>
@@ -33,7 +32,7 @@ const IconStatus = () => (
         <span>
             Active</span>
     </div>
-)
+);
 
 const status = [
     {
@@ -46,7 +45,7 @@ const DropdownStatus = () => (
     <div className='floatRight'>
         <span className="label_dropdown">Status</span><Dropdown placeholder='Select status' selection options={status}/>
     </div>
-)
+);
 
 const positon = [
     {
@@ -56,25 +55,25 @@ const positon = [
         value: 'articles2',
         text: 'Supervisor'
     }
-]
+];
 
 const DropdownPosition = () => (
     <div className='floatRight'>
         <span className="label_dropdown">Position</span><Dropdown placeholder='Select position' selection options={positon}/>
     </div>
-)
+);
 
 const DropdownSupervisor = () => (
     <div className='floatRight'>
         <span className="label_dropdown">Supervisor</span><Dropdown placeholder='Select supervisor' selection options={positon}/>
     </div>
-)
+);
 
 const DropdownSupervisor2 = () => (
     <div>
         <span className="label_dropdown">Drop down</span><Dropdown placeholder='Select supervisor' selection options={positon}/>
     </div>
-)
+);
 
 const CheckboxModal = () => (<Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>)
 
@@ -103,10 +102,10 @@ const GridExampleVerticallyDivided = () => (
             </Grid.Column>
         </Grid.Row>
     </Grid>
-)
+);
 
 const ModalWindow = () => (
-    <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
+    <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
         <Header>
             <InvalidMessage/>
             <HeaderTitle/>
@@ -115,6 +114,6 @@ const ModalWindow = () => (
             <GridExampleVerticallyDivided/>
         </Modal.Content>
     </Modal>
-)
+);
 
 export default ModalWindow;

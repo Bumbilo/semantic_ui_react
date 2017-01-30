@@ -9,6 +9,7 @@
 }
 
 .ui.active.modal {
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid rgba(34, 36, 38, .15);
 }
@@ -79,12 +80,22 @@
     font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
 }
 
+.ui.basic.button,
+.ui.basic.buttons .button {
+    color: #a8a8a8 !important;
+}
+
 .ui.active.modal .ui.button,
 .ui.basic.button {
-    padding: 1em 4em;
+    padding: 1em 5em;
     font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin: 0 5px 0 10px;
+}
+
+.ui.active.modal .ui.button,
+.ui.basic.button.button_delte {
+    padding: 1em 2em;
 }
 
 .ui.dropdown:not(.button)>.default.text,
@@ -93,6 +104,7 @@
 }
 
 .ui[class*="vertically divided"].grid>.row:before {
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -142,7 +154,9 @@
     padding: 40px 0 20px 0;
 }
 
-
+h2.ui.header {
+    font-size: 1.614rem;
+}
 
 .ui.header .header_title_red {
     color: #e25f6f;
@@ -182,6 +196,7 @@
     text-transform: none;
     font-weight: 700;
     border: 1px solid #7ed321;
+    -webkit-border-radius: .2rem;
     border-radius: .2rem;
     -webkit-transition: background .1s ease;
     transition: background .1s ease;
@@ -219,6 +234,7 @@ p   {
     background: #fff;
     padding: 15px 10px;
     border: 1px solid #e4e5e7;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     overflow: hidden;
     margin: 10px 15px;
@@ -254,6 +270,7 @@ p   {
     display: inline-block;
     vertical-align: baseline;
     border: 1px solid #e4e5e7;
+    -webkit-border-radius: .28571429rem;
     border-radius: .28571429rem;
     padding: 2px 12px;
     text-align: center;
@@ -279,6 +296,7 @@ p   {
     padding: 7px;
     font-weight: 700;
     border: 1px solid #e4e5e7;
+    -webkit-border-radius: .28571429rem;
     border-radius: .28571429rem;
     color: rgba(0, 0, 0, .6);
     margin: 5px 10px;
@@ -297,6 +315,7 @@ p   {
     color: #fff;
     line-height: 1.4em;
     text-align: center;
+    -webkit-border-radius: 500rem;
     border-radius: 500rem;
 }
 
@@ -330,14 +349,13 @@ p   {
 }
 
 .checkbox_modal_delete .ui.checkbox label {
-    color: #888;
-    font-weight: 700;
+    color: #4F4F4F;
 }
 
 .scroll_bar {
     position: relative;
     padding: 15px 0;
-    height: 175px;
+    height: 180px;
     margin: 20px 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -351,12 +369,9 @@ p   {
     bottom: 290px;
     left: 0;
     height: 20px;
-    /* adjust it to your needs */
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(243, 248, 252, 1)));
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(243, 248, 252, 1)));
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
 }
 
@@ -364,11 +379,13 @@ p   {
     padding: 10px 0;
     width: 8px;
     background-color: #d0d9e0;
+    -webkit-border-radius: 15px;
     border-radius: 15px;
 }
 
 .scroll_bar::-webkit-scrollbar-thumb {
     background-color: #83a8bd;
+    -webkit-border-radius: 15px;
     border-radius: 15px;
 }
 
@@ -379,12 +396,9 @@ p   {
     top: 257px;
     left: 0;
     height: 20px;
-    /* adjust it to your needs */
-    background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(243, 248, 252, 1)));
     background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
-    background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
-    background: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(243, 248, 252, 1)));
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
 }
 

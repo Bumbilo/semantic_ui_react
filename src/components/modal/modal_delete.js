@@ -5,14 +5,12 @@ import {
     Icon,
     Image,
     Modal,
-    Segment,
     Grid
 } from 'semantic-ui-react';
 import varning from '../../images/warning2.png';
 import ava from '../../images/avaBig.png';
 import '../../CSS/fonts.css'
 import './modal.css';
-
 
 const HeaderTitle = () => (
     <div className='header_title'>
@@ -77,10 +75,10 @@ const GridExampleVerticallyDivided = () => (
         </Grid.Row>
         <Grid.Row columns={2}>
             <Grid.Column floated='right'>
-                <Button basic floated='right'>Cancel, Keep records</Button>
+                <Button basic floated='right' className="button_delte">Cancel, Keep records</Button>
             </Grid.Column>
             <Grid.Column floated='left'>
-                <Button color='red'>Yes, Delete records!</Button>
+                <Button color='red' className="button_delte">Yes, Delete records!</Button>
             </Grid.Column>
         </Grid.Row>
     </Grid>

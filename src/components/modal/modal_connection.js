@@ -5,7 +5,7 @@ import {
     Modal,
     Header,
     List,
-    Grid,
+    Grid
 } from 'semantic-ui-react';
 import ImgConnect from '../../images/connection.png';
 import '../../CSS/fonts.css';
@@ -23,7 +23,7 @@ const HeaderList = () => (
     <div>
         <Header as='h4'>Please check this option</Header>
     </div>
-)
+);
 
 const ListOption = () => (
     <List as='ul'>
@@ -44,8 +44,8 @@ const GridExampleVerticallyDivided = () => (
                     ratione quibusdam deleniti, nemo, cupiditate? Quo nesciunt et at consequatur
                     adipisci perferendis mollitia dicta itaque hic fuga.
                 </p>
-                <HeaderList />
-                <ListOption />
+                <HeaderList/>
+                <ListOption/>
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -57,7 +57,7 @@ const GridExampleVerticallyDivided = () => (
 );
 
 const ModalWindowConnection = () => (
-    <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
+    <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>

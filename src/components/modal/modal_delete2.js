@@ -5,51 +5,50 @@ import {
     Icon,
     Image,
     Modal,
-    Segment,
     Grid,
     Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/warning2.png';
 import ava from '../../images/avaBig.png';
-import '../../CSS/fonts.css'
+import '../../CSS/fonts.css';
 import './modal.css';
 
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
         <Header as='h2' className="header_title_red">
-            Delete(6) Records</Header>
+            Delete(2) Records</Header>
     </div>
-)
+);
 
 const ProfileDays = () => (
     <div className="count_days floatRight">
         <div className="date_day">08</div>
         <div className="full_day">days</div>
     </div>
-)
+);
 
 const ProfileOption = () => (
     <div className="option_profile floatRight">
         <Icon name='ellipsis vertical'/>
     </div>
-)
+);
 
 const IconStatus = () => (
     <div className='icon_status'>
         <Icon name='plane'/>
     </div>
-)
+);
 
 const CheckboxModalDelete = () => (
-   <div className="checkbox_modal_delete">
-      <span className='title_chechbox'>Warning: this cannot be undone.</span>
-      <Checkbox label='Lorem Ipsum is simply dummy text of the' />
-      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
-      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
-   </div>
-  
-)
+    <div className="checkbox_modal_delete">
+        <span className='title_chechbox'>Warning: this cannot be undone.</span>
+        <Checkbox label='Lorem Ipsum is simply dummy text of the'/>
+        <Checkbox label='Lorem Ipsum is simply dummy text of the'/>
+        <Checkbox label='Lorem Ipsum is simply dummy text of the'/>
+    </div>
+
+);
 
 const ImageAvatar = () => (
     <div className='profile_avatar'>
@@ -61,7 +60,7 @@ const ImageAvatar = () => (
             <span className="profile_position">Mechanical Designer</span>
         </span>
     </div>
-)
+);
 
 const ProfileBlock = () => (
     <div className="profile">
@@ -69,7 +68,7 @@ const ProfileBlock = () => (
         <ProfileOption/>
         <ProfileDays/>
     </div>
-)
+);
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -91,7 +90,7 @@ const GridExampleVerticallyDivided = () => (
             </Grid.Column>
         </Grid.Row>
     </Grid>
-)
+);
 
 const ModalWindowDeleteCheck = () => (
     <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
@@ -102,6 +101,6 @@ const ModalWindowDeleteCheck = () => (
             <GridExampleVerticallyDivided/>
         </Modal.Content>
     </Modal>
-)
+);
 
 export default ModalWindowDeleteCheck;
