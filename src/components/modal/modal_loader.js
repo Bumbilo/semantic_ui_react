@@ -18,7 +18,7 @@ import './modal.css';
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={check} className="img_header"/>
-        <Header as='h3' className="header_title_check"> The records was deleted.</Header>
+        <Header as='h2' className="header_title_check"> The records was deleted.</Header>
     </div>
 )
 

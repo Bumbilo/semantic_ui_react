@@ -18,7 +18,7 @@ import './modal.css';
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
-        <Header as='h3' className="header_title_red">
+        <Header as='h2' className="header_title_red">
             Delete(6) Records</Header>
     </div>
 )

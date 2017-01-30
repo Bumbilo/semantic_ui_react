@@ -23,7 +23,7 @@ const InvalidMessage = () => (
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
-        <Header as='h3' className="header_title">Update record infromation!</Header>
+        <Header as='h2' className="header_title">Update record infromation!</Header>
     </div>
 )
 

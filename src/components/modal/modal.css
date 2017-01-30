@@ -42,6 +42,18 @@
     text-align: center;
 }
 
+.ui.bulleted.list .list>a.item:before, .ui.bulleted.list>a.item:before, ul.ui.list li:before {
+    font-size: 2em;
+    line-height: .45em;
+    margin-left: -1em;
+}
+
+.ui.bulleted.list, ul.ui.list {
+    margin-left: 2rem;
+    color: #4a4a4a;
+    font-family: "ProximaNovaLight", "Lato", Arial, Helvetica, sans-serif;
+}
+
 .undo_footer {
     font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
     text-decoration: underline;
@@ -69,7 +81,7 @@
 
 .ui.active.modal .ui.button,
 .ui.basic.button {
-    padding: 1em 3em;
+    padding: 1em 4em;
     font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin: 0 5px 0 10px;
@@ -82,6 +94,12 @@
 
 .ui[class*="vertically divided"].grid>.row:before {
     box-shadow: none;
+}
+
+.ui.basic.button.button_center {
+    display: block;
+    width: 166px;
+    margin: 0 auto !important;
 }
 
 .ui.checkbox input:checked~.box:after,
@@ -113,6 +131,11 @@
 
 /* Modal header */
 
+.ui.header {
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
+    color: #4a4a4a;
+}
+
 .ui.header .header_title {
     color: #7f64b5;
     text-align: center;
@@ -131,6 +154,12 @@
     color: #7f64b5;
     text-align: center;
     padding: 10px ;
+}
+
+.ui.header .header_title_connect{
+    color: #f6c602;
+    text-align: center;
+    padding: 20px;
 }
 
 .img_header {
@@ -181,6 +210,10 @@
 
 
 /* Modal delete*/
+
+p   {
+    font-family: "ProximaNovaLight", "Lato", Arial, Helvetica, sans-serif;
+}
 
 .profile {
     background: #fff;
