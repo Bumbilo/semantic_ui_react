@@ -89,11 +89,11 @@ const DropdownEmployees = () => (
 
 const ButtonCircularAdd = () => (
   <Button circular icon='plus' />
-)
+);
 
 const InputSearch = () => (
   <Input icon='search' iconPosition='left' placeholder='Search...' transparent />
-)
+);
 
 const GridExampleColumns = () => (
     <header className="header">

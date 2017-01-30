@@ -31,17 +31,28 @@
     min-width: 230px;
 }
 
-.ui.green.button, .ui.green.buttons .button {
+.ui.green.button,
+.ui.green.buttons .button {
     background-color: #7ed321;
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
 }
 
-.ui.active.modal .ui.button, .ui.basic.button {
-    padding: 1em 5em;
-    font-weight: bold;
+.ui.red.button,
+.ui.red.buttons .button {
+    background-color: #e25f6f;
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
+}
+
+.ui.active.modal .ui.button,
+.ui.basic.button {
+    padding: 1em 3em;
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
+    font-size: 15px;
     margin: 0 5px 0 10px;
 }
 
-.ui.dropdown:not(.button)>.default.text, .ui.dropdown>.text {
+.ui.dropdown:not(.button)>.default.text,
+.ui.dropdown>.text {
     line-height: 2;
 }
 
@@ -54,6 +65,12 @@
 
 .ui.header.header_title {
     color: #7f64b5;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.ui.header.header_title_red {
+    color: #e25f6f;
     text-align: center;
     padding: 10px 0 20px;
 }
@@ -109,14 +126,20 @@
 
 .profile {
     background: #fff;
-    padding: 10px;
+    padding: 15px 10px;
     border: 1px solid #e4e5e7;
     border-radius: 3px;
     overflow: hidden;
+    margin: 10px;
 }
 
 .profile_avatar {
     display: inline-block;
+    position: relative;
+}
+
+.profile_avatar .ui.mini.image {
+    width: 40px;
 }
 
 .profile_info {
@@ -144,4 +167,57 @@
     padding: 2px 12px;
     text-align: center;
     line-height: 1;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.date_day {
+    font-weight: bold;
+}
+
+.full_day {
+    color: #888;
+    font-weight: bold;
+}
+
+.option_profile {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 1em;
+    padding: 7px;
+    font-weight: 700;
+    border: 1px solid #e4e5e7;
+    border-radius: .28571429rem;
+    color: rgba(0, 0, 0, .6);
+    margin: 5px 10px;
+}
+
+.icon_status {
+    position: absolute;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    border: 1px solid #fff;
+    top: 30px;
+    left: 25px;
+    z-index: 3;
+    font-size: .8rem;
+    background: #47c3ff;
+    color: #fff;
+    line-height: 1.4em;
+    text-align: center;
+    border-radius: 500rem;
+}
+
+.icon_status i {
+    margin: 0;
+}
+
+.option_profile i {
+    margin: 0;
+    color: #cbcbcb;
+}
+
+.option_profile i:hover {
+    color: #a1a1a1;
 }

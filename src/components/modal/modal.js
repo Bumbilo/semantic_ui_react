@@ -11,6 +11,7 @@ import {
     Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/slice-1.png';
+import '../../CSS/fonts.css'
 import './modal.css';
 
 const InvalidMessage = () => (
@@ -18,13 +19,13 @@ const InvalidMessage = () => (
         Invalid email address format.
     </Segment>
 )
+
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
         <Header as='h3' className="header_title">Update record infromation!</Header>
     </div>
 )
-
 
 const IconStatus = () => (
     <div className='status_icon'>
@@ -101,12 +102,11 @@ const GridExampleVerticallyDivided = () => (
                 <Button color='green'>Update</Button>
             </Grid.Column>
         </Grid.Row>
-
     </Grid>
 )
 
 const ModalWindow = () => (
-    <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
+    <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
         <Header>
             <InvalidMessage/>
             <HeaderTitle/>
