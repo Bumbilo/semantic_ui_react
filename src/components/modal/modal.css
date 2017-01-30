@@ -13,6 +13,10 @@
     border: 1px solid rgba(34, 36, 38, .15);
 }
 
+.ui.active.modal .ui.loader {
+    top: 35%;
+}
+
 .ui.active.modal .dropdown.icon {
     top: 1em
 }
@@ -25,6 +29,22 @@
     background-color: #f24b60;
     color: #fff;
     text-align: center;
+}
+
+.ui.basic.segment.footer_message {
+    font-family: "ProximaNova", "Lato", Arial, Helvetica, sans-serif;
+    background: #fffed7;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #dcdcdc;
+    text-align: center;
+}
+
+.undo_footer {
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
 }
 
 .ui.selection.dropdown {
@@ -69,6 +89,27 @@
     color: #7f64b5;
 }
 
+.ui.massive.loader:after, .ui.massive.loader:before {
+    height: 6rem;
+    width: 6rem;
+    margin: 0 0 0 -3rem;
+}
+
+.ui.loader:before {
+    border: .26em solid rgba(0,0,0,.1);
+}
+
+.ui.dimmer .ui.loader:before {
+    border-color: #d0d9e0;
+}
+
+.ui.dimmer .ui.loader:after {
+    border-color: #7f64b5 #7f64b5 transparent;
+}
+
+.ui.loader:after {
+    border-width: .25em;
+}
 
 /* Modal header */
 
@@ -78,10 +119,18 @@
     padding: 40px 0 20px 0;
 }
 
+
+
 .ui.header .header_title_red {
     color: #e25f6f;
     text-align: center;
     padding: 20px;
+}
+
+.ui.header .header_title_check {
+    color: #7f64b5;
+    text-align: center;
+    padding: 10px ;
 }
 
 .img_header {
@@ -278,12 +327,6 @@
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
 }
 
-​ .scroll_bar::after {
-    content: ' ';
-    background: red;
-    width: 100%;
-}
-
 .scroll_bar::-webkit-scrollbar {
     padding: 10px 0;
     width: 8px;
@@ -310,4 +353,9 @@
     background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
     background: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 252, 1) 70%);
+}
+
+.modal_loader {
+    height: 200px;
+    background: #f3f8fc;
 }
