@@ -6,11 +6,12 @@ import LoginReset from './forms/reset_form';
 import ModalWindow from './modal/modal';
 import ModalWindowDelete from './modal/modal_delete';
 import ModalWindowDeleteCheck from './modal/modal_delete2';
+import ModalWindowDeleteScroll from './modal/modal_delete_scroll'
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalWindowDeleteCheck/>);
+        return (<ModalWindowDeleteScroll/>);
     }
 }
 

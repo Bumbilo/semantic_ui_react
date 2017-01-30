@@ -6,7 +6,8 @@ import {
     Image,
     Modal,
     Segment,
-    Grid
+    Grid,
+    Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/warning2.png';
 import ava from '../../images/avaBig.png';
@@ -61,6 +62,17 @@ const ProfileBlock = () => (
     </div>
 )
 
+const CheckboxModalDelete = () => (
+   <div className="checkbox_modal_delete">
+      <span className='title_chechbox'>Warning: this cannot be undone.</span>
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' />
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
+   </div>
+  
+)
+
+
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
         <Grid.Row columns={2}>
@@ -75,7 +87,24 @@ const GridExampleVerticallyDivided = () => (
                 <ProfileBlock/>
             </Grid.Column>
         </Grid.Row>
-        <Grid.Row columns={2}>
+    </Grid>
+)
+
+const GridCheckbox = () => (
+ <Grid divided='vertically'>
+           <Grid.Row columns={2}>
+            <Grid.Column floated='right'>
+            <CheckboxModalDelete/>
+            </Grid.Column>
+            <Grid.Column floated='left'>
+            </Grid.Column>
+        </Grid.Row>
+ </Grid>
+)
+
+const GridButton = () => (
+ <Grid divided='vertically'>
+           <Grid.Row columns={2}>
             <Grid.Column floated='right'>
                 <Button basic floated='right'>Cancel, Keep records</Button>
             </Grid.Column>
@@ -83,18 +112,24 @@ const GridExampleVerticallyDivided = () => (
                 <Button color='red'>Yes, Delete records!</Button>
             </Grid.Column>
         </Grid.Row>
-    </Grid>
+ </Grid>
 )
-
-const ModalWindowDelete = () => (
+   
+const ModalWindowDeleteScroll = () => (
     <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>
         <Modal.Content className="modal_content">
-            <GridExampleVerticallyDivided/>
+            <div className="scroll_bar">
+             <div className="gradient_top"></div>
+               <GridExampleVerticallyDivided/>
+               <div className="gradient_bottom"></div>
+            </div>
+            <GridCheckbox />
+            <GridButton/>
         </Modal.Content>
     </Modal>
 )
 
-export default ModalWindowDelete;
+export default ModalWindowDeleteScroll;
