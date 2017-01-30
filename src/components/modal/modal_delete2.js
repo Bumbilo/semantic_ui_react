@@ -6,18 +6,14 @@ import {
     Image,
     Modal,
     Segment,
-    Grid
+    Grid,
+    Checkbox
 } from 'semantic-ui-react';
 import varning from '../../images/warning2.png';
 import ava from '../../images/avaBig.png';
 import '../../CSS/fonts.css'
 import './modal.css';
 
-const InvalidMessage = () => (
-    <Segment basic className="invalid_message">
-        Invalid email address format.
-    </Segment>
-)
 const HeaderTitle = () => (
     <div className='header_title'>
         <img src={varning} className="img_header"/>
@@ -45,6 +41,16 @@ const IconStatus = () => (
     </div>
 )
 
+const CheckboxModalDelete = () => (
+   <div className="checkbox_modal_delete">
+      <span className='title_chechbox'>Warning: this cannot be undone.</span>
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' />
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
+      <Checkbox label='Lorem Ipsum is simply dummy text of the' /> 
+   </div>
+  
+)
+
 const ImageAvatar = () => (
     <div className='profile_avatar'>
         <Image src={ava} avatar size='mini'/>
@@ -70,12 +76,9 @@ const GridExampleVerticallyDivided = () => (
         <Grid.Row columns={2}>
             <Grid.Column floated='right'>
                 <ProfileBlock/>
-                <ProfileBlock/>
-                <ProfileBlock/>
+                <CheckboxModalDelete/>
             </Grid.Column>
             <Grid.Column floated='left'>
-                <ProfileBlock/>
-                <ProfileBlock/>
                 <ProfileBlock/>
             </Grid.Column>
         </Grid.Row>
@@ -90,10 +93,9 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 )
 
-const ModalWindowDelete = () => (
+const ModalWindowDeleteCheck = () => (
     <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
         <Header>
-            <InvalidMessage/>
             <HeaderTitle/>
         </Header>
         <Modal.Content className="modal_content">
@@ -102,4 +104,4 @@ const ModalWindowDelete = () => (
     </Modal>
 )
 
-export default ModalWindowDelete;
+export default ModalWindowDeleteCheck;

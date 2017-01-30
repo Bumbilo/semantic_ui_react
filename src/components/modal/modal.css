@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.ui.dimmer {
+    background-color: rgba(84, 94, 109, .85);
+}
+
 .ui.active.modal {
     border-radius: 3px;
     border: 1px solid rgba(34, 36, 38, .15);
@@ -60,19 +64,22 @@
     box-shadow: none;
 }
 
+.ui.checkbox input:checked~.box:after, .ui.checkbox input:checked~label:after {
+    color: #7f64b5;
+}
 
 /* Modal header */
 
-.ui.header.header_title {
+.ui.header .header_title {
     color: #7f64b5;
     text-align: center;
-    padding: 10px 0 20px;
+    padding: 40px 0 20px 0;
 }
 
-.ui.header.header_title_red {
+.ui.header .header_title_red {
     color: #e25f6f;
     text-align: center;
-    padding: 10px 0 20px;
+    padding: 20px;
 }
 
 .img_header {
@@ -121,7 +128,6 @@
     float: right;
 }
 
-
 /* Modal delete*/
 
 .profile {
@@ -130,7 +136,7 @@
     border: 1px solid #e4e5e7;
     border-radius: 3px;
     overflow: hidden;
-    margin: 10px;
+    margin: 10px 15px;
 }
 
 .profile_avatar {
@@ -151,7 +157,7 @@
 
 .profile_name {
     font-size: 14px;
-    font-family: ProximaNovaBold, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 .profile_position {
@@ -220,4 +226,25 @@
 
 .option_profile i:hover {
     color: #a1a1a1;
+}
+
+.title_chechbox {
+    display: inline-block;
+    font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 5px 0;
+    color: #4F4F4F;
+}
+
+.checkbox_modal_delete {
+    padding: 20px 15px;
+}
+
+.checkbox_modal_delete .ui.checkbox {
+    padding: 10px 0;
+}
+
+.checkbox_modal_delete .ui.checkbox label {
+    color: #888;
+    font-weight: 700;
 }
