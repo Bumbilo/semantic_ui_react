@@ -65,8 +65,7 @@ const ImageAvatar = () => (
 const ProfileBlock = () => (
     <div className="profile">
         <ImageAvatar/>
-        <ProfileOption/>
-        <ProfileDays/>
+        <Icon link name='remove circle' />
     </div>
 );
 
@@ -92,7 +91,7 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 );
 
-const ModalWindowDeleteCheck = () => (
+const ModalWindowDeleteCheck2 = () => (
     <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
@@ -103,4 +102,4 @@ const ModalWindowDeleteCheck = () => (
     </Modal>
 );
 
-export default ModalWindowDeleteCheck;
+export default ModalWindowDeleteCheck2;

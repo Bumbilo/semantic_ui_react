@@ -231,6 +231,7 @@ p   {
 }
 
 .profile {
+    position: relative;
     background: #fff;
     padding: 15px 10px;
     border: 1px solid #e4e5e7;
@@ -238,6 +239,14 @@ p   {
     border-radius: 3px;
     overflow: hidden;
     margin: 10px 15px;
+}
+
+.profile .remove.circle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.4em;
+    color: #d8d8d8;
 }
 
 .profile_avatar {
