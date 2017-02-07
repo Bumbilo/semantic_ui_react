@@ -72,7 +72,7 @@ const ProfileBlock = () => (
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
         <Grid.Row columns={2}>
-            <Grid.Column floated='right'>
+            <Grid.Column floated='right'>   
                 <ProfileBlock/>
                 <CheckboxModalDelete/>
             </Grid.Column>

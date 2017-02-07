@@ -1,0 +1,146 @@
+.form_wrapper {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.form_login {
+    box-shadow: 0 0 1px 2px #DCDCDC;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.form_login .header_form {
+    height: 127px;
+    background: #fff url('../../images/logo_form.png') no-repeat 50%;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.form_login .header_form_forgot {
+    border-bottom: 2px solid #dcdcdc;
+    background: #fff;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.form_login .header_form_forgot span {
+    color: #4c4c4c;
+    font-size: 16px;
+}
+
+.form_forgot_attention {
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: #4c4c4c;
+}
+
+.form_forgot_attention span {
+    font-weight: bold;
+}
+
+.form_login_bottom {
+    box-shadow: 0 0 1px 2px #DCDCDC;
+    border-radius: 3px;
+    height: 75px;
+    margin-top: 20px;
+    background: #fff;
+}
+
+.form_login_bottom img.ui.image  {
+   display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.form_login_bottom .form_bottom_text {
+    padding-left: 20px;
+    color: #ccc;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.form_login_bottom .help_link {
+    color: #a592cb;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.form_login .form_login_content {
+    padding: 25px 50px;
+    background: #f3f8fc;
+}
+
+.form_login.ui.form .form_login_content input {
+    margin: 5px 0;
+    border: 1px solid #DCDCDC;
+    color: #9b9b9b;
+}
+
+.form_login.ui.form .form_login_content input[placeholder] {
+    color: #9b9b9b;
+    font-weight: bold;
+}
+
+.form_login.ui.form .form_login_content .login_btn {
+    background: #7ed321;
+    height: 44px;
+    color: #fff;
+    margin: 15px 0;
+}
+
+.form_login.ui.form .form_login_content .login_btn.load {
+    background: #7f64b5;
+}
+
+.form_login.ui.form .form_login_content .login_btn.load img {
+    width: 48px;
+    margin: 0 auto;
+}
+
+.form_login.ui.form .form_login_content .login_btn.load:hover {
+    background: #7f64b5;
+}
+
+.form_login.ui.form .form_login_content .login_btn:hover {
+    background: #62A820;
+}
+
+.form_login.ui.form .form_login_link {
+    overflow: hidden;
+}
+
+.form_login.ui.form .form_login_link .compact {
+    overflow: hidden;
+    display: inline-block;
+    color: #9b9b9b;
+    background: #e6e9f0;
+    font-weight: bold;
+    margin: 5px 0;
+    width: 48%;
+}
+
+.form_login.ui.form .form_login_link .compact:hover {
+    background: #ced1d8;
+}
+
+.fullInput {
+    width: 100%;
+    background: #7ed321;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.emptyInput {
+    width: 100%;
+    background: #f24d63;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
