@@ -144,3 +144,17 @@
     top: 0;
     left: 0;
 }
+
+/* employee_profile */
+
+.employee {
+    padding: 20px 0
+}
+
+.employee_profile {
+    background: #fff;
+    width: 745px;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #e4e5e7;
+}

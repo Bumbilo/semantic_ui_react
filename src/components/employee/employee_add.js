@@ -160,7 +160,14 @@ const GridExampleColumns = () => (
 const GridColumnsContent = () => (
     <Container>
         <Grid.Row>
-            Hello
+            <div className="employee">
+                <div className="employee_profile">
+                <h1>Hello</h1>
+                </div>
+                <div className="employee_option">
+                
+                </div>
+            </div>
         </Grid.Row>
     </Container>
 );
