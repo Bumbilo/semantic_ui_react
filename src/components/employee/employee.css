@@ -444,8 +444,19 @@ i.descript_icon {
    margin: .5em 0;
 }
 
-.input_icon {
-   display: inline-block;
+i.input_icon {
+   position: absolute;
+   right: 0;
+   top: 30%;
+   font-size: 1.4em;
+   color: #d8d8d8;
+   cursor: pointer;
+}
+
+.input_edit {
+   position: relative;
+   overflow: hidden;
+   padding-right: 30px;
 }
 
 .hr_edit {

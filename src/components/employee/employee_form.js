@@ -144,8 +144,8 @@ const GridExampleColumns = () => (
                     <Grid.Row>
                         <Grid.Column mobile={7} tablet={6} computer={12}>
                             <a href="#" className="item header_title_menu">
-                           <a href="#" className="top_title_menu">Employees list &gt;</a>
-                            Misty Smith</a>
+                                <a href="#" className="top_title_menu">Employees list &gt;</a>
+                                Misty Smith</a>
                         </Grid.Column>
                         <Grid.Column mobile={9} tablet={10} computer={4}>
                             <div className="header_top_addEmp">
@@ -189,10 +189,22 @@ class MenuExample extends Component {
         return (
             <div>
                 <Menu pointing secondary>
-                    <Menu.Item name='account' active={activeItem === 'account'} onClick={this.handleItemClick}/>
-                    <Menu.Item name='Holiday calendar' active={activeItem === 'Holiday calendar'} onClick={this.handleItemClick}/>
-                    <Menu.Item name='Time card' active={activeItem === 'Time card'} onClick={this.handleItemClick}/>
-                    <Menu.Item name='log notes' active={activeItem === 'log notes'} onClick={this.handleItemClick}>
+                    <Menu.Item
+                        name='account'
+                        active={activeItem === 'account'}
+                        onClick={this.handleItemClick}/>
+                    <Menu.Item
+                        name='Holiday calendar'
+                        active={activeItem === 'Holiday calendar'}
+                        onClick={this.handleItemClick}/>
+                    <Menu.Item
+                        name='Time card'
+                        active={activeItem === 'Time card'}
+                        onClick={this.handleItemClick}/>
+                    <Menu.Item
+                        name='log notes'
+                        active={activeItem === 'log notes'}
+                        onClick={this.handleItemClick}>
                         Log / Notes
                     </Menu.Item>
                 </Menu>
@@ -221,7 +233,11 @@ const IconStatus = () => (
 const ButtonMakeRequest = () => (
     <div className="employee_option_block">
         <div className='btn_wrap'>
-            <Button content='Make Request' icon='dropdown' labelPosition='right' className='btn_request'/>
+            <Button
+                content='Make Request'
+                icon='dropdown'
+                labelPosition='right'
+                className='btn_request'/>
         </div>
     </div>
 
@@ -379,106 +395,275 @@ const AdditionalInfromationOther = () => (
 
 const SidebarAllowance = () => (
     <div className='employee_option_block'>
-         <div className="sidebar_info">
+        <div className="sidebar_info">
             <div className='count_title'>Holliday Available</div>
             <div className='title_column'>You have in total 25 days for 2017</div>
-         </div>
+        </div>
 
         <div className='count_sidebar'>
             <div className='count_title'>Available</div>
             <div className='count_time'>4 day</div>
-            <div className='count_sidebar_hover'>
-             </div>
+            <div className='count_sidebar_hover'></div>
         </div>
     </div>
 )
 
 const SidebarTimeCard = () => (
     <div className='employee_option_block'>
-         <div className="sidebar_info">
+        <div className="sidebar_info">
             <div className='count_title'>Time card</div>
             <div className='title_column'>Your shift is: 08:00 -16:30</div>
-         </div>
+        </div>
 
         <div className='count_sidebar'>
-        <div className='count_title'>Time Card</div>
-        <div className='count_time'>35 hr</div>
-           <div className='count_sidebar_hover'>
-            </div>
+            <div className='count_title'>Time Card</div>
+            <div className='count_time'>35 hr</div>
+            <div className='count_sidebar_hover'></div>
         </div>
     </div>
 )
 
+/* ========== Form Edit block ========== */
+
 const options = [
-  { key: 'Employee', text: 'Employee', value: 'Employee' },
-  { key: 'French', text: 'French', value: 'French' },
-  { key: 'Spanish', text: 'Spanish', value: 'Spanish' },
-  { key: 'German', text: 'German', value: 'German' },
-  { key: 'Chinese', text: 'Chinese', value: 'Chinese' },
-]
+    {
+        key: 'Employee',
+        text: 'Employee',
+        value: 'Employee'
+    }, {
+        key: 'French',
+        text: 'French',
+        value: 'French'
+    }, {
+        key: 'Spanish',
+        text: 'Spanish',
+        value: 'Spanish'
+    }, {
+        key: 'German',
+        text: 'German',
+        value: 'German'
+    }, {
+        key: 'Chinese',
+        text: 'Chinese',
+        value: 'Chinese'
+    }
+];
 
 class DropdownAccountType extends Component {
-  state = { options }
+    state = {
+        options
+    }
 
-  handleAddition = (e, { value }) => {
-    this.setState({
-      options: [{ text: value, value }, ...this.state.options],
-    })
-  }
+    handleAddition = (e, {value}) => {
+        this.setState({
+            options: [
+                {
+                    text: value,
+                    value
+                },
+                ...this.state.options
+            ]
+        })
+    }
 
-  handleChange = (e, { value }) => this.setState({ currentValue: value })
+    handleChange = (e, {value}) => this.setState({currentValue: value})
 
-  render() {
-    const { currentValue } = this.state
+    render() {
+        const {currentValue} = this.state
 
-    return (
-      <Dropdown
-        options={this.state.options}
-        placeholder='Employee'
-        search
-        selection
-        fluid
-        allowAdditions
-        value={currentValue}
-        onAddItem={this.handleAddition}
-        onChange={this.handleChange}
-        className='dropdown_edit'
-      />
-    )
-  }
+        return (<Dropdown
+            options={this.state.options}
+            placeholder='Employee'
+            search
+            selection
+            fluid
+            allowAdditions
+            value={currentValue}
+            onAddItem={this.handleAddition}
+            onChange={this.handleChange}
+            className='dropdown_edit'/>)
+    }
 }
 
 const EditProfile = () => (
-   <Grid.Row>
-      <Grid.Column width={8}>
-          <label className='label_edit'>Account Type</label>
-          <DropdownAccountType />
-      </Grid.Column>
-      <Grid.Column>
-         <Icon name='help circle' className='descript_icon' />
-          <p className="descript_edit"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod.</p>
-      </Grid.Column>
-      <hr className='hr_edit'/>
-   </Grid.Row>
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <div className='input_edit'>
+                <label className='label_edit'>Account Type</label>
+                <DropdownAccountType/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <Icon name='help circle' className='descript_icon'/>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
 )
 
 const EditProfileEmail = () => (
-   <Grid.Row>
-      <Grid.Column width={8}>
-          <label className='label_edit'>Email</label>
-          <div>
-            <Input fluid placeholder='email' defaultValue='mitsy@longdomainname.com' className='input_color' />
-            <Icon name='add circle' className='input_icon' />
-          </div>
-          <Input fluid placeholder='email' defaultValue='secondmail@domain.com' className='input_color' />
-      </Grid.Column>
-      <Grid.Column>
-      </Grid.Column>
-      <hr className='hr_edit'/>
-   </Grid.Row>
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <label className='label_edit'>Email</label>
+            <div className='input_edit'>
+                <Input
+                    fluid
+                    placeholder='email'
+                    defaultValue='mitsy@longdomainname.com'
+                    className='input_color'/>
+                <Icon name='add circle' className='input_icon'/>
+            </div>
+            <div className='input_edit'>
+                <Input
+                    fluid
+                    placeholder='email'
+                    defaultValue='secondmail@domain.com'
+                    className='input_color'/>
+                <Icon name='add circle' className='input_icon'/>
+            </div>
+        </Grid.Column>
+        <Grid.Column></Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
 )
 
+const EditProfilePhone = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <label className='label_edit'>Phone</label>
+            <div className='input_edit'>
+                <Input
+                    fluid
+                    placeholder='phone'
+                    defaultValue='+44 7449 123 465'
+                    className='input_color'/>
+                <Icon name='add circle' className='input_icon'/>
+            </div>
+            <div className='input_edit'>
+                <Input
+                    fluid
+                    placeholder='phone'
+                    defaultValue='+359 899 123 465'
+                    className='input_color'/>
+                <Icon name='add circle' className='input_icon'/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
+)
+
+const EditProfileBirthday = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <div className='input_edit'>
+                <label className='label_edit'>Date of birthday</label>
+                <Input
+                    fluid
+                    icon='calendar'
+                    iconPosition='left'
+                    placeholder='date of birthday'
+                    defaultValue='27/01/1977'
+                    className='input_color'/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
+)
+
+const EditProfileStartDay = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <div className='input_edit'>
+                <label className='label_edit'>Start Date</label>
+                <Input
+                    fluid
+                    icon='calendar'
+                    iconPosition='left'
+                    placeholder='date of birthday'
+                    defaultValue='27/01/1977'
+                    className='input_color'/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
+)
+
+const options2 = [
+    {
+        key: 'Joe Doe',
+        text: 'Joe Doe',
+        value: 'Joe Doe'
+    }, {
+        key: 'Jane Smith',
+        text: 'Jane Smith',
+        value: 'Jane Smith'
+    }
+]
+
+class DropdownManager extends Component {
+    state = {
+        options2
+    }
+
+    handleAddition = (e, {value}) => {
+        this.setState({
+            options: [
+                {
+                    text: value,
+                    value
+                },
+                ...this.state.options2
+            ]
+        })
+    }
+
+    handleChange = (e, {value}) => this.setState({currentValues: value})
+
+    render() {
+        const {currentValues} = this.state
+
+        return (<Dropdown
+            options={this.state.options2}
+            placeholder='Choose Languages'
+            search
+            selection
+            fluid
+            multiple
+            allowAdditions
+            value={currentValues}
+            onAddItem={this.handleAddition}
+            onChange={this.handleChange}/>)
+    }
+}
+
+const EditProfileManager = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <div className='input_edit'>
+                <label className='label_edit'>Manager</label>
+                <DropdownManager/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
+)
 
 // Content
 const ContentMenu = () => (
@@ -502,14 +687,18 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-
                 <div className='employee_profile_info border_bottm'>
                     <Grid columns='equal'>
-                         <Grid.Column width={16}>
-                           <ProfileInfromation/>
-                         </Grid.Column>
-                         <EditProfile/>
-                         <EditProfileEmail />
+                        <Grid.Column width={16}>
+                            <ProfileInfromation/>
+                        </Grid.Column>
+                        <EditProfile/>
+                        <EditProfileEmail/>
+                        <EditProfilePhone/>
+                        <EditProfileBirthday/>
+                        <EditProfileStartDay/>
+                        <EditProfileManager/>
+                        <EditProfileStartDay/>
                     </Grid>
                 </div>
 
