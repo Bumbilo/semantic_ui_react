@@ -144,7 +144,7 @@ const GridExampleColumns = () => (
                     <Grid.Row>
                         <Grid.Column mobile={7} tablet={6} computer={12}>
                             <a href="#" className="item header_title_menu">
-                           <a href="#" className="top_title_menu">Employees list ></a>
+                           <a href="#" className="top_title_menu">Employees list &gt;</a>
                             Misty Smith</a>
                         </Grid.Column>
                         <Grid.Column mobile={9} tablet={10} computer={4}>
@@ -260,57 +260,6 @@ const ProfileInfromation = () => (
         <div className="title_column_lf">
             Information...
         </div>
-    </div>
-)
-
-const ProfileInfromationEmail = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Email</div>
-        <div className='content_column'>mitsy@longdomainname.com</div>
-        <div className='content_column'>secondmail@domain.com</div>
-    </div>
-)
-
-const ProfileInfromationPhone = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Phone</div>
-        <div className='content_column'>+44 7449 123 456</div>
-        <div className='content_column'>+359 899 132 456</div>
-    </div>
-)
-
-const ProfileInfromationBirday = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Date of birthday</div>
-        <div className='content_column'>07 / 07 / 1977</div>
-    </div>
-)
-
-const ProfileInfromationAcount = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Account type</div>
-        <div className='content_column'>Employee</div>
-    </div>
-)
-
-const ProfileInfromationStart = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Start Date</div>
-        <div className='content_column'>27/01/2014</div>
-    </div>
-)
-
-const ProfileInfromationManager = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Manager</div>
-        <div className='content_column'>Joe Doe</div>
-    </div>
-)
-
-const ProfileInfromationHoliday = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Holiday entitlement</div>
-        <div className='content_column'>25</div>
     </div>
 )
 
@@ -460,6 +409,75 @@ const SidebarTimeCard = () => (
     </div>
 )
 
+const options = [
+  { key: 'Employee', text: 'Employee', value: 'Employee' },
+  { key: 'French', text: 'French', value: 'French' },
+  { key: 'Spanish', text: 'Spanish', value: 'Spanish' },
+  { key: 'German', text: 'German', value: 'German' },
+  { key: 'Chinese', text: 'Chinese', value: 'Chinese' },
+]
+
+class DropdownAccountType extends Component {
+  state = { options }
+
+  handleAddition = (e, { value }) => {
+    this.setState({
+      options: [{ text: value, value }, ...this.state.options],
+    })
+  }
+
+  handleChange = (e, { value }) => this.setState({ currentValue: value })
+
+  render() {
+    const { currentValue } = this.state
+
+    return (
+      <Dropdown
+        options={this.state.options}
+        placeholder='Employee'
+        search
+        selection
+        fluid
+        allowAdditions
+        value={currentValue}
+        onAddItem={this.handleAddition}
+        onChange={this.handleChange}
+        className='dropdown_edit'
+      />
+    )
+  }
+}
+
+const EditProfile = () => (
+   <Grid.Row>
+      <Grid.Column width={8}>
+          <label className='label_edit'>Account Type</label>
+          <DropdownAccountType />
+      </Grid.Column>
+      <Grid.Column>
+         <Icon name='help circle' className='descript_icon' />
+          <p className="descript_edit"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod.</p>
+      </Grid.Column>
+      <hr className='hr_edit'/>
+   </Grid.Row>
+)
+
+const EditProfileEmail = () => (
+   <Grid.Row>
+      <Grid.Column width={8}>
+          <label className='label_edit'>Email</label>
+          <div>
+            <Input fluid placeholder='email' defaultValue='mitsy@longdomainname.com' className='input_color' />
+            <Icon name='add circle' className='input_icon' />
+          </div>
+          <Input fluid placeholder='email' defaultValue='secondmail@domain.com' className='input_color' />
+      </Grid.Column>
+      <Grid.Column>
+      </Grid.Column>
+      <hr className='hr_edit'/>
+   </Grid.Row>
+)
 
 
 // Content
@@ -484,24 +502,15 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
+
                 <div className='employee_profile_info border_bottm'>
                     <Grid columns='equal'>
-                        <Grid.Column width={6}>
-                            <ProfileInfromation/>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <ProfileInfromationEmail/>
-                            <ProfileInfromationPhone/>
-                            <ProfileInfromationBirday/>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <ProfileInfromationAcount/>
-                            <ProfileInfromationStart/>
-                            <ProfileInfromationManager/>
-                            <ProfileInfromationHoliday/>
-                        </Grid.Column>
+                         <Grid.Column width={16}>
+                           <ProfileInfromation/>
+                         </Grid.Column>
+                         <EditProfile/>
+                         <EditProfileEmail />
                     </Grid>
-                    <a href='#' className='edit'>Edit</a>
                 </div>
 
                 <div className='employee_profile_info border_bottm'>
@@ -577,7 +586,7 @@ export default class Employees extends Component {
     }
 }
 
-class EployeeAdd extends React.Component {
+class EployeeForm extends React.Component {
     render() {
         return (<Employees/>);
     }

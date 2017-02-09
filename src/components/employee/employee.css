@@ -11,6 +11,31 @@ a {
     border-top: 2px solid hsla(210, 6%, 14%, 0.15);
 }
 
+.header_top_searchDown {
+   margin-top: -5px;
+}
+
+header .header_top_search .header_top_searchDown.filter_dropdown {
+   margin-right: 20px;
+   color: #7f64b5;
+}
+
+header .header_top_menu .item.header_title_menu {
+   font-family: "ProximaNovaRegular";
+   font-size: 20px;
+   color: #fff;
+   vertical-align: middle;
+}
+
+.top_title_menu {
+   position: absolute;
+   font-size: 12px;
+   top: 13px;
+   display: inline;
+   line-height: 1;
+   color: #fff;
+}
+
 .ui.tiny.image,
 .ui.tiny.images .image,
 .ui.tiny.images img,
@@ -193,7 +218,7 @@ a {
     float: left;
     position: relative;
     background: #fff;
-    width: 745px;
+    width: 760px;
     padding: 25px;
     border-radius: 3px;
     border: 1px solid #e4e5e7;
@@ -292,7 +317,7 @@ a {
     right: 0;
     background: #f7f7f7;
     width: 345px;
-    padding: 25px;
+    padding: 5px 25px;
     border-radius: 3px;
     border: 1px solid #e4e5e7;
 }
@@ -306,9 +331,9 @@ a {
 .ui.button.btn_request {
     background: #b8e986;
     color: #788668;
-    width: 203px;
-    height: 50px;
-    font-size: 16px;
+    width: 195px;
+    height: 45px;
+    font-size: 15px;
 }
 
 .employee_option .ui.labeled.icon.button>.icon {
@@ -323,6 +348,110 @@ a {
 }
 
 .employee_option_block {
+   overflow: hidden;
    border-bottom: 1px solid #e6ebf0;
+   padding-top: 20px;
    padding-bottom: 20px;
+}
+
+.count_sidebar {
+   float:right;
+   position: relative;
+   display: inline-block;
+   width: 80px;
+   height: 55px;
+   padding: 10px 0;
+   border-radius: 3px;
+   background: #e4e5e7;
+   text-align: center;
+   cursor: pointer;
+   overflow: hidden;
+   transition: all 0.2s linear;
+}
+
+.count_sidebar:hover {
+   box-shadow: 0px 0px 1px 1px #000;
+   box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,0.9);
+}
+
+.count_sidebar:hover .count_sidebar_hover {
+   display: block;
+}
+
+.count_sidebar_hover {
+   transition: all 0.2s linear;
+   display: none;
+   position: absolute;
+   padding: 10px 0;
+   top:0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(228,229,231,0.8) url('../../images/check_bg.png')no-repeat 50% 50%;
+
+}
+
+.sidebar_info {
+   display: inline-block;
+   vertical-align: middle;
+   padding: 10px 0;
+}
+
+.count_title {
+   color: #4a4a4a;
+   font-family: "ProximaNovaBold";
+   font-size: 14px;
+}
+
+.count_time {
+   font-family: "ProximaNovaRegular";
+   font-size: 13px;
+   color: #927bc2;
+}
+
+.label_edit {
+   color: #5c5c5c;
+   font-family: "ProximaNovaLight";
+   font-size: 13px;
+   padding-left: 5px;
+}
+
+.ui.selection.dropdown.dropdown_edit {
+   color: #927bc2;
+   font-family: "Proxima Nova";
+   font-size: 13px;
+   width: 100%;
+}
+
+.descript_edit {
+   color: #738094;
+   font-family: "ProximaNovaRegular";
+   font-size: 12px;
+   margin-left: 20px;
+}
+
+i.descript_icon {
+   padding-right: 20px;
+   height: 100%;
+   float: left;
+   font-size: 1.2em;
+   color: #d8d8d8;
+}
+
+.input_color.ui.input input {
+   font-family: "Proxima Nova";
+   color: #927bc2;
+   margin: .5em 0;
+}
+
+.input_icon {
+   display: inline-block;
+}
+
+.hr_edit {
+   width: 100%;
+   border: none;
+   border-top: 1px solid #e6ebf0;
+   margin: 0 10px;
+   margin-top: 20px;
 }
