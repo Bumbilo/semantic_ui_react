@@ -1,4 +1,5 @@
 body{
+   overflow: auto;
    height: 0;
    background: #e6e9f0;
    min-width: 490px;

@@ -9,7 +9,7 @@ import {
 } from 'semantic-ui-react';
 import varning from '../../images/warning2.png';
 import ava from '../../images/avaBig.png';
-import '../../CSS/fonts.css'
+import '../../CSS/fonts.css';
 import './modal.css';
 
 const HeaderTitle = () => (
