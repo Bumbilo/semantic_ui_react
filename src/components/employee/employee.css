@@ -71,7 +71,9 @@ header .header_top_menu .item.header_title_menu {
 }
 
 .form_login {
+    -webkit-box-shadow: 0 0 1px 2px #DCDCDC;
     box-shadow: 0 0 1px 2px #DCDCDC;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     overflow: hidden;
 }
@@ -105,7 +107,9 @@ header .header_top_menu .item.header_title_menu {
 }
 
 .form_login_bottom {
+    -webkit-box-shadow: 0 0 1px 2px #DCDCDC;
     box-shadow: 0 0 1px 2px #DCDCDC;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     height: 75px;
     margin-top: 20px;
@@ -224,6 +228,7 @@ header .header_top_menu .item.header_title_menu {
     background: #fff;
     width: 782px;
     padding: 25px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid #e4e5e7;
     margin-right: 345px;
@@ -322,6 +327,7 @@ header .header_top_menu .item.header_title_menu {
     background: #f7f7f7;
     width: 345px;
     padding: 5px 25px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid #e4e5e7;
 }
@@ -365,16 +371,20 @@ header .header_top_menu .item.header_title_menu {
     width: 80px;
     height: 55px;
     padding: 10px 0;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     background: #e4e5e7;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
+    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
 .count_sidebar:hover {
+    -webkit-box-shadow: 0px 0px 1px 1px #000;
     box-shadow: 0px 0px 1px 1px #000;
+    -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.9);
     box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.9);
 }
 
@@ -383,6 +393,7 @@ header .header_top_menu .item.header_title_menu {
 }
 
 .count_sidebar_hover {
+    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     display: none;
     position: absolute;
@@ -510,6 +521,7 @@ i.input_icon {
 
 .btn_save_change.ui.button {
     background-color: #b8e986;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 
@@ -517,12 +529,14 @@ i.input_icon {
     background-color: transparent;
     border: 1px solid #d3dde4;
     color: #9b9b9b;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 
 /* ========== progress_bar ========== */
 
 .progress_bar {
+    -webkit-border-radius: 30px;
     border-radius: 30px;
     position: relative;
     border: 1px solid #c6c6c6;
@@ -638,4 +652,9 @@ i.input_icon {
 
 .employee_info_block i:hover {
     color: #bfbfbf;
+}
+
+.label_input {
+    display: inline-block;
+    margin: 10px 0;
 }

@@ -10,6 +10,7 @@ import ModalWindowDeleteCheck2 from './modal/modal_delete3';
 import ModalWindowDeleteScroll from './modal/modal_delete_scroll';
 import ModalWindowConnection from './modal/modal_connection';
 import ModalWindowDeleteLoader from './modal/modal_loader';
+import ModalWindowEmployee from './modal/modal_add_employee';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EployeeForm from './employee/employee_form'
@@ -17,7 +18,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<EployeeAdd2 />);
+        return (<ModalWindowEmployee/>);
     }
 }
 

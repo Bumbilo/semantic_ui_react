@@ -1,6 +1,6 @@
 /* Semantic default classes*/
 
-.ui.modal>.header {
+.ui.modal > .header {
     padding: 0;
 }
 
@@ -22,7 +22,7 @@
     top: 1em
 }
 
-.ui.active.modal .ui.grid>.row {
+.ui.active.modal .ui.grid > .row {
     padding: 0;
 }
 
@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.ui.bulleted.list .list>a.item:before, .ui.bulleted.list>a.item:before, ul.ui.list li:before {
+.ui.bulleted.list .list > a.item:before, .ui.bulleted.list > a.item:before, ul.ui.list li:before {
     font-size: 2em;
     line-height: .45em;
     margin-left: -1em;
@@ -98,12 +98,12 @@
     padding: 1em 2em;
 }
 
-.ui.dropdown:not(.button)>.default.text,
-.ui.dropdown>.text {
+.ui.dropdown:not(.button) > .default.text,
+.ui.dropdown > .text {
     line-height: 2;
 }
 
-.ui[class*="vertically divided"].grid>.row:before {
+.ui[class*="vertically divided"].grid > .row:before {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -114,8 +114,8 @@
     margin: 0 auto !important;
 }
 
-.ui.checkbox input:checked~.box:after,
-.ui.checkbox input:checked~label:after {
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
     color: #7f64b5;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .ui.loader:before {
-    border: .26em solid rgba(0,0,0,.1);
+    border: .26em solid rgba(0, 0, 0, .1);
 }
 
 .ui.dimmer .ui.loader:before {
@@ -167,10 +167,10 @@ h2.ui.header {
 .ui.header .header_title_check {
     color: #7f64b5;
     text-align: center;
-    padding: 10px ;
+    padding: 10px;
 }
 
-.ui.header .header_title_connect{
+.ui.header .header_title_connect {
     color: #f6c602;
     text-align: center;
     padding: 20px;
@@ -182,7 +182,7 @@ h2.ui.header {
     display: block;
 }
 
-.ui.modal>.content.modal_content {
+.ui.modal > .content.modal_content {
     background: #f3f8fc;
     padding: 3rem;
 }
@@ -223,10 +223,9 @@ h2.ui.header {
     float: right;
 }
 
-
 /* Modal delete*/
 
-p   {
+p {
     font-family: "ProximaNovaLight", "Lato", Arial, Helvetica, sans-serif;
 }
 
@@ -414,4 +413,30 @@ p   {
 .modal_loader {
     height: 200px;
     background: #f3f8fc;
+}
+.img_header_photo {
+    width: 82px;
+}
+
+h2.ui.header.header_employee {
+    font-family: "ProximaNovaRegular", "Lato", Arial, Helvetica, sans-serif;
+    color: #7f64b5;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.input_modal.ui.input input {
+    width: 20em;
+    margin: 5px;
+    margin-right: 25px;
+}
+
+.ui.selection.dropdown.dropdown_modal{
+    width: 18.5em;
+    height: 32px;
+    margin-right: 25px;
+}
+
+.ui.active.modal .ui.button.btn_basic {
+    padding: 1em 4em;
 }
