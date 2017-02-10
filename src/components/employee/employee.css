@@ -1,5 +1,9 @@
 /* ========== Global properties  ========== */
 
+body {
+    min-width: 1280px;
+}
+
 a {
     color: #0091ff;
     font-size: 13px;
@@ -12,28 +16,28 @@ a {
 }
 
 .header_top_searchDown {
-   margin-top: -5px;
+    margin-top: -5px;
 }
 
 header .header_top_search .header_top_searchDown.filter_dropdown {
-   margin-right: 20px;
-   color: #7f64b5;
+    margin-right: 20px;
+    color: #7f64b5;
 }
 
 header .header_top_menu .item.header_title_menu {
-   font-family: "ProximaNovaRegular";
-   font-size: 20px;
-   color: #fff;
-   vertical-align: middle;
+    font-family: "ProximaNovaRegular", serif;;
+    font-size: 20px;
+    color: #fff;
+    vertical-align: middle;
 }
 
 .top_title_menu {
-   position: absolute;
-   font-size: 12px;
-   top: 13px;
-   display: inline;
-   line-height: 1;
-   color: #fff;
+    position: absolute;
+    font-size: 12px;
+    top: 13px;
+    display: inline;
+    line-height: 1;
+    color: #fff;
 }
 
 .ui.tiny.image,
@@ -45,7 +49,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .active.item {
     color: #4a4a4a;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;;
     font-size: 14px;
     border-color: #7f64b5;
     border-width: 4px;
@@ -54,7 +58,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .item {
     color: #4a4a4a;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;;
     font-size: 14px;
 }
 
@@ -208,7 +212,7 @@ header .header_top_menu .item.header_title_menu {
 /* ========== employee_profile ========== */
 
 .employee {
-   position: relative;
+    position: relative;
     display: inline-block;
     height: 100%;
     margin: 20px 0;
@@ -218,7 +222,7 @@ header .header_top_menu .item.header_title_menu {
     float: left;
     position: relative;
     background: #fff;
-    width: 760px;
+    width: 782px;
     padding: 25px;
     border-radius: 3px;
     border: 1px solid #e4e5e7;
@@ -253,38 +257,38 @@ header .header_top_menu .item.header_title_menu {
 
 .avatar_name {
     color: #5c5c5c;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;;
     font-size: 18px;
 }
 
 .avatar_position {
     color: #927bc2;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;;
     font-size: 13px;
 }
 
 .title_column {
     color: #5c5c5c;
-    font-family: "ProximaNovaLight";
+    font-family: "ProximaNovaRegular", serif;
     font-size: 13px;
 }
 
 .title_column_lf {
     color: #7b899e;
-    font-family: "ProximaNovaLight";
+    font-family: "ProximaNovaLight", serif;
     font-size: 13px;
 }
 
 .content_column {
     color: #927bc2;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;
     font-size: 13px;
     padding-bottom: 5px;
 }
 
 .title_infom {
     color: #4a4a4a;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;
     font-size: 14px;
 }
 
@@ -312,7 +316,7 @@ header .header_top_menu .item.header_title_menu {
 
 .employee_option {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     right: 0;
     background: #f7f7f7;
@@ -336,7 +340,7 @@ header .header_top_menu .item.header_title_menu {
     font-size: 15px;
 }
 
-.employee_option .ui.labeled.icon.button>.icon {
+.employee_option .ui.labeled.icon.button > .icon {
     background: none;
     color: #788668;
 }
@@ -348,121 +352,290 @@ header .header_top_menu .item.header_title_menu {
 }
 
 .employee_option_block {
-   overflow: hidden;
-   border-bottom: 1px solid #e6ebf0;
-   padding-top: 20px;
-   padding-bottom: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6ebf0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .count_sidebar {
-   float:right;
-   position: relative;
-   display: inline-block;
-   width: 80px;
-   height: 55px;
-   padding: 10px 0;
-   border-radius: 3px;
-   background: #e4e5e7;
-   text-align: center;
-   cursor: pointer;
-   overflow: hidden;
-   transition: all 0.2s linear;
+    float: right;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 55px;
+    padding: 10px 0;
+    border-radius: 3px;
+    background: #e4e5e7;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s linear;
 }
 
 .count_sidebar:hover {
-   box-shadow: 0px 0px 1px 1px #000;
-   box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,0.9);
+    box-shadow: 0px 0px 1px 1px #000;
+    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.9);
 }
 
 .count_sidebar:hover .count_sidebar_hover {
-   display: block;
+    display: block;
 }
 
 .count_sidebar_hover {
-   transition: all 0.2s linear;
-   display: none;
-   position: absolute;
-   padding: 10px 0;
-   top:0;
-   bottom: 0;
-   right: 0;
-   left: 0;
-   background: rgba(228,229,231,0.8) url('../../images/check_bg.png')no-repeat 50% 50%;
+    transition: all 0.2s linear;
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(228, 229, 231, 0.8) url('../../images/check_bg.png') no-repeat 50% 50%;
 
 }
 
 .sidebar_info {
-   display: inline-block;
-   vertical-align: middle;
-   padding: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 0;
 }
 
 .count_title {
-   color: #4a4a4a;
-   font-family: "ProximaNovaBold";
-   font-size: 14px;
+    color: #4a4a4a;
+    font-family: "ProximaNovaBold", serif;
+    font-size: 14px;
 }
 
 .count_time {
-   font-family: "ProximaNovaRegular";
-   font-size: 13px;
-   color: #927bc2;
+    font-family: "ProximaNovaRegular", serif;
+    font-size: 13px;
+    color: #927bc2;
 }
 
 .label_edit {
-   color: #5c5c5c;
-   font-family: "ProximaNovaLight";
-   font-size: 13px;
-   padding-left: 5px;
+    color: #5c5c5c;
+    font-family: "ProximaNovaLight", serif;
+    font-size: 13px;
+    padding-left: 5px;
 }
 
 .ui.selection.dropdown.dropdown_edit {
-   color: #927bc2;
-   font-family: "Proxima Nova";
-   font-size: 13px;
-   width: 100%;
+    color: #927bc2;
+    font-family: "Proxima Nova", serif;
+    font-size: 13px;
+    width: 100%;
 }
 
 .descript_edit {
-   color: #738094;
-   font-family: "ProximaNovaRegular";
-   font-size: 12px;
-   margin-left: 20px;
+    color: #738094;
+    font-family: "ProximaNovaRegular", serif;
+    font-size: 12px;
+    margin-left: 20px;
 }
 
 i.descript_icon {
-   padding-right: 20px;
-   height: 100%;
-   float: left;
-   font-size: 1.2em;
-   color: #d8d8d8;
+    padding-right: 20px;
+    height: 100%;
+    float: left;
+    font-size: 1.2em;
+    color: #d8d8d8;
 }
 
 .input_color.ui.input input {
-   font-family: "Proxima Nova";
-   color: #927bc2;
-   margin: .5em 0;
+    font-family: "Proxima Nova", serif;
+    color: #927bc2;
+    margin: .5em 0;
+    font-size: 13px;
 }
 
 i.input_icon {
-   position: absolute;
-   right: 0;
-   top: 30%;
-   font-size: 1.4em;
-   color: #d8d8d8;
-   cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    font-size: 1.4em;
+    color: #d8d8d8;
+    cursor: pointer;
 }
 
 .input_edit {
-   position: relative;
-   overflow: hidden;
-   padding-right: 30px;
+    position: relative;
+    padding-right: 30px;
 }
 
 .hr_edit {
-   width: 100%;
-   border: none;
-   border-top: 1px solid #e6ebf0;
-   margin: 0 10px;
-   margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #e6ebf0;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.hr {
+    width: 110%;
+    border: none;
+    border-top: 1px solid #e6ebf0;
+    margin-top: 20px;
+}
+
+.input_edit .ui.multiple.dropdown > .label {
+    color: #927bc2;
+    font-family: "Proxima Nova", 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-size: 13px;
+    background: #f7f8fa;
+    padding: 6px 12px;
+}
+
+.input_edit .ui.label > .delete.icon {
+    color: #ababab;
+}
+
+.input_edit .ui.selection.dropdown {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text,
+.manager_dropdown.ui.dropdown > .text {
+    line-height: 1;
+}
+
+.input_edit .ui.disabled.input {
+    opacity: 0.8;
+}
+
+.input_edit .ui.disabled.input input {
+    background: #e4e5e7;
+}
+
+.btn_save_change.ui.button {
+    background-color: #b8e986;
+    border-radius: 3px;
+}
+
+.btn_cancel.ui.button {
+    background-color: transparent;
+    border: 1px solid #d3dde4;
+    color: #9b9b9b;
+    border-radius: 3px;
+}
+
+/* ========== progress_bar ========== */
+
+.progress_bar {
+    border-radius: 30px;
+    position: relative;
+    border: 1px solid #c6c6c6;
+    color: white;
+    display: block;
+    width: 280px;
+    vertical-align: middle;
+    height: 15px;
+    line-height: 15px;
+    background: #e6ebf0;
+    overflow: hidden;
+    margin: 10px 0;
+
+}
+
+.progress_bar > span {
+    height: 100%;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.popup_title {
+    color: #ababab;
+    font-family: "Proxima Nova", serif;
+    font-size: 13px;
+}
+
+.popup_count {
+    color: #424242;
+    font-family: "Proxima Nova", serif;
+    font-size: 12px;
+}
+
+.statistic_holiday {
+    font-size: 13px;
+    font-family: "Proxima Nova", serif;
+    line-height: 2;
+}
+
+.statistic_holiday .label {
+    color: #5c5c5c;
+}
+
+.statistic_holiday .count {
+    float: right;
+    color: #424242;
+    padding-right: 10px;
+}
+
+.static_result {
+    font-size: 15px;
+    font-family: "Proxima Nova", serif;
+    background: #efefef;
+    border-top: 1px solid #e6ebf0;
+    border-bottom: 1px solid #e6ebf0;
+    padding: 5px 0;
+
+}
+
+.static_result .label {
+    color: #5c5c5c;
+}
+
+.static_result .count {
+    float: right;
+    color: #424242;
+    padding-right: 10px;
+}
+
+.view_link {
+    padding-top: 10px;
+    display: block;
+    font-family: "ProximaNovaRegular", serif;
+    text-align: center;
+}
+
+.ui.segment.employee_info_block {
+    position: relative;
+    background: #fffdf0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.employee_info_block h5 {
+    color: #5c5c5c;
+    font-family: "Proxima Nova", serif;
+    font-size: 15px;
+}
+
+.employee_info_block p {
+    color: #5c5c5c;
+    font-family: "ProximaNovaRegular", serif;
+    font-size: 14px;
+}
+
+.employee_info_block span {
+    color: #7f64b5;
+    font-family: "Proxima Nova", serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.employee_info_block i {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 18px;
+    color: #d8d8d8;
+    cursor: pointer;
+}
+
+.employee_info_block i:hover {
+    color: #bfbfbf;
 }

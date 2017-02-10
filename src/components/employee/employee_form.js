@@ -8,7 +8,7 @@ import {
     Icon,
     Input,
     Menu,
-    Table
+    Popup
 } from 'semantic-ui-react';
 import mainLogo from '../../images/logo.png';
 import ava2 from '../../images/ava3.png';
@@ -182,8 +182,9 @@ const GridExampleColumns = () => (
 class MenuExample extends Component {
     state = {
         activeItem: 'account'
-    }
+    };
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
+
     render() {
         const {activeItem} = this.state
         return (
@@ -222,13 +223,13 @@ const AvatarInfromation = () => (
             Mechanical Designer
         </div>
     </div>
-)
+);
 
 const IconStatus = () => (
     <div className='employee_icon'>
         <Icon name='check circle'/>
     </div>
-)
+);
 
 const ButtonMakeRequest = () => (
     <div className="employee_option_block">
@@ -241,7 +242,7 @@ const ButtonMakeRequest = () => (
         </div>
     </div>
 
-)
+);
 
 // Avatar
 const EmployeeAvatar = () => (
@@ -250,21 +251,21 @@ const EmployeeAvatar = () => (
         <IconStatus/>
         <AvatarInfromation/>
     </div>
-)
+);
 
 const DepartmentMenu = () => (
     <div className='employee_block'>
         <div className='title_column'>Department</div>
         <div className='content_column'>Desing</div>
     </div>
-)
+);
 
 const LocationMenu = () => (
     <div className='employee_block'>
         <div className='title_column'>Location</div>
         <div className='content_column'>Old Dalby</div>
     </div>
-)
+);
 
 /* ========== Profile block ========== */
 
@@ -277,7 +278,7 @@ const ProfileInfromation = () => (
             Information...
         </div>
     </div>
-)
+);
 
 /* ========== Security block ========== */
 
@@ -290,35 +291,35 @@ const SecurityInfromation = () => (
             Information...
         </div>
     </div>
-)
+);
 
 const SecurityInfromationPassword = () => (
     <div className='employee_block'>
         <div className='title_column'>Password</div>
         <div className='content_column'>Change password</div>
     </div>
-)
+);
 
 const SecurityInfromationLoginId = () => (
     <div className='employee_block'>
         <div className='title_column'>Login ID</div>
         <div className='content_column'>2314</div>
     </div>
-)
+);
 
 const SecurityInfromationPasswordLog = () => (
     <div className='employee_block'>
         <div className='title_column'>Log in email</div>
         <div className='content_column'>mitsy@logdomainname.com</div>
     </div>
-)
+);
 
 const SecurityInfromationKeyfob = () => (
     <div className='employee_block'>
         <div className='title_column'>Keyfob</div>
         <div className='content_column'>Assign Keyfob</div>
     </div>
-)
+);
 
 /* ========== Employement block ========== */
 
@@ -338,14 +339,14 @@ const EmployementInfromationBank = () => (
         <div className='title_column'>Bank details</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
 const EmployementInfromationNation = () => (
     <div className='employee_block'>
         <div className='title_column'>National Insurance Number</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
 const EmployementInfromationContact = () => (
     <div className='employee_block'>
@@ -355,7 +356,7 @@ const EmployementInfromationContact = () => (
         <div className='title_column'>Flat 1, Charnwood House, Alexandra park, Albert Road NG42KJ, Nottingham</div>
 
     </div>
-)
+);
 
 /* ========== Additional block ========== */
 
@@ -375,53 +376,158 @@ const AdditionalInfromationShoe = () => (
         <div className='title_column'>Shoe size</div>
         <div className='content_column'>10</div>
     </div>
-)
+);
 
 const AdditionalInfromationWork = () => (
     <div className='employee_block'>
         <div className='title_column'>Work permit</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
 const AdditionalInfromationOther = () => (
     <div className='employee_block'>
         <div className='title_column'>Other information</div>
         <div className='title_column'>other details</div>
     </div>
-)
+);
 
 /* ========== Sidebar block ========== */
+
+const divStyle = {
+    width: '60%',
+    background: '#7f64b5'
+};
+
+const divStyle2 = {
+    width: '5%',
+    background: '#ffa424'
+};
+
+const divStyle3 = {
+    width: '20%',
+    background: '#f24b60'
+};
+
+const PopapHoliday = () => (
+    <Popup
+        trigger={
+            <div className="progress_bar">
+                <span style={divStyle}></span>
+                <span style={divStyle2}></span>
+                <span style={divStyle3}></span>
+            </div>
+        } positioning='bottom left'>
+        <Popup.Content>
+            <div className="popup_content">
+                <div className="popup_title">
+                    Holiday
+                </div>
+                <div className="popup_count">
+                    20 days
+                </div>
+            </div>
+        </Popup.Content>
+    </Popup>
+);
+
+const StatsticHoliday = () => (
+    <div className="statistic_holiday">
+        <div>
+            <span className="label">Vaction</span>
+            <span className="count">15</span>
+        </div>
+        <div>
+            <span className="label">Sick leave</span>
+            <span className="count">1&frac12;</span>
+        </div>
+        <div>
+            <span className="label">Maternity / Parenting</span>
+            <span className="count">4&frac12;</span>
+        </div>
+        <div className="static_result">
+            <div>
+                <span className="label">Used days</span>
+                <span className="count">21</span>
+            </div>
+            <div>
+                <span className="label">Left days</span>
+                <span className="count">4</span>
+            </div>
+        </div>
+        <a href="#" className="view_link">View calendar</a>
+    </div>
+);
 
 const SidebarAllowance = () => (
     <div className='employee_option_block'>
         <div className="sidebar_info">
             <div className='count_title'>Holliday Available</div>
             <div className='title_column'>You have in total 25 days for 2017</div>
-        </div>
-
-        <div className='count_sidebar'>
-            <div className='count_title'>Available</div>
-            <div className='count_time'>4 day</div>
-            <div className='count_sidebar_hover'></div>
+            <PopapHoliday/>
+            <StatsticHoliday/>
         </div>
     </div>
-)
+);
+
+const StatsticTimeCard = () => (
+    <div className="statistic_holiday">
+        <div>
+            <span className="label">Worked time</span>
+            <span className="count">35 hr</span>
+        </div>
+        <div>
+            <span className="label">Break time</span>
+            <span className="count">3 hr</span>
+        </div>
+        <hr className="hr"/>
+        <a href="#" className="view_link">View calendar</a>
+    </div>
+);
+
+
+const progres = {
+    width: '90%',
+    background: '#b8e986'
+};
+
+const progres2 = {
+    width: '3%',
+    background: '#fcfd99'
+};
+
+
+const PopapTimeCard = () => (
+    <Popup
+        trigger={
+            <div className="progress_bar">
+                <span style={progres}></span>
+                <span style={progres2}></span>
+            </div>
+        } positioning='bottom left'>
+        <Popup.Content>
+            <div className="popup_content">
+                <div className="popup_title">
+                    Holiday
+                </div>
+                <div className="popup_count">
+                    20 days
+                </div>
+            </div>
+        </Popup.Content>
+    </Popup>
+);
 
 const SidebarTimeCard = () => (
-    <div className='employee_option_block'>
+    <div className=''>
         <div className="sidebar_info">
             <div className='count_title'>Time card</div>
             <div className='title_column'>Your shift is: 08:00 -16:30</div>
-        </div>
-
-        <div className='count_sidebar'>
-            <div className='count_title'>Time Card</div>
-            <div className='count_time'>35 hr</div>
-            <div className='count_sidebar_hover'></div>
+            <PopapTimeCard/>
+            <StatsticTimeCard/>
         </div>
     </div>
-)
+);
 
 /* ========== Form Edit block ========== */
 
@@ -438,21 +544,13 @@ const options = [
         key: 'Spanish',
         text: 'Spanish',
         value: 'Spanish'
-    }, {
-        key: 'German',
-        text: 'German',
-        value: 'German'
-    }, {
-        key: 'Chinese',
-        text: 'Chinese',
-        value: 'Chinese'
     }
 ];
 
 class DropdownAccountType extends Component {
     state = {
         options
-    }
+    };
 
     handleAddition = (e, {value}) => {
         this.setState({
@@ -464,12 +562,12 @@ class DropdownAccountType extends Component {
                 ...this.state.options
             ]
         })
-    }
+    };
 
-    handleChange = (e, {value}) => this.setState({currentValue: value})
+    handleChange = (e, {value}) => this.setState({currentValue: value});
 
     render() {
-        const {currentValue} = this.state
+        const {currentValue} = this.state;
 
         return (<Dropdown
             options={this.state.options}
@@ -500,7 +598,7 @@ const EditProfile = () => (
         </Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
 
 const EditProfileEmail = () => (
     <Grid.Row>
@@ -526,7 +624,7 @@ const EditProfileEmail = () => (
         <Grid.Column></Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
 
 const EditProfilePhone = () => (
     <Grid.Row>
@@ -555,7 +653,7 @@ const EditProfilePhone = () => (
         </Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
 
 const EditProfileBirthday = () => (
     <Grid.Row>
@@ -572,12 +670,10 @@ const EditProfileBirthday = () => (
             </div>
         </Grid.Column>
         <Grid.Column>
-            <p className="descript_edit">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
         </Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
 
 const EditProfileStartDay = () => (
     <Grid.Row>
@@ -599,55 +695,8 @@ const EditProfileStartDay = () => (
         </Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
 
-const options2 = [
-    {
-        key: 'Joe Doe',
-        text: 'Joe Doe',
-        value: 'Joe Doe'
-    }, {
-        key: 'Jane Smith',
-        text: 'Jane Smith',
-        value: 'Jane Smith'
-    }
-]
-
-class DropdownManager extends Component {
-    state = {
-        options2
-    }
-
-    handleAddition = (e, {value}) => {
-        this.setState({
-            options: [
-                {
-                    text: value,
-                    value
-                },
-                ...this.state.options2
-            ]
-        })
-    }
-
-    handleChange = (e, {value}) => this.setState({currentValues: value})
-
-    render() {
-        const {currentValues} = this.state
-
-        return (<Dropdown
-            options={this.state.options2}
-            placeholder='Choose Languages'
-            search
-            selection
-            fluid
-            multiple
-            allowAdditions
-            value={currentValues}
-            onAddItem={this.handleAddition}
-            onChange={this.handleChange}/>)
-    }
-}
 
 const EditProfileManager = () => (
     <Grid.Row>
@@ -663,7 +712,90 @@ const EditProfileManager = () => (
         </Grid.Column>
         <hr className='hr_edit'/>
     </Grid.Row>
-)
+);
+
+const EditProfileHoliday = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <div className='input_edit'>
+                <label className='label_edit'>Manager</label>
+                <Input
+                    fluid
+                    disabled
+                    placeholder='day'
+                    defaultValue='25'
+                    className='input_color'/>
+            </div>
+        </Grid.Column>
+        <Grid.Column>
+            <Icon name='help circle' className='descript_icon'/>
+            <p className="descript_edit">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </Grid.Column>
+        <hr className='hr_edit'/>
+    </Grid.Row>
+);
+
+const EditProfileButton = () => (
+    <Grid.Row>
+        <Grid.Column width={8}>
+            <Button className="btn_cancel">Cancel</Button>
+        </Grid.Column>
+        <Grid.Column>
+            <Button floated='right' className="btn_save_change">Save Changes</Button>
+        </Grid.Column>
+    </Grid.Row>
+);
+
+
+const options2 = [
+    {
+        key: 'Joe Doe',
+        text: 'Joe Doe',
+        value: 'Joe Doe'
+    }, {
+        key: 'Jane Smith',
+        text: 'Jane Smith',
+        value: 'Jane Smith'
+    }
+];
+
+class DropdownManager extends Component {
+    state = {
+        options2
+    };
+
+    handleAddition = (e, {value}) => {
+        this.setState({
+            options2: [
+                {
+                    text: value,
+                    value
+                },
+                ...this.state.options2
+            ]
+        })
+    };
+
+    handleChange = (e, {value}) => this.setState({currentValues: value});
+
+    render() {
+        const {currentValues} = this.state;
+
+        return (<Dropdown
+            options={this.state.options2}
+            placeholder='Choose Manager'
+            search
+            selection
+            multiple
+            allowAdditions
+            value={currentValues}
+            onAddItem={this.handleAddition}
+            className='manager_dropdown'
+            onChange={this.handleChange}
+            fluid/>)
+    }
+}
 
 // Content
 const ContentMenu = () => (
@@ -699,6 +831,8 @@ const ContentMenu = () => (
                         <EditProfileStartDay/>
                         <EditProfileManager/>
                         <EditProfileStartDay/>
+                        <EditProfileHoliday/>
+                        <EditProfileButton/>
                     </Grid>
                 </div>
 
@@ -764,6 +898,7 @@ const ContentMenu = () => (
 export default class Employees extends Component {
     state = {};
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
+
     render() {
         const {activeItem} = this.state;
         return (

@@ -18,26 +18,26 @@ const HeaderTitle = () => (
         <Header as='h2' className="header_title_red">
             Delete(6) Records</Header>
     </div>
-)
+);
 
 const ProfileDays = () => (
     <div className="count_days floatRight">
         <div className="date_day">08</div>
         <div className="full_day">days</div>
     </div>
-)
+);
 
 const ProfileOption = () => (
     <div className="option_profile floatRight">
         <Icon name='ellipsis vertical'/>
     </div>
-)
+);
 
 const IconStatus = () => (
     <div className='icon_status'>
         <Icon name='plane'/>
     </div>
-)
+);
 
 const ImageAvatar = () => (
     <div className='profile_avatar'>
@@ -49,7 +49,7 @@ const ImageAvatar = () => (
             <span className="profile_position">Mechanical Designer</span>
         </span>
     </div>
-)
+);
 
 const ProfileBlock = () => (
     <div className="profile">
@@ -57,7 +57,7 @@ const ProfileBlock = () => (
         <ProfileOption/>
         <ProfileDays/>
     </div>
-)
+);
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -82,7 +82,7 @@ const GridExampleVerticallyDivided = () => (
             </Grid.Column>
         </Grid.Row>
     </Grid>
-)
+);
 
 const ModalWindowDelete = () => (
     <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
@@ -93,6 +93,6 @@ const ModalWindowDelete = () => (
             <GridExampleVerticallyDivided/>
         </Modal.Content>
     </Modal>
-)
+);
 
 export default ModalWindowDelete;
