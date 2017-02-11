@@ -43,11 +43,11 @@ const DropdownProfile = () => (
     </Dropdown>
 );
 
-const triger2 = (<Image src={dottedImg}/>);
+const trigger2 = (<Image src={dottedImg}/>);
 
 // Dropdown Option
 const DropdownOption = () => (
-    <Dropdown trigger={triger2} icon={null}>
+    <Dropdown trigger={trigger2} icon={null}>
         <Dropdown.Menu>
             <Dropdown.Item>All employees</Dropdown.Item>
             <Dropdown.Item>All employees</Dropdown.Item>
@@ -55,10 +55,11 @@ const DropdownOption = () => (
     </Dropdown>
 );
 
-const triger3 = (<Image src={appImg}/>);
+const trigger3 = (<Image src={appImg}/>);
+
 // Dropdown Menu
 const DropdownMenu = () => (
-    <Dropdown trigger={triger3} icon={null}>
+    <Dropdown trigger={trigger3} icon={null}>
         <Dropdown.Menu className="DropdownMenu">
             <div className="MenuItem">
                 <span>HR</span>
@@ -80,16 +81,18 @@ const DropdownMenu = () => (
     </Dropdown>
 );
 
-const triger4 = (<Image src={bellImg}/>);
+const trigger4 = (<Image src={bellImg}/>);
+
 // Dropdown Menu
 const DropdownNotice = () => (
-    <Dropdown trigger={triger4} icon={null}>
+    <Dropdown trigger={trigger4} icon={null}>
         <Dropdown.Menu>
             <Dropdown.Item>All employees</Dropdown.Item>
             <Dropdown.Item>All employees</Dropdown.Item>
         </Dropdown.Menu>
     </Dropdown>
 );
+
 // Dropdown All employees
 const DropdownEmployees = () => (
     <Dropdown text='Sort'>
@@ -112,6 +115,7 @@ const DropdownFilter = () => (
 const ButtonCircularAdd = () => (<Button circular icon='plus'/>);
 
 const InputSearch = () => (<Input icon='search' iconPosition='left' placeholder='Search...' transparent/>);
+
 // header
 const GridExampleColumns = () => (
     <header className="header">
@@ -143,8 +147,8 @@ const GridExampleColumns = () => (
                     <Grid.Row>
                         <Grid.Column mobile={7} tablet={6} computer={12}>
                             <a href="#" className="item header_title_menu">
-                           <a href="#" className="top_title_menu">Employees list ></a>
-                            Misty Smith</a>
+                                <a href="#" className="top_title_menu">Employees list ></a>
+                                Misty Smith</a>
                         </Grid.Column>
                         <Grid.Column mobile={9} tablet={10} computer={4}>
                             <div className="header_top_addEmp">
@@ -181,15 +185,17 @@ const GridExampleColumns = () => (
 class MenuExample extends Component {
     state = {
         activeItem: 'account'
-    }
-    handleItemClick = (e, {name}) => this.setState({activeItem: name})
+    };
+    handleItemClick = (e, {name}) => this.setState({activeItem: name});
+
     render() {
-        const {activeItem} = this.state
+        const {activeItem} = this.state;
         return (
             <div>
                 <Menu pointing secondary>
                     <Menu.Item name='account' active={activeItem === 'account'} onClick={this.handleItemClick}/>
-                    <Menu.Item name='Holiday calendar' active={activeItem === 'Holiday calendar'} onClick={this.handleItemClick}/>
+                    <Menu.Item name='Holiday calendar' active={activeItem === 'Holiday calendar'}
+                               onClick={this.handleItemClick}/>
                     <Menu.Item name='Time card' active={activeItem === 'Time card'} onClick={this.handleItemClick}/>
                     <Menu.Item name='log notes' active={activeItem === 'log notes'} onClick={this.handleItemClick}>
                         Log / Notes
@@ -200,7 +206,7 @@ class MenuExample extends Component {
     }
 }
 
-const AvatarInfromation = () => (
+const AvatarInformation = () => (
     <div className='avatar_info'>
         <div className='avatar_name'>
             Misty Smith
@@ -209,13 +215,13 @@ const AvatarInfromation = () => (
             Mechanical Designer
         </div>
     </div>
-)
+);
 
 const IconStatus = () => (
     <div className='employee_icon'>
         <Icon name='check circle'/>
     </div>
-)
+);
 
 const ButtonMakeRequest = () => (
     <div className="employee_option_block">
@@ -224,142 +230,37 @@ const ButtonMakeRequest = () => (
         </div>
     </div>
 
-)
+);
 
 // Avatar
 const EmployeeAvatar = () => (
     <div className='employee_avatar'>
         <Image src={avaBig} size='tiny' avatar/>
         <IconStatus/>
-        <AvatarInfromation/>
+        <AvatarInformation/>
     </div>
-)
+);
 
 const DepartmentMenu = () => (
     <div className='employee_block'>
         <div className='title_column'>Department</div>
         <div className='content_column'>Desing</div>
     </div>
-)
+);
 
 const LocationMenu = () => (
     <div className='employee_block'>
         <div className='title_column'>Location</div>
         <div className='content_column'>Old Dalby</div>
     </div>
-)
+);
 
 /* ========== Profile block ========== */
 
-const ProfileInfromation = () => (
+const ProfileInformation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
+        <div className="title_inform">
             Profile
-        </div>
-        <div className="title_column_lf">
-            Information...
-        </div>
-    </div>
-)
-
-const ProfileInfromationEmail = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Email</div>
-        <div className='content_column'>mitsy@longdomainname.com</div>
-        <div className='content_column'>secondmail@domain.com</div>
-    </div>
-)
-
-const ProfileInfromationPhone = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Phone</div>
-        <div className='content_column'>+44 7449 123 456</div>
-        <div className='content_column'>+359 899 132 456</div>
-    </div>
-)
-
-const ProfileInfromationBirday = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Date of birthday</div>
-        <div className='content_column'>07 / 07 / 1977</div>
-    </div>
-)
-
-const ProfileInfromationAcount = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Account type</div>
-        <div className='content_column'>Employee</div>
-    </div>
-)
-
-const ProfileInfromationStart = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Start Date</div>
-        <div className='content_column'>27/01/2014</div>
-    </div>
-)
-
-const ProfileInfromationManager = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Manager</div>
-        <div className='content_column'>Joe Doe</div>
-    </div>
-)
-
-const ProfileInfromationHoliday = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Holiday entitlement</div>
-        <div className='content_column'>25</div>
-    </div>
-)
-
-/* ========== Security block ========== */
-
-const SecurityInfromation = () => (
-    <div className='employee_block'>
-        <div className="title_infom">
-            Security
-        </div>
-        <div className="title_column_lf">
-            Information...
-        </div>
-    </div>
-)
-
-const SecurityInfromationPassword = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Password</div>
-        <div className='content_column'>Change password</div>
-    </div>
-)
-
-const SecurityInfromationLoginId = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Login ID</div>
-        <div className='content_column'>2314</div>
-    </div>
-)
-
-const SecurityInfromationPasswordLog = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Log in email</div>
-        <div className='content_column'>mitsy@logdomainname.com</div>
-    </div>
-)
-
-const SecurityInfromationKeyfob = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Keyfob</div>
-        <div className='content_column'>Assign Keyfob</div>
-    </div>
-)
-
-/* ========== Employement block ========== */
-
-const EmployementInfromation = () => (
-    <div className='employee_block'>
-        <div className="title_infom">
-            Employement datails
         </div>
         <div className="title_column_lf">
             Information...
@@ -367,21 +268,126 @@ const EmployementInfromation = () => (
     </div>
 );
 
-const EmployementInfromationBank = () => (
+const ProfileInformationEmail = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Email</div>
+        <div className='content_column'>mitsy@longdomainname.com</div>
+        <div className='content_column'>secondmail@domain.com</div>
+    </div>
+);
+
+const ProfileInformationPhone = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Phone</div>
+        <div className='content_column'>+44 7449 123 456</div>
+        <div className='content_column'>+359 899 132 456</div>
+    </div>
+);
+
+const ProfileInformationBirday = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Date of birthday</div>
+        <div className='content_column'>07 / 07 / 1977</div>
+    </div>
+);
+
+const ProfileInformationAcount = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Account type</div>
+        <div className='content_column'>Employee</div>
+    </div>
+);
+
+const ProfileInformationStart = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Start Date</div>
+        <div className='content_column'>27/01/2014</div>
+    </div>
+);
+
+const ProfileInformationManager = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Manager</div>
+        <div className='content_column'>Joe Doe</div>
+    </div>
+);
+
+const ProfileInformationHoliday = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Holiday entitlement</div>
+        <div className='content_column'>25</div>
+    </div>
+);
+
+/* ========== Security block ========== */
+
+const SecurityInformation = () => (
+    <div className='employee_block'>
+        <div className="title_inform">
+            Security
+        </div>
+        <div className="title_column_lf">
+            Information...
+        </div>
+    </div>
+);
+
+const SecurityInformationPassword = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Password</div>
+        <div className='content_column'>Change password</div>
+    </div>
+);
+
+const SecurityInformationLoginId = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Login ID</div>
+        <div className='content_column'>2314</div>
+    </div>
+);
+
+const SecurityInformationPasswordLog = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Log in email</div>
+        <div className='content_column'>mitsy@logdomainname.com</div>
+    </div>
+);
+
+const SecurityInformationKeyfob = () => (
+    <div className='employee_block'>
+        <div className='title_column'>Keyfob</div>
+        <div className='content_column'>Assign Keyfob</div>
+    </div>
+);
+
+/* ========== Employment block ========== */
+
+const EmploymentInformation = () => (
+    <div className='employee_block'>
+        <div className="title_inform">
+            Employment datails
+        </div>
+        <div className="title_column_lf">
+            Information...
+        </div>
+    </div>
+);
+
+const EmploymentInformationBank = () => (
     <div className='employee_block'>
         <div className='title_column'>Bank details</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
-const EmployementInfromationNation = () => (
+const EmploymentInformationNation = () => (
     <div className='employee_block'>
         <div className='title_column'>National Insurance Number</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
-const EmployementInfromationContact = () => (
+const EmploymentInformationContact = () => (
     <div className='employee_block'>
         <div className='title_column'>Emergency contact</div>
         <div className='title_column'>Julia Smith - partner</div>
@@ -389,13 +395,13 @@ const EmployementInfromationContact = () => (
         <div className='title_column'>Flat 1, Charnwood House, Alexandra park, Albert Road NG42KJ, Nottingham</div>
 
     </div>
-)
+);
 
 /* ========== Additional block ========== */
 
-const AdditionalInfromation = () => (
+const AdditionalInformation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
+        <div className="title_inform">
             Additional information
         </div>
         <div className="title_column_lf">
@@ -404,62 +410,60 @@ const AdditionalInfromation = () => (
     </div>
 );
 
-const AdditionalInfromationShoe = () => (
+const AdditionalInformationShoe = () => (
     <div className='employee_block'>
         <div className='title_column'>Shoe size</div>
         <div className='content_column'>10</div>
     </div>
-)
+);
 
-const AdditionalInfromationWork = () => (
+const AdditionalInformationWork = () => (
     <div className='employee_block'>
         <div className='title_column'>Work permit</div>
         <div className='content_column'>Change detaills</div>
     </div>
-)
+);
 
-const AdditionalInfromationOther = () => (
+const AdditionalInformationOther = () => (
     <div className='employee_block'>
         <div className='title_column'>Other information</div>
         <div className='title_column'>other details</div>
     </div>
-)
+);
 
 /* ========== Sidebar block ========== */
 
 const SidebarAllowance = () => (
     <div className='employee_option_block'>
-         <div className="sidebar_info">
-            <div className='count_title'>Holliday Available</div>
+        <div className="sidebar_info">
+            <div className='count_title'>Holiday Available</div>
             <div className='title_column'>You have in total 25 days for 2017</div>
-         </div>
+        </div>
 
         <div className='count_sidebar'>
             <div className='count_title'>Available</div>
             <div className='count_time'>4 day</div>
             <div className='count_sidebar_hover'>
-             </div>
-        </div>
-    </div>
-)
-
-const SidebarTimeCard = () => (
-    <div className='employee_option_block'>
-         <div className="sidebar_info">
-            <div className='count_title'>Time card</div>
-            <div className='title_column'>Your shift is: 08:00 -16:30</div>
-         </div>
-
-        <div className='count_sidebar'>
-        <div className='count_title'>Time Card</div>
-        <div className='count_time'>35 hr</div>
-           <div className='count_sidebar_hover'>
             </div>
         </div>
     </div>
-)
+);
 
+const SidebarTimeCard = () => (
+    <div className='employee_option_block'>
+        <div className="sidebar_info">
+            <div className='count_title'>Time card</div>
+            <div className='title_column'>Your shift is: 08:00 -16:30</div>
+        </div>
 
+        <div className='count_sidebar'>
+            <div className='count_title'>Time Card</div>
+            <div className='count_time'>35 hr</div>
+            <div className='count_sidebar_hover'>
+            </div>
+        </div>
+    </div>
+);
 
 // Content
 const ContentMenu = () => (
@@ -483,54 +487,54 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
-                            <ProfileInfromation/>
+                            <ProfileInformation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <ProfileInfromationEmail/>
-                            <ProfileInfromationPhone/>
-                            <ProfileInfromationBirday/>
+                            <ProfileInformationEmail/>
+                            <ProfileInformationPhone/>
+                            <ProfileInformationBirday/>
                         </Grid.Column>
                         <Grid.Column>
-                            <ProfileInfromationAcount/>
-                            <ProfileInfromationStart/>
-                            <ProfileInfromationManager/>
-                            <ProfileInfromationHoliday/>
+                            <ProfileInformationAcount/>
+                            <ProfileInformationStart/>
+                            <ProfileInformationManager/>
+                            <ProfileInformationHoliday/>
                         </Grid.Column>
                     </Grid>
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
-                            <SecurityInfromation/>
+                            <SecurityInformation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <SecurityInfromationPassword/>
-                            <SecurityInfromationLoginId/>
+                            <SecurityInformationPassword/>
+                            <SecurityInformationLoginId/>
                         </Grid.Column>
                         <Grid.Column>
-                            <SecurityInfromationPasswordLog/>
-                            <SecurityInfromationKeyfob/>
+                            <SecurityInformationPasswordLog/>
+                            <SecurityInformationKeyfob/>
                         </Grid.Column>
                     </Grid>
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
-                            <EmployementInfromation/>
+                            <EmploymentInformation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <EmployementInfromationBank/>
-                            <EmployementInfromationNation/>
+                            <EmploymentInformationBank/>
+                            <EmploymentInformationNation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <EmployementInfromationContact/>
+                            <EmploymentInformationContact/>
                         </Grid.Column>
                     </Grid>
                     <a href='#' className='edit'>Edit</a>
@@ -539,14 +543,14 @@ const ContentMenu = () => (
                 <div className='employee_profile_info'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
-                            <AdditionalInfromation/>
+                            <AdditionalInformation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <AdditionalInfromationShoe/>
-                            <AdditionalInfromationWork/>
+                            <AdditionalInformationShoe/>
+                            <AdditionalInformationWork/>
                         </Grid.Column>
                         <Grid.Column>
-                            <AdditionalInfromationOther/>
+                            <AdditionalInformationOther/>
                         </Grid.Column>
                     </Grid>
                     <a href='#' className='edit'>Edit</a>
@@ -565,6 +569,7 @@ const ContentMenu = () => (
 export default class Employees extends Component {
     state = {};
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
+
     render() {
         const {activeItem} = this.state;
         return (

@@ -25,7 +25,7 @@ header .header_top_search .header_top_searchDown.filter_dropdown {
 }
 
 header .header_top_menu .item.header_title_menu {
-    font-family: "ProximaNovaRegular", serif;;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 20px;
     color: #fff;
     vertical-align: middle;
@@ -49,7 +49,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .active.item {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
     border-color: #7f64b5;
     border-width: 4px;
@@ -262,38 +262,38 @@ header .header_top_menu .item.header_title_menu {
 
 .avatar_name {
     color: #5c5c5c;
-    font-family: "Proxima Nova", serif;;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 18px;
 }
 
 .avatar_position {
     color: #927bc2;
-    font-family: "Proxima Nova", serif;;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
 }
 
 .title_column {
     color: #5c5c5c;
-    font-family: "ProximaNovaRegular", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
 }
 
 .title_column_lf {
     color: #7b899e;
-    font-family: "ProximaNovaLight", serif;
+    font-family: 'ProximaNovaLight', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
 }
 
 .content_column {
     color: #927bc2;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
     padding-bottom: 5px;
 }
 
-.title_infom {
+.title_inform {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
 }
 
@@ -312,7 +312,7 @@ header .header_top_menu .item.header_title_menu {
     position: relative;
 }
 
-.border_bottm {
+.border_bottom {
     border-bottom: 2px solid hsla(210, 6%, 14%, 0.15);
     padding-bottom: 20px;
 }
@@ -414,33 +414,33 @@ header .header_top_menu .item.header_title_menu {
 
 .count_title {
     color: #4a4a4a;
-    font-family: "ProximaNovaBold", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
 }
 
 .count_time {
-    font-family: "ProximaNovaRegular", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
     color: #927bc2;
 }
 
 .label_edit {
     color: #5c5c5c;
-    font-family: "ProximaNovaLight", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
     padding-left: 5px;
 }
 
 .ui.selection.dropdown.dropdown_edit {
     color: #927bc2;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
     width: 100%;
 }
 
 .descript_edit {
     color: #738094;
-    font-family: "ProximaNovaRegular", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 12px;
     margin-left: 20px;
 }
@@ -454,7 +454,7 @@ i.descript_icon {
 }
 
 .input_color.ui.input input {
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     color: #927bc2;
     margin: .5em 0;
     font-size: 13px;
@@ -491,7 +491,7 @@ i.input_icon {
 
 .input_edit .ui.multiple.dropdown > .label {
     color: #927bc2;
-    font-family: "Proxima Nova", 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
     background: #f7f8fa;
     padding: 6px 12px;
@@ -562,19 +562,19 @@ i.input_icon {
 
 .popup_title {
     color: #ababab;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
 }
 
 .popup_count {
     color: #424242;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 12px;
 }
 
 .statistic_holiday {
     font-size: 13px;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     line-height: 2;
 }
 
@@ -590,11 +590,12 @@ i.input_icon {
 
 .static_result {
     font-size: 15px;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     background: #efefef;
     border-top: 1px solid #e6ebf0;
     border-bottom: 1px solid #e6ebf0;
     padding: 5px 0;
+    margin-top: 20px;
 
 }
 
@@ -611,7 +612,7 @@ i.input_icon {
 .view_link {
     padding-top: 10px;
     display: block;
-    font-family: "ProximaNovaRegular", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     text-align: center;
 }
 
@@ -624,19 +625,19 @@ i.input_icon {
 
 .employee_info_block h5 {
     color: #5c5c5c;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 15px;
 }
 
 .employee_info_block p {
     color: #5c5c5c;
-    font-family: "ProximaNovaRegular", serif;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
 }
 
 .employee_info_block span {
     color: #7f64b5;
-    font-family: "Proxima Nova", serif;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 14px;
     font-weight: 600;
 }
@@ -652,4 +653,31 @@ i.input_icon {
 
 .employee_info_block i:hover {
     color: #bfbfbf;
+}
+
+.statistic_square {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.clr_vac {
+    background: #e3d5ff;
+}
+
+.clr_sick {
+    background: #ffc26a;
+}
+
+.clr_mater {
+    background: #ff8d9b;
+}
+
+.clr_anu {
+    background: #f24b60;
+}
+
+.clr_blank {
+    background: #dbf4c2;
 }

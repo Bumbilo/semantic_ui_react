@@ -187,7 +187,7 @@ class MenuExample extends Component {
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
 
     render() {
-        const {activeItem} = this.state
+        const {activeItem} = this.state;
         return (
             <div>
                 <Menu pointing secondary>
@@ -257,7 +257,7 @@ const LocationMenu = () => (
 
 const ProfileInfromation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
+        <div className="title_inform">
             Profile
         </div>
         <div className="title_column_lf">
@@ -321,7 +321,7 @@ const ProfileInfromationHoliday = () => (
 
 const SecurityInfromation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
+        <div className="title_inform">
             Security
         </div>
         <div className="title_column_lf">
@@ -358,12 +358,12 @@ const SecurityInfromationKeyfob = () => (
     </div>
 );
 
-/* ========== Employement block ========== */
+/* ========== Employment block ========== */
 
-const EmployementInfromation = () => (
+const EmploymentInfromation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
-            Employement datails
+        <div className="title_inform">
+            Employment datails
         </div>
         <div className="title_column_lf">
             Information...
@@ -371,21 +371,21 @@ const EmployementInfromation = () => (
     </div>
 );
 
-const EmployementInfromationBank = () => (
+const EmploymentInfromationBank = () => (
     <div className='employee_block'>
         <div className='title_column'>Bank details</div>
         <div className='content_column'>Change detaills</div>
     </div>
 );
 
-const EmployementInfromationNation = () => (
+const EmploymentInfromationNation = () => (
     <div className='employee_block'>
         <div className='title_column'>National Insurance Number</div>
         <div className='content_column'>Change detaills</div>
     </div>
 );
 
-const EmployementInfromationContact = () => (
+const EmploymentInfromationContact = () => (
     <div className='employee_block'>
         <div className='title_column'>Emergency contact</div>
         <div className='title_column'>Julia Smith - partner</div>
@@ -399,7 +399,7 @@ const EmployementInfromationContact = () => (
 
 const AdditionalInfromation = () => (
     <div className='employee_block'>
-        <div className="title_infom">
+        <div className="title_inform">
             Additional information
         </div>
         <div className="title_column_lf">
@@ -431,56 +431,138 @@ const AdditionalInfromationOther = () => (
 
 /* ========== Sidebar block ========== */
 
-const divStyle = {
+const HolidayProgress = {
     width: '60%',
-    background: '#7f64b5'
+    background: '#e3d5ff'
 };
 
-const divStyle2 = {
-    width: '5%',
-    background: '#ffa424'
-};
-
-const divStyle3 = {
-    width: '20%',
+const HolidayProgress2 = {
+    width: '10%',
     background: '#f24b60'
 };
 
-const PopapHoliday = () => (
+const HolidayProgress3 = {
+    width: '5%',
+    background: '#ffc26a'
+};
+
+const HolidayProgress4 = {
+    width: '10%',
+    background: '#ff8d9b'
+};
+
+const HolidayProgress5 = {
+    width: '15%',
+    background: '#e6ebf0'
+};
+
+const PopupHoliday1 = () => (
     <Popup
-        trigger={
-            <div className="progress_bar">
-                <span style={divStyle}></span>
-                <span style={divStyle2}></span>
-                <span style={divStyle3}></span>
+        trigger={<span style={HolidayProgress}></span>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Holiday
             </div>
-        } positioning='bottom left'>
-        <Popup.Content>
-            <div className="popup_content">
-                <div className="popup_title">
-                    Holiday
-                </div>
-                <div className="popup_count">
-                    20 days
-                </div>
+            <div className="popup_count">
+                15 days
             </div>
-        </Popup.Content>
+        </div>
     </Popup>
 );
 
-const StatsticHoliday = () => (
+const PopupHoliday2 = () => (
+    <Popup
+        trigger={<span style={HolidayProgress2}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Holiday
+            </div>
+            <div className="popup_count">
+                4 days
+            </div>
+        </div>
+    </Popup>
+);
+
+
+const PopupHoliday3 = () => (
+    <Popup
+        trigger={<span style={HolidayProgress3}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Holiday
+            </div>
+            <div className="popup_count">
+                4 days
+            </div>
+        </div>
+    </Popup>
+);
+
+const PopupHoliday4 = () => (
+    <Popup
+        trigger={<span style={HolidayProgress4}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Holiday
+            </div>
+            <div className="popup_count">
+                Other
+            </div>
+        </div>
+    </Popup>
+);
+
+const PopupHoliday5 = () => (
+    <Popup
+        trigger={<span style={HolidayProgress5}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Holiday
+            </div>
+            <div className="popup_count">
+                Other
+            </div>
+        </div>
+    </Popup>
+);
+
+const ProgressBarHoliday = () => (
+    <div className="progress_bar">
+        <PopupHoliday1/>
+        <PopupHoliday2/>
+        <PopupHoliday3/>
+        <PopupHoliday4/>
+        <PopupHoliday5/>
+    </div>
+);
+
+const StatisticHoliday = () => (
     <div className="statistic_holiday">
         <div>
+            <div className="statistic_square clr_vac"></div>
             <span className="label">Vaction</span>
             <span className="count">15</span>
         </div>
         <div>
+            <div className="statistic_square clr_sick"></div>
             <span className="label">Sick leave</span>
             <span className="count">1&frac12;</span>
         </div>
         <div>
+            <div className="statistic_square clr_mater"></div>
             <span className="label">Maternity / Parenting</span>
-            <span className="count">4&frac12;</span>
+            <span className="count">2&frac12;</span>
+        </div>
+        <div>
+            <div className="statistic_square clr_anu"></div>
+            <span className="label">Unauthorised absence</span>
+            <span className="count">2</span>
+        </div>
+        <div>
+            <div className="statistic_square clr_blank"></div>
+            <span className="label">Blank holiday days</span>
+            <span className="count">8</span>
         </div>
         <div className="static_result">
             <div>
@@ -501,13 +583,13 @@ const SidebarAllowance = () => (
         <div className="sidebar_info">
             <div className='count_title'>Holliday Available</div>
             <div className='title_column'>You have in total 25 days for 2017</div>
-            <PopapHoliday/>
-            <StatsticHoliday/>
+            <ProgressBarHoliday/>
+            <StatisticHoliday/>
         </div>
     </div>
 );
 
-const StatsticTimeCard = () => (
+const StatisticTimeCard = () => (
     <div className="statistic_holiday">
         <div>
             <span className="label">Worked time</span>
@@ -522,37 +604,67 @@ const StatsticTimeCard = () => (
     </div>
 );
 
-
-const progres = {
+// Popup TimeCard
+const TimeProgress = {
     width: '90%',
     background: '#b8e986'
 };
 
-const progres2 = {
+const TimeProgress2 = {
     width: '3%',
     background: '#fcfd99'
 };
 
+const TimeProgress3 = {
+    width: '7%',
+    background: '#e6ebf0'
+};
 
-const PopapTimeCard = () => (
-    <Popup
-        trigger={
-            <div className="progress_bar">
-                <span style={progres}></span>
-                <span style={progres2}></span>
+const PopupTimeCard = () => (
+    <Popup trigger={<span style={TimeProgress}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Worked time
             </div>
-        } positioning='bottom left'>
-        <Popup.Content>
-            <div className="popup_content">
-                <div className="popup_title">
-                    Holiday
-                </div>
-                <div className="popup_count">
-                    20 days
-                </div>
+            <div className="popup_count">
+                35 hours
             </div>
-        </Popup.Content>
+        </div>
     </Popup>
+);
+
+const PopupTimeCard2 = () => (
+    <Popup trigger={<span style={TimeProgress2}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Worked time
+            </div>
+            <div className="popup_count">
+                3 hours
+            </div>
+        </div>
+    </Popup>
+);
+
+const PopupTimeCard3 = () => (
+    <Popup trigger={<span style={TimeProgress3}/>} positioning='bottom center'>
+        <div className="popup_content">
+            <div className="popup_title">
+                Worked time
+            </div>
+            <div className="popup_count">
+                Other
+            </div>
+        </div>
+    </Popup>
+);
+
+const ProgressBarTime = () => (
+    <div className="progress_bar">
+        <PopupTimeCard/>
+        <PopupTimeCard2/>
+        <PopupTimeCard3/>
+    </div>
 );
 
 const SidebarTimeCard = () => (
@@ -560,8 +672,8 @@ const SidebarTimeCard = () => (
         <div className="sidebar_info">
             <div className='count_title'>Time card</div>
             <div className='title_column'>Your shift is: 08:00 -16:30</div>
-            <PopapTimeCard/>
-            <StatsticTimeCard/>
+            <ProgressBarTime/>
+            <StatisticTimeCard/>
         </div>
     </div>
 );
@@ -569,7 +681,8 @@ const SidebarTimeCard = () => (
 const InformationBlock = () => (
     <Segment padded className="employee_info_block">
         <h5>Add Emergency Contact Information to Your Phone's</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur <span>typesetting industry</span>. Architecto atque consequuntur cum ea eum facilis
+        <p>Lorem ipsum dolor sit amet, consectetur <span>typesetting industry</span>. Architecto atque consequuntur cum
+            ea eum facilis
             fugiat iusto magni maxime modi molestias numquam odit officiis omnis praesentium ratione, reiciendis
             reprehenderit voluptates.</p>
         <Icon name='remove circle'/>
@@ -598,7 +711,7 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
                             <ProfileInfromation/>
@@ -618,7 +731,7 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
                             <SecurityInfromation/>
@@ -635,17 +748,17 @@ const ContentMenu = () => (
                     <a href='#' className='edit'>Edit</a>
                 </div>
 
-                <div className='employee_profile_info border_bottm'>
+                <div className='employee_profile_info border_bottom'>
                     <Grid columns='equal'>
                         <Grid.Column width={6}>
-                            <EmployementInfromation/>
+                            <EmploymentInfromation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <EmployementInfromationBank/>
-                            <EmployementInfromationNation/>
+                            <EmploymentInfromationBank/>
+                            <EmploymentInfromationNation/>
                         </Grid.Column>
                         <Grid.Column>
-                            <EmployementInfromationContact/>
+                            <EmploymentInfromationContact/>
                         </Grid.Column>
                     </Grid>
                     <a href='#' className='edit'>Edit</a>

@@ -414,6 +414,7 @@ p {
     height: 200px;
     background: #f3f8fc;
 }
+
 .img_header_photo {
     width: 82px;
 }
@@ -431,7 +432,7 @@ h2.ui.header.header_employee {
     margin-right: 25px;
 }
 
-.ui.selection.dropdown.dropdown_modal{
+.ui.selection.dropdown.dropdown_modal {
     width: 18.5em;
     height: 32px;
     margin-right: 25px;
@@ -441,11 +442,9 @@ h2.ui.header.header_employee {
     padding: 1em 4em;
 }
 
-
-
 .label_input {
     display: inline-block;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .add_new_employee, .add_new_employee2 {
@@ -455,12 +454,12 @@ h2.ui.header.header_employee {
     height: 150px;
     border-radius: 3px;
     border: 1px solid #cbcbcb;
-    background: #fff url('../../images/icon_add_employee.png')no-repeat 50% 30%;
+    background: #fff url('../../images/icon_add_employee.png') no-repeat 50% 30%;
     padding-top: 90px;
 }
 
 .add_new_employee2 {
-    background: #fff url('../../images/icon_time.png')no-repeat 50% 30%;
+    background: #fff url('../../images/icon_time.png') no-repeat 50% 30%;
 }
 
 .select_option {
@@ -493,4 +492,8 @@ h2.ui.header.header_employee {
     color: #9b9b9b;
     font-size: 15px;
     vertical-align: bottom;
+}
+
+.input_position {
+    padding: 0 1.8em;
 }

@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {
     Button,
     Header,
-    Icon,
     Modal,
     Grid,
     Dropdown,
-    Checkbox,
     Input
 } from 'semantic-ui-react';
 import varning from '../../images/icon_add_phone.png';
@@ -20,36 +18,28 @@ const HeaderTitle = () => (
     </div>
 );
 
-const IconStatus = () => (
-    <div className='status_icon'>
-        <Icon name='check circle outline'/>
-        <span>
-            Active</span>
-    </div>
-);
-
 const InputFirstName = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">First name</span>
-        <Input size='small' className='input_modal' />
+        <Input size='small' className='input_modal'/>
     </div>
 );
 
 const InputLastName = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">Last name</span>
-        <Input size='small' className='input_modal' />
+        <Input size='small' className='input_modal'/>
     </div>
 );
 
 const InputMobile = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">Mobile number</span>
-        <Input size='small' className='input_modal' />
+        <Input size='small' className='input_modal'/>
     </div>
 );
 
-const positon = [
+const position = [
     {
         value: 'articles1',
         text: 'Position'
@@ -59,7 +49,7 @@ const positon = [
     }
 ];
 
-const positon2 = [
+const position2 = [
     {
         value: 'articles1',
         text: '08:00 - 16:00'
@@ -72,34 +62,30 @@ const positon2 = [
 const InputEmail = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">Email</span>
-        <Input size='small' className='input_modal' placeholder='Enter email address' />
+        <Input size='small' className='input_modal' placeholder='Enter email address'/>
     </div>
 );
 
- const DropdownSupervisor = () => (
+const DropdownSupervisor = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">Account type</span><Dropdown placeholder='Select supervisor' selection
-                                                                    options={positon} className='dropdown_modal'/>
+                                                                          options={position} className='dropdown_modal'/>
     </div>
 );
 
 const PositionWork = () => (
-    <div>
+    <div className="input_position">
         <label className='  label_input'>What postion(s) does this person work? </label>
-         <Input fluid icon='plus' placeholder='i.e Designer, Team lead, Coordinator, etc.'/>
+        <Input fluid icon='plus' placeholder='i.e Designer, Team lead, Coordinator, etc.'/>
     </div>
 );
 
 const DropdownSupervisor2 = () => (
     <div className='floatRight'>
         <span className="label_dropdown_mod">Work shift</span><Dropdown placeholder='08:00 - 16:00' selection
-                                                                  options={positon2} className='dropdown_modal'/>
+                                                                        options={position2} className='dropdown_modal'/>
     </div>
 );
-
-const CheckboxModal = () => (<Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>);
-
-const CheckboxModal2 = () => (<Checkbox label='Lorem ipsum is simply text of the' className="checkbox_modal"/>);
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -116,9 +102,9 @@ const GridExampleVerticallyDivided = () => (
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-        <Grid.Column>
-            <PositionWork/>    
-        </Grid.Column>
+            <Grid.Column>
+                <PositionWork/>
+            </Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
             <Grid.Column floated='right'>

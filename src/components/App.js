@@ -19,7 +19,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalSelectOption/>);
+        return (<ModalWindowEmployee/>);
     }
 }
 
