@@ -14,12 +14,13 @@ import ModalWindowEmployee from './modal/modal_add_employee';
 import ModalSelectOption from './modal/modal_select_option'
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
-import EployeeForm from './employee/employee_form'
+import EployeeForm from './employee/employee_form';
+import EmployeeCalendar from './employee/employee_calendar'
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalWindowEmployee/>);
+        return (<EmployeeCalendar/>);
     }
 }
 
