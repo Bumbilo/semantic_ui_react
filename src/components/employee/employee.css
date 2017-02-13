@@ -681,3 +681,164 @@ i.input_icon {
 .clr_blank {
     background: #dbf4c2;
 }
+
+.holiday_request {
+    padding: 10px 0;
+}
+
+.request_item {
+    border: 1px solid #e4e5e7;
+    padding: 10px;
+    border-radius: 3px;
+    background: #fff;
+    margin-top: 10px;
+}
+
+.request_first_date, .request_last_date {
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 7px;
+    vertical-align: middle;
+}
+
+.request_date_day {
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    color: #4a4a4a;
+    font-size: 13px;
+}
+
+.request_full_day {
+    color: #888888;
+    font-size: 12px;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.request_arrow{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.btn_request_item {
+    float: right;
+    margin-top: 5px;
+    padding: 3px;
+    margin-right: 7px;
+    border-radius: .28571429rem;
+    background-color: #fff;
+    color: #7b7b7b;
+    border: 1px solid #e4e5e7;
+}
+
+.btn_request_item i {
+    padding-left: 3px;
+}
+
+.btn_request_item.btn_orange {
+    border: 1px solid #ffc62d;
+    background: #fffff6;
+    color: #ffc62d;
+}
+
+.btn_request_item.btn_red {
+    border: 1px solid #e0b4b4;
+    background: #fff6f6;
+    color: #d82b40;
+}
+
+    /* ========== Date Picker ========== */
+
+.date_picker {
+    width: 200px;
+    overflow: hidden;
+}
+
+.date_picker .DayPicker {
+    width: 200px;
+}
+
+.date_picker .CalendarDay {
+    font-size: 12px;
+    width: 23px;
+    height: 23px !important;
+    border: none;
+}
+
+.date_picker .date_picker .CalendarDay {
+    width: 190px;
+    padding: 0 13px;
+}
+
+.date_picker .DayPicker__week-header li {
+    width: 23px;
+}
+
+.date_picker .DayPicker__week-header {
+    top: 50px;
+    width: 190px;
+}
+
+.date_picker .transition-container {
+    width: 200px;
+    min-height: 217px;
+}
+
+.date_picker .CalendarMonthGrid--horizontal {
+    width: 200px !important;
+    min-height: 200px;
+}
+
+.border_calendar_month {
+    border: 1px dashed #dcdddf;
+    padding: 0 20px 0 20px;
+}
+
+.calendar_year {
+    width: 100%;
+}
+
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
+.DayPickerNavigation--horizontal .DayPickerNavigation__next,
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+    padding: 0;
+    top: 23px;
+}
+
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg,
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
+    height: 11px;
+    width: 14px;
+}
+
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+    right: 140px;
+    padding: 0;
+}
+
+.date_picker .CalendarMonth__caption {
+    color: #737373;
+    font-size: 14px;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.title_calendar {
+    padding: 10px;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    color: #737373;
+}
+
+.title_calendar i {
+    border: 1px solid #e4e5e7;
+    background: #f9f9fb;
+    color: #737373;
+    vertical-align: middle;
+    margin: 0 5px;
+    padding: 0;
+    width: 16px;
+    font-size: 0.7em;
+    line-height: 1.5;
+    height: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}

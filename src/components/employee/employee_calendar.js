@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {SingleDatePicker, DateRangePicker, DayPicker} from 'react-dates';
 import {
     Dropdown,
     Grid,
@@ -16,6 +17,7 @@ import avaBig from '../../images/avaBig.png'
 import appImg from '../../images/apps.svg';
 import dottedImg from '../../images/dotted.svg';
 import bellImg from '../../images/bell.svg';
+import 'react-dates/lib/css/_datepicker.css';
 import '../../CSS/fonts.css';
 import './employee.css';
 
@@ -267,78 +269,6 @@ const LocationMenu = () => (
     </div>
 );
 
-/* ========== Employement block ========== */
-
-const EmployementInfromation = () => (
-    <div className='employee_block'>
-        <div className="title_inform">
-            Employement datails
-        </div>
-        <div className="title_column_lf">
-            Information...
-        </div>
-    </div>
-);
-
-const EmployementInfromationBank = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Bank details</div>
-        <div className='content_column'>Change detaills</div>
-    </div>
-);
-
-const EmployementInfromationNation = () => (
-    <div className='employee_block'>
-        <div className='title_column'>National Insurance Number</div>
-        <div className='content_column'>Change detaills</div>
-    </div>
-);
-
-const EmployementInfromationContact = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Emergency contact</div>
-        <div className='title_column'>Julia Smith - partner</div>
-        <div className='title_column'>+44 7777 123 456</div>
-        <div className='title_column'>Flat 1, Charnwood House, Alexandra park, Albert Road NG42KJ, Nottingham</div>
-
-    </div>
-);
-
-/* ========== Additional block ========== */
-
-const AdditionalInfromation = () => (
-    <div className='employee_block'>
-        <div className="title_inform">
-            Additional information
-        </div>
-        <div className="title_column_lf">
-            Information...
-        </div>
-    </div>
-);
-
-const AdditionalInfromationShoe = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Shoe size</div>
-        <div className='content_column'>10</div>
-    </div>
-);
-
-const AdditionalInfromationWork = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Work permit</div>
-        <div className='content_column'>Change detaills</div>
-    </div>
-);
-
-const AdditionalInfromationOther = () => (
-    <div className='employee_block'>
-        <div className='title_column'>Other information</div>
-        <div className='title_column'>other details</div>
-    </div>
-);
-
-
 /* ========== Sidebar block ========== */
 
 const HolidayProgress = {
@@ -499,93 +429,99 @@ const SidebarAllowance = () => (
     </div>
 );
 
-const StatisticTimeCard = () => (
-    <div className="statistic_holiday">
-        <div>
-            <span className="label">Worked time</span>
-            <span className="count">35 hr</span>
+
+
+const HolidayRequestItem = () => (
+    <div className="request_item">
+        <div className="request_first_date">
+            <div className="request_date_day">01 Jan 17</div>
+            <div className="request_full_day">Full day</div>
         </div>
-        <div>
-            <span className="label">Break time</span>
-            <span className="count">3 hr</span>
+        <div className="request_arrow">
+            <Icon name="arrow right"/>
         </div>
-        <hr className="hr"/>
-        <a href="#" className="view_link">View calendar</a>
+        <div className="request_last_date">
+            <div className="request_date_day">08 Jan 17</div>
+            <div className="request_full_day">Full day</div>
+        </div>
+        <button basic className="btn_request_item"> <Icon disabled name='ellipsis vertical'/></button>
+        <button basic className="btn_request_item btn_orange"> <Icon  name='info'/></button>
+        <button basic className="btn_request_item btn_red"> <Icon  name='close'/></button>
     </div>
 );
 
-// Popup TimeCard
-const TimeProgress = {
-    width: '90%',
-    background: '#b8e986'
-};
-
-const TimeProgress2 = {
-    width: '3%',
-    background: '#fcfd99'
-};
-
-const TimeProgress3 = {
-    width: '7%',
-    background: '#e6ebf0'
-};
-
-const PopupTimeCard = () => (
-    <Popup trigger={<span style={TimeProgress}/>} positioning='bottom center'>
-        <div className="popup_content">
-            <div className="popup_title">
-                Worked time
-            </div>
-            <div className="popup_count">
-                35 hours
-            </div>
-        </div>
-    </Popup>
-);
-
-const PopupTimeCard2 = () => (
-    <Popup trigger={<span style={TimeProgress2}/>} positioning='bottom center'>
-        <div className="popup_content">
-            <div className="popup_title">
-                Worked time
-            </div>
-            <div className="popup_count">
-                3 hours
-            </div>
-        </div>
-    </Popup>
-);
-
-const PopupTimeCard3 = () => (
-    <Popup trigger={<span style={TimeProgress3}/>} positioning='bottom center'>
-        <div className="popup_content">
-            <div className="popup_title">
-                Worked time
-            </div>
-            <div className="popup_count">
-                Other
-            </div>
-        </div>
-    </Popup>
-);
-
-const ProgressBarTime = () => (
-    <div className="progress_bar">
-        <PopupTimeCard/>
-        <PopupTimeCard2/>
-        <PopupTimeCard3/>
+const HolidayRequest = () => (
+    <div className="holiday_request">
+        <div className='count_title'>Holiday request</div>
+        <HolidayRequestItem/>
+        <HolidayRequestItem/>
+        <HolidayRequestItem/>
     </div>
 );
 
-const SidebarTimeCard = () => (
-    <div className=''>
-        <div className="sidebar_info">
-            <div className='count_title'>Time card</div>
-            <div className='title_column'>Your shift is: 08:00 -16:30</div>
-            <ProgressBarTime/>
-            <StatisticTimeCard/>
-        </div>
-    </div>
+
+class DateRangePickerWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            focusedInput: null,
+            startDate: null,
+            endDate: null,
+        };
+
+        this.onDatesChange = this.onDatesChange.bind(this);
+        this.onFocusChange = this.onFocusChange.bind(this);
+    }
+
+    onDatesChange({startDate, endDate}) {
+        this.setState({startDate, endDate});
+    }
+
+    onFocusChange(focusedInput) {
+        this.setState({focusedInput});
+    }
+
+    render() {
+        const {focusedInput, startDate, endDate} = this.state;
+        return (
+            <div className="date_picker">
+                <DayPicker
+                    {...this.props}
+                    onDatesChange={this.onDatesChange}
+                    onFocusChange={this.onFocusChange}
+                    focusedInput={focusedInput}
+                    startDate={startDate}
+                    endDate={endDate}
+                />
+            </div>
+        );
+    }
+}
+
+const CalendarYear = () => (
+    <table className="calendar_year">
+        <caption className="title_calendar">  <Icon name='chevron left' /> 2017 <Icon name='chevron right' /></caption>
+        <tr>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+        </tr>
+        <tr>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+        </tr>
+        <tr>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+        </tr>
+        <tr>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+            <td className="border_calendar_month"><DateRangePickerWrapper/></td>
+        </tr>
+    </table>
 );
 
 
@@ -612,31 +548,14 @@ const ContentMenu = () => (
                 </div>
 
                 <div className='print_calenader'>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
-                    <p> Lorem impsum asfasdf asldkfj asdlfk jasdlfk jasdl fj </p>
+                    <CalendarYear/>
                 </div>
             </div>
 
             <div className="employee_option">
                 <ButtonMakeRequest/>
                 <SidebarAllowance/>
-                <SidebarTimeCard/>
+                <HolidayRequest/>
             </div>
         </div>
     </Container>
