@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SingleDatePicker, DateRangePicker, DayPicker} from 'react-dates';
+import {DayPicker} from 'react-dates';
 import {
     Dropdown,
     Grid,
@@ -430,7 +430,6 @@ const SidebarAllowance = () => (
 );
 
 
-
 const HolidayRequestItem = () => (
     <div className="request_item">
         <div className="request_first_date">
@@ -444,9 +443,9 @@ const HolidayRequestItem = () => (
             <div className="request_date_day">08 Jan 17</div>
             <div className="request_full_day">Full day</div>
         </div>
-        <button basic className="btn_request_item"> <Icon disabled name='ellipsis vertical'/></button>
-        <button basic className="btn_request_item btn_orange"> <Icon  name='info'/></button>
-        <button basic className="btn_request_item btn_red"> <Icon  name='close'/></button>
+        <button basic className="btn_request_item"><Icon disabled name='ellipsis vertical'/></button>
+        <button basic className="btn_request_item btn_orange"><Icon name='info'/></button>
+        <button basic className="btn_request_item btn_red"><Icon name='close'/></button>
     </div>
 );
 
@@ -500,7 +499,7 @@ class DateRangePickerWrapper extends React.Component {
 
 const CalendarYear = () => (
     <table className="calendar_year">
-        <caption className="title_calendar">  <Icon name='chevron left' /> 2017 <Icon name='chevron right' /></caption>
+        <caption className="title_calendar"><Icon name='chevron left'/> 2017 <Icon name='chevron right'/></caption>
         <tr>
             <td className="border_calendar_month"><DateRangePickerWrapper/></td>
             <td className="border_calendar_month"><DateRangePickerWrapper/></td>
