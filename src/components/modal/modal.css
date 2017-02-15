@@ -508,14 +508,28 @@ h2.ui.header.header_employee {
 }
 
 .modal_content_calendar .DateRangePicker__picker {
-    top: -380px;
+    top: -315px;
     left: -175px !important;
     display: block;
 }
 
-.modal_content_calendar .DateInput--with-caret::after,
+.modal_content_calendar .DateRangePickerInput__arrow svg {
+    fill: #927bc2;
+}
+
+
 .modal_content_calendar .DateInput--with-caret::before {
-    display: none;
+    border: 7px solid transparent;
+    top: -17px;
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+}
+
+.modal_content_calendar .DateInput--with-caret::after {
+    border: 7px solid transparent;
+    top: -18px;
+    border-top-color: #fff;
+    border-bottom: 0;
 }
 
 .modal_content_calendar .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
@@ -527,8 +541,8 @@ h2.ui.header.header_employee {
     position: absolute;
 }
 
-.modal_content_calendar .DayPicker--horizontal {
-    box-shadow: none;
+.modal_content_calendar .DateInput__display-text--focused {
+    color: #927bc2
 }
 
 .modal_content_calendar .DateInput {
@@ -570,7 +584,7 @@ h2.ui.header.header_employee {
 
 .modal_content_calendar .ui.selection.dropdown.dropdown_modal_reason {
     display: block;
-    width: 16em;
+    width: 16.2em;
     margin: 0 auto;
     height: 35px;
     font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;

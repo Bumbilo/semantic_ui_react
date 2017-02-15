@@ -6,16 +6,21 @@ import {
     Modal,
     Grid,
     Dropdown,
+    Image,
     Input
 } from 'semantic-ui-react';
+import time from '../../images/time_request.png';
 import '../../CSS/fonts.css';
 import './modal.css';
 import 'react-dates/lib/css/_datepicker.css';
 
 const HeaderTitle = () => (
-    <div className='modal_calendar'>
+    <div className='header_title'>
+        <Image src={time} className="img_header"/>
+        <Header as='h2' className="header_title_check">
+            Time-off request</Header>
     </div>
-);
+)
 
 const position = [
     {
@@ -41,7 +46,7 @@ class DateRangePickerWrapper extends React.Component {
         this.state = {
             focusedInput: null,
             startDate: null,
-            endDate: null,
+            endDate: null
         };
 
         this.onDatesChange = this.onDatesChange.bind(this);
@@ -49,6 +54,7 @@ class DateRangePickerWrapper extends React.Component {
     }
 
     onDatesChange({ startDate, endDate }) {
+        console.log({ startDate })
         this.setState({ startDate, endDate });
     }
 
