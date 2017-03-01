@@ -40,10 +40,7 @@ header .header_top_menu .item.header_title_menu {
     color: #fff;
 }
 
-.ui.tiny.image,
-.ui.tiny.images .image,
-.ui.tiny.images img,
-.ui.tiny.images svg {
+.ui.tiny.image, .ui.tiny.images .image, .ui.tiny.images img, .ui.tiny.images svg {
     width: 77px;
 }
 
@@ -403,7 +400,6 @@ header .header_top_menu .item.header_title_menu {
     right: 0;
     left: 0;
     background: rgba(228, 229, 231, 0.8) url('../../images/check_bg.png') no-repeat 50% 50%;
-
 }
 
 .sidebar_info {
@@ -506,8 +502,7 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text,
-.manager_dropdown.ui.dropdown > .text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text, .manager_dropdown.ui.dropdown > .text {
     line-height: 1;
 }
 
@@ -549,7 +544,6 @@ i.input_icon {
     background: #e6ebf0;
     overflow: hidden;
     margin: 10px 0;
-
 }
 
 .progress_bar > span {
@@ -596,7 +590,6 @@ i.input_icon {
     border-bottom: 1px solid #e6ebf0;
     padding: 5px 0;
     margin-top: 20px;
-
 }
 
 .static_result .label {
@@ -713,7 +706,7 @@ i.input_icon {
     font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.request_arrow{
+.request_arrow {
     display: inline-block;
     vertical-align: middle;
     padding-left: 10px;
@@ -748,10 +741,9 @@ i.input_icon {
 }
 
 .modal_calenader {
-
 }
 
-    /* ========== Date Picker ========== */
+/* ========== Date Picker ========== */
 
 .date_picker {
     width: 200px;
@@ -802,15 +794,12 @@ i.input_icon {
     width: 100%;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
-.DayPickerNavigation--horizontal .DayPickerNavigation__next,
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev, .DayPickerNavigation--horizontal .DayPickerNavigation__next, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
     padding: 0;
     top: 23px;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg,
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
     height: 11px;
     width: 14px;
 }
@@ -845,4 +834,327 @@ i.input_icon {
     height: 16px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+/* ========== Date Picker ========== */
+
+.title_calendar_year {
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.title_calendar_year .chevron.left {
+    float: left;
+    border: 1px solid #e4e5e7;
+    background: #f9f9fb;
+    color: #737373;
+    vertical-align: middle;
+    margin: 0 5px;
+    padding: 0;
+    width: 20px;
+    font-size: 0.8em;
+    line-height: 1.5;
+    height: 19px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.title_calendar_year .chevron.left:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.title_calendar_year .chevron.right:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.title_calendar_year .chevron.right {
+    float: right;
+    border: 1px solid #e4e5e7;
+    background: #f9f9fb;
+    color: #737373;
+    vertical-align: middle;
+    margin: 0 5px;
+    padding: 0;
+    width: 20px;
+    font-size: 0.8em;
+    line-height: 1.5;
+    height: 19px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.days_week .ui.buttons.day_center {
+    display: block;
+    border-width: 2px;
+    max-width: 550px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.days_week .ui.buttons {
+    border-width: 2px;
+    margin: 10px 0;
+}
+
+.days_week .ui.buttons .button {
+    font-size: 1.1rem;
+    position: relative;
+    width: 78px;
+    height: 42px;
+    padding: 1.2rem 1.8rem;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.label_week {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px;
+}
+
+.title_lable_week {
+    font-size: 13px;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    color: #5c5c5c;
+    line-height: 0.8;
+}
+
+.subtitle_lable_week {
+    color: #a1a1a1;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-size: 12px;
+}
+
+.title_lable_week span.ligth {
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.days_week .data_days {
+    position: absolute;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-size: 0.8em;
+    top: 3px;
+    right: 5px;
+    color: #6e6e6e;
+}
+
+.days_week .data_days.day_holiday {
+    color: #9b9b9b;
+}
+
+.days_week .ui.buttons .button.now_day {
+    background: #faf7ff;
+    border: 2px solid #b4a8d0;
+    color: #b4a8d0;
+}
+
+.days_week .ui.buttons .button.now_day .data_days {
+    color: #b4a8d0;
+}
+
+.days_week .ui.buttons .button.green_day {
+    background: #fff url('../../images/green_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.yellow_day {
+    background: #fff url('../../images/yellow_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.purple_day {
+    background: #fff url('../../images/purple_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.red_day {
+    background: #fff url('../../images/red_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.light_yellow {
+    background: #fff url('../../images/ligth_yellow.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.light_yellow.green_day {
+    background: url('../../images/green_day.png') no-repeat 50%,
+    url('../../images/ligth_yellow.png') no-repeat 50% !important;
+
+}
+
+.days_week .ui.buttons .button.light_yellow.red_day {
+    background: url('../../images/red_day.png') no-repeat 50%,
+    url('../../images/ligth_yellow.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.light_yellow.yellow_day {
+    background: url('../../images/yellow_day.png') no-repeat 50%,
+    url('../../images/ligth_yellow.png') no-repeat 50% !important;
+
+}
+
+.days_week .ui.buttons .button.purple_day.green_day {
+    background: url('../../images/green_day.png') no-repeat 50%,
+    url('../../images/purple_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.purple_day.red_day {
+    background: url('../../images/red_day.png') no-repeat 50%,
+    url('../../images/purple_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.purple_day.yellow_day {
+    background: url('../../images/yellow_day.png') no-repeat 50%,
+    url('../../images/purple_day.png') no-repeat 50% !important;
+}
+
+.today_info_item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.today_info_item.active {
+    background: #f9f9f9;
+}
+
+.today_info .ui.divider {
+    text-transform: none;
+}
+
+.today_info_item i.circular.icon {
+    background: #e4e5e7;
+    color: #8065b5;
+    box-shadow: none;
+    width: 2.5em !important;
+    height: 2.5em !important;
+    line-height: 1.5 !important;
+    font-size: 1em;
+}
+
+.today_info_item .today_info_user {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.today_info_item .massage {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.today_info_item .massage i.bordered.icon {
+    border-radius: 3px;
+}
+
+.countMassage {
+    display: inline-block;
+    padding: 0 5px;
+    color: #7f64b5;
+    font-weight: bold;
+}
+
+.popup_content_day {
+    padding: 0;
+
+}
+
+.popup_content_day .popup_title_day {
+    width: 200px;
+    padding: 7px 10px;
+    background: #f7f8fa;
+    color: #7f64b5;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    border-bottom: 1px solid #dededf;
+    font-size: 0.9em;
+}
+
+.popup_content_day .popup_status {
+    position: relative;
+    padding: 7px 10px;
+    min-height: 33px;
+    font-size: 0.9em;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.popup_content_day .popup_status .icon.pencil {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: #d8d8d8;
+    color: #fff;
+    box-shadow: none;
+    font-size: .9em;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    line-height: 0.8 !important;
+}
+
+.popup_content_day .popup_status .icon.close {
+    background: #d8d8d8;
+    color: #fff;
+    box-shadow: none;
+    font-size: 1em;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    line-height: 0.5 !important;
+    margin-right: 5px;
+    background-color: #ff897b !important;
+    padding: .42em 0.3em !important;
+}
+
+.popup_content_day .popup_status .icon.info {
+    background: #d8d8d8;
+    color: #fff;
+    box-shadow: none;
+    font-size: 1em;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    line-height: 0.5 !important;
+    margin-right: 5px;
+}
+
+.popup_content_day .count_hours {
+    color: #7f64b5;
+    text-align: right;
+    float: right;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.popup_content_day .popup_content_date {
+    padding: 7px 10px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #dededf;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.connect_day {
+    padding-left: 10px;
+    background: url('../../images/connect_day.png') no-repeat 0% 50%;
+}
+
+.connect_day_date {
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-size: 0.9em;
+    display: inline-block;
+    padding: 2px;
+    padding-left: 7px;
+}
+
+.one_day {
+    padding-left: 10px;
+    background: url('../../images/dotted.png') no-repeat 0% 50%;
+}
+
+.connect_day_status {
+    display: inline-block;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    font-size: 0.9em;
+    color: #7b7b7b;
+    padding: 2px;
+
 }

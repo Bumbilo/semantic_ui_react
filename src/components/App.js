@@ -17,12 +17,13 @@ import ModalReport from './modal/modal_report';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EployeeForm from './employee/employee_form';
-import EmployeeCalendar from './employee/employee_calendar'
+import EmployeeCalendar from './employee/employee_calendar';
+import EmployeeProfileTime from './employee/employee_profile_time';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalDateRequest/>);
+        return (<EmployeeProfileTime/>);
     }
 }
 
