@@ -4,6 +4,7 @@ import {
     Grid,
     Image,
     Container,
+    Accordion,
     Button,
     Icon,
     Divider,
@@ -348,9 +349,13 @@ const SidebarTimeCard = () => (
 
 const YearTitle = () => (
     <div className="title_calendar_year">
-        <Icon name='chevron left'/>
+        <button className="left">
+            <Icon name='chevron left'/>
+        </button>
         2017
-        <Icon name='chevron right'/>
+        <button className="right">
+            <Icon name='chevron right'/>
+        </button>
     </div>
 );
 
@@ -467,8 +472,6 @@ const LabelHours5 = () => (
 
 const TodayInfo = () => (
     <div className="today_info">
-        <Divider horizontal>Today</Divider>
-
         <div className="today_info_item active">
             <Icon circular size='large' name='bell outline'/>
             <div className="today_info_user">
@@ -479,11 +482,10 @@ const TodayInfo = () => (
                     Forgot to check
                 </div>
             </div>
-            <div className="massage">
-                <Icon bordered name='talk outline'/>
-            </div>
+            <button className="massage">
+                <Icon name='talk outline'/>
+            </button>
         </div>
-
         <div className="today_info_item ">
             <Icon circular size='large' name='clock'/>
             <div className="today_info_user">
@@ -491,15 +493,14 @@ const TodayInfo = () => (
                     25 FEB
                 </div>
                 <div className="title_lable_week">
-                    Late
+                    <a href="#" className="user_link">Late</a>
                 </div>
             </div>
-            <div className="massage">
+            <button className="massage_no">
                 <span className="countMassage">1</span>
                 <Icon name='talk outline'/>
-            </div>
+            </button>
         </div>
-
         <div className="today_info_item ">
             <Icon circular size='large' name='bell outline'/>
             <div className="today_info_user">
@@ -507,14 +508,11 @@ const TodayInfo = () => (
                     25 FEB
                 </div>
                 <div className="title_lable_week">
-                    John Smith <span className="ligth">Maker as</span> Unauthorised absence
+                    <a href="#" className="user_link">John Smith</a> <span className="ligth">Maker as</span>
+                    Unauthorised absence
                 </div>
             </div>
-            <div className="massage">
-
-            </div>
         </div>
-
         <div className="today_info_item ">
             <Icon circular size='large' name='pencil'/>
             <div className="today_info_user">
@@ -522,14 +520,11 @@ const TodayInfo = () => (
                     25 FEB
                 </div>
                 <div className="title_lable_week">
-                    John Smith <span className="ligth">Maker as</span> Forgot check
+                    <a href="#" className="user_link">John Smith</a> <span className="ligth">Maker as</span> Forgot
+                    check
                 </div>
             </div>
-            <div className="massage">
-
-            </div>
         </div>
-
         <div className="today_info_item ">
             <Icon circular size='large' name='pencil'/>
             <div className="today_info_user">
@@ -537,40 +532,39 @@ const TodayInfo = () => (
                     25 FEB
                 </div>
                 <div className="title_lable_week">
-                    John Smith <span className="ligth"> Maker as</span> Forgot check
+                    <a href="#" className="user_link">John Smith</a> <span className="ligth"> Maker as</span> Forgot
+                    check
                 </div>
             </div>
-            <div className="massage">
-            </div>
         </div>
-
-        <Divider horizontal>Yesterday</Divider>
-        <Divider horizontal>Last Week</Divider>
-        <Divider horizontal>Last month</Divider>
     </div>
 );
 
 const style = {padding: 0}
-
-const BankHoliday = () => (
-    <Popup trigger={
-        <Button className="light_yellow">
-            <span className="data_days day_holiday">30</span>
-        </Button>
-    } positioning='bottom left' on='click' style={style}>
-        <div className="popup_content_day">
-            <div className="popup_title_day">
-                Bank holiday
-                <span className="count_hours"></span>
-            </div>
-            <div className="popup_status">
-                <span>No check records</span>
-                <Icon circular name='pencil' size="small"/>
-            </div>
-        </div>
-    </Popup>
-);
-
+class BankHoliday extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="light_yellow">
+                    <span className="data_days day_holiday">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
+                    <div className="popup_title_day">
+                        Bank holiday
+                        <span className="count_hours"></span>
+                    </div>
+                    <div className="popup_status">
+                        <span>No check records</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
 
 const ConnectDay = () => (
     <div className="connect_day">
@@ -592,34 +586,39 @@ const OneDay = () => (
     </div>
 )
 
-const BookedHoliday = () => (
-    <Popup trigger={
-        <Button className="purple_day">
-            <span className="data_days">09</span>
-        </Button>
-    } positioning='bottom left' on='click' style={style}>
-        <div className="popup_content_day">
+class BookedHoliday extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="purple_day">
+                    <span className="data_days">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
 
-            <div className="popup_title_day">
-                Bank holiday
-                <span className="count_hours">5 Days</span>
-            </div>
+                    <div className="popup_title_day">
+                        Booked holiday
+                        <span className="count_hours">5 Days</span>
+                    </div>
 
-            <div className="popup_content_date">
-                <ConnectDay/>
-                <OneDay/>
-            </div>
+                    <div className="popup_content_date">
+                        <ConnectDay/>
+                        <OneDay/>
+                    </div>
 
-            <div className="popup_status">
-                <span>No check records</span>
-                <Icon circular name='pencil' size="small"/>
-            </div>
-        </div>
-    </Popup>
-);
+                    <div className="popup_status">
+                        <span>No check records</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
 
-
-const ConnectDay2 = () => (
+const RedDay1 = () => (
     <div className="connect_day">
         <div>
             <span className="connect_day_date">08:04</span>
@@ -632,95 +631,44 @@ const ConnectDay2 = () => (
     </div>
 )
 
-const OneDay2 = () => (
+const RedDay2 = () => (
     <div className="one_day">
         <span className="connect_day_date">13:02</span>
         <span className="connect_day_status">Check in</span>
     </div>
 )
 
+class RedDays extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="red_day">
+                    <span className="data_days">23</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
 
-const WorkedTime = () => (
-    <Popup trigger={
-        <Button className="red_day">
-            <span className="data_days">23</span>
-        </Button>
-    } positioning='bottom left' on='click' style={style}>
-        <div className="popup_content_day">
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <RedDay1/>
+                        <RedDay2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='close' size="small"/>
+                        <span>Unauthorized leave</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
 
-            <div className="popup_title_day">
-                Worked time
-                <span className="count_hours">7h 56min</span>
-            </div>
-
-            <div className="popup_content_date">
-                <ConnectDay2/>
-                <OneDay2/>
-            </div>
-
-            <div className="popup_status">
-                <Icon circular inverted name='close' size="small"/>
-                <span>Unauthorized leave</span>
-                <Icon circular name='pencil' size="small"/>
-            </div>
-        </div>
-    </Popup>
-);
-
-
-const ConnectDay3 = () => (
-    <div className="connect_day">
-        <div>
-            <span className="connect_day_date">08:04</span>
-            <span className="connect_day_status">Check in</span>
-        </div>
-        <div>
-            <span className="connect_day_date">12:30</span>
-            <span className="connect_day_status">Check out</span>
-        </div>
-    </div>
-)
-
-
-const ConnectDay31 = () => (
-    <div className="connect_day">
-        <div>
-            <span className="connect_day_date">13:04</span>
-            <span className="connect_day_status">Check in</span>
-        </div>
-        <div>
-            <span className="connect_day_date">16:30</span>
-            <span className="connect_day_status">Check out</span>
-        </div>
-    </div>
-)
-
-const WorkedTime3 = () => (
-    <Popup trigger={
-        <Button className="green_day">
-            <span className="data_days">03</span>
-        </Button>
-    } positioning='bottom left' on='click' style={style}>
-        <div className="popup_content_day">
-
-            <div className="popup_title_day">
-                Worked time
-                <span className="count_hours">7h 56min</span>
-            </div>
-
-            <div className="popup_content_date">
-                <ConnectDay3/>
-                <ConnectDay31/>
-            </div>
-
-            <div className="popup_status">
-                <Icon circular inverted name='info' color="yellow" size="small"/>
-                <span>Late/Not check in</span>
-                <Icon circular name='pencil' size="small"/>
-            </div>
-        </div>
-    </Popup>
-);
 
 const ConnectDay4 = () => (
     <div className="connect_day">
@@ -768,11 +716,210 @@ const WorkedTime4 = () => (
             </div>
 
             <div className="popup_status">
-                <Icon circular name='pencil' size="small"/>
+                <a href="#">
+                    <Icon circular name='pencil' size="small"/>
+                </a>
             </div>
         </div>
     </Popup>
 );
+
+
+const Greenday1 = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">08:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">12:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
+
+
+const GreenDay2 = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">13:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">16:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
+
+class YellowDays extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="yellow_day">
+                    <span className="data_days">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <Greenday1/>
+                        <GreenDay2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='info' color="yellow" size="small"/>
+                        <span>Late/Not check in</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
+
+class YellowDaysHoliday extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="yellow_day">
+                    <span className="data_days day_holiday">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <Greenday1/>
+                        <GreenDay2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='info' color="yellow" size="small"/>
+                        <span>Late/Not check in</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
+
+class GreenDays extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="green_day">
+                    <span className="data_days">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <Greenday1/>
+                        <GreenDay2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='info' color="yellow" size="small"/>
+                        <span>Late/Not check in</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
+
+class GreenDaysHoliday extends React.Component {
+    render() {
+        return (
+            <Popup trigger={
+                <Button className="green_day">
+                    <span className="data_days day_holiday">{this.props.day}</span>
+                </Button>
+            } positioning='bottom left' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <Greenday1/>
+                        <GreenDay2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='info' color="yellow" size="small"/>
+                        <span>Late/Not check in</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
+
+class AccordionExampleActiveIndex extends Component {
+    state = {activeIndex: 0}
+
+    handleSliderChange = (e) => this.setState({
+        activeIndex: Number(e.target.value),
+    })
+
+    render() {
+        const {activeIndex} = this.state
+        return (
+            <AccordionExampleStandard onTitleClick={this.handleTitleClick} activeIndex={activeIndex}/>
+        )
+    }
+}
+
+const AccordionExampleStandard = () => (
+
+    <Accordion>
+        <Accordion.Title>
+            <Divider horizontal>Today</Divider>
+        </Accordion.Title>
+        <Accordion.Content >
+            <TodayInfo></TodayInfo>
+        </Accordion.Content>
+        <Accordion.Title>
+            <Divider horizontal>Yesterday</Divider>
+        </Accordion.Title>
+        <Accordion.Content>
+            <TodayInfo></TodayInfo>
+        </Accordion.Content>
+        <Accordion.Title>
+            <Divider horizontal>Last Week</Divider>
+        </Accordion.Title>
+        <Accordion.Content>
+            <TodayInfo></TodayInfo>
+        </Accordion.Content>
+        <Accordion.Title>
+            <Divider horizontal>Last month</Divider>
+        </Accordion.Title>
+        <Accordion.Content>
+            <TodayInfo></TodayInfo>
+        </Accordion.Content>
+    </Accordion>
+)
 
 const YearDays = () => (
     <div className="days_week">
@@ -790,23 +937,13 @@ const YearDays = () => (
             <LabelWeek/>
             <Button.Group basic>
                 <BankHoliday/>
-                <Button className="green_day">
-                    <span className="data_days day_holiday">31</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">01</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">02</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">03</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days day_holiday">04</span>
-                </Button>
+                <GreenDaysHoliday day="31"/>
+                <GreenDays day="01"/>
+                <GreenDays day="02"/>
+                <GreenDaysHoliday day="04"/>
+                <GreenDaysHoliday day="05"/>
                 <Button>
-                    <span className="data_days day_holiday">05</span>
+                    <span className="data_days day_holiday">06</span>
                 </Button>
             </Button.Group>
             <LabelHours/>
@@ -815,19 +952,11 @@ const YearDays = () => (
         <div>
             <LabelWeek2/>
             <Button.Group basic>
-                <Button className="yellow_day">
-                    <span className="data_days">07</span>
-                </Button>
-                <Button className="purple_day">
-                    <span className="data_days">08</span>
-                </Button>
-                <BookedHoliday/>
-                <Button className="purple_day">
-                    <span className="data_days">10</span>
-                </Button>
-                <Button>
-                    <span className="data_days">11</span>
-                </Button>
+                <YellowDays day="07"/>
+                <BookedHoliday day="08"/>
+                <BookedHoliday day="09"/>
+                <BookedHoliday day="10"/>
+                <BookedHoliday day="11"/>
                 <Button>
                     <span className="data_days day_holiday">12</span>
                 </Button>
@@ -841,21 +970,11 @@ const YearDays = () => (
         <div>
             <LabelWeek3/>
             <Button.Group basic>
-                <Button className="purple_day">
-                    <span className="data_days">14</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">15</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">16</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">17</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days">18</span>
-                </Button>
+                <BookedHoliday day="14"/>
+                <GreenDays day="15"/>
+                <GreenDays day="16"/>
+                <GreenDays day="17"/>
+                <GreenDays day="18"/>
                 <Button>
                     <span className="data_days day_holiday">19</span>
                 </Button>
@@ -868,25 +987,15 @@ const YearDays = () => (
         <div>
             <LabelWeek4/>
             <Button.Group basic>
-                <Button className="green_day">
-                    <span className="data_days">21</span>
-                </Button>
-                <Button className="yellow_day">
-                    <span className="data_days">22</span>
-                </Button>
-                <WorkedTime/>
-                <Button className="green_day">
-                    <span className="data_days">24</span>
-                </Button>
+                <GreenDays day="21"/>
+                <YellowDays day="22"/>
+                <RedDays day="23"></RedDays>
+                <GreenDays day="24"/>
                 <Button className="now_day">
                     <span className="data_days">25</span>
                 </Button>
-                <Button className="green_day">
-                    <span className="data_days day_holiday">26</span>
-                </Button>
-                <Button className="green_day">
-                    <span className="data_days day_holiday">27</span>
-                </Button>
+                <GreenDaysHoliday day="26"/>
+                <GreenDaysHoliday day="27"/>
             </Button.Group>
             <LabelHours4/>
         </div>
@@ -894,19 +1003,11 @@ const YearDays = () => (
             <LabelWeek5/>
             <Button.Group basic>
                 <WorkedTime4/>
-                <Button className="green_day">
-                    <span className="data_days">01</span>
-                </Button >
-                <Button className="green_day">
-                    <span className="data_days">02</span>
-                </Button>
-                <WorkedTime3/>
-                <Button className="yellow_day">
-                    <span className="data_days">04</span>
-                </Button>
-                <Button className="yellow_day">
-                    <span className="data_days day_holiday">05</span>
-                </Button>
+                <GreenDays day="01"/>
+                <GreenDays day="02"/>
+                <GreenDays day="03"/>
+                <YellowDaysHoliday day="04"/>
+                <YellowDaysHoliday day="05"/>
                 <Button>
                     <span className="data_days day_holiday">06</span>
                 </Button>
@@ -938,7 +1039,7 @@ const ContentMenu = () => (
                 </div>
                 <YearTitle/>
                 <YearDays/>
-                <TodayInfo/>
+                <AccordionExampleActiveIndex/>
             </div>
 
             <div className="employee_option">

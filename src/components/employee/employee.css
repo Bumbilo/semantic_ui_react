@@ -9,6 +9,8 @@ a {
     font-size: 13px;
 }
 
+
+
 /* ========== Semantic classes ========== */
 
 .employee_profile .ui.secondary.pointing.menu {
@@ -845,7 +847,7 @@ i.input_icon {
     text-align: center;
 }
 
-.title_calendar_year .chevron.left {
+.title_calendar_year button.left {
     float: left;
     border: 1px solid #e4e5e7;
     background: #f9f9fb;
@@ -861,19 +863,19 @@ i.input_icon {
     cursor: pointer;
 }
 
-.title_calendar_year .chevron.left:after {
+.title_calendar_year button.left:after {
     display: block;
     content: '';
     clear: both;
 }
 
-.title_calendar_year .chevron.right:after {
+.title_calendar_year button.right:after {
     display: block;
     content: '';
     clear: both;
 }
 
-.title_calendar_year .chevron.right {
+.title_calendar_year button.right {
     float: right;
     border: 1px solid #e4e5e7;
     background: #f9f9fb;
@@ -902,14 +904,23 @@ i.input_icon {
     margin: 10px 0;
 }
 
-.days_week .ui.buttons .button {
-    font-size: 1.1rem;
+.days_week .ui.buttons .button,
+.days_week .ui.buttons .button:hover,
+.days_week .ui.buttons .button:active,
+.days_week .ui.buttons .button:visited,
+.days_week .ui.buttons .button::selection{
+    background: #fff !important;
+    background-color: #fff !important;
+    color: #a8a8a8 !important;
+    font-size: 1rem;
     position: relative;
     width: 78px;
     height: 42px;
+    background: #ffffff;
     padding: 1.2rem 1.8rem;
-    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
+
 
 .label_week {
     display: inline-block;
@@ -962,8 +973,16 @@ i.input_icon {
     background: #fff url('../../images/green_day.png') no-repeat 50% !important;
 }
 
+.days_week .ui.buttons .button.green_day:hover {
+    background: #fff url('../../images/green_day_hover.png') no-repeat 50% !important;
+}
+
 .days_week .ui.buttons .button.yellow_day {
     background: #fff url('../../images/yellow_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.yellow_day:hover {
+    background: #fff url('../../images/yellow_day_hover.png') no-repeat 50% !important;
 }
 
 .days_week .ui.buttons .button.purple_day {
@@ -972,6 +991,10 @@ i.input_icon {
 
 .days_week .ui.buttons .button.red_day {
     background: #fff url('../../images/red_day.png') no-repeat 50% !important;
+}
+
+.days_week .ui.buttons .button.red_day:hover {
+    background: #fff url('../../images/red_day_hover.png') no-repeat 50% !important;
 }
 
 .days_week .ui.buttons .button.light_yellow {
@@ -1021,7 +1044,7 @@ i.input_icon {
     background: #f9f9f9;
 }
 
-.today_info .ui.divider {
+.ui.divider {
     text-transform: none;
 }
 
@@ -1045,10 +1068,34 @@ i.input_icon {
     float: right;
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
 }
 
-.today_info_item .massage i.bordered.icon {
+.today_info_item .massage_no {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 4px;
+    background: #fff;
+    border: none;
     border-radius: 3px;
+}
+
+.today_info_item:hover {
+    background: #f9f9f9;
+}
+
+.today_info_item:hover .massage_no {
+    border: 1px solid #d9d9d9;
+}
+
+.today_info_item .massage_no:hover {
+    border: 1px solid #d9d9d9;
 }
 
 .countMassage {
@@ -1084,14 +1131,20 @@ i.input_icon {
 .popup_content_day .popup_status .icon.pencil {
     position: absolute;
     right: 5px;
-    top: 5px;
+    top: 7px;
     background: #d8d8d8;
     color: #fff;
     box-shadow: none;
-    font-size: .9em;
     width: 1.2rem !important;
     height: 1.2rem !important;
     line-height: 0.8 !important;
+    cursor: pointer;
+    transition: all .2s linear;
+
+}
+
+.popup_content_day .popup_status .icon.pencil:hover {
+    background: #ced1d8;
 }
 
 .popup_content_day .popup_status .icon.close {
@@ -1102,9 +1155,9 @@ i.input_icon {
     width: 1.2rem !important;
     height: 1.2rem !important;
     line-height: 0.5 !important;
-    margin-right: 5px;
+    margin-right: 7px;
     background-color: #ff897b !important;
-    padding: .42em 0.3em !important;
+    padding: .45em 0.3em !important;
 }
 
 .popup_content_day .popup_status .icon.info {
@@ -1157,4 +1210,12 @@ i.input_icon {
     color: #7b7b7b;
     padding: 2px;
 
+}
+
+.user_link {
+    color: #5c5c5c;
+}
+
+.employee_profile .ui.accordion .title:not(.ui) {
+    padding: 0.1em;
 }
