@@ -20,6 +20,7 @@ import dottedImg from '../../images/dotted.svg';
 import bellImg from '../../images/bell.svg';
 import '../../CSS/fonts.css';
 import './employee.css';
+import './timecard.css';
 
 // Dropdown profile
 const trigger = (<Image src={ava2} size='mini' avatar/>);
@@ -359,116 +360,6 @@ const YearTitle = () => (
     </div>
 );
 
-const LabelWeek = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            Week 5
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
-);
-
-const LabelWeek2 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            Week 6
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
-);
-
-const LabelWeek3 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            Week 7
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
-);
-
-const LabelWeek4 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            Week 8
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
-);
-
-const LabelWeek5 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            Week 9
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
-);
-
-const LabelHours = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            47 h 1min
-        </div>
-        <div className="subtitle_lable_week">
-            total
-        </div>
-    </div>
-);
-
-const LabelHours2 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            7 h 25 min
-        </div>
-        <div className="subtitle_lable_week">
-            total
-        </div>
-    </div>
-);
-
-const LabelHours3 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            40 hr
-        </div>
-        <div className="subtitle_lable_week">
-            total
-        </div>
-    </div>
-);
-
-const LabelHours4 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            55 hr
-        </div>
-        <div className="subtitle_lable_week">
-            total
-        </div>
-    </div>
-);
-
-const LabelHours5 = () => (
-    <div className="label_week">
-        <div className="title_lable_week">
-            45 hr 7 min
-        </div>
-        <div className="subtitle_lable_week">
-            total
-        </div>
-    </div>
-);
-
 
 const TodayInfo = () => (
     <div className="today_info">
@@ -544,7 +435,7 @@ const style = {padding: 0}
 class BankHoliday extends React.Component {
     render() {
         return (
-            <Popup trigger={
+            <Popup className="popup_day" trigger={
                 <Button className="light_yellow">
                     <span className="data_days day_holiday">{this.props.day}</span>
                 </Button>
@@ -589,10 +480,9 @@ const OneDay = () => (
 class BookedHoliday extends React.Component {
     render() {
         return (
-            <Popup trigger={
-                <Button className="purple_day">
-                    <span className="data_days">{this.props.day}</span>
-                </Button>
+            <Popup className="popup_day" trigger={
+                <span className="purple_day">
+                </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
 
@@ -638,13 +528,12 @@ const RedDay2 = () => (
     </div>
 )
 
-class RedDays extends React.Component {
+class RedDay extends React.Component {
     render() {
         return (
-            <Popup trigger={
-                <Button className="red_day">
-                    <span className="data_days">23</span>
-                </Button>
+            <Popup className="popup_day" trigger={
+                <span className="red_day">
+                </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
 
@@ -697,11 +586,10 @@ const ConnectDay41 = () => (
     </div>
 )
 
-const WorkedTime4 = () => (
-    <Popup trigger={
-        <Button className="green_day light_yellow">
-            <span className="data_days">28</span>
-        </Button >
+const YellowGreen = () => (
+    <Popup className="popup_day" trigger={
+        <span className="green_day light_yellow">
+        </span >
     } positioning='bottom left' on='click' style={style}>
         <div className="popup_content_day">
 
@@ -752,13 +640,12 @@ const GreenDay2 = () => (
     </div>
 )
 
-class YellowDays extends React.Component {
+class YellowDay extends React.Component {
     render() {
         return (
-            <Popup trigger={
-                <Button className="yellow_day">
-                    <span className="data_days">{this.props.day}</span>
-                </Button>
+            <Popup className="popup_day" trigger={
+                <span className="yellow_day">
+                </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
 
@@ -783,75 +670,12 @@ class YellowDays extends React.Component {
     }
 }
 
-class YellowDaysHoliday extends React.Component {
+class GreenDay extends React.Component {
     render() {
         return (
-            <Popup trigger={
-                <Button className="yellow_day">
-                    <span className="data_days day_holiday">{this.props.day}</span>
-                </Button>
-            } positioning='bottom left' on='click' style={style}>
-                <div className="popup_content_day">
-
-                    <div className="popup_title_day">
-                        Worked time
-                        <span className="count_hours">7h 56min</span>
-                    </div>
-                    <div className="popup_content_date">
-                        <Greenday1/>
-                        <GreenDay2/>
-                    </div>
-                    <div className="popup_status">
-                        <Icon circular inverted name='info' color="yellow" size="small"/>
-                        <span>Late/Not check in</span>
-                        <a href="#">
-                            <Icon circular name='pencil' size="small"/>
-                        </a>
-                    </div>
-                </div>
-            </Popup>
-        )
-    }
-}
-
-class GreenDays extends React.Component {
-    render() {
-        return (
-            <Popup trigger={
-                <Button className="green_day">
-                    <span className="data_days">{this.props.day}</span>
-                </Button>
-            } positioning='bottom left' on='click' style={style}>
-                <div className="popup_content_day">
-
-                    <div className="popup_title_day">
-                        Worked time
-                        <span className="count_hours">7h 56min</span>
-                    </div>
-                    <div className="popup_content_date">
-                        <Greenday1/>
-                        <GreenDay2/>
-                    </div>
-                    <div className="popup_status">
-                        <Icon circular inverted name='info' color="yellow" size="small"/>
-                        <span>Late/Not check in</span>
-                        <a href="#">
-                            <Icon circular name='pencil' size="small"/>
-                        </a>
-                    </div>
-                </div>
-            </Popup>
-        )
-    }
-}
-
-class GreenDaysHoliday extends React.Component {
-    render() {
-        return (
-            <Popup trigger={
-                <Button className="green_day">
-                    <span className="data_days day_holiday">{this.props.day}</span>
-                </Button>
+            <Popup className="popup_day" trigger={
+                <span className="green_day">
+                </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
 
@@ -921,99 +745,258 @@ const AccordionExampleStandard = () => (
     </Accordion>
 )
 
+class LabelWeek extends React.Component {
+    render() {
+        return (
+               <div className="label_week">
+        <div className="title_lable_week">
+           Week {this.props.number}
+        </div>
+        <div className="subtitle_lable_week">
+            29/01-04/02
+        </div>
+    </div>
+        )
+    }
+}
+
+
+class LabeHours extends React.Component {
+    render() {
+        return (
+            <div className="label_week">
+                <div className="title_lable_week">
+                    {this.props.time}
+                </div>
+                <div className="subtitle_lable_week">
+                    total
+                </div>
+            </div>
+        )
+    }
+}
+
 const YearDays = () => (
     <div className="days_week">
-        <Button.Group basic className="day_center">
-            <Button>Mon</Button>
-            <Button>Tue</Button>
-            <Button>Wed</Button>
-            <Button>Thu</Button>
-            <Button>Fri</Button>
-            <Button>Sat</Button>
-            <Button>Sun</Button>
-        </Button.Group>
-
-        <div>
-            <LabelWeek/>
-            <Button.Group basic>
-                <BankHoliday/>
-                <GreenDaysHoliday day="31"/>
-                <GreenDays day="01"/>
-                <GreenDays day="02"/>
-                <GreenDaysHoliday day="04"/>
-                <GreenDaysHoliday day="05"/>
-                <Button>
-                    <span className="data_days day_holiday">06</span>
-                </Button>
-            </Button.Group>
-            <LabelHours/>
-        </div>
-
-        <div>
-            <LabelWeek2/>
-            <Button.Group basic>
-                <YellowDays day="07"/>
-                <BookedHoliday day="08"/>
-                <BookedHoliday day="09"/>
-                <BookedHoliday day="10"/>
-                <BookedHoliday day="11"/>
-                <Button>
-                    <span className="data_days day_holiday">12</span>
-                </Button>
-                <Button>
-                    <span className="data_days day_holiday">13</span>
-                </Button>
-            </Button.Group>
-            <LabelHours2/>
-        </div>
-
-        <div>
-            <LabelWeek3/>
-            <Button.Group basic>
-                <BookedHoliday day="14"/>
-                <GreenDays day="15"/>
-                <GreenDays day="16"/>
-                <GreenDays day="17"/>
-                <GreenDays day="18"/>
-                <Button>
-                    <span className="data_days day_holiday">19</span>
-                </Button>
-                <Button>
-                    <span className="data_days day_holiday">20</span>
-                </Button>
-            </Button.Group>
-            <LabelHours3/>
-        </div>
-        <div>
-            <LabelWeek4/>
-            <Button.Group basic>
-                <GreenDays day="21"/>
-                <YellowDays day="22"/>
-                <RedDays day="23"></RedDays>
-                <GreenDays day="24"/>
-                <Button className="now_day">
-                    <span className="data_days">25</span>
-                </Button>
-                <GreenDaysHoliday day="26"/>
-                <GreenDaysHoliday day="27"/>
-            </Button.Group>
-            <LabelHours4/>
-        </div>
-        <div>
-            <LabelWeek5/>
-            <Button.Group basic>
-                <WorkedTime4/>
-                <GreenDays day="01"/>
-                <GreenDays day="02"/>
-                <GreenDays day="03"/>
-                <YellowDaysHoliday day="04"/>
-                <YellowDaysHoliday day="05"/>
-                <Button>
-                    <span className="data_days day_holiday">06</span>
-                </Button>
-            </Button.Group>
-            <LabelHours5/>
-        </div>
+        <ul className="calendar_card">
+            <li className="wrapp_calendar_title">
+                <ul className="calendar_card_title">
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                    <li>Sun</li>
+                </ul>
+            </li>
+            <li>
+                <ul className="calendar_card_content">
+                    <li>
+                        <LabelWeek number="5"/>
+                    </li>
+                    <li>
+                        <ul className="calendar_card_days">
+                            <li>
+                                <span className="data_days day_holiday">31</span>
+                                <YellowGreen/>
+                            </li>
+                            <li >
+                                <span className="data_days ">01</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">02</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">03</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">04</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">05</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">06</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <LabeHours time="7hr 1min"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul className="calendar_card_content">
+                    <li>
+                        <LabelWeek number="6"/>
+                    </li>
+                    <li>
+                        <ul className="calendar_card_days">
+                            <li>
+                                <span className="data_days day_holiday">07</span>
+                                <YellowDay/>
+                            </li>
+                            <li >
+                                <span className="data_days ">08</span>
+                                <BookedHoliday/>
+                            </li>
+                            <li>
+                                <span className="data_days ">09</span>
+                                <BookedHoliday/>
+                            </li>
+                            <li>
+                                <span className="data_days ">10</span>
+                                <BookedHoliday/>
+                            </li>
+                            <li>
+                                <span className="data_days ">11</span>
+                                <BookedHoliday/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">12</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">13</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <LabeHours time="7hr 25min"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul className="calendar_card_content">
+                    <li>
+                        <LabelWeek number="7"/>
+                    </li>
+                    <li>
+                        <ul className="calendar_card_days">
+                            <li>
+                                <span className="data_days day_holiday">14</span>
+                                <BookedHoliday/>
+                            </li>
+                            <li >
+                                <span className="data_days ">15</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">16</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">17</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">18</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">19</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">20</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <LabeHours time="40hr"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul className="calendar_card_content">
+                    <li>
+                        <LabelWeek number="8"/>
+                    </li>
+                    <li>
+                        <ul className="calendar_card_days">
+                            <li>
+                                <span className="data_days day_holiday">21</span>
+                                <GreenDay/>
+                            </li>
+                            <li >
+                                <span className="data_days ">22</span>
+                                <YellowDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">23</span>
+                                <RedDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">24</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">25</span>
+                                <span className="now_day"></span>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">26</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">27</span>
+                                <GreenDay/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <LabeHours time="55hr"/>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul className="calendar_card_content">
+                    <li>
+                        <LabelWeek number="9"/>
+                    </li>
+                    <li>
+                        <ul className="calendar_card_days">
+                            <li>
+                                <span className="data_days day_holiday">28</span>
+                                <YellowGreen/>
+                            </li>
+                            <li >
+                                <span className="data_days ">01</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">02</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">03</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days ">04</span>
+                                <GreenDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">04</span>
+                                <YellowDay/>
+                            </li>
+                            <li>
+                                <span className="data_days day_holiday">05</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <LabeHours time="45hr 7min"/>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
 );
