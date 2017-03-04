@@ -716,7 +716,6 @@ class AccordionExampleActiveIndex extends Component {
 }
 
 const AccordionExampleStandard = () => (
-
     <Accordion>
         <Accordion.Title>
             <Divider horizontal>Today</Divider>

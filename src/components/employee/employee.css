@@ -932,3 +932,24 @@ i.input_icon {
 .employee_profile .ui.accordion .title:not(.ui) {
     padding: 0.1em;
 }
+/*========== ProfileMonth ==========*/
+.profile_month_item {
+    width: 100%;
+    border: 2px solid #e4e5e7;
+}
+
+.profile_month_status,
+profile_month_day {
+    float: left;
+    padding: 20px 11px;
+}
+
+.profile_status_month {
+    display: block;
+    color:  #82d427;
+}
+
+.profile_name_month{
+    display: block;
+    color: #848484;
+}
