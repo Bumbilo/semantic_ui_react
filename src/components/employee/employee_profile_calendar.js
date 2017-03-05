@@ -413,33 +413,121 @@ const SidebarAllowance = () => (
     </div>
 );
 
-const ItemProfile = () => (
-    <div className="profile_month">
-        <div className="profile_month_item">
-            <div className="profile_month_status">
-                <span className="profile_status_month">Approved</span>
-                <span className="profile_name_month">John Smith</span>
-            </div>
-            <div className="profile_month_day">
-                8 days
-            </div>
-            <div className="profile_month_date">
-                <div className="profile_start_month">
-                    10 Feb
+class ItemProfileActive extends Component {
+    render() {
+        return (
+            <div className="profile_month">
+                <div className="profile_month_item active">
+                    <div className="profile_month_status">
+                        <span className={this.props.status}>Approved</span>
+                        <span className="profile_name_month">John Smith</span>
+                    </div>
+                    <div className="profile_month_day">
+                <span className="month_day">
+                    {this.props.days}
+                </span>
+                    </div>
+                    <div className="profile_month_date">
+                        <div className="profile_start_month">
+                            <span className="start_month_date">01 Fev </span>
+                            <span className="start_month_status">Full day</span>
+                        </div>
+                        <div className="icon_time">
+                            <Icon name="arrow right"/>
+                        </div>
+                        <div className="profile_end_month">
+                            <span className="end_month_date">01 Fev </span>
+                            <span className="end_month_status">Full day</span>
+                        </div>
+                    </div>
+                    <div className="profile_month_vacation">
+              <span className="month_vocation">
+                  {this.props.vacation}
+              </span>
+                    </div>
+                    <div className="profile_month_option">
+                        <button>
+                            <Icon name="ellipsis vertical"/>
+                        </button>
+                    </div>
                 </div>
-                <div className="profile_end_month">
-                    12 Feb
+            </div>
+        )
+    }
+}
+
+class ItemProfile extends Component {
+    render() {
+        return (
+            <div className="profile_month">
+                <div className="profile_month_item">
+                    <div className="profile_month_status">
+                        <span className={this.props.status}>Approved</span>
+                        <span className="profile_name_month">John Smith</span>
+                    </div>
+                    <div className="profile_month_day">
+                <span className="month_day">
+                    {this.props.days}
+                </span>
+                    </div>
+                    <div className="profile_month_date">
+                        <div className="profile_start_month">
+                            <span className="start_month_date">01 Fev </span>
+                            <span className="start_month_status">Full day</span>
+                        </div>
+                        <div className="icon_time">
+                            <Icon name="arrow right"/>
+                        </div>
+                        <div className="profile_end_month">
+                            <span className="end_month_date">01 Fev </span>
+                            <span className="end_month_status">Full day</span>
+                        </div>
+                    </div>
+                    <div className="profile_month_vacation">
+              <span className="month_vocation">
+                  {this.props.vacation}
+              </span>
+                    </div>
+                    <div className="profile_month_option">
+                        <button>
+                            <Icon name="ellipsis vertical"/>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div className="profile_month_location">
-              Vacation
-            </div>
-            <div className="profile_month_option">
-             ...
-            </div>
+        )
+    }
+}
+
+
+const HolidayRequestItem = () => (
+    <div className="request_item">
+        <div className="request_first_date">
+            <div className="request_date_day">01 Jan 17</div>
+            <div className="request_full_day">Full day</div>
         </div>
+        <div className="request_arrow">
+            <Icon name="arrow right"/>
+        </div>
+        <div className="request_last_date">
+            <div className="request_date_day">08 Jan 17</div>
+            <div className="request_full_day">Full day</div>
+        </div>
+        <button className="btn_request_item"><Icon disabled name='ellipsis vertical'/></button>
+        <button className="btn_request_item btn_orange"><Icon name='info'/></button>
+        <button className="btn_request_item btn_red"><Icon name='close'/></button>
     </div>
 );
+
+const HolidayRequest = () => (
+    <div className="holiday_request">
+        <div className='count_title'>Holiday request</div>
+        <HolidayRequestItem/>
+        <HolidayRequestItem/>
+        <HolidayRequestItem/>
+    </div>
+);
+
 
 const AccordionYears = () => (
     <Accordion>
@@ -447,19 +535,29 @@ const AccordionYears = () => (
             <Divider horizontal>January</Divider>
         </Accordion.Title>
         <Accordion.Content >
-           <ItemProfile/>
+            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>February</Divider>
+            <span className="acartion_status">Vacation</span>
         </Accordion.Title>
         <Accordion.Content>
-            <h1>Title</h1>
+            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>March</Divider>
         </Accordion.Title>
         <Accordion.Content>
-            <h1>Title</h1>
+            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>April</Divider>
@@ -516,7 +614,7 @@ const AccordionYears = () => (
             <h1>Title</h1>
         </Accordion.Content>
     </Accordion>
-)
+);
 
 
 // Content
@@ -539,7 +637,7 @@ const ContentMenu = () => (
                     <MenuExample/>
                 </div>
 
-                <div className='employee_profile_info'>
+                <div className='employee_profile_calendar'>
                     <Grid columns='equal'>
                         <AccordionYears />
                     </Grid>
@@ -550,6 +648,7 @@ const ContentMenu = () => (
             <div className="employee_option">
                 <ButtonMakeRequest/>
                 <SidebarAllowance/>
+                <HolidayRequest/>
             </div>
         </div>
     </Container>

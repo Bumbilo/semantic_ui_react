@@ -9,7 +9,6 @@ a {
     font-size: 13px;
 }
 
-
 /* ========== Semantic classes ========== */
 
 .employee_profile .ui.secondary.pointing.menu {
@@ -59,8 +58,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .item {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;
-    ;
+    font-family: "Proxima Nova", serif;;
     font-size: 14px;
 }
 
@@ -215,7 +213,6 @@ header .header_top_menu .item.header_title_menu {
     left: 0;
 }
 
-
 /* ========== employee_profile ========== */
 
 .employee {
@@ -320,7 +317,6 @@ header .header_top_menu .item.header_title_menu {
     padding-bottom: 20px;
 }
 
-
 /* ========== employee_option ========== */
 
 .employee_option {
@@ -350,7 +346,7 @@ header .header_top_menu .item.header_title_menu {
     font-size: 15px;
 }
 
-.employee_option .ui.labeled.icon.button>.icon {
+.employee_option .ui.labeled.icon.button > .icon {
     background: none;
     color: #788668;
 }
@@ -492,7 +488,7 @@ i.input_icon {
     margin-top: 20px;
 }
 
-.input_edit .ui.multiple.dropdown>.label {
+.input_edit .ui.multiple.dropdown > .label {
     color: #927bc2;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
@@ -500,7 +496,7 @@ i.input_icon {
     padding: 6px 12px;
 }
 
-.input_edit .ui.label>.delete.icon {
+.input_edit .ui.label > .delete.icon {
     color: #ababab;
 }
 
@@ -509,8 +505,8 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text,
-.manager_dropdown.ui.dropdown>.text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text,
+.manager_dropdown.ui.dropdown > .text {
     line-height: 1;
 }
 
@@ -536,7 +532,6 @@ i.input_icon {
     border-radius: 3px;
 }
 
-
 /* ========== progress_bar ========== */
 
 .progress_bar {
@@ -555,7 +550,7 @@ i.input_icon {
     margin: 10px 0;
 }
 
-.progress_bar>span {
+.progress_bar > span {
     height: 100%;
     display: inline-block;
     top: 0;
@@ -750,8 +745,8 @@ i.input_icon {
     color: #d82b40;
 }
 
-.modal_calenader {}
-
+.modal_calenader {
+}
 
 /* ========== Date Picker ========== */
 
@@ -849,7 +844,6 @@ i.input_icon {
     cursor: pointer;
 }
 
-
 /* ========== Accardion ========== */
 
 .today_info_item {
@@ -932,24 +926,155 @@ i.input_icon {
 .employee_profile .ui.accordion .title:not(.ui) {
     padding: 0.1em;
 }
+
 /*========== ProfileMonth ==========*/
-.profile_month_item {
-    width: 100%;
-    border: 2px solid #e4e5e7;
+
+.employee_profile_calendar {
+    padding: 20px 0;
+    color: #a5a5a5;
 }
 
-.profile_month_status,
-profile_month_day {
-    float: left;
-    padding: 20px 11px;
+.employee_profile_calendar .ui.horizontal.divider {
+    color: #a5a5a5;
+}
+
+.profile_month_item.active {
+    color: #4a4a4a;
+}
+
+.profile_month_item {
+    width: 100%;
+    border: 1px solid #e4e5e7;
+    overflow: hidden;
+    border-radius: 3px;
+    height: 82px;
+    margin-top: 10px;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
 .profile_status_month {
     display: block;
-    color:  #82d427;
+    color: #82d427;
 }
 
-.profile_name_month{
+.profile_status_month_pending {
+    display: block;
+    color: #ffcb3f;
+}
+
+.profile_status_month_reject {
+    display: block;
+    color: #d82b40
+}
+
+.profile_name_month {
+    display: block;
+    color: #878787;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.profile_name_month {
     display: block;
     color: #848484;
+}
+
+.profile_month_status,
+.profile_month_day,
+.profile_month_date,
+.profile_month_vacation {
+    float: left;
+    padding: 20px 0;
+    margin: 0 20px;
+}
+
+.profile_month_status {
+    width: 15%;
+    min-width: 75px;
+}
+
+.profile_month_day {
+    width: 10%;
+    min-width: 60px;
+}
+
+.profile_month_date {
+    width: 30%;
+    min-width: 80px;
+}
+
+.profile_month_vacation {
+    width: 10%;
+    min-width: 75px;
+
+}
+
+.icon_time {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+}
+
+.profile_month_option {
+    float: right;
+    padding: 20px 11px;
+}
+
+.profile_month_option button {
+    background: #fff;
+    padding: .3em .4em;
+    margin-top: 5px;
+    color: #c9c9c9;
+    font-size: 1.1em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 1px 1px #c9c9c9;
+}
+
+.profile_month_option button i {
+    margin: 0;
+}
+
+.profile_month_option button:hover {
+    color: #a5a5a5;
+    box-shadow: 0 0 1px 1px #a5a5a5;
+}
+
+.month_day, .month_vocation {
+    vertical-align: middle;
+    line-height: 2.5;
+}
+
+.profile_start_month,
+.profile_end_month {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.start_month_date,
+.start_month_status,
+.end_month_date,
+.end_month_status {
+    display: block;
+}
+
+.start_month_status,
+.end_month_status {
+    font-size: 0.9em;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    color: #878787;
+}
+
+.acartion_status {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.ui .accordion .title {
+    position: relative;
+
+
 }
