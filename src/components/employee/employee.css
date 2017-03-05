@@ -1075,6 +1075,36 @@ i.input_icon {
 
 .ui .accordion .title {
     position: relative;
-
-
 }
+
+/*========== Modal Profile Time Card ==========*/
+
+.block_center {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.block_center label {
+    padding-left: 2px;
+    color: #555;
+}
+
+.block_center .subtitle_comment {
+    font-size:.7em;
+    color: #555;
+}
+
+.block_center  .ui.form textarea:not([rows]){
+    min-height: 3em;
+    heigth: 5em;
+    max-height: 8em;
+}
+
+.block_center .ui.selection.dropdown {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+

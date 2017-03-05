@@ -14,6 +14,9 @@ import ModalWindowEmployee from './modal/modal_add_employee';
 import ModalSelectOption from './modal/modal_select_option'
 import ModalDateRequest from './modal/modal_date_request';
 import ModalReport from './modal/modal_report';
+import ModalProfileTimeCard from './modal/modal_profile_time_card';
+import ModalProfileTimeView from './modal/modal_profile_time_card_view';
+import ModalWindowAfterSubmit from './modal/modal_profile_time_after_submit';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
@@ -24,7 +27,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<EmployeeProfileCalendar/>);
+        return (<ModalWindowAfterSubmit />);
     }
 }
 
