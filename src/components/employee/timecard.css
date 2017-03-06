@@ -93,76 +93,66 @@ span.now_day {
    background: #faf7ff;
    border: 2px solid #b4a8d0;
    color: #b4a8d0;
+   cursor: pointer;
 }
 
 .days_week .green_day {
-   background: #fff url('../../images/green_day.png') no-repeat 50% !important;
+   position: absolute;
+   top: 12px;
+   left: 20px;
+   width: 31px;
+   height: 15px;
+   background-color: #b8e986;
+   border-radius: 50px;
+   cursor: pointer;
 }
 
+
 .days_week .green_day:hover {
-   background: #fff url('../../images/green_day_hover.png') no-repeat 50% !important;
+  background-color: #d0f4ad;
 }
 
 .days_week .yellow_day {
-   background: #fff url('../../images/yellow_day.png') no-repeat 50% !important;
+   position: absolute;
+   top: 12px;
+   left: 20px;
+   width: 31px;
+   height: 15px;
+   background-color: #fcfd99;
+   border-radius: 50px;
+   cursor: pointer;
 }
 
 .yellow_day:hover {
-   background: #fff url('../../images/yellow_day_hover.png') no-repeat 50% !important;
+    background-color: #f8f9bb;
 }
 
-
-
-.purple_day {
-   background: #fff url('../../images/purple_day.png') no-repeat 50% !important;
-}
-
-.red_day {
-   background: #fff url('../../images/red_day.png') no-repeat 50% !important;
+ .days_week .red_day {
+   position: absolute;
+   top: 12px;
+   left: 20px;
+   width: 31px;
+   height: 15px;
+   background-color: #ff8d9b;
+   border-radius: 50px;
+   cursor: pointer;
 }
 
 .red_day:hover {
-   background: #fff url('../../images/red_day_hover.png') no-repeat 50% !important;
+   background-color: #ffa9b3;
 }
 
 .light_yellow {
    background: #fff url('../../images/ligth_yellow.png') no-repeat 50% !important;
 }
 
-.light_yellow.green_day {
-   background: url('../../images/green_day.png') no-repeat 50%, url('../../images/ligth_yellow.png') no-repeat 50% !important;
-}
-
-.light_yellow.red_day {
-   background: url('../../images/red_day.png') no-repeat 50%, url('../../images/ligth_yellow.png') no-repeat 50% !important;
-}
-
-.light_yellow.yellow_day {
-   background: url('../../images/yellow_day.png') no-repeat 50%, url('../../images/ligth_yellow.png') no-repeat 50% !important;
-}
-
-.purple_day.green_day {
-   background: url('../../images/green_day.png') no-repeat 50%, url('../../images/purple_day.png') no-repeat 50% !important;
-}
-
-.purple_day.red_day {
-   background: url('../../images/red_day.png') no-repeat 50%, url('../../images/purple_day.png') no-repeat 50% !important;
-}
-
-.purple_day.yellow_day {
-   background: url('../../images/yellow_day.png') no-repeat 50%, url('../../images/purple_day.png') no-repeat 50% !important;
+.purple_day {
+   background: url('../../images/purple_day.png') no-repeat 50% !important;
 }
 
 span.purple_day,
-span.red_day,
-span.green_day,
 span.light_yellow,
-span.light_yellow.green_day,
-span.light_yellow.red_day,
-span.purple_day.green_day,
-span.purple_day.red_day,
-span.purple_day.yellow_day,
-span.yellow_day {
+span.wrapp_label {
    cursor: pointer;
    position: absolute;
    top: 0;
@@ -170,10 +160,6 @@ span.yellow_day {
    width: 100%;
    height: 100%;
    z-index: 0;
-}
-
-.wrapp_calendar_title {
-
 }
 
 .popup_day.ui.bottom.popup:before,
@@ -403,10 +389,6 @@ span.yellow_day {
 
 .calendar_card_content li {
    float: left;
-}
-
-.calendar_card_days {
-
 }
 
 .calendar_card_days li {

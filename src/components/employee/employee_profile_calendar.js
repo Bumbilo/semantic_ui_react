@@ -416,42 +416,47 @@ const SidebarAllowance = () => (
 class ItemProfileActive extends Component {
     render() {
         return (
-            <div className="profile_month">
-                <div className="profile_month_item active">
-                    <div className="profile_month_status">
-                        <span className={this.props.status}>Approved</span>
-                        <span className="profile_name_month">John Smith</span>
-                    </div>
-                    <div className="profile_month_day">
+            <Grid.Row>
+                <Grid.Column>
+                    <div className="profile_month">
+                        <div className="profile_month_item active">
+                            <div className="profile_month_status">
+                                <span className={this.props.status}>Approved</span>
+                                <span className="profile_name_month">John Smith</span>
+                            </div>
+                            <div className="profile_month_day">
                 <span className="month_day">
                     {this.props.days}
                 </span>
-                    </div>
-                    <div className="profile_month_date">
-                        <div className="profile_start_month">
-                            <span className="start_month_date">01 Fev </span>
-                            <span className="start_month_status">Full day</span>
-                        </div>
-                        <div className="icon_time">
-                            <Icon name="arrow right"/>
-                        </div>
-                        <div className="profile_end_month">
-                            <span className="end_month_date">01 Fev </span>
-                            <span className="end_month_status">Full day</span>
-                        </div>
-                    </div>
-                    <div className="profile_month_vacation">
+                            </div>
+                            <div className="profile_month_date">
+                                <div className="profile_start_month">
+                                    <span className="start_month_date">01 Fev </span>
+                                    <span className="start_month_status">Full day</span>
+                                </div>
+                                <div className="icon_time">
+                                    <Icon name="arrow right"/>
+                                </div>
+                                <div className="profile_end_month">
+                                    <span className="end_month_date">01 Fev </span>
+                                    <span className="end_month_status">Full day</span>
+                                </div>
+                            </div>
+                            <div className="profile_month_vacation">
               <span className="month_vocation">
                   {this.props.vacation}
               </span>
+                            </div>
+                            <div className="profile_month_option">
+                                <button>
+                                    <Icon name="ellipsis vertical"/>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="profile_month_option">
-                        <button>
-                            <Icon name="ellipsis vertical"/>
-                        </button>
-                    </div>
-                </div>
-            </div>
+
+                </Grid.Column>
+            </Grid.Row>
         )
     }
 }
@@ -459,42 +464,46 @@ class ItemProfileActive extends Component {
 class ItemProfile extends Component {
     render() {
         return (
-            <div className="profile_month">
-                <div className="profile_month_item">
-                    <div className="profile_month_status">
-                        <span className={this.props.status}>Approved</span>
-                        <span className="profile_name_month">John Smith</span>
-                    </div>
-                    <div className="profile_month_day">
-                <span className="month_day">
-                    {this.props.days}
-                </span>
-                    </div>
-                    <div className="profile_month_date">
-                        <div className="profile_start_month">
-                            <span className="start_month_date">01 Fev </span>
-                            <span className="start_month_status">Full day</span>
+            <Grid.Row>
+                <Grid.Column>
+                    <div className="profile_month">
+                        <div className="profile_month_item">
+                            <div className="profile_month_status">
+                                <span className={this.props.status}>Approved</span>
+                                <span className="profile_name_month">John Smith</span>
+                            </div>
+                            <div className="profile_month_day">
+                        <span className="month_day">
+                            {this.props.days}
+                        </span>
+                            </div>
+                            <div className="profile_month_date">
+                                <div className="profile_start_month">
+                                    <span className="start_month_date">01 Fev </span>
+                                    <span className="start_month_status">Full day</span>
+                                </div>
+                                <div className="icon_time">
+                                    <Icon name="arrow right"/>
+                                </div>
+                                <div className="profile_end_month">
+                                    <span className="end_month_date">01 Fev </span>
+                                    <span className="end_month_status">Full day</span>
+                                </div>
+                            </div>
+                            <div className="profile_month_vacation">
+                    <span className="month_vocation">
+                        {this.props.vacation}
+                    </span>
+                            </div>
+                            <div className="profile_month_option">
+                                <button>
+                                    <Icon name="ellipsis vertical"/>
+                                </button>
+                            </div>
                         </div>
-                        <div className="icon_time">
-                            <Icon name="arrow right"/>
-                        </div>
-                        <div className="profile_end_month">
-                            <span className="end_month_date">01 Fev </span>
-                            <span className="end_month_status">Full day</span>
-                        </div>
                     </div>
-                    <div className="profile_month_vacation">
-              <span className="month_vocation">
-                  {this.props.vacation}
-              </span>
-                    </div>
-                    <div className="profile_month_option">
-                        <button>
-                            <Icon name="ellipsis vertical"/>
-                        </button>
-                    </div>
-                </div>
-            </div>
+                </Grid.Column>
+            </Grid.Row>
         )
     }
 }
@@ -535,29 +544,35 @@ const AccordionYears = () => (
             <Divider horizontal>January</Divider>
         </Accordion.Title>
         <Accordion.Content >
-            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
-            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            <Grid>
+                <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+                <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            </Grid>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>February</Divider>
             <span className="acartion_status">Vacation</span>
         </Accordion.Title>
         <Accordion.Content>
-            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
-            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            <Grid>
+                <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+                <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            </Grid>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>March</Divider>
         </Accordion.Title>
         <Accordion.Content>
-            <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
-            <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
-            <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            <Grid>
+                <ItemProfileActive status="profile_status_month" days="8 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_pending" days="2 days" vacation="Vacation"/>
+                <ItemProfile status="profile_status_month_reject " days="1&#189; days" vacation="Sick leave"/>
+                <ItemProfileActive status="profile_status_month" days="7 days" vacation="Vacation"/>
+            </Grid>
         </Accordion.Content>
         <Accordion.Title>
             <Divider horizontal>April</Divider>

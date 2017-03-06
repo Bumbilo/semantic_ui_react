@@ -532,7 +532,8 @@ class RedDay extends React.Component {
     render() {
         return (
             <Popup className="popup_day" trigger={
-                <span className="red_day">
+                <span className="wrapp_label">
+                    <span className="red_day"></span>
                 </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
@@ -588,7 +589,8 @@ const ConnectDay41 = () => (
 
 const YellowGreen = () => (
     <Popup className="popup_day" trigger={
-        <span className="green_day light_yellow">
+        <span className= "light_yellow">
+            <div className="green_day"></div>
         </span >
     } positioning='bottom left' on='click' style={style}>
         <div className="popup_content_day">
@@ -612,6 +614,31 @@ const YellowGreen = () => (
     </Popup>
 );
 
+const YellowLight = () => (
+    <Popup className="popup_day" trigger={
+        <span className= "light_yellow">
+        </span >
+    } positioning='bottom left' on='click' style={style}>
+        <div className="popup_content_day">
+
+            <div className="popup_title_day">
+                Worked time
+                <span className="count_hours">7h 56min</span>
+            </div>
+
+            <div className="popup_content_date">
+                <ConnectDay4/>
+                <ConnectDay41/>
+            </div>
+
+            <div className="popup_status">
+                <a href="#">
+                    <Icon circular name='pencil' size="small"/>
+                </a>
+            </div>
+        </div>
+    </Popup>
+);
 
 const Greenday1 = () => (
     <div className="connect_day">
@@ -644,8 +671,10 @@ class YellowDay extends React.Component {
     render() {
         return (
             <Popup className="popup_day" trigger={
-                <span className="yellow_day">
+                <span className="wrapp_label">
+                <span className="yellow_day"></span>
                 </span>
+
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
 
@@ -674,7 +703,9 @@ class GreenDay extends React.Component {
     render() {
         return (
             <Popup className="popup_day" trigger={
-                <span className="green_day">
+                <span className="wrapp_label">
+                    <span className="green_day">
+                    </span>
                 </span>
             } positioning='bottom left' on='click' style={style}>
                 <div className="popup_content_day">
@@ -798,7 +829,7 @@ const YearDays = () => (
                         <ul className="calendar_card_days">
                             <li>
                                 <span className="data_days day_holiday">31</span>
-                                <YellowGreen/>
+                                <YellowLight/>
                             </li>
                             <li >
                                 <span className="data_days ">01</span>

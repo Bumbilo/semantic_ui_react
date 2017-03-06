@@ -955,7 +955,6 @@ i.input_icon {
     overflow: hidden;
     border-radius: 3px;
     height: 82px;
-    margin-top: 10px;
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
@@ -1116,56 +1115,3 @@ i.input_icon {
     margin: 0 0 10px 0;
 }
 
-
-/*=========== Modal Holiday ==========*/
-
-.view_holiday {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 613px;
-    height: 185px;
-    border: 1px solid #e4e5e7;
-    background-color: #fff;
-    border-radius: 3px;
-    }
-
-.holiday_title_user {
-    background-color: #f8f8f8;
-    padding: 5px 10px;
-    border-bottom: 1px solid #e4e5e7;
-}
-
-.holiday_title_user .ui.mini.image {
-        width: 40px;
-        margin: 5px;
-}
-
-.holiday_title_user .profile_name {
-    display: inline-block;
-    margin-bottom: 3px;
-}
-
-button.square  {
-    background: #fff;
-    padding: .3em .4em;
-    margin-top: 5px;
-    color: #c9c9c9;
-    font-size: 1.1em;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    border: none;
-}
-
-button.square.green {
-    color: #7ed321;
-    background:#f6fff8;
-    padding-right: .2em;
-    box-shadow: 0 0 1px 1px #7ed321;
-
-}
-
-.holiday_date {
-    float: right;
-}
