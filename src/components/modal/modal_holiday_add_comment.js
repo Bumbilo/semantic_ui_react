@@ -6,6 +6,8 @@ import {
     Popup,
     Header,
     Grid,
+    Form,
+    TextArea,
     Icon
 } from 'semantic-ui-react';
 import ImgConnect from '../../images/time_request.png';
@@ -49,7 +51,7 @@ const PopupCheck = () => (
         <Icon name="checkmark"/></button>} on='click' position='bottom right' className="position_popup">
         <PopupBlock/>
     </Popup>
-    
+
 );
 
 
@@ -65,6 +67,15 @@ const ViewProfileMessageRequired = () => (
         <div className="holiday_comment_content">
             <p>Comments is not required</p>
         </div>
+    </div>
+);
+
+const AddRequestComment = () => (
+    <div className="holiday_add_request">
+        <Form>
+            <button className="holiday_replay add"><Icon name="send"/></button>
+            <TextArea placeholder='Click to leave your comment ' />
+        </Form>
     </div>
 );
 
@@ -99,6 +110,7 @@ const ViewProfile = () => (
             <div className="view_holiday_content">
                 <ViewProfileMessage/>
                 <ViewProfileMessageRequired/>
+                <AddRequestComment/>
             </div>
         </div>
     </div>
@@ -120,9 +132,9 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 );
 
-const ModalHolidayReview = () => (
+const ModalHolidayAddComment = () => (
     <Modal trigger={< Button > Show Modal
-        </Button>} closeIcon='close'>
+    </Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>
@@ -132,4 +144,4 @@ const ModalHolidayReview = () => (
     </Modal>
 );
 
-export default ModalHolidayReview;
+export default ModalHolidayAddComment;

@@ -98,7 +98,7 @@ span.now_day {
 
 .days_week .green_day {
    position: absolute;
-   top: 12px;
+   top: 28%;
    left: 20px;
    width: 31px;
    height: 15px;
@@ -108,7 +108,7 @@ span.now_day {
 }
 
 
-.days_week .green_day:hover {
+span.wrapp_label:hover .green_day {
   background-color: #d0f4ad;
 }
 
@@ -123,7 +123,7 @@ span.now_day {
    cursor: pointer;
 }
 
-.yellow_day:hover {
+span.wrapp_label:hover .yellow_day {
     background-color: #f8f9bb;
 }
 
@@ -138,16 +138,18 @@ span.now_day {
    cursor: pointer;
 }
 
-.red_day:hover {
+span.wrapp_label:hover .red_day {
    background-color: #ffa9b3;
 }
 
 .light_yellow {
-   background: #fff url('../../images/ligth_yellow.png') no-repeat 50% !important;
+   background: repeating-linear-gradient(-45deg, #fff, #fff 4px, #fbf9eb 4px, #fbf9eb 8px) fixed;
+   border: 3px solid #eceacb;
 }
 
 .purple_day {
-   background: url('../../images/purple_day.png') no-repeat 50% !important;
+   background: repeating-linear-gradient(-45deg, #fff, #fff 4px, #e5e1ee 4px, #e5e1ee 8px) fixed;
+   border: 3px solid #ded6ee;
 }
 
 span.purple_day,
@@ -155,18 +157,23 @@ span.light_yellow,
 span.wrapp_label {
    cursor: pointer;
    position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+   top: 2px;
+   left: 2px;
+   right: 2px;
+   bottom: 2px;
+   width: 95%;
+   height: 90%;
    z-index: 0;
 }
 
-.popup_day.ui.bottom.popup:before,
+.popup_day.ui.bottom.popup:before{
+   background: #f7f8fa;
+}
+
 .popup_day.ui.left.center.popup:before,
 .popup_day.ui.right.center.popup:before,
 .popup_day.ui.top.popup:before {
-   background: #f7f8fa;
+   background: #fff;
 }
 
 .popup_content_day .popup_status {

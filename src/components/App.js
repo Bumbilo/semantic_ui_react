@@ -18,6 +18,8 @@ import ModalProfileTimeCard from './modal/modal_profile_time_card';
 import ModalProfileTimeView from './modal/modal_profile_time_card_view';
 import ModalWindowAfterSubmit from './modal/modal_profile_time_after_submit';
 import ModalHolidayReview from './modal/modal_holiday_review';
+import ModalHolidayAddComment from './modal/modal_holiday_add_comment';
+import ModalHolidayWaitin from './modal/modal_holiday_waiting';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
@@ -28,7 +30,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalHolidayReview />);
+        return (<ModalHolidayWaitin/>);
     }
 }
 

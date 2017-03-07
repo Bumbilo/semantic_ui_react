@@ -6,6 +6,8 @@ import {
     Popup,
     Header,
     Grid,
+    Form,
+    TextArea,
     Icon
 } from 'semantic-ui-react';
 import ImgConnect from '../../images/time_request.png';
@@ -18,7 +20,7 @@ const HeaderTitle = () => (
     <div className='header_title'>
         <Image src={ImgConnect} className="img_header"/>
         <Header as='h2' className="header_title_check">
-            Request review</Header>
+            Time off request</Header>
     </div>
 );
 
@@ -31,39 +33,6 @@ const ViewProfileMessage = () => (
         </div>
         <div className="holiday_comment_content">
             <p>I want to take this day off.</p>
-        </div>
-    </div>
-);
-
-
-const PopupBlock = () => (
-    <div className="popup_check_block">
-        <div className="check_block_user_name">John Smith</div>
-        <div className="check_block_status">Approved in</div>
-        <div className="check_block_status">10 Feb 2017</div>
-    </div>
-);
-
-const PopupCheck = () => (
-    <Popup trigger={< button className="square green">
-        <Icon name="checkmark"/></button>} on='click' position='bottom right' className="position_popup">
-        <PopupBlock/>
-    </Popup>
-    
-);
-
-
-
-const ViewProfileMessageRequired = () => (
-    <div className="holiday_comment send">
-        <button className="holiday_replay"><Icon name="reply"/></button>
-        <div className="holiday_comment_title">
-            <div className="holiday_comment_name">Mitsy Smith</div>
-            <div className="holiday_comment_date">10 Feb 2017</div>
-            <div className="holiday_comment_label green">Vacation</div>
-        </div>
-        <div className="holiday_comment_content">
-            <p>Comments is not required</p>
         </div>
     </div>
 );
@@ -93,12 +62,10 @@ const ViewProfile = () => (
                             </div>
                         </div>
                     </div>
-                    <PopupCheck/>
                 </div>
             </div>
             <div className="view_holiday_content">
                 <ViewProfileMessage/>
-                <ViewProfileMessageRequired/>
             </div>
         </div>
     </div>
@@ -112,17 +79,12 @@ const GridExampleVerticallyDivided = () => (
                 <ViewProfile/>
             </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-            <Grid.Column>
-                <Button basic className="button_center">Cancel</Button>
-            </Grid.Column>
-        </Grid.Row>
     </Grid>
 );
 
-const ModalHolidayReview = () => (
+const ModalHolidayWaiting = () => (
     <Modal trigger={< Button > Show Modal
-        </Button>} closeIcon='close'>
+    </Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>
@@ -132,4 +94,4 @@ const ModalHolidayReview = () => (
     </Modal>
 );
 
-export default ModalHolidayReview;
+export default ModalHolidayWaiting;

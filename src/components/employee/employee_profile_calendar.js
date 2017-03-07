@@ -417,45 +417,38 @@ class ItemProfileActive extends Component {
     render() {
         return (
             <Grid.Row>
-                <Grid.Column>
-                    <div className="profile_month">
-                        <div className="profile_month_item active">
-                            <div className="profile_month_status">
-                                <span className={this.props.status}>Approved</span>
-                                <span className="profile_name_month">John Smith</span>
-                            </div>
-                            <div className="profile_month_day">
-                <span className="month_day">
-                    {this.props.days}
-                </span>
-                            </div>
-                            <div className="profile_month_date">
-                                <div className="profile_start_month">
-                                    <span className="start_month_date">01 Fev </span>
-                                    <span className="start_month_status">Full day</span>
-                                </div>
-                                <div className="icon_time">
-                                    <Icon name="arrow right"/>
-                                </div>
-                                <div className="profile_end_month">
-                                    <span className="end_month_date">01 Fev </span>
-                                    <span className="end_month_status">Full day</span>
-                                </div>
-                            </div>
-                            <div className="profile_month_vacation">
-              <span className="month_vocation">
-                  {this.props.vacation}
-              </span>
-                            </div>
-                            <div className="profile_month_option">
-                                <button>
-                                    <Icon name="ellipsis vertical"/>
-                                </button>
-                            </div>
+                <Grid columns="equal" container className="profile_month_item active">
+                    <Grid.Column>
+                        <span className={this.props.status}>Approved</span>
+                        <span className="profile_name_month">John Smith</span>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
+                        <span className="month_day">{this.props.days}</span>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                        <div className="profile_start_month">
+                            <span className="start_month_date">01 Fev </span>
+                            <span className="start_month_status">Full day</span>
                         </div>
-                    </div>
-
-                </Grid.Column>
+                        <div className="icon_time">
+                            <Icon name="arrow right"/>
+                        </div>
+                        <div className="profile_end_month">
+                            <span className="end_month_date">01 Fev </span>
+                            <span className="end_month_status">Full day</span>
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column>
+                    <span className="month_vocation">
+                        {this.props.vacation}
+                    </span>
+                    </Grid.Column>
+                    <Grid.Column width={1}>
+                        <button className="profile_month_option">
+                            <Icon name="ellipsis vertical"/>
+                        </button>
+                    </Grid.Column>
+                </Grid>
             </Grid.Row>
         )
     }
@@ -465,44 +458,39 @@ class ItemProfile extends Component {
     render() {
         return (
             <Grid.Row>
-                <Grid.Column>
-                    <div className="profile_month">
-                        <div className="profile_month_item">
-                            <div className="profile_month_status">
-                                <span className={this.props.status}>Approved</span>
-                                <span className="profile_name_month">John Smith</span>
-                            </div>
-                            <div className="profile_month_day">
-                        <span className="month_day">
-                            {this.props.days}
-                        </span>
-                            </div>
-                            <div className="profile_month_date">
-                                <div className="profile_start_month">
-                                    <span className="start_month_date">01 Fev </span>
-                                    <span className="start_month_status">Full day</span>
-                                </div>
-                                <div className="icon_time">
-                                    <Icon name="arrow right"/>
-                                </div>
-                                <div className="profile_end_month">
-                                    <span className="end_month_date">01 Fev </span>
-                                    <span className="end_month_status">Full day</span>
-                                </div>
-                            </div>
-                            <div className="profile_month_vacation">
+                <Grid columns="equal" container className="profile_month_item">
+                    <Grid.Column>
+                        <span className={this.props.status}>Approved</span>
+                        <span className="profile_name_month">John Smith</span>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
+                        <span className="month_day">{this.props.days}</span>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                        <div className="profile_start_month">
+                            <span className="start_month_date">01 Fev </span>
+                            <span className="start_month_status">Full day</span>
+                        </div>
+                        <div className="icon_time">
+                            <Icon name="arrow right"/>
+                        </div>
+                        <div className="profile_end_month">
+                            <span className="end_month_date">01 Fev </span>
+                            <span className="end_month_status">Full day</span>
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column>
                     <span className="month_vocation">
                         {this.props.vacation}
                     </span>
-                            </div>
-                            <div className="profile_month_option">
-                                <button>
-                                    <Icon name="ellipsis vertical"/>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </Grid.Column>
+
+                    </Grid.Column>
+                    <Grid.Column width={1}>
+                        <button className="profile_month_option">
+                            <Icon name="ellipsis vertical"/>
+                        </button>
+                    </Grid.Column>
+                </Grid>
             </Grid.Row>
         )
     }

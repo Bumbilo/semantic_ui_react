@@ -9,7 +9,6 @@ a {
     font-size: 13px;
 }
 
-
 /* ========== Semantic classes ========== */
 
 .employee_profile .ui.secondary.pointing.menu {
@@ -41,10 +40,7 @@ header .header_top_menu .item.header_title_menu {
     color: #fff;
 }
 
-.ui.tiny.image,
-.ui.tiny.images .image,
-.ui.tiny.images img,
-.ui.tiny.images svg {
+.ui.tiny.image, .ui.tiny.images .image, .ui.tiny.images img, .ui.tiny.images svg {
     width: 77px;
 }
 
@@ -320,7 +316,6 @@ header .header_top_menu .item.header_title_menu {
     padding-bottom: 20px;
 }
 
-
 /* ========== employee_option ========== */
 
 .employee_option {
@@ -509,8 +504,7 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text,
-.manager_dropdown.ui.dropdown>.text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text, .manager_dropdown.ui.dropdown>.text {
     line-height: 1;
 }
 
@@ -535,7 +529,6 @@ i.input_icon {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-
 
 /* ========== progress_bar ========== */
 
@@ -696,8 +689,7 @@ i.input_icon {
     margin-top: 10px;
 }
 
-.request_first_date,
-.request_last_date {
+.request_first_date, .request_last_date {
     display: inline-block;
     font-size: 12px;
     padding-left: 7px;
@@ -752,7 +744,6 @@ i.input_icon {
 
 .modal_calenader {}
 
-
 /* ========== Date Picker ========== */
 
 .date_picker {
@@ -804,15 +795,12 @@ i.input_icon {
     width: 100%;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
-.DayPickerNavigation--horizontal .DayPickerNavigation__next,
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev, .DayPickerNavigation--horizontal .DayPickerNavigation__next, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
     padding: 0;
     top: 23px;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg,
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
     height: 11px;
     width: 14px;
 }
@@ -848,7 +836,6 @@ i.input_icon {
     border-radius: 3px;
     cursor: pointer;
 }
-
 
 /* ========== Accardion ========== */
 
@@ -950,12 +937,11 @@ i.input_icon {
 }
 
 .profile_month_item {
-    width: 100%;
     border: 1px solid #e4e5e7;
     overflow: hidden;
     border-radius: 3px;
-    height: 82px;
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    margin: -5px 0 !important;
 }
 
 .profile_status_month {
@@ -984,32 +970,25 @@ i.input_icon {
     color: #848484;
 }
 
-.profile_month_status,
-.profile_month_day,
-.profile_month_date,
-.profile_month_vacation {
+.profile_month_status, .profile_month_day, .profile_month_date, .profile_month_vacation {
     float: left;
-    padding: 20px 0;
     margin: 0 20px;
+    padding-top: 5px;
 }
 
 .profile_month_status {
-    width: 15%;
     min-width: 75px;
 }
 
 .profile_month_day {
-    width: 10%;
     min-width: 60px;
 }
 
 .profile_month_date {
-    width: 30%;
     min-width: 80px;
 }
 
 .profile_month_vacation {
-    width: 10%;
     min-width: 75px;
 }
 
@@ -1019,12 +998,9 @@ i.input_icon {
     margin-bottom: 15px;
 }
 
-.profile_month_option {
-    float: right;
-    padding: 20px 11px;
-}
 
-.profile_month_option button {
+
+button.profile_month_option {
     background: #fff;
     padding: .3em .4em;
     margin-top: 5px;
@@ -1037,36 +1013,34 @@ i.input_icon {
     box-shadow: 0 0 1px 1px #c9c9c9;
 }
 
-.profile_month_option button i {
+.profile_month_option {
+    float: right;
+}
+
+ button.profile_month_option  i {
     margin: 0;
 }
 
-.profile_month_option button:hover {
+.profile_month_option:hover {
     color: #a5a5a5;
     box-shadow: 0 0 1px 1px #a5a5a5;
 }
 
-.month_day,
-.month_vocation {
+.month_day, .month_vocation {
     vertical-align: middle;
-    line-height: 2.5;
+    line-height: 3;
 }
 
-.profile_start_month,
-.profile_end_month {
+.profile_start_month, .profile_end_month {
     display: inline-block;
     padding: 0 20px;
 }
 
-.start_month_date,
-.start_month_status,
-.end_month_date,
-.end_month_status {
+.start_month_date, .start_month_status, .end_month_date, .end_month_status {
     display: block;
 }
 
-.start_month_status,
-.end_month_status {
+.start_month_status, .end_month_status {
     font-size: 0.9em;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     color: #878787;
@@ -1082,7 +1056,6 @@ i.input_icon {
 .ui .accordion .title {
     position: relative;
 }
-
 
 /*========== Modal Profile Time Card ==========*/
 
@@ -1113,5 +1086,9 @@ i.input_icon {
 .block_center .ui.selection.dropdown {
     width: 100%;
     margin: 0 0 10px 0;
+}
+
+.myClass {
+    border: 1px solid grey;
 }
 
