@@ -37,6 +37,17 @@ const ViewProfileMessage = () => (
     </div>
 );
 
+const ButtonApproval = () => (
+    <div className="holiday_comment">
+        <div className="reject">
+            <button>Reject</button>
+        </div>
+        <div className="approve">
+            <button>Approve</button>
+        </div>
+    </div>
+);
+
 const ViewProfile = () => (
     <div className="view_holiday">
         <div className="view_holiday_title">
@@ -66,6 +77,7 @@ const ViewProfile = () => (
             </div>
             <div className="view_holiday_content">
                 <ViewProfileMessage/>
+                <ButtonApproval/>
             </div>
         </div>
     </div>

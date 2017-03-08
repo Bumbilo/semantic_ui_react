@@ -6,8 +6,6 @@ import {
     Popup,
     Header,
     Grid,
-    Form,
-    TextArea,
     Icon
 } from 'semantic-ui-react';
 import ImgConnect from '../../images/time_request.png';
@@ -20,7 +18,7 @@ const HeaderTitle = () => (
     <div className='header_title'>
         <Image src={ImgConnect} className="img_header"/>
         <Header as='h2' className="header_title_check">
-            Request review</Header>
+            Time off request cancellation</Header>
     </div>
 );
 
@@ -48,7 +46,7 @@ const PopupBlock = () => (
 
 const PopupCheck = () => (
     <Popup trigger={< button className="square green">
-        <Icon name="checkmark"/></button>}  position='bottom right' className="position_popup">
+        <Icon name="checkmark"/></button>} position='bottom right' className="position_popup">
         <PopupBlock/>
     </Popup>
 
@@ -58,7 +56,6 @@ const PopupCheck = () => (
 
 const ViewProfileMessageRequired = () => (
     <div className="holiday_comment send">
-        <button className="holiday_replay"><Icon name="reply"/></button>
         <div className="holiday_comment_title">
             <div className="holiday_comment_name">Mitsy Smith</div>
             <div className="holiday_comment_date">10 Feb 2017</div>
@@ -67,15 +64,6 @@ const ViewProfileMessageRequired = () => (
         <div className="holiday_comment_content">
             <p>Comments is not required</p>
         </div>
-    </div>
-);
-
-const AddRequestComment = () => (
-    <div className="holiday_add_request">
-        <Form>
-            <button className="holiday_replay add"><Icon name="send"/></button>
-            <TextArea placeholder='Click to leave your comment ' />
-        </Form>
     </div>
 );
 
@@ -110,11 +98,19 @@ const ViewProfile = () => (
             <div className="view_holiday_content">
                 <ViewProfileMessage/>
                 <ViewProfileMessageRequired/>
-                <AddRequestComment/>
             </div>
         </div>
     </div>
+);
 
+const AskRequest = () => (
+    <div className="ask_request">
+        <span className="ask_agree">
+            Are you sure that want to delete this request ?
+        </span>
+        <Button basic floated='right' >No</Button>
+        <Button basic floated='right'>Yes</Button>
+    </div>
 );
 
 const GridExampleVerticallyDivided = () => (
@@ -126,13 +122,13 @@ const GridExampleVerticallyDivided = () => (
         </Grid.Row>
         <Grid.Row>
             <Grid.Column>
-                <Button basic className="button_center">Cancel</Button>
+       <AskRequest/>
             </Grid.Column>
         </Grid.Row>
     </Grid>
 );
 
-const ModalHolidayAddComment = () => (
+const ModalHolidayOffRequest = () => (
     <Modal trigger={< Button > Show Modal
     </Button>} closeIcon='close'>
         <Header>
@@ -144,4 +140,4 @@ const ModalHolidayAddComment = () => (
     </Modal>
 );
 
-export default ModalHolidayAddComment;
+export default ModalHolidayOffRequest;

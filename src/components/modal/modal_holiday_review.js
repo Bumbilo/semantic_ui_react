@@ -46,13 +46,11 @@ const PopupBlock = () => (
 
 const PopupCheck = () => (
     <Popup trigger={< button className="square green">
-        <Icon name="checkmark"/></button>} on='click' position='bottom right' className="position_popup">
+        <Icon name="checkmark"/></button>} position='bottom right' className="position_popup">
         <PopupBlock/>
     </Popup>
     
 );
-
-
 
 const ViewProfileMessageRequired = () => (
     <div className="holiday_comment send">
