@@ -1,4 +1,8 @@
 import React from 'react';
+import TabletComponent from './tablet/tablet_profile';
+import TabletComponentProfile from './tablet/tablet_profile2';
+import TabletComponentProfile2 from './tablet/tablet_profile3';
+import TabletComponentNumbers from './tablet/tablet_number';
 import Login from './forms/login_form';
 import LoginForgot from './forms/forgot_form';
 import Header from './header/header_main';
@@ -36,7 +40,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalChangePasswordSend/>);
+        return (<TabletComponentProfile2 />);
     }
 }
 

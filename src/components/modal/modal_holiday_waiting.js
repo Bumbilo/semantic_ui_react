@@ -39,12 +39,16 @@ const ViewProfileMessage = () => (
 
 const ButtonApproval = () => (
     <div className="holiday_comment">
-        <div className="reject">
-            <button>Reject</button>
-        </div>
-        <div className="approve">
-            <button>Approve</button>
-        </div>
+        <Grid>
+            <Grid.Row>
+                <Grid.Column width={8}>
+                    <Button basic color="red" floated="right">Reject</Button>
+                </Grid.Column>
+                <Grid.Column width={8}>
+                    <Button basic color="green">Approve</Button>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
     </div>
 );
 
