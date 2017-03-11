@@ -30,6 +30,8 @@ import ModalHolidayWaitin from './modal/modal_holiday_waiting';
 import ModalHolidayOffRequest from './modal/modal_holiday_off_request';
 import ModalHolidayOffView from './modal/modal_holiday_off_view';
 import ModalHolidayRequestAfter from './modal/modal_holiday_request_after';
+import ModalEditShift from './modal/modal_edit_shift';
+import ModalEditDepartments from './modal/modal_edit_departments';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
@@ -40,7 +42,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<TabletComponentProfile2 />);
+        return (<ModalEditDepartments />)
     }
 }
 
