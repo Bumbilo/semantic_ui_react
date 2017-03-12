@@ -37,12 +37,13 @@ import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
 import EployeeForm from './employee/employee_form';
 import EmployeeCalendar from './employee/employee_calendar';
+import EployeeSetting from './employee/employee_settings';
 import EmployeeProfileTime from './employee/employee_profile_time';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<ModalEditDepartments />)
+        return (<EployeeSetting/>)
     }
 }
 

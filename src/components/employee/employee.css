@@ -56,8 +56,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .item {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;
-    ;
+    font-family: "Proxima Nova", serif;;
     font-size: 14px;
 }
 
@@ -212,7 +211,6 @@ header .header_top_menu .item.header_title_menu {
     left: 0;
 }
 
-
 /* ========== employee_profile ========== */
 
 .employee {
@@ -346,7 +344,7 @@ header .header_top_menu .item.header_title_menu {
     font-size: 15px;
 }
 
-.employee_option .ui.labeled.icon.button>.icon {
+.employee_option .ui.labeled.icon.button > .icon {
     background: none;
     color: #788668;
 }
@@ -488,7 +486,7 @@ i.input_icon {
     margin-top: 20px;
 }
 
-.input_edit .ui.multiple.dropdown>.label {
+.input_edit .ui.multiple.dropdown > .label {
     color: #927bc2;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
@@ -496,7 +494,7 @@ i.input_icon {
     padding: 6px 12px;
 }
 
-.input_edit .ui.label>.delete.icon {
+.input_edit .ui.label > .delete.icon {
     color: #ababab;
 }
 
@@ -505,7 +503,7 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text, .manager_dropdown.ui.dropdown>.text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text, .manager_dropdown.ui.dropdown > .text {
     line-height: 1;
 }
 
@@ -549,7 +547,7 @@ i.input_icon {
     margin: 10px 0;
 }
 
-.progress_bar>span {
+.progress_bar > span {
     height: 100%;
     display: inline-block;
     top: 0;
@@ -743,7 +741,8 @@ i.input_icon {
     color: #d82b40;
 }
 
-.modal_calenader {}
+.modal_calenader {
+}
 
 /* ========== Date Picker ========== */
 
@@ -921,7 +920,6 @@ i.input_icon {
     padding: 0.1em;
 }
 
-
 /*========== ProfileMonth ==========*/
 
 .employee_profile_calendar {
@@ -999,8 +997,6 @@ i.input_icon {
     margin-bottom: 15px;
 }
 
-
-
 button.profile_month_option {
     background: #fff;
     padding: .3em .4em;
@@ -1018,7 +1014,7 @@ button.profile_month_option {
     float: right;
 }
 
- button.profile_month_option  i {
+button.profile_month_option i {
     margin: 0;
 }
 
@@ -1093,3 +1089,94 @@ button.profile_month_option {
     border: 1px solid grey;
 }
 
+/*========== Employee Settings ==========*/
+.employee_option_left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #f7f7f7;
+    width: 345px;
+    border-radius: 3px;
+    border: 1px solid #e4e5e7;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.employee_option_left .ui.vertical.menu {
+    width: 100%;
+}
+
+.employee_option_left .ui.vertical.text.menu .item {
+    margin: 0;
+    padding: .8em 1.8em;
+    border-bottom: 1px solid #dcdddf;
+}
+
+.employee_option_left .ui.vertical.text.menu .item:hover {
+    background: #ededed;
+    border-left: 4px solid #dcdddf;
+}
+
+.employee_option_left .ui.text.menu .active.item {
+    border-left: 4px solid #7f64b5;
+    color: #7f64b5;
+    border-radius: 0;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.employee_option_left .ui.vertical.menu > .active.item:last-child,
+.employee_option_left .ui.vertical.menu > .item:last-child {
+    border-radius: 0;
+}
+
+.employee_profile_right {
+    position: relative;
+    background: #fff;
+    width: 782px;
+    border-radius: 3px;
+    border: 1px solid #e4e5e7;
+    margin-left: 345px;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.employee_title {
+    padding: 25px 40px;
+    background: #fafafa url('../../images/users.png') no-repeat 95% 50%;
+}
+
+.employee_title .title,
+.employee_title_btn .title {
+    color: #5a5a5a;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
+}
+
+.employee_title .subtitle,
+.employee_title_btn .subtitle {
+    color: #748195;
+}
+
+.employee_title_btn {
+    margin: 30px 40px 15px 40px;
+}
+
+.employee_title_btn .ui.basic.button {
+    padding: .7em 2em;
+    font-size: 1em;
+}
+
+.employee_settings_content {
+    margin: 25px 40px;
+}
+
+.employee_settings_content .ui.table {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(34, 36, 38, .1);
+}
+
+.employee_settings_content .ui.table button {
+    float: right;
+    margin: 0 4px;
+}

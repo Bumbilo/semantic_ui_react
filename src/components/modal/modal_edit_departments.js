@@ -4,8 +4,8 @@ import {
     Header,
     Image,
     Modal,
-    Checkbox,
     Grid,
+    Flag,
     Dropdown,
     Icon,
     Container,
@@ -13,13 +13,14 @@ import {
 } from 'semantic-ui-react';
 import report from '../../images/report.png';
 import '../../CSS/fonts.css';
+import ava2 from '../../images/ava3.png';
 import './modal.css';
 
 const HeaderTitle = () => (
     <div className='header_title'>
         <Image src={report} className="img_header"/>
         <Header as='h2' className="header_title_check">
-            Edit shift template</Header>
+            Edit Department</Header>
     </div>
 );
 
@@ -29,88 +30,61 @@ const ButtonReport = () => (
     </div>
 );
 
-const stateOptions = [
+
+const MyText = () => (
+    <h3>Hello world</h3>
+);
+
+const options = [
     {
-        value: 'Monday',
-        text: 'Monday'
-    }, {
-        value: 'Tuesday',
-        text: 'Tuesday'
-    }, {
-        value: 'Wednesday',
-        text: 'Wednesday'
-    }, {
-        value: 'Thursday',
-        text: 'Thursday'
-    }, {
-        value: 'Friday',
-        text: 'Friday'
-    }, {
-        value: 'Saturday',
-        text: 'Saturday'
+        key: 'Mitsy', text: 'Mitsy', value: 'Mitsy',
+        image: {avatar: true, src: 'static/media/ava3.3fad30da.png'}
     },
     {
-        value: 'Sunday',
-        text: 'Sunday'
+        key: 'Teo', text: 'Teo', value: 'Teo',
+        image: {avatar: true, src: 'static/media/ava3.3fad30da.png'}
+    },
+    {
+        key: 'James', text: 'James', value: 'James',
+        image: {avatar: true, src: 'static/media/ava3.3fad30da.png'}
+    },
+    {
+        key: 'John', text: 'John', value: 'John',
+        image: {avatar: true, src: 'static/media/ava3.3fad30da.png'}
     }
 ];
 
-const stateTime = [
-    {value: "08:00", text: "08:00"},
-    {value: "08:30", text: "08:30"},
-    {value: "09:00", text: "09:00"},
-    {value: "09:30", text: "09:30"},
-    {value: "10:00", text: "10:00"},
-    {value: "10:30", text: "10:30"},
-    {value: "11:00", text: "11:00"},
-    {value: "11:30", text: "11:30"},
-    {value: "12:00", text: "12:00"},
-    {value: "12:30", text: "12:30"},
-    {value: "13:00", text: "13:00"},
-    {value: "13:30", text: "13:30"},
-    {value: "14:00", text: "14:00"},
-    {value: "14:30", text: "14:30"},
-    {value: "15:00", text: "15:00"},
-    {value: "15:30", text: "15:30"},
-    {value: "16:00", text: "16:00"},
-    {value: "16:30", text: "16:30"},
-    {value: "17:00", text: "17:00"},
-    {value: "17:30", text: "17:30"},
-    {value: "18:00", text: "18:00"}
-];
 
-const DropdownDay = () => (<Dropdown compact selection options={stateOptions} defaultValue={stateOptions[0].value}/>);
-const DropdownDay2 = () => (<Dropdown compact selection options={stateOptions} defaultValue={stateOptions[4].value}/>);
-const DropdownTime = () => (<Dropdown compact selection options={stateTime}  defaultValue={stateTime[0].value} />);
-const DropdownTime2 = () => (<Dropdown compact selection options={stateTime}  defaultValue={stateTime[17].value} />);
 
-const ChangeDay = () => (
-    <ul className="wrapp_group_call left">
-        <li><Icon name="calendar" className="day_purple"/></li>
-        <li>
-            <ul className="group_call">
-                <li><DropdownDay/></li>
-                <li><DropdownDay2/></li>
-            </ul>
-        </li>
-    </ul>
-);
+class DropdownUsers extends Component {
+    state = {options}
 
-const ChangeTime = () => (
-    <ul className="wrapp_group_call right">
-        <li><Icon name="clock" className="day_purple"/></li>
-        <li>
-            <ul className="group_call">
-                <li><DropdownTime/></li>
-                <li><DropdownTime2/></li>
-            </ul>
-        </li>
-    </ul>
-);
+    handleAddition = (e, {value}) => {
+        this.setState({
+            options: [{text: value, value}, ...this.state.options],
+        })
+    }
 
-const CheckAllDay = () => (
-    <Checkbox label='All day' className="chebox_allday" />
-);
+    handleChange = (e, {value}) => this.setState({currentValues: value})
+
+    render() {
+        const {currentValues} = this.state
+
+        return (
+            <Dropdown
+                options={this.state.options}
+                selection
+                fluid
+                search
+                multiple
+                allowAdditions
+                value={currentValues}
+                onAddItem={this.handleAddition}
+                onChange={this.handleChange}
+            />
+        )
+    }
+}
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -126,15 +100,8 @@ const GridExampleVerticallyDivided = () => (
             <Grid.Row>
                 <Grid.Column>
                     <div className="block_center large">
-                        <ChangeDay/>
-                        <ChangeTime/>
-                    </div>
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row>
-                <Grid.Column>
-                    <div className="block_center large">
-                        <CheckAllDay/>
+                        <label className="label_input top">Add manage</label>
+                        <DropdownUsers/>
                     </div>
                 </Grid.Column>
             </Grid.Row>

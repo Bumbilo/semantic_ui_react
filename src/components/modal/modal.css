@@ -965,7 +965,7 @@ button.square.green:hover .popup_check_holiday {
     vertical-align: middle;
     line-height: 2.5;
 }
-
+/*========= Modal Panel ========*/
 .group_call {
     margin: 0;
     padding: 0;
@@ -1040,3 +1040,10 @@ i.icon.day_purple {
     color: #7f64b5;
 }
 
+.label_input.top {
+    margin: 15px 0 10px 0;
+}
+
+.block_center .ui.multiple.dropdown>.label {
+    box-shadow: none;
+}
