@@ -4,7 +4,6 @@ body{
    background: #e6e9f0;
    min-width: 490px;
    font-size: 100%;
-   overflow-x: hidden;
    height: 100%;
    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 }

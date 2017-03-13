@@ -4,21 +4,21 @@ import {
     Grid,
     Image,
     Container,
-    Accordion,
     Table,
+    Popup,
     Button,
     Icon,
-    Divider,
     Input,
-    Menu,
-    Popup,
+    Menu
 } from 'semantic-ui-react';
 import mainLogo from '../../images/logo.png';
 import ava2 from '../../images/ava3.png';
-import avaBig from '../../images/avaBig.png'
 import appImg from '../../images/apps.svg';
 import dottedImg from '../../images/dotted.svg';
 import bellImg from '../../images/bell.svg';
+import mitsy from '../../images/user_mitsy.png';
+import john from '../../images/user_jhon.png';
+import den from '../../images/user_den.png';
 import '../../CSS/fonts.css';
 import './employee.css';
 import './timecard.css';
@@ -207,6 +207,38 @@ class MenuLeftSidebar extends Component {
     }
 }
 
+// ============ Popup ============
+
+const UserPopupMinsy = () => (
+    <Popup
+        trigger={<Image src={mitsy} shape='circular'/>}
+        content='Mitsy Smith'
+        position='top right'
+        size='tiny'
+        className="setting_popup_users"
+    />
+);
+
+
+const UserPopupJohn = () => (
+    <Popup
+        trigger={<Image src={john} shape='circular'/>}
+        content='John Taddy'
+        position='top right'
+        size='tiny'
+        className="setting_popup_users"
+    />
+);
+
+const UserPopupDen = () => (
+    <Popup
+        trigger={<Image src={den} shape='circular'/>}
+        content='Den Michel'
+        position='top right'
+        size='tiny'
+        className="setting_popup_users"
+    />
+);
 // ============ Content ============
 
 const EmployeeSettings = () => (
@@ -249,30 +281,29 @@ const EmployeeLocations = () => (
             <Table compact='very'>
                 <Table.Body>
                     <Table.Row>
-                        <Table.Cell>Old Dalby</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Old Dalby</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
                     <Table.Row>
-                        <Table.Cell>Nottingham</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Nottingham</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
                     <Table.Row>
-                        <Table.Cell>Nottingham</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Nottingham</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
-
                 </Table.Body>
             </Table>
         </div>
@@ -302,27 +333,193 @@ const EmployeePosition = () => (
             <Table compact='very'>
                 <Table.Body>
                     <Table.Row>
-                        <Table.Cell>Old Dalby</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Designer</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
                     <Table.Row>
-                        <Table.Cell>Nottingham</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Accountant</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
                     <Table.Row>
-                        <Table.Cell>Nottingham</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
-                            <button>1</button>
-                            <button>2</button>
+                        <Table.Cell width={8}>Developer</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Accountant</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Software developer</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Marketing manager</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Electrical Engineer</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Store Manager</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>CNC programmer</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                </Table.Body>
+            </Table>
+        </div>
+    </div>
+);
+
+const EmployeeDepartments = () => (
+    <div>
+        <div className="employee_title_btn">
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={10}>
+                        <div className="title">
+                            Departments
+                        </div>
+                        <div className="subtitle">
+                            Informational text about departments
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                        <Button basic floated="right">Add Department</Button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </div>
+        <div className="employee_settings_content">
+            <Table compact='very'>
+                <Table.Body>
+                    <Table.Row>
+                        <Table.Cell width={8}>Design</Table.Cell>
+                        <Table.Cell width={6}>
+                            <UserPopupMinsy/>
+                            <UserPopupJohn/>
+                            <UserPopupDen/>
+                            <a className="count_users">+2 more</a>
+                        </Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Fabrication</Table.Cell>
+                        <Table.Cell width={6}>
+                            <UserPopupMinsy/>
+                        </Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Software</Table.Cell>
+                        <Table.Cell width={6}></Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                </Table.Body>
+            </Table>
+        </div>
+    </div>
+);
+
+
+const EmployeeShift = () => (
+    <div>
+        <div className="employee_title_btn">
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={10}>
+                        <div className="title">
+                            Shift templates
+                        </div>
+                        <div className="subtitle">
+                            Informational text about Shift
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                        <Button basic floated="right">Add shift</Button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </div>
+        <div className="employee_settings_content">
+            <Table compact='very'>
+                <Table.Body>
+                    <Table.Row>
+                        <Table.Cell width={8}>Factory</Table.Cell>
+                        <Table.Cell width={6}>
+                            <span className="employee_setting_date">Mon - Fri 08:00 - 16:30</span>
+                        </Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Office half</Table.Cell>
+                        <Table.Cell width={6}>
+                            <span className="employee_setting_date">Mon - Fri 08:00 - 12:30</span>
+                        </Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell width={8}>Office</Table.Cell>
+                        <Table.Cell width={6}>
+                            <span className="employee_setting_date">Mon - Fri 09:00 - 17:00</span>
+                        </Table.Cell>
+                        <Table.Cell width={2}>
+                            <button><Icon name="write"/></button>
+                            <button><Icon name="trash outline"/></button>
                         </Table.Cell>
                     </Table.Row>
 
@@ -345,6 +542,8 @@ const ContentMenu = () => (
                             <EmployeeSettings/>
                             <EmployeeLocations/>
                             <EmployeePosition/>
+                            <EmployeeDepartments/>
+                            <EmployeeShift/>
                         </Grid.Column>
                     </Grid>
                 </div>
