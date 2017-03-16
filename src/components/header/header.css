@@ -137,6 +137,14 @@ header .header_top_inform {
     line-height: 71px;
 }
 
+header .header_top_inform .ui.grid {
+    margin: 0;
+}
+
+header .header_top_inform .ui.grid>.row {
+    padding: 0;
+}
+
 header .header_top_inform .item.emp_title {
     font-size: 16px;
 }
@@ -166,6 +174,7 @@ header .header_top_search {
     min-height: 45px;
     background: #fff;
     border-bottom: 1px solid #d6d7d8;
+    margin-top: 14px;
 }
 
 header .header_top_search .celected_count {

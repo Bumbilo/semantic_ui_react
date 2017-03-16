@@ -278,34 +278,32 @@ const EmployeeLocations = () => (
             </Grid>
         </div>
         <div className="employee_settings_content">
-            <Table compact='very'>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell width={8}>Old Dalby</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Nottingham</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Nottingham</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                </Table.Body>
-            </Table>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Old Dalby</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Nottingham</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Nottingham</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         </div>
     </div>
 );
@@ -330,82 +328,80 @@ const EmployeePosition = () => (
             </Grid>
         </div>
         <div className="employee_settings_content">
-            <Table compact='very'>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell width={8}>Designer</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Accountant</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Developer</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Accountant</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Software developer</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Marketing manager</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Electrical Engineer</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Store Manager</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>CNC programmer</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                </Table.Body>
-            </Table>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Designer</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Accountant</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Developer</span> </Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Accountant</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Software developer</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Marketing manager</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Electrical Engineer</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Store Manager</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">CNC programmer</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         </div>
     </div>
 );
@@ -430,41 +426,39 @@ const EmployeeDepartments = () => (
             </Grid>
         </div>
         <div className="employee_settings_content">
-            <Table compact='very'>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell width={8}>Design</Table.Cell>
-                        <Table.Cell width={6}>
-                            <UserPopupMinsy/>
-                            <UserPopupJohn/>
-                            <UserPopupDen/>
-                            <a className="count_users">+2 more</a>
-                        </Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Fabrication</Table.Cell>
-                        <Table.Cell width={6}>
-                            <UserPopupMinsy/>
-                        </Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Software</Table.Cell>
-                        <Table.Cell width={6}></Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                </Table.Body>
-            </Table>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Design</span></Grid.Column>
+                    <Grid.Column width={5}>
+                        <UserPopupMinsy/>
+                        <UserPopupJohn/>
+                        <UserPopupDen/>
+                        <a className="count_users">+2 more</a>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Fabrication</span></Grid.Column>
+                    <Grid.Column width={5}>
+                        <UserPopupMinsy/>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Software</span></Grid.Column>
+                    <Grid.Column width={5}></Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         </div>
     </div>
 );
@@ -490,41 +484,38 @@ const EmployeeShift = () => (
             </Grid>
         </div>
         <div className="employee_settings_content">
-            <Table compact='very'>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell width={8}>Factory</Table.Cell>
-                        <Table.Cell width={6}>
-                            <span className="employee_setting_date">Mon - Fri 08:00 - 16:30</span>
-                        </Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Office half</Table.Cell>
-                        <Table.Cell width={6}>
-                            <span className="employee_setting_date">Mon - Fri 08:00 - 12:30</span>
-                        </Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell width={8}>Office</Table.Cell>
-                        <Table.Cell width={6}>
-                            <span className="employee_setting_date">Mon - Fri 09:00 - 17:00</span>
-                        </Table.Cell>
-                        <Table.Cell width={2}>
-                            <button><Icon name="write"/></button>
-                            <button><Icon name="trash outline"/></button>
-                        </Table.Cell>
-                    </Table.Row>
-
-                </Table.Body>
-            </Table>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Factory</span></Grid.Column>
+                    <Grid.Column width={5}>
+                        <span className="employee_setting_date"><span className="date">Mon - Fri 08:00 - 16:30</span></span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Office half</span></Grid.Column>
+                    <Grid.Column width={5}>
+                        <span className="employee_setting_date"><span className="date">Mon - Fri 08:00 - 12:30</span></span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}><span className="name">Office</span></Grid.Column>
+                    <Grid.Column width={5}>
+                        <span className="employee_setting_date"><span className="name">Mon - Fri 09:00 - 17:00</span></span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <button><Icon name="write"/></button>
+                        <button><Icon name="trash outline"/></button>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         </div>
     </div>
 );
