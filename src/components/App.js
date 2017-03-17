@@ -38,12 +38,14 @@ import EmployeeProfileCalendar from './employee/employee_profile_calendar';
 import EployeeForm from './employee/employee_form';
 import EmployeeCalendar from './employee/employee_calendar';
 import EployeeSetting from './employee/employee_settings';
+import EmployeeSettingPanel from './employee/employee_settings_panel';
+import EmployeeSettingPanel2 from './employee/employee_settings_panel2';
 import EmployeeProfileTime from './employee/employee_profile_time';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<EployeeSetting/>)
+        return (<EmployeeSettingPanel2/>)
     }
 }
 

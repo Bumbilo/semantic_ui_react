@@ -194,9 +194,8 @@ class MenuLeftSidebar extends Component {
         return (
             <Menu text vertical>
                 <Menu.Item name='general' active={activeItem === 'general'} onClick={this.handleItemClick}/>
-                <Menu.Item name='holiday' active={activeItem === 'holiday'} onClick={this.handleItemClick}/>
-                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'}
-                           onClick={this.handleItemClick}/>
+                <Menu.Item name='absence' active={activeItem === 'absence'} onClick={this.handleItemClick}/>
+                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'} onClick={this.handleItemClick}/>
                 <Menu.Item name='employee' active={activeItem === 'employee'} onClick={this.handleItemClick}/>
                 <Menu.Item name='nottification' active={activeItem === 'nottification'} onClick={this.handleItemClick}/>
                 <Menu.Item name='permissions' active={activeItem === 'permissions'} onClick={this.handleItemClick}/>
@@ -245,7 +244,7 @@ const EmployeeSettings = () => (
             <Grid.Row>
                 <Grid.Column>
                     <div className="title">
-                        Employee settings
+                        Absence
                     </div>
                     <div className="subtitle">
                         Configure actions and for your Page
@@ -263,14 +262,14 @@ const EmployeeLocations = () => (
                 <Grid.Row>
                     <Grid.Column width={10}>
                         <div className="title">
-                            Locations
+                            Absence types
                         </div>
                         <div className="subtitle">
-                            Informational text about location
+                            Informational text about departmets
                         </div>
                     </Grid.Column>
                     <Grid.Column width={6}>
-                        <Button basic floated="right">Add Location</Button>
+                        <Button basic floated="right">Add Absence</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -278,7 +277,7 @@ const EmployeeLocations = () => (
         <div className="employee_settings_content">
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Old Dalby</span></Grid.Column>
+                    <Grid.Column width={8}><span className="name">Holiday</span></Grid.Column>
                     <Grid.Column width={5}></Grid.Column>
                     <Grid.Column width={3}>
                         <Button icon="write"/>
@@ -286,7 +285,7 @@ const EmployeeLocations = () => (
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Nottingham</span></Grid.Column>
+                    <Grid.Column width={8}><span className="name">Sick</span></Grid.Column>
                     <Grid.Column width={5}></Grid.Column>
                     <Grid.Column width={3}>
                         <Button icon="write"/>
@@ -294,105 +293,7 @@ const EmployeeLocations = () => (
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Nottingham</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-    </div>
-);
-
-const EmployeePosition = () => (
-    <div>
-        <div className="employee_title_btn">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={10}>
-                        <div className="title">
-                            Locations
-                        </div>
-                        <div className="subtitle">
-                            Informational text about location
-                        </div>
-                    </Grid.Column>
-                    <Grid.Column width={6}>
-                        <Button basic floated="right">Add Position</Button>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-        <div className="employee_settings_content">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Designer</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Accountant</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Developer</span> </Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Accountant</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Software developer</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Marketing manager</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Electrical Engineer</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Store Manager</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">CNC programmer</span></Grid.Column>
+                    <Grid.Column width={8}><span className="name">Matternity/Paternity</span></Grid.Column>
                     <Grid.Column width={5}></Grid.Column>
                     <Grid.Column width={3}>
                         <Button icon="write"/>
@@ -411,14 +312,14 @@ const EmployeeDepartments = () => (
                 <Grid.Row>
                     <Grid.Column width={10}>
                         <div className="title">
-                            Departments
+                            Autorisers
                         </div>
                         <div className="subtitle">
                             Informational text about departments
                         </div>
                     </Grid.Column>
                     <Grid.Column width={6}>
-                        <Button basic floated="right">Add Department</Button>
+
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -426,91 +327,35 @@ const EmployeeDepartments = () => (
         <div className="employee_settings_content">
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Design</span></Grid.Column>
-                    <Grid.Column width={5}>
+                    <Grid.Column width={4}><span className="name">All</span></Grid.Column>
+                    <Grid.Column width={7}><span className="name">All</span></Grid.Column>
+                    <Grid.Column width={3}>
                         <UserPopupMinsy/>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
+                        <Button icon="write"/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={4}><span className="name">Old Balby</span></Grid.Column>
+                    <Grid.Column width={7}><span className="name">Designer</span></Grid.Column>
+                    <Grid.Column width={3}>
                         <UserPopupJohn/>
                         <UserPopupDen/>
                         <a className="count_users">+2 more</a>
                     </Grid.Column>
-                    <Grid.Column width={3}>
+                    <Grid.Column width={2}>
                         <Button icon="write"/>
-                        <Button icon="trash outline"/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Fabrication</span></Grid.Column>
-                    <Grid.Column width={5}>
-                        <UserPopupMinsy/>
-                    </Grid.Column>
+                    <Grid.Column width={4}><span className="name">Old Dably</span></Grid.Column>
+                    <Grid.Column width={7}><span className="name">Fabricaton</span></Grid.Column>
                     <Grid.Column width={3}>
+                        <UserPopupDen/>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
                         <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Software</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-    </div>
-);
-
-
-const EmployeeShift = () => (
-    <div>
-        <div className="employee_title_btn">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={10}>
-                        <div className="title">
-                            Shift templates
-                        </div>
-                        <div className="subtitle">
-                            Informational text about Shift
-                        </div>
-                    </Grid.Column>
-                    <Grid.Column width={6}>
-                        <Button basic floated="right">Add shift</Button>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-        <div className="employee_settings_content">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Factory</span></Grid.Column>
-                    <Grid.Column width={5}>
-                        <span className="employee_setting_date"><span className="date">Mon - Fri 08:00 - 16:30</span></span>
-                    </Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Office half</span></Grid.Column>
-                    <Grid.Column width={5}>
-                        <span className="employee_setting_date"><span className="date">Mon - Fri 08:00 - 12:30</span></span>
-                    </Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Office</span></Grid.Column>
-                    <Grid.Column width={5}>
-                        <span className="employee_setting_date"><span className="name">Mon - Fri 09:00 - 17:00</span></span>
-                    </Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -530,9 +375,7 @@ const ContentMenu = () => (
                         <Grid.Column>
                             <EmployeeSettings/>
                             <EmployeeLocations/>
-                            <EmployeePosition/>
                             <EmployeeDepartments/>
-                            <EmployeeShift/>
                         </Grid.Column>
                     </Grid>
                 </div>
@@ -556,7 +399,7 @@ export default class Employees extends Component {
     }
 }
 
-class EployeeSetting extends React.Component {
+class EployeeSettingPanel2 extends React.Component {
     render() {
         return (<Employees/>);
     }
