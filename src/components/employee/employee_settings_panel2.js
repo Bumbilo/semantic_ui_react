@@ -5,6 +5,7 @@ import {
     Image,
     Container,
     Popup,
+    Checkbox,
     Button,
     Input,
     Menu
@@ -115,7 +116,9 @@ const DropdownFilter = () => (
 const ButtonCircularAdd = () => (<Button circular icon='plus'/>);
 
 const InputSearch = () => (<Input icon='search' iconPosition='left' placeholder='Search...' transparent/>);
+
 // ========== header ==========
+
 const GridExampleColumns = () => (
     <header className="header">
         <div className="header_top_menu">
@@ -184,7 +187,7 @@ const GridExampleColumns = () => (
 // ========== Left Sidebar ==========
 
 class MenuLeftSidebar extends Component {
-    state = {activeItem: 'general'};
+    state = {activeItem: 'timeAttendance'};
 
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
 
@@ -195,7 +198,8 @@ class MenuLeftSidebar extends Component {
             <Menu text vertical>
                 <Menu.Item name='general' active={activeItem === 'general'} onClick={this.handleItemClick}/>
                 <Menu.Item name='absence' active={activeItem === 'absence'} onClick={this.handleItemClick}/>
-                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'} onClick={this.handleItemClick}/>
+                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'}
+                           onClick={this.handleItemClick}/>
                 <Menu.Item name='employee' active={activeItem === 'employee'} onClick={this.handleItemClick}/>
                 <Menu.Item name='nottification' active={activeItem === 'nottification'} onClick={this.handleItemClick}/>
                 <Menu.Item name='permissions' active={activeItem === 'permissions'} onClick={this.handleItemClick}/>
@@ -237,6 +241,19 @@ const UserPopupDen = () => (
     />
 );
 // ============ Content ============
+const DayOption = [
+    {key: 'monday', value: 'monday', text: 'Monday'},
+    {key: 'tuesday', value: 'tuesday', text: 'Tuesday'},
+    {key: 'wednesday', value: 'wednesday', text: 'Wednesday'},
+    {key: 'thursday', value: 'thursday', text: 'Thursday'},
+    {key: 'friday', value: 'friday', text: 'Friday'},
+    {key: 'saturday', value: 'saturday', text: 'Saturday'},
+    {key: 'sunday', value: 'sunday', text: 'Sunday'}
+];
+
+const SelectExample = () => (
+    <Dropdown placeholder='Monday' compact selection options={DayOption}/>
+);
 
 const EmployeeSettings = () => (
     <div className="employee_title">
@@ -244,10 +261,10 @@ const EmployeeSettings = () => (
             <Grid.Row>
                 <Grid.Column>
                     <div className="title">
-                        Absence
+                        Time and attendance
                     </div>
                     <div className="subtitle">
-                        Configure actions and for your Page
+                        Configurate actions and for your Page
                     </div>
                 </Grid.Column>
             </Grid.Row>
@@ -255,58 +272,8 @@ const EmployeeSettings = () => (
     </div>
 );
 
-const EmployeeLocations = () => (
-    <div>
-        <div className="employee_title_btn">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={10}>
-                        <div className="title">
-                            Absence types
-                        </div>
-                        <div className="subtitle">
-                            Informational text about departmets
-                        </div>
-                    </Grid.Column>
-                    <Grid.Column width={6}>
-                        <Button basic floated="right">Add Absence</Button>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-        <div className="employee_settings_content">
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Holiday</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Sick</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column width={8}><span className="name">Matternity/Paternity</span></Grid.Column>
-                    <Grid.Column width={5}></Grid.Column>
-                    <Grid.Column width={3}>
-                        <Button icon="write"/>
-                        <Button icon="trash outline"/>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </div>
-    </div>
-);
-
 const EmployeeDepartments = () => (
-    <div>
+    <div className="employee_setting_dropdown">
         <div className="employee_title_btn">
             <Grid>
                 <Grid.Row>
@@ -319,7 +286,6 @@ const EmployeeDepartments = () => (
                         </div>
                     </Grid.Column>
                     <Grid.Column width={6}>
-
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -327,35 +293,179 @@ const EmployeeDepartments = () => (
         <div className="employee_settings_content">
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={4}><span className="name">All</span></Grid.Column>
-                    <Grid.Column width={7}><span className="name">All</span></Grid.Column>
-                    <Grid.Column width={3}>
-                        <UserPopupMinsy/>
+                    <Grid.Column width={12}>
+                        <span className="name">Should Sunday hours be tracked separately to regular hours on the timecards ?</span>
+                    </Grid.Column>
+                    <Grid.Column width={2}> <Checkbox label='Yes'/>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Button icon="write"/>
+                        <Checkbox label='No'/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={4}><span className="name">Old Balby</span></Grid.Column>
-                    <Grid.Column width={7}><span className="name">Designer</span></Grid.Column>
+                    <Grid.Column width={12}>
+                        <span className="name">Do you pay your employees for breaks taken during their shift ?</span>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
+                        <Checkbox label='Yes'/>
+                    </Grid.Column>
+                    <Grid.Column width={2}>
+                        <Checkbox label='No'/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={13}>
+                        <span className="name">Timecards should start on what day of the week ?</span>
+                    </Grid.Column>
                     <Grid.Column width={3}>
+                        <SelectExample/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={11}><span className="name">Select employee responsible for timecards updates.</span></Grid.Column>
+                    <Grid.Column width={4}>
+                        <UserPopupMinsy/>
                         <UserPopupJohn/>
                         <UserPopupDen/>
                         <a className="count_users">+2 more</a>
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={1}>
                         <Button icon="write"/>
                     </Grid.Column>
                 </Grid.Row>
+            </Grid>
+        </div>
+    </div>
+);
+
+const PunchTimes = [
+    {key: '8:00-09:00', value: '8:00-09:00', text: '8:00-09:00'},
+    {key: '09:00-10:00', value: '09:00-10:00', text: '09:00-10:00'},
+    {key: '10:00-11:00', value: '10:00-11:00', text: '10:00-11:00'},
+    {key: '11:00-12:00', value: '11:00-12:00', text: '11:00-12:00'},
+    {key: '12:00-13:00', value: '12:00-13:00', text: '12:00-13:00'},
+    {key: '13:00-14:00', value: '13:00-14:00', text: '13:00-14:00'},
+    {key: '14:00-15:00', value: '14:00-15:00', text: '14:00-15:00'},
+    {key: '15:00-16:00', value: '15:00-16:00', text: '15:00-16:00'},
+    {key: '16:00-17:00', value: '16:00-17:00', text: '16:00-17:00'},
+    {key: '17:00-18:00', value: '17:00-18:00', text: '17:00-18:00'},
+];
+
+const PunchTime = () => (
+    <Dropdown placeholder='Punch time' compact selection options={PunchTimes}/>
+);
+
+const ScheduleTime = () => (
+    <Dropdown placeholder='Schedule time' compact selection options={PunchTimes}/>
+);
+
+const EmployeeLatenessRule = () => (
+    <div className="employee_setting_dropdown">
+        <div className="employee_title_btn">
+            <Grid>
                 <Grid.Row>
-                    <Grid.Column width={4}><span className="name">Old Dably</span></Grid.Column>
-                    <Grid.Column width={7}><span className="name">Fabricaton</span></Grid.Column>
-                    <Grid.Column width={3}>
-                        <UserPopupDen/>
+                    <Grid.Column width={10}>
+                        <div className="title">
+                           Lateness rules
+                        </div>
+                        <div className="subtitle">
+                            Informational text about location
+                        </div>
                     </Grid.Column>
-                    <Grid.Column width={2}>
-                        <Button icon="write"/>
+                    <Grid.Column width={6}>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </div>
+        <div className="employee_settings_content">
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={13}>
+                        <span className="name">If an employee clocks in <span className="bold">earlier </span>
+                            than their schedule time what time should be on the timecard ?
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <PunchTime/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={13}>
+                        <span className="name">If an employee clocks in <span className="bold">later </span>
+                            than their schedule time what time should be on the timecard ?
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <ScheduleTime/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={13}>
+                        <span className="name">If an employee clocks in <span className="bold">earlier </span>
+                            than their schedule time what time should be on the timecard ?
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <PunchTime/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={13}>
+                        <span className="name">If an employee clocks in <span className="bold">later </span>
+                            than their schedule time what time should be on the timecard ?
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+                        <ScheduleTime/>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </div>
+    </div>
+);
+
+
+const RoundedTime = () => (
+    <Dropdown placeholder='Do no round time' compact selection options={PunchTimes}/>
+);
+
+const EmployeeLatenessRounding = () => (
+    <div className="employee_setting_dropdown rounded">
+        <div className="employee_title_btn">
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={10}>
+                        <div className="title">
+                          Rounding times 
+                        </div>
+                        <div className="subtitle">
+                            Informational text about location
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                        <Checkbox toggle />
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </div>
+        <div className="employee_settings_content">
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={12}>
+                        <span className="name"> If an employee clocks in their time should be rounded ot the nearest
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <RoundedTime/>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={12}>
+                        <span className="name"> If an employee clocks in their time should be rounded ot the nearest
+                        </span>
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <RoundedTime/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -374,9 +484,10 @@ const ContentMenu = () => (
                     <Grid columns='equal'>
                         <Grid.Column>
                             <EmployeeSettings/>
-                            <EmployeeLocations/>
                             <EmployeeDepartments/>
-                        </Grid.Column>
+                            <EmployeeLatenessRule/>
+                            <EmployeeLatenessRounding/>
+                       </Grid.Column>
                     </Grid>
                 </div>
             </div>

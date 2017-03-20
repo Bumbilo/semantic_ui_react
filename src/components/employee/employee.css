@@ -1229,6 +1229,40 @@ button.profile_month_option i {
     margin-top: 2px;
 }
 
+.employee_setting_dropdown .ui.selection.dropdown {
+    width: 9em;
+    min-height: 1em;
+    padding: 0 10px;
+    float: right;
+    margin: 0;
+    margin-left: 5px;
+}
+.employee_setting_dropdown.rounded .ui.selection.dropdown {
+    width: 10.5em;
+}
+.employee_setting_dropdown span.name {
+    line-height: 2.2em;
+}
+
+.employee_setting_dropdown .count_users {
+    line-height: 3em;
+}
+
+.employee_setting_dropdown .ui.checkbox {
+    float: right;
+    margin-top: 5px;
+}
+span.bold {
+    font-weight: 700;
+}
+.employee_setting_dropdown .ui.icon.button{
+    margin-top: 5px;
+}
+
+.employee_setting_dropdown img.ui.image {
+    margin-top: 5px;
+}
+
 .employee_settings_content .ui.icon.button:hover {
     color: #9b9b9b;
     background: #f7f7f7;
