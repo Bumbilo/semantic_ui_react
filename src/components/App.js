@@ -40,12 +40,13 @@ import EmployeeCalendar from './employee/employee_calendar';
 import EployeeSetting from './employee/employee_settings';
 import EmployeeSettingPanel from './employee/employee_settings_panel';
 import EmployeeSettingPanel2 from './employee/employee_settings_panel2';
+import EmployeeSettingPanel3 from './employee/employee_settings_panel3';
 import EmployeeProfileTime from './employee/employee_profile_time';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<EmployeeSettingPanel2/>)
+        return (<EmployeeSettingPanel3/>)
     }
 }
 
