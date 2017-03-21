@@ -253,6 +253,7 @@ const EmployeeSettings = () => (
                 </Grid.Column>
             </Grid.Row>
         </Grid>
+        <i className="icon-people"/>
     </div>
 );
 

@@ -269,6 +269,7 @@ const EmployeeSettings = () => (
                 </Grid.Column>
             </Grid.Row>
         </Grid>
+        <i className="icon-plane"/>
     </div>
 );
 
@@ -382,7 +383,7 @@ const EmployeeLatenessRule = () => (
                 <Grid.Row>
                     <Grid.Column width={13}>
                         <span className="name">If an employee clocks in <span className="bold">earlier </span>
-                            than their schedule time what time should be on the timecard ?
+                            than their schedule time what time should be on timecard ?
                         </span>
                     </Grid.Column>
                     <Grid.Column width={3}>
@@ -392,7 +393,7 @@ const EmployeeLatenessRule = () => (
                 <Grid.Row>
                     <Grid.Column width={13}>
                         <span className="name">If an employee clocks in <span className="bold">later </span>
-                            than their schedule time what time should be on the timecard ?
+                            than their schedule time what time should be on timecard ?
                         </span>
                     </Grid.Column>
                     <Grid.Column width={3}>
@@ -402,7 +403,7 @@ const EmployeeLatenessRule = () => (
                 <Grid.Row>
                     <Grid.Column width={13}>
                         <span className="name">If an employee clocks in <span className="bold">earlier </span>
-                            than their schedule time what time should be on the timecard ?
+                            than their schedule time what time should be on timecard ?
                         </span>
                     </Grid.Column>
                     <Grid.Column width={3}>
@@ -412,7 +413,7 @@ const EmployeeLatenessRule = () => (
                 <Grid.Row>
                     <Grid.Column width={13}>
                         <span className="name">If an employee clocks in <span className="bold">later </span>
-                            than their schedule time what time should be on the timecard ?
+                            than their schedule time what time should be on timecard ?
                         </span>
                     </Grid.Column>
                     <Grid.Column width={3}>

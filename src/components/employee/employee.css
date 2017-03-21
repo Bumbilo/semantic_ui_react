@@ -1146,8 +1146,20 @@ button.profile_month_option i {
 }
 
 .employee_title {
-    padding: 25px;
-    background: #fafafa url('../../images/users.png') no-repeat 95% 50%;
+    position: relative;
+    padding: 30px;
+    background: #fafafa;
+}
+
+.employee_title .icon-people, 
+.employee_title .icon-clock, 
+.employee_title .icon-plane,
+.employee_title .icon-bell {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #b6bec8;
+    font-size: 3em;
 }
 
 .employee_title .title,
@@ -1166,7 +1178,7 @@ button.profile_month_option i {
 }
 
 .employee_title_btn {
-    margin: 40px 40px 15px 40px;
+    margin: 40px 50px 15px 50px;
 }
 
 .employee_title_btn .ui.basic.button {
@@ -1176,7 +1188,7 @@ button.profile_month_option i {
 }
 
 .employee_settings_content {
-    margin: 25px 40px;
+    margin: 25px 50px;
 }
 
 .employee_settings_content .ui.grid > .row:hover .column:first-child {

@@ -48,41 +48,83 @@ const stateOptions = [
     }, {
         value: 'Saturday',
         text: 'Saturday'
-    },
-    {
+    }, {
         value: 'Sunday',
         text: 'Sunday'
     }
 ];
 
 const stateTime = [
-    {value: "08:00", text: "08:00"},
-    {value: "08:30", text: "08:30"},
-    {value: "09:00", text: "09:00"},
-    {value: "09:30", text: "09:30"},
-    {value: "10:00", text: "10:00"},
-    {value: "10:30", text: "10:30"},
-    {value: "11:00", text: "11:00"},
-    {value: "11:30", text: "11:30"},
-    {value: "12:00", text: "12:00"},
-    {value: "12:30", text: "12:30"},
-    {value: "13:00", text: "13:00"},
-    {value: "13:30", text: "13:30"},
-    {value: "14:00", text: "14:00"},
-    {value: "14:30", text: "14:30"},
-    {value: "15:00", text: "15:00"},
-    {value: "15:30", text: "15:30"},
-    {value: "16:00", text: "16:00"},
-    {value: "16:30", text: "16:30"},
-    {value: "17:00", text: "17:00"},
-    {value: "17:30", text: "17:30"},
-    {value: "18:00", text: "18:00"}
+    {
+        value: "08:00",
+        text: "08:00"
+    }, {
+        value: "08:30",
+        text: "08:30"
+    }, {
+        value: "09:00",
+        text: "09:00"
+    }, {
+        value: "09:30",
+        text: "09:30"
+    }, {
+        value: "10:00",
+        text: "10:00"
+    }, {
+        value: "10:30",
+        text: "10:30"
+    }, {
+        value: "11:00",
+        text: "11:00"
+    }, {
+        value: "11:30",
+        text: "11:30"
+    }, {
+        value: "12:00",
+        text: "12:00"
+    }, {
+        value: "12:30",
+        text: "12:30"
+    }, {
+        value: "13:00",
+        text: "13:00"
+    }, {
+        value: "13:30",
+        text: "13:30"
+    }, {
+        value: "14:00",
+        text: "14:00"
+    }, {
+        value: "14:30",
+        text: "14:30"
+    }, {
+        value: "15:00",
+        text: "15:00"
+    }, {
+        value: "15:30",
+        text: "15:30"
+    }, {
+        value: "16:00",
+        text: "16:00"
+    }, {
+        value: "16:30",
+        text: "16:30"
+    }, {
+        value: "17:00",
+        text: "17:00"
+    }, {
+        value: "17:30",
+        text: "17:30"
+    }, {
+        value: "18:00",
+        text: "18:00"
+    }
 ];
 
 const DropdownDay = () => (<Dropdown compact selection options={stateOptions} defaultValue={stateOptions[0].value}/>);
 const DropdownDay2 = () => (<Dropdown compact selection options={stateOptions} defaultValue={stateOptions[4].value}/>);
-const DropdownTime = () => (<Dropdown compact selection options={stateTime}  defaultValue={stateTime[0].value} />);
-const DropdownTime2 = () => (<Dropdown compact selection options={stateTime}  defaultValue={stateTime[17].value} />);
+const DropdownTime = () => (<Dropdown compact selection options={stateTime} defaultValue={stateTime[0].value}/>);
+const DropdownTime2 = () => (<Dropdown compact selection options={stateTime} defaultValue={stateTime[17].value}/>);
 
 const ChangeDay = () => (
     <ul className="wrapp_group_call left">
@@ -108,9 +150,7 @@ const ChangeTime = () => (
     </ul>
 );
 
-const CheckAllDay = () => (
-   <Checkbox label='All day' className="chebox_allday" />
-);
+const CheckAllDay = () => (<Checkbox label='All day' className="chebox_allday"/>);
 
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
@@ -134,7 +174,7 @@ const GridExampleVerticallyDivided = () => (
             <Grid.Row>
                 <Grid.Column>
                     <div className="block_center large">
-                     <CheckAllDay/>
+                        <CheckAllDay/>
                     </div>
                 </Grid.Column>
             </Grid.Row>
@@ -148,7 +188,7 @@ const GridExampleVerticallyDivided = () => (
 );
 
 const ModalEditShift = () => (
-    <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
+    <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>

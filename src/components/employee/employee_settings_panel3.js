@@ -6,6 +6,7 @@ import {
     Container,
     Popup,
     Checkbox,
+    Icon,
     Button,
     Input,
     Menu
@@ -19,6 +20,7 @@ import mitsy from '../../images/user_mitsy.png';
 import john from '../../images/user_jhon.png';
 import den from '../../images/user_den.png';
 import '../../CSS/fonts.css';
+import '../../CSS/simple-line-icons.css';
 import './employee.css';
 import './timecard.css';
 
@@ -60,7 +62,9 @@ const DropdownOption = () => (
 );
 
 const triger3 = (<Image src={appImg}/>);
+
 // Dropdown Menu
+
 const DropdownMenu = () => (
     <Dropdown trigger={triger3} icon={null}>
         <Dropdown.Menu className="DropdownMenu">
@@ -85,7 +89,9 @@ const DropdownMenu = () => (
 );
 
 const triger4 = (<Image src={bellImg}/>);
+
 // Dropdown Menu
+
 const DropdownNotice = () => (
     <Dropdown trigger={triger4} icon={null}>
         <Dropdown.Menu>
@@ -94,7 +100,9 @@ const DropdownNotice = () => (
         </Dropdown.Menu>
     </Dropdown>
 );
+
 // Dropdown All employees
+
 const DropdownEmployees = () => (
     <Dropdown text='Sort'>
         <Dropdown.Menu>
@@ -182,12 +190,13 @@ const GridExampleColumns = () => (
             </div>
         </div>
     </header>
-);
-
-// ========== Left Sidebar ==========
-
-class MenuLeftSidebar extends Component {
-    state = {activeItem: 'nottification'};
+    ); 
+    
+    // ========== Left Sidebar ========== 
+    
+    class MenuLeftSidebar extends Component {state = {
+        activeItem: 'nottification'
+    };
 
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
 
@@ -198,8 +207,7 @@ class MenuLeftSidebar extends Component {
             <Menu text vertical>
                 <Menu.Item name='general' active={activeItem === 'general'} onClick={this.handleItemClick}/>
                 <Menu.Item name='absence' active={activeItem === 'absence'} onClick={this.handleItemClick}/>
-                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'}
-                           onClick={this.handleItemClick}/>
+                <Menu.Item name='timeAttendance' active={activeItem === 'timeAttendance'} onClick={this.handleItemClick}/>
                 <Menu.Item name='employee' active={activeItem === 'employee'} onClick={this.handleItemClick}/>
                 <Menu.Item name='nottification' active={activeItem === 'nottification'} onClick={this.handleItemClick}/>
                 <Menu.Item name='permissions' active={activeItem === 'permissions'} onClick={this.handleItemClick}/>
@@ -208,54 +216,50 @@ class MenuLeftSidebar extends Component {
     }
 }
 
-// ============ Popup ============
+    // ============ Popup ============ 
+    
+    const UserPopupMinsy = () => (
+    <Popup trigger={< Image src = {
+        mitsy
+    }
 
-const UserPopupMinsy = () => (
-    <Popup
-        trigger={<Image src={mitsy} shape='circular'/>}
-        content='Mitsy Smith'
-        position='top right'
-        size='tiny'
-        className="setting_popup_users"
-    />
-);
-
-
-const UserPopupJohn = () => (
-    <Popup
-        trigger={<Image src={john} shape='circular'/>}
-        content='John Taddy'
-        position='top right'
-        size='tiny'
-        className="setting_popup_users"
-    />
-);
-
-const UserPopupDen = () => (
-    <Popup
-        trigger={<Image src={den} shape='circular'/>}
-        content='Den Michel'
-        position='top right'
-        size='tiny'
-        className="setting_popup_users"
-    />
-);
-// ============ Content ============
-const DayOption = [
-    {key: 'monday', value: 'monday', text: 'Monday'},
-    {key: 'tuesday', value: 'tuesday', text: 'Tuesday'},
-    {key: 'wednesday', value: 'wednesday', text: 'Wednesday'},
-    {key: 'thursday', value: 'thursday', text: 'Thursday'},
-    {key: 'friday', value: 'friday', text: 'Friday'},
-    {key: 'saturday', value: 'saturday', text: 'Saturday'},
-    {key: 'sunday', value: 'sunday', text: 'Sunday'}
-];
-
-const SelectExample = () => (
+    shape = 'circular' />} content='Mitsy Smith' position='top right' size='tiny' className="setting_popup_users"/>
+    ); const UserPopupJohn = () => (
+    <Popup trigger={< Image src = {
+        john
+    }
+    shape = 'circular' />} content='John Taddy' position='top right' size='tiny' className="setting_popup_users"/>
+    ); const UserPopupDen = () => (
+    <Popup trigger={< Image src = {
+        den
+    }
+    shape = 'circular' />} content='Den Michel' position='top right' size='tiny' className="setting_popup_users"/>
+    ); 
+    
+    // ============ Content ============ 
+    
+    const DayOption = [ {key : 'monday',
+    value : 'monday',
+    text : 'Monday'}, {key : 'tuesday',
+    value : 'tuesday',
+    text : 'Tuesday'}, {key : 'wednesday',
+    value : 'wednesday',
+    text : 'Wednesday'}, {key : 'thursday',
+    value : 'thursday',
+    text : 'Thursday'}, {key : 'friday',
+    value : 'friday',
+    text : 'Friday'}, {key : 'saturday',
+    value : 'saturday',
+    text : 'Saturday'}, {key : 'sunday',
+    value : 'sunday',
+    text : 'Sunday'}
+    ]; 
+    
+    const SelectExample = () => (
     <Dropdown placeholder='Monday' compact selection options={DayOption}/>
-);
-
-const EmployeeSettings = () => (
+    ); 
+    
+    const EmployeeSettings = () => (
     <div className="employee_title">
         <Grid>
             <Grid.Row>
@@ -269,24 +273,24 @@ const EmployeeSettings = () => (
                 </Grid.Column>
             </Grid.Row>
         </Grid>
+        <i className="icon-bell"/>
     </div>
-);
 
-const EmployeeDepartments = () => (
+    ); const EmployeeDepartments = () => (
     <div className="employee_setting_dropdown">
         <div className="employee_title_btn">
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={10}>
                         <div className="title">
-                           Get notification 
+                            Get notification
                         </div>
                         <div className="subtitle">
                             Informational text about departments
                         </div>
                     </Grid.Column>
                     <Grid.Column width={6}>
-                        <Checkbox toggle defaultChecked />
+                        <Checkbox toggle defaultChecked/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -298,7 +302,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee registration</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle defaultChecked />
+                        <Checkbox toggle defaultChecked/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -306,7 +310,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee holiday request</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle  />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -314,7 +318,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle  />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -322,7 +326,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle defaultChecked />
+                        <Checkbox toggle defaultChecked/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -330,7 +334,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee registration</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -338,7 +342,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee holiday request</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -346,7 +350,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee holiday update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle  />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -354,7 +358,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee holiday update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -362,7 +366,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee registration</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -370,7 +374,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee holiday request</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -378,7 +382,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -386,7 +390,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -394,7 +398,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -402,7 +406,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -410,7 +414,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -418,7 +422,7 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -426,14 +430,13 @@ const EmployeeDepartments = () => (
                         <span className="name">New employee request update</span>
                     </Grid.Column>
                     <Grid.Column width={2}>
-                        <Checkbox toggle />
+                        <Checkbox toggle/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
         </div>
     </div>
-);
-const ContentMenu = () => (
+    ); const ContentMenu = () => (
     <Container>
         <div className="employee">
             <div className="employee_option_left">
@@ -445,16 +448,13 @@ const ContentMenu = () => (
                         <Grid.Column>
                             <EmployeeSettings/>
                             <EmployeeDepartments/>
-                       </Grid.Column>
+                        </Grid.Column>
                     </Grid>
                 </div>
             </div>
         </div>
     </Container>
-);
-
-export default class Employees extends Component {
-    state = {};
+    ); export default class Employees extends Component {state = {};
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
 
     render() {
@@ -468,9 +468,7 @@ export default class Employees extends Component {
     }
 }
 
-class EmployeeSettingPanel3 extends React.Component {
-    render() {
+    class EmployeeSettingPanel3 extends React.Component {render() {
         return (<Employees/>);
     }
 }
-
