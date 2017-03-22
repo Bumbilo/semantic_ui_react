@@ -1,20 +1,25 @@
 import React, {Component} from 'react';
 import {
     Button,
+    Image,
     Header,
     Modal,
     Grid,
     Dropdown,
     Input
 } from 'semantic-ui-react';
-import varning from '../../images/icon_add_phone.png';
+import varning from '../../images/icon_add_photo.png';
 import '../../CSS/fonts.css';
 import './modal.css';
 
 const HeaderTitle = () => (
     <div className='header_title'>
-        <img src={varning} className="img_header_photo"/>
+        <div className="header_wrap_img">
+            <Image src={varning} shape='circular'/>
+            <Button basic icon='pencil' className="btn_icon"/>
+        </div>
         <Header as='h2' className="header_employee">Add empoloyee</Header>
+
     </div>
 );
 
@@ -68,57 +73,54 @@ const InputEmail = () => (
 
 const DropdownSupervisor = () => (
     <div className='floatRight'>
-        <span className="label_dropdown_mod">Account type</span><Dropdown placeholder='Select supervisor' selection
-                                                                          options={position} className='dropdown_modal'/>
+        <span className="label_dropdown_mod">Account type</span><Dropdown placeholder='Select supervisor' selection options={position} className='dropdown_modal'/>
     </div>
 );
 
 const PositionWork = () => (
     <div className="input_position">
-        <label className='  label_input'>What postion(s) does this person work? </label>
+        <label className='  label_input'>What postion(s) does this person work?
+        </label>
         <Input fluid icon='plus' placeholder='i.e Designer, Team lead, Coordinator, etc.'/>
     </div>
 );
 
 const DropdownSupervisor2 = () => (
     <div className='floatRight'>
-        <span className="label_dropdown_mod">Work shift</span><Dropdown placeholder='08:00 - 16:00' selection
-                                                                        options={position2} className='dropdown_modal'/>
+        <span className="label_dropdown_mod">Work shift</span><Dropdown placeholder='08:00 - 16:00' selection options={position2} className='dropdown_modal'/>
     </div>
 );
 
 const GridExampleVerticallyDivided = () => (
-    <Grid divided='vertically'>
-        <Grid.Row columns={2}>
-            <Grid.Column floated='right'>
+    <Grid divided='vertically' stackable>
+        <Grid.Row >
+            <Grid.Column width={8}>
                 <InputFirstName/>
                 <InputEmail/>
                 <DropdownSupervisor/>
             </Grid.Column>
-            <Grid.Column floated='left'>
+            <Grid.Column width={8}>
                 <InputLastName/>
                 <InputMobile/>
                 <DropdownSupervisor2/>
             </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-            <Grid.Column>
+            <Grid.Column width={16}>
                 <PositionWork/>
             </Grid.Column>
         </Grid.Row>
         <Grid.Row columns={2}>
-            <Grid.Column floated='right'>
+            <Grid.Column>
                 <Button basic floated='right' className='btn_basic'>Cancel</Button>
             </Grid.Column>
-            <Grid.Column floated='left'>
-                <Button color='green'>Add empoloyee</Button>
+            <Grid.Column >
+                <Button floated='left' color='green'>Add empoloyee</Button>
             </Grid.Column>
         </Grid.Row>
     </Grid>
 );
 
 const ModalWindowEmployee = () => (
-    <Modal trigger={<Button> Show Modal </Button>} closeIcon='close'>
+    <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>

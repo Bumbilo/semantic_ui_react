@@ -1047,3 +1047,32 @@ i.icon.day_purple {
 .block_center .ui.multiple.dropdown>.label {
     box-shadow: none;
 }
+
+
+
+@media (max-width: 767px) {
+   .floatRight .ui.selection.dropdown.dropdown_modal {
+      width: 100%;
+   }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 1200px) {
+   .floatRight {
+      width: 100%;
+   }
+   .floatRight .ui.small.input {
+      width: 100%;
+   }
+   .floatRight .ui.selection.dropdown.dropdown_modal {
+      width: 92%;
+   }
+
+}
+
+@media (max-width: 1279px) {
+
+}
