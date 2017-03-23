@@ -1308,7 +1308,6 @@ span.bold {
     color: #9b9b9b;
     background: #f7f7f7;
 }
-
 .count_users {
     color: #748195;
     font-size: .8em;
@@ -1321,3 +1320,82 @@ span.bold {
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
+.employee_dushboard_setup {
+    position: relative;
+    margin: 20px 0;
+    padding: 30px;
+}
+
+.employee_dushboard_setup.green {
+    border: 2px solid #b8e986;
+    background: #f6fcf7;
+}
+
+.employee_dushboard_setup.yellow {
+    border: 2px solid #f9f189;
+    background: #fcfcf6;
+}
+
+.employee_dushboard_setup i.icon.close {
+    position: absolute;
+    font-size: 1.2em;
+    top: 5px;
+    right: 5px;
+    color: #7d7f7d;
+    cursor: pointer;
+}
+
+.employee_dushboard_setup p {
+    font-size: .9em;
+    line-height: 1.2em;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    color: #4a4a4a;
+}
+
+.employee_dushboard_setup h1 {
+    color: #5a5a5a;
+}
+
+.employee_dushboard_setup .ui.button.circular_btn {
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    margin: 0;
+    border-radius: 500rem;
+    width: 2em;
+    height: 2em;
+    padding: 6px 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.employee_dushboard_setup .ui.button.circular_btn.inherit {
+    box-shadow: 0 0 0 1px #5a5a5a inset !important;
+    background: #fff !important;
+}
+
+.employee_dushboard_setup .ui.button.circular_btn.green {
+    background: #b8e986 !important;
+    color: #437707 !important;
+}
+
+
+.employee_dushboard_setup .ui.basic.button {
+    padding: .7em 3.5em;
+    background: #fff !important;
+}
+
+.employee_dushboard_setup .ui.basic.button.green_btn {
+    padding: .7em 3.5em;
+    box-shadow: 0 0 0 1px #73d004 inset!important;
+    color: #73d004 !important;
+}
+
+.employee_dushboard_setup img {
+    margin-top: 10px;
+}
+
+.employee_dushboard_setup .ui.basic.button.yellow_btn {
+    padding: .7em 1em;
+    box-shadow: 0 0 0 1px #f5a623 inset!important;
+    color: #6a6a6a !important;
+    min-width:  150px;
+}
