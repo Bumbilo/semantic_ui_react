@@ -1048,31 +1048,52 @@ i.icon.day_purple {
     box-shadow: none;
 }
 
-
-
-@media (max-width: 767px) {
-   .floatRight .ui.selection.dropdown.dropdown_modal {
-      width: 100%;
-   }
-}
-
-@media (max-width: 992px) {
+/*========= Media request ==========*/
+@media (max-width: 1279px) {
 
 }
 
 @media (max-width: 1200px) {
-   .floatRight {
-      width: 100%;
-   }
-   .floatRight .ui.small.input {
-      width: 100%;
-   }
-   .floatRight .ui.selection.dropdown.dropdown_modal {
-      width: 92%;
-   }
+    .floatRight {
+        width: 100%;
+    }
+    .floatRight .ui.small.input {
+        width: 100%;
+    }
+    .floatRight .ui.selection.dropdown.dropdown_modal {
+        width: 92%;
+    }
 
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 992px) {
+    .input_position {
+        padding: 0;
+        padding-right: 1.8em;
+    }
+
+    .floatRight .ui.selection.dropdown.dropdown_modal {
+        width: 92%;
+    }
+}
+
+@media (max-width: 767px) {
+    .floatRight .ui.selection.dropdown.dropdown_modal {
+        width: 95%;
+    }
+
+    .ui.active.modal .ui.button.btn_center {
+        float: none;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .floatRight .ui.selection.dropdown.dropdown_modal {
+        width: 92%;
+    }
 
 }

@@ -110,17 +110,17 @@ const GridExampleVerticallyDivided = () => (
         </Grid.Row>
         <Grid.Row columns={2}>
             <Grid.Column>
-                <Button basic floated='right' className='btn_basic'>Cancel</Button>
+                <Button basic floated='right' className='btn_basic btn_center'>Cancel</Button>
             </Grid.Column>
-            <Grid.Column >
-                <Button floated='left' color='green'>Add empoloyee</Button>
+            <Grid.Column>
+                <Button floated='left' color='green' className="btn_center">Add empoloyee</Button>
             </Grid.Column>
         </Grid.Row>
     </Grid>
 );
 
 const ModalWindowEmployee = () => (
-    <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
+    <Modal trigger={ <Button> Show Modal </Button> } closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>
