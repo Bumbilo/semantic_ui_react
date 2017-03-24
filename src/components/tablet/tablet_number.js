@@ -6,7 +6,7 @@ import '../../CSS/fonts.css';
 import './tablet.css';
 
 const HeaderTablet = () => (
-    <header className="header_tablet">
+    <div className="header_tablet">
         <div className="ui grid">
             <Grid.Row>
                 <Grid.Column mobile={6} tablet={8} computer={10}>
@@ -17,7 +17,7 @@ const HeaderTablet = () => (
                 </Grid.Column>
             </Grid.Row>
         </div>
-    </header>
+    </div>
 );
 
 const TabletContent = () => (

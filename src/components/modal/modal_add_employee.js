@@ -120,7 +120,7 @@ const GridExampleVerticallyDivided = () => (
 );
 
 const ModalWindowEmployee = () => (
-    <Modal trigger={ <Button> Show Modal </Button> } closeIcon='close'>
+    <Modal trigger={< Button > Show Modal < /Button>} closeIcon='close'>
         <Header>
             <HeaderTitle/>
         </Header>

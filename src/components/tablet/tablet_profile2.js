@@ -6,18 +6,18 @@ import '../../CSS/fonts.css';
 import './tablet.css';
 
 const HeaderTablet = () => (
-    <header className="header_tablet">
+    <div className="header_tablet">
         <div className="ui grid">
             <Grid.Row>
-                <Grid.Column mobile={6} tablet={6} computer={6}>
+                <Grid.Column width={6}>
                     <Image src={logo}/>
                 </Grid.Column>
-                <Grid.Column mobile={10} tablet={10} computer={10} textAlign="right">
+                <Grid.Column width={10} textAlign="right">
                     <span className="header_tablet_date">02 March 2017</span>
                 </Grid.Column>
             </Grid.Row>
         </div>
-    </header>
+    </div>
 );
 
 const TabletContent = () => (

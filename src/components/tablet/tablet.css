@@ -1,14 +1,22 @@
 
+
 .wrapper_tablet {
     height: 100%;
-    background: #fafafa;
+    background: #f9f9f9;
     overflow-x: hidden;
 }
+.wrapper_tablet .ui.grid {
+    margin: 0;
+    padding: 0;
+}
+.content_tablet .ui.grid {
+    min-height: 100%;
+}
 
-.header_tablet {
+.wrapper_tablet .header_tablet {
     background: #fff;
     width: 100%;
-    padding: 20px;
+    padding: 0;
     border-bottom: 1px solid #d4d7de;
     overflow: hidden;
 }
@@ -23,16 +31,15 @@
     font-family: "ProximaNovaLight", "Lato", Arial, Helvetica, sans-serif;
 }
 
-.content_tablet {
-    padding: 50px 0 120px 0;
-    background: #fafafa;
+.wrapper_tablet .content_tablet {
+    padding: 50px 0 80px 0;
     width: 100%;
 }
 
-.footer_tablet {
+.wrapper_tablet .footer_tablet {
     width: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 10px 0;
     border-top: 1px solid #d4d7de;
     position: fixed;
     bottom: 0;
@@ -48,6 +55,7 @@
 
 .header_tablet img {
     margin: 0 20px;
+    margin-top: -7px;
 }
 
 .header_tablet_date {
@@ -55,8 +63,8 @@
     font-family: "ProximaNovaLight", "Lato", Arial, Helvetica, sans-serif;
     font-size: 2rem;
     padding: 0 20px;
-    line-height: 2.7;
-    vert-align: middle;
+    line-height: 2;
+    vertical-align: middle;
 }
 
 .content_tablet .ui.basic.button {
@@ -307,7 +315,7 @@
     }
 
     .content_tablet {
-        paddingto: 85px 120px;
+        padding: 85px 120px;
     }
 
     .btn_number.active {
