@@ -48,7 +48,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<TabletComponent/>)
+        return (<TabletComponentProfile2/>)
     }
 }
 

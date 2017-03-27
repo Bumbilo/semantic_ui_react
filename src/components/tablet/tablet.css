@@ -1,14 +1,14 @@
-
-
 .wrapper_tablet {
     height: 100%;
     background: #f9f9f9;
     overflow-x: hidden;
 }
+
 .wrapper_tablet .ui.grid {
     margin: 0;
     padding: 0;
 }
+
 .content_tablet .ui.grid {
     min-height: 100%;
 }
@@ -90,6 +90,7 @@
     color: #fff !important;
     box-shadow: 0 0 0 1px #8bd832 !important;
 }
+
 
 /*========== TabletProfile2 ==========*/
 
@@ -180,19 +181,23 @@
     font-family: "ProximaNovaExtrabld", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.inputNumber::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.inputNumber::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: #d8d0e8;
 }
 
-.inputNumber::-moz-placeholder { /* Firefox 19+ */
+.inputNumber::-moz-placeholder {
+    /* Firefox 19+ */
     color: #d8d0e8;
 }
 
-.inputNumber:-ms-input-placeholder { /* IE 10+ */
+.inputNumber:-ms-input-placeholder {
+    /* IE 10+ */
     color: #d8d0e8;
 }
 
-.inputNumber:-moz-placeholder { /* Firefox 18- */
+.inputNumber:-moz-placeholder {
+    /* Firefox 18- */
     color: #d8d0e8;
 }
 
@@ -292,40 +297,117 @@
     background: url('../../images/btn_next_hover.svg') no-repeat 50%;
 }
 
-@media (min-height: 100px) and (max-height: 700px ) {
+@media (min-height: 100px) and (max-height: 670px) {
     .footer_tablet {
         position: relative;
     }
-}
-
-@media (min-height: 750px) and (max-height: 1024px ) {
-
-}
-
-@media (min-width: 100px) and (max-width: 760px) {
-
     .big_time {
+        padding: 20px !important;
         font-size: 10rem;
     }
+    .content_tablet {
+        padding: 20px 0 50px 0 !important;
+    }
+    .tablet_time {
+        margin-bottom: 0;
+    }
+    .tablet_hello_name {
+        padding-bottom: 20px;
+    }
+    .tablet_icon_status {
+        width: 60px;
+        height: 60px;
+        line-height: 2.2;
+        bottom: 5px;
+    }
+    .wrapper_tablet .footer_tablet {
+        padding: 0;
+    }
+    .ui.basic.button.btn_tablet {
+        padding: 0.5em 1em;
+        font-size: 1.7rem;
+    }
+    .tablet_avatar {
+        max-width: 200px;
+    }
+    .header_tablet .ui.grid>.row>.column>img {
+        max-width: 100px;
+    }
+    .header_tablet_date {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+    .inputNumber {
+        margin: 0 auto;
+        height: 72px;
+        font-size: 4rem;   
+     }
+    .btn_number {
+        width: 60px;
+        height: 60px;
+        background-size: 90%;
+    }
+    .btn_number.active {
+        background-size: 90%;
+    }
+    .tablet_hello_name {
+        font-size: 1.8rem;
+    }
+}
 
+@media (min-height: 671px) and (max-height: 800px) {
+    .tablet_hello_name {
+        padding-bottom: 20px;
+    }
+        .tablet_time {
+        margin-bottom: 10px;
+    }
+.wrapper_tablet .content_tablet {
+    padding: 30px 0 60px 0;
+}
+    .inputNumber {
+        margin: 10px auto;
+        height: 76px;
+        font-size: 4rem;   
+     }
+    .btn_number {
+        width: 60px;
+        height: 60px;
+        background-size: 90%;
+    }
+    .btn_number.active {
+        background-size: 90%;
+    }
+ }
+
+@media (min-width: 100px) and (max-width: 760px) {
+    .big_time {
+        padding: 0 !important;
+        font-size: 10rem;
+    }
+    .tablet_time {
+        margin-bottom: 0;
+    }
+    .ui.basic.button.btn_tablet {
+        margin: 10px auto !important;
+        padding: 0.5em 1em;
+        font-size: 1.7rem;
+        min-width: 260px;
+    }
     .btn_number {
         width: 80px;
         height: 80px;
         background-size: 100%;
     }
-
     .content_tablet {
         padding: 85px 120px;
     }
-
     .btn_number.active {
         background-size: 100%;
     }
-
     .content_tablet .ui.basic.button {
         min-width: 300px;
     }
-
     .content_tablet .ui.basic.button,
     .ui.basic.button.btn_tablet.green {
         margin: 20px auto;
@@ -334,18 +416,10 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) {}
 
-}
+@media (max-width: 992px) {}
 
-@media (max-width: 992px) {
+@media (max-width: 1280px) {}
 
-}
-
-@media (max-width: 1280px) {
-
-}
-
-@media (max-width: 1279px) {
-
-}
+@media (max-width: 1279px) {}
