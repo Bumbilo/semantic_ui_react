@@ -1401,7 +1401,10 @@ span.bold {
     min-width:  150px;
 }
 
-
+.ui.popup.popup_users.user {
+    max-width: 135px;
+    padding-bottom: 10px;
+}
 
 .ui.popup.popup_users {
     position: relative;

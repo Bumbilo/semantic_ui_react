@@ -24,13 +24,14 @@
 }
 
 .ui.active.modal .ui.grid > .row {
-    padding: 5px;
+    padding: 0;
 }
 
 .ui.basic.segment.invalid_message {
     background-color: #f24b60;
     color: #fff;
     text-align: center;
+    padding: 8px;
 }
 
 .ui.basic.segment.footer_message {
@@ -1049,8 +1050,13 @@ i.icon.day_purple {
 .block_center .ui.multiple.dropdown>.label {
     box-shadow: none;
 }
+
 .ui.active.modal .ui.container{
     width: 100% !important;
+}
+
+.ui.active.modal .modal_panel_add.ui.grid > .row {
+    padding: 20px 0;
 }
 
 /*========= Media request ==========*/

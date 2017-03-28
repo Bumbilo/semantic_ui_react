@@ -5,6 +5,7 @@ import {
     Image,
     Modal,
     Grid,
+    Segment,
     Flag,
     Dropdown,
     Icon,
@@ -20,13 +21,13 @@ const HeaderTitle = () => (
     <div className='header_title'>
         <Image src={report} className="img_header"/>
         <Header as='h2' className="header_title_check">
-            Add position</Header>
+            Add location</Header>
     </div>
 );
 
 const ButtonReport = () => (
     <div className="btn_center">
-        <Button className='green btn_middle'>Add position</Button>
+        <Button className='green btn_middle'>Add location</Button>
     </div>
 );
 
@@ -35,8 +36,8 @@ const GridExampleVerticallyDivided = () => (
             <Grid.Row>
                 <Grid.Column width={16}>
                     <div className="block_center large">
-                        <label className="label_input">Position name</label>
-                        <Input type="test" fluid value="Marketing assistant"/>
+                        <label className="label_input">Location name</label>
+                        <Input type="test" fluid value="Old Dalby"/>
                     </div>
              </Grid.Column>
             </Grid.Row>
@@ -48,10 +49,10 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 );
 
-const ModalPanelAdd = () => (
+const ModalPanelLocation = () => (
     <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
         <Header>
-            <HeaderTitle/>
+          <HeaderTitle/>
         </Header>
         <Modal.Content className="modal_content">
             <GridExampleVerticallyDivided/>
@@ -59,4 +60,4 @@ const ModalPanelAdd = () => (
     </Modal>
 );
 
-export default ModalPanelAdd;
+export default ModalPanelLocation;

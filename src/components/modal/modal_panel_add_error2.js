@@ -5,6 +5,7 @@ import {
     Image,
     Modal,
     Grid,
+    Segment,
     Flag,
     Dropdown,
     Icon,
@@ -30,13 +31,19 @@ const ButtonReport = () => (
     </div>
 );
 
+const InvalidMessage = () => (
+    <Segment basic className="invalid_message">
+        Please enter a position name
+    </Segment>
+);
+
 const GridExampleVerticallyDivided = () => (
     <Grid className="modal_panel_add">
             <Grid.Row>
                 <Grid.Column width={16}>
                     <div className="block_center large">
                         <label className="label_input">Position name</label>
-                        <Input type="test" fluid value="Marketing assistant"/>
+                        <Input type="test" fluid />
                     </div>
              </Grid.Column>
             </Grid.Row>
@@ -48,10 +55,11 @@ const GridExampleVerticallyDivided = () => (
     </Grid>
 );
 
-const ModalPanelAdd = () => (
+const ModalPanelAddError2 = () => (
     <Modal trigger={< Button > Show Modal </Button>} closeIcon='close'>
         <Header>
-            <HeaderTitle/>
+          <InvalidMessage/>            
+          <HeaderTitle/>
         </Header>
         <Modal.Content className="modal_content">
             <GridExampleVerticallyDivided/>
@@ -59,4 +67,4 @@ const ModalPanelAdd = () => (
     </Modal>
 );
 
-export default ModalPanelAdd;
+export default ModalPanelAddError2;

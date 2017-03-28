@@ -33,6 +33,10 @@ import ModalHolidayRequestAfter from './modal/modal_holiday_request_after';
 import ModalEditShift from './modal/modal_edit_shift';
 import ModalEditDepartments from './modal/modal_edit_departments';
 import ModalPanelAdd from './modal/modal_panel_add';
+import ModalPanelAddError from './modal/modal_panel_add_error';
+import ModalPanelAddError2 from './modal/modal_panel_add_error2';
+import ModalPanelAbscence from './modal/modal_panel_abscence';
+import ModalPanelLocation from './modal/modal_panel_location';
 import ModalPanelShift from './modal/modal_panel_shift';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
@@ -47,11 +51,12 @@ import EmployeeProfileTime from './employee/employee_profile_time';
 import DashboardSetupGuide from './employee/dashboard_setup_guide';
 import DashboardSetupGuide2 from './employee/dashboard_setup_guide2';
 import EmployeeSettingsUser from './employee/employee_settings_user';
+import EmployeeSettingsUser2 from './employee/employee_settings_user2';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<ModalPanelAdd/>)
+     return (<EmployeeSettingsUser2/>)
     }
 }
 
