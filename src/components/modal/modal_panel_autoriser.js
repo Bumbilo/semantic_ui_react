@@ -61,7 +61,7 @@ class DropdownUsers extends Component {
 
     handleAddition = (e, {value}) => {
         this.setState({
-            options: [{text: value, image }, ...this.state.options],
+            options: [{text: value, value}, ...this.state.options],
         })
     }
 
@@ -86,43 +86,6 @@ class DropdownUsers extends Component {
     }
 }
 
-const DropdownUsers2 = () => (
-
-<div role="combobox" aria-expanded="false" className="ui fluid multiple search selection dropdown">
-      <select type="hidden" aria-hidden="true" multiple="">
-      <option value="">
-    </option><option value="AL">Alabama</option>
-    <option value="AK">Alaska</option>
-    <option value="AZ">Arizona</option>
-    <option value="AR">Arkansas</option>
-    <option value="CA">California</option>
-    </select>
-      <input type="text" value="" aria-autocomplete="list" className="search" name="-search" autoComplete="off" tabIndex="0" />
-      <span className="sizer"></span>
-      <div className="default text">State</div>
-      <i aria-hidden="true" className="dropdown icon"></i>
-      <div aria-multiselectable="true" role="listbox" className="menu transition">
-        <div role="option" aria-checked="false" aria-selected="true" className="selected item">
-          <span className="text">Alabama</span>
-        </div>
-        <div role="option" aria-checked="false" aria-selected="false" className="item">
-          <span className="text">Alaska</span>
-        </div>
-        <div role="option" aria-checked="false" aria-selected="false" className="item">
-          <span className="text">Arizona</span>
-        </div>
-        <div  role="option" aria-checked="false" aria-selected="false" className="item">
-          <span className="text">Arkansas</span>
-        </div>
-        <div  role="option" aria-checked="false" aria-selected="false" className="item">
-          <span className="text">California</span>
-        </div>
-      </div>
-</div>
-);
-
-
-
 const GridExampleVerticallyDivided = () => (
     <Grid divided='vertically'>
         <Container>
@@ -139,7 +102,6 @@ const GridExampleVerticallyDivided = () => (
                     <div className="block_center large">
                         <label className="label_input top">Add manage</label>
                         <DropdownUsers/>
-                        <DropdownUsers2/>
                     </div>
                 </Grid.Column>
             </Grid.Row>

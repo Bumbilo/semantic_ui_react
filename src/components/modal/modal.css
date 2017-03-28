@@ -11,6 +11,7 @@
 .ui.active.modal {
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    min-width: 460px;
     border: 1px solid rgba(34, 36, 38, .15);
 }
 
@@ -23,7 +24,7 @@
 }
 
 .ui.active.modal .ui.grid > .row {
-    padding: 0;
+    padding: 5px;
 }
 
 .ui.basic.segment.invalid_message {
@@ -90,7 +91,7 @@
     padding: 1em 5em;
     font-family: "ProximaNovaBold", "Lato", Arial, Helvetica, sans-serif;
     font-size: 15px;
-    margin: 0 5px 0 10px;
+    margin: 5px  10px;
 }
 
 .ui.active.modal .ui.button,
@@ -101,6 +102,7 @@
 .ui.dropdown:not(.button) > .default.text,
 .ui.dropdown > .text {
     line-height: 2;
+    padding-top: 2px;
 }
 
 .ui[class*="vertically divided"].grid > .row:before {
@@ -444,7 +446,7 @@ h2.ui.header.header_employee {
 
 .label_input {
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .add_new_employee, .add_new_employee2 {
@@ -1046,6 +1048,9 @@ i.icon.day_purple {
 
 .block_center .ui.multiple.dropdown>.label {
     box-shadow: none;
+}
+.ui.active.modal .ui.container{
+    width: 100% !important;
 }
 
 /*========= Media request ==========*/

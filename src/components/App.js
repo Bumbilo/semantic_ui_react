@@ -15,7 +15,7 @@ import ModalWindowDeleteScroll from './modal/modal_delete_scroll';
 import ModalWindowConnection from './modal/modal_connection';
 import ModalWindowDeleteLoader from './modal/modal_loader';
 import ModalWindowEmployee from './modal/modal_add_employee';
-import ModalSelectOption from './modal/modal_select_option'
+import ModalSelectOption from './modal/modal_select_option';
 import ModalDateRequest from './modal/modal_date_request';
 import ModalChangePassword from './modal/modal_chnage_password2';
 import ModalChangePasswordSend from './modal/modal_change_password3';
@@ -32,6 +32,8 @@ import ModalHolidayOffView from './modal/modal_holiday_off_view';
 import ModalHolidayRequestAfter from './modal/modal_holiday_request_after';
 import ModalEditShift from './modal/modal_edit_shift';
 import ModalEditDepartments from './modal/modal_edit_departments';
+import ModalPanelAdd from './modal/modal_panel_add';
+import ModalPanelShift from './modal/modal_panel_shift';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
@@ -44,11 +46,12 @@ import EmployeeSettingPanel3 from './employee/employee_settings_panel3';
 import EmployeeProfileTime from './employee/employee_profile_time';
 import DashboardSetupGuide from './employee/dashboard_setup_guide';
 import DashboardSetupGuide2 from './employee/dashboard_setup_guide2';
+import EmployeeSettingsUser from './employee/employee_settings_user';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-        return (<TabletComponentProfile2/>)
+     return (<ModalPanelAdd/>)
     }
 }
 

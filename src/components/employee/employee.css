@@ -1400,3 +1400,48 @@ span.bold {
     color: #6a6a6a !important;
     min-width:  150px;
 }
+
+
+
+.ui.popup.popup_users {
+    position: relative;
+    max-width: 135px;
+    padding-bottom: 35px;
+}
+
+.ui.popup.popup_users img.ui.image {
+    display: inline-block;
+    margin: 3px;
+}
+
+ul.popup_users_paginator {
+    display: inline-block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    margin: 0;
+    padding: 3px ;
+    width: 100%;
+    border-top: 1px solid #ededed;
+}
+
+
+ul.popup_users_paginator i.icon {
+   color:  #d4d4d5;
+}
+ul.popup_users_paginator li {
+    display: inline-block;
+    min-width: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: .9em;
+    line-height: 1.4em;
+    vertical-align: middle;
+    color: #5a5a5a;
+}
+
+ul.popup_users_paginator li.active_li {
+    background: #7f64b5;
+    color: #fff;
+    border-radius: 2px;
+}
