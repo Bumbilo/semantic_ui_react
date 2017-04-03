@@ -280,97 +280,318 @@ const LocationMenu = () => (
     </div>
 );
 
+const days = [
+  { key: 'march', text: '01 Mar 2017 - 31 Mar 2017', value: '01 Mar 2017 - 31 Mar 2017' },
+  { key: 'april', text: '01 April 2017 - 31 April 2017', value: '01 April 2017 - 31 April 2017' },
+  { key: 'May', text: '01 May 2017 - 31 May 2017', value: '01 May 2017 - 31 May 2017' },
+  { key: 'june', text: '01 June 2017 - 31 June 2017', value: '01 June 2017 - 31 June 2017' }
+]
+
+const DropdownSelectionMonth = () => (
+  <Dropdown placeholder='Date' fluid selection options={days} className="select_month" />
+)
+
 const EmployeeDaysDate = () => (
     <div className="days_row">
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    01
+                </span>
+                <span className="day">
+                    mon
+                </span>
+            </div>
         </div>
         <div className="day_col">
-            <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    02
+                </span>
+                <span className="day">
+                   tue
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    03
+                </span>
+                <span className="day">
+                    wed
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    04
+                </span>
+                <span className="day">
+                   thu
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    05
+                </span>
+                <span className="day">
+                    fri
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    06
+                </span>
+                <span className="day">
+                   sat
+                </span>
+            </div>
+        </div>
+        <div className="day_col hol_date">
+            <div className="days_date">
+                <span className="number">
+                    07
+                </span>
+                <span className="day">
+                   sun
+                </span>
+            </div>
+        </div>
+        <div className="day_col hol_date">
+            <div className="days_date">
+                <span className="number">
+                    08
+                </span>
+                <span className="day">
+                    mon
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    09
+                </span>
+                <span className="day">
+                   tue
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   10
+                </span>
+                <span className="day">
+                   wed
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   11
+                </span>
+                <span className="day">
+                   thu
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                    12
+                </span>
+                <span className="day">
+                   fri
+                </span>
+            </div>
+        </div>
+        <div className="day_col  hol_date">
+            <div className="days_date  hol_date">
+                <span className="number">
+                   13
+                </span>
+                <span className="day">
+                   sat
+                </span>
+            </div>
+        </div>
+        <div className="day_col  hol_date">
+            <div className="days_date">
+                <span className="number">
+                   14
+                </span>
+                <span className="day">
+                   sun
+                </span>
+            </div>
+        </div>
+        <div className="day_col bank_hol_date">
+            <div className="days_date">
+                <span className="number">
+                   15
+                </span>
+                <span className="day">
+                   mon
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   16
+                </span>
+                <span className="day">
+                   tue
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   17
+                </span>
+                <span className="day">
+                   wed
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   18
+                </span>
+                <span className="day">
+                   thu
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   19
+                </span>
+                <span className="day">
+                   fri
+                </span>
+            </div>
+        </div>
+        <div className="day_col hol_date">
+            <div className="days_date">
+                <span className="number">
+                   20
+                </span>
+                <span className="day">
+                   sat
+                </span>
+            </div>
+        </div>
+        <div className="day_col  hol_date">
+            <div className="days_date">
+                <span className="number">
+                   21
+                </span>
+                <span className="day">
+                   sun
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   22
+                </span>
+                <span className="day">
+                    mon
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   23
+                </span>
+                <span className="day">
+                   thu
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   24
+                </span>
+                <span className="day">
+                   wed
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   25
+                </span>
+                <span className="day">
+                   thu
+                </span>
+            </div>
+        </div>
+        <div className="day_col current_date">
+            <div className="days_date">
+                <span className="number">
+                   26
+                </span>
+                <span className="day">
+                   fri
+                </span>
+            </div>
+        </div>
+        <div className="day_col hol_date">
+            <div className="days_date">
+                <span className="number">
+                   27
+                </span>
+                <span className="day">
+                   sat
+                </span>
+            </div>
+        </div>
+     <div className="day_col hol_date">
+            <div className="days_date">
+                <span className="number">
+                   28
+                </span>
+                <span className="day">
+                    sun
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   29
+                </span>
+                <span className="day">
+                   mon
+                </span>
+            </div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
+            <div className="days_date">
+                <span className="number">
+                   30
+                </span>
+                <span className="day">
+                   tue
+                </span>
+            </div>
         </div>
     </div>
 );
@@ -378,97 +599,107 @@ const EmployeeDaysDate = () => (
 const EmployeeDaysAll = () => (
     <div className="days_row">
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-            <div className="time_status green"></div> 
+            <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+     <div className="day_col bank_hol_date">
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+        <div className="day_col ">
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col current_date">
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status green"></div>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+        <div className="day_col ">
+          <div className="time_status green"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div> 
+          <div className="time_status green"></div>
         </div>
     </div>
 );
+
+const position = [
+  { key: 'design', text: 'Design', value: 'Design' },
+  { key: 'meneger', text: 'Meneger', value: 'Meneger' },
+  { key: 'engineer', text: 'Engineer', value: 'Engineer' }
+]
+
+const DropdownPosition = () => (
+  <Dropdown text='Design' options={position} className="filter_position" />
+)
 
 const Employee_User = () => (
             <div className="user_col">
@@ -488,33 +719,41 @@ const Employee_User = () => (
             </div>
 );
 
+const EmployeeSelectDate = () => (
+   <div className="change_date">
+      <DropdownSelectionMonth />
+   </div>
+);
 
 const EmployeeDays = () => (
     <ul className="employee_time_list">
         <li className="list_row">
-            <Employee_User/>       
-            <EmployeeDaysAll/>
+            <EmployeeSelectDate/>
+            <EmployeeDaysDate/>
         </li>
     </ul>
 );
 
 const EmployeeTimeList = () => (
     <ul className="employee_time_list">
+         <li> <DropdownPosition/> </li>
         <li className="list_row">
-            <Employee_User/>       
+            <Employee_User/>
             <EmployeeDaysAll/>
         </li>
         <li className="list_row">
-            <Employee_User/>       
+            <Employee_User/>
+            <EmployeeDaysAll/>
         </li>
         <li className="list_row">
-            <Employee_User/>       
+            <Employee_User/>
+            <EmployeeDaysAll/>
         </li>
         <li className="list_row">
-            <Employee_User/>       
+            <Employee_User/>
         </li>
         <li className="list_row">
-            <Employee_User/>       
+            <Employee_User/>
         </li>
     </ul>
 );
@@ -526,7 +765,7 @@ const ContentMenu = () => (
             <EmployeeFilterUser/>
             <EmployeeDays/>
             <EmployeeTimeList/>
-          </div> 
+          </div>
     </div>
 );
 
