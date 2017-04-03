@@ -48,6 +48,7 @@ import EmployeeSettingPanel from './employee/employee_settings_panel';
 import EmployeeSettingPanel2 from './employee/employee_settings_panel2';
 import EmployeeSettingPanel3 from './employee/employee_settings_panel3';
 import EmployeeProfileTime from './employee/employee_profile_time';
+import EployeeTimeView from './employee/employee_time_view'; 
 import DashboardSetupGuide from './employee/dashboard_setup_guide';
 import DashboardSetupGuide2 from './employee/dashboard_setup_guide2';
 import EmployeeSettingsUser from './employee/employee_settings_user';
@@ -56,7 +57,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EmployeeSettingsUser2/>)
+     return (<EployeeTimeView/>)
     }
 }
 

@@ -11,6 +11,7 @@ a {
     font-size: 13px;
 }
 
+
 /* ========== Semantic classes ========== */
 
 .employee_profile .ui.secondary.pointing.menu {
@@ -71,7 +72,10 @@ header .header_top_menu .item.header_title_menu {
     color: #fff;
 }
 
-.ui.tiny.image, .ui.tiny.images .image, .ui.tiny.images img, .ui.tiny.images svg {
+.ui.tiny.image,
+.ui.tiny.images .image,
+.ui.tiny.images img,
+.ui.tiny.images svg {
     width: 77px;
 }
 
@@ -86,7 +90,8 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .item {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;;
+    font-family: "Proxima Nova", serif;
+    ;
     font-size: 14px;
 }
 
@@ -241,6 +246,7 @@ header .header_top_menu .item.header_title_menu {
     left: 0;
 }
 
+
 /* ========== employee_profile ========== */
 
 .employee {
@@ -345,6 +351,7 @@ header .header_top_menu .item.header_title_menu {
     padding-bottom: 20px;
 }
 
+
 /* ========== employee_option ========== */
 
 .employee_option {
@@ -374,7 +381,7 @@ header .header_top_menu .item.header_title_menu {
     font-size: 15px;
 }
 
-.employee_option .ui.labeled.icon.button > .icon {
+.employee_option .ui.labeled.icon.button>.icon {
     background: none;
     color: #788668;
 }
@@ -516,7 +523,7 @@ i.input_icon {
     margin-top: 20px;
 }
 
-.input_edit .ui.multiple.dropdown > .label {
+.input_edit .ui.multiple.dropdown>.label {
     color: #927bc2;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
@@ -524,7 +531,7 @@ i.input_icon {
     padding: 6px 12px;
 }
 
-.input_edit .ui.label > .delete.icon {
+.input_edit .ui.label>.delete.icon {
     color: #ababab;
 }
 
@@ -533,7 +540,8 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text, .manager_dropdown.ui.dropdown > .text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text,
+.manager_dropdown.ui.dropdown>.text {
     line-height: 1;
 }
 
@@ -559,6 +567,7 @@ i.input_icon {
     border-radius: 3px;
 }
 
+
 /* ========== progress_bar ========== */
 
 .progress_bar {
@@ -577,7 +586,7 @@ i.input_icon {
     margin: 10px 0;
 }
 
-.progress_bar > span {
+.progress_bar>span {
     height: 100%;
     display: inline-block;
     top: 0;
@@ -718,7 +727,8 @@ i.input_icon {
     margin-top: 10px;
 }
 
-.request_first_date, .request_last_date {
+.request_first_date,
+.request_last_date {
     display: inline-block;
     font-size: 12px;
     padding-left: 7px;
@@ -771,8 +781,8 @@ i.input_icon {
     color: #d82b40;
 }
 
-.modal_calenader {
-}
+.modal_calenader {}
+
 
 /* ========== Date Picker ========== */
 
@@ -825,12 +835,15 @@ i.input_icon {
     width: 100%;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev, .DayPickerNavigation--horizontal .DayPickerNavigation__next, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
+.DayPickerNavigation--horizontal .DayPickerNavigation__next,
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next {
     padding: 0;
     top: 23px;
 }
 
-.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg, .date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg,
+.date_picker .DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg {
     height: 11px;
     width: 14px;
 }
@@ -866,6 +879,7 @@ i.input_icon {
     border-radius: 3px;
     cursor: pointer;
 }
+
 
 /* ========== Accardion ========== */
 
@@ -950,6 +964,7 @@ i.input_icon {
     padding: 0.1em;
 }
 
+
 /*========== ProfileMonth ==========*/
 
 .employee_profile_calendar {
@@ -999,7 +1014,10 @@ i.input_icon {
     color: #848484;
 }
 
-.profile_month_status, .profile_month_day, .profile_month_date, .profile_month_vacation {
+.profile_month_status,
+.profile_month_day,
+.profile_month_date,
+.profile_month_vacation {
     float: left;
     margin: 0 20px;
     padding-top: 5px;
@@ -1053,21 +1071,27 @@ button.profile_month_option i {
     box-shadow: 0 0 1px 1px #a5a5a5;
 }
 
-.month_day, .month_vocation {
+.month_day,
+.month_vocation {
     vertical-align: middle;
     line-height: 3;
 }
 
-.profile_start_month, .profile_end_month {
+.profile_start_month,
+.profile_end_month {
     display: inline-block;
     padding: 0 20px;
 }
 
-.start_month_date, .start_month_status, .end_month_date, .end_month_status {
+.start_month_date,
+.start_month_status,
+.end_month_date,
+.end_month_status {
     display: block;
 }
 
-.start_month_status, .end_month_status {
+.start_month_status,
+.end_month_status {
     font-size: 0.9em;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     color: #878787;
@@ -1083,6 +1107,7 @@ button.profile_month_option i {
 .ui .accordion .title {
     position: relative;
 }
+
 
 /*========== Modal Profile Time Card ==========*/
 
@@ -1119,7 +1144,9 @@ button.profile_month_option i {
     border: 1px solid grey;
 }
 
+
 /*========== Employee Settings ==========*/
+
 .employee_option_left {
     position: absolute;
     top: 0;
@@ -1154,8 +1181,8 @@ button.profile_month_option i {
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.employee_option_left .ui.vertical.menu > .active.item:last-child,
-.employee_option_left .ui.vertical.menu > .item:last-child {
+.employee_option_left .ui.vertical.menu>.active.item:last-child,
+.employee_option_left .ui.vertical.menu>.item:last-child {
     border-radius: 0;
 }
 
@@ -1194,7 +1221,7 @@ button.profile_month_option i {
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.employee_title_btn .ui.grid > .row > .column {
+.employee_title_btn .ui.grid>.row>.column {
     padding: 0;
 }
 
@@ -1217,7 +1244,7 @@ button.profile_month_option i {
     margin: 25px 50px;
 }
 
-.employee_settings_content .ui.grid > .row:hover .column:first-child {
+.employee_settings_content .ui.grid>.row:hover .column:first-child {
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -o-transition: all .2s linear;
@@ -1249,14 +1276,14 @@ button.profile_month_option i {
     transition: all .2s ease-in-out;
 }
 
-.employee_settings_content .ui.grid > .row {
+.employee_settings_content .ui.grid>.row {
     padding: .3rem 0;
     border-top: 1px solid #e4e5e7;
     border-bottom: 1px solid #e4e5e7;
     margin-top: -1px;
 }
 
-.employee_settings_content .ui.grid > .row > .column {
+.employee_settings_content .ui.grid>.row>.column {
     vertical-align: middle;
     padding: 0;
 }
@@ -1309,6 +1336,7 @@ span.bold {
     color: #9b9b9b;
     background: #f7f7f7;
 }
+
 .count_users {
     color: #748195;
     font-size: .8em;
@@ -1378,7 +1406,6 @@ span.bold {
     color: #437707 !important;
 }
 
-
 .employee_dushboard_setup .ui.basic.button {
     padding: .7em 3.5em;
     background: #fff !important;
@@ -1398,7 +1425,7 @@ span.bold {
     padding: .7em 1em;
     box-shadow: 0 0 0 1px #f5a623 inset!important;
     color: #6a6a6a !important;
-    min-width:  150px;
+    min-width: 150px;
 }
 
 .ui.popup.popup_users.user {
@@ -1423,15 +1450,15 @@ ul.popup_users_paginator {
     bottom: 3px;
     left: 0;
     margin: 0;
-    padding: 3px ;
+    padding: 3px;
     width: 100%;
     border-top: 1px solid #ededed;
 }
 
-
 ul.popup_users_paginator i.icon {
-   color:  #d4d4d5;
+    color: #d4d4d5;
 }
+
 ul.popup_users_paginator li {
     display: inline-block;
     min-width: 15px;
@@ -1447,4 +1474,161 @@ ul.popup_users_paginator li.active_li {
     background: #7f64b5;
     color: #fff;
     border-radius: 2px;
+}
+
+
+/*========== Employee_time_view ==========*/
+
+.employee_time_view {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.employee_time_list {
+    display: table;
+    table-layout: fixed;
+    empty-cells: show;
+    margin: 20px;
+    padding: 0;
+}
+
+.list_row {
+    position: relative;
+    display: table-row;
+    width: 100%;
+}
+
+.user_col {
+    display: table-cell;
+    position: relative;
+    background: #f7f7f7;
+    min-width: 225px;
+    padding: 5px;
+    border-bottom: 1px solid #f1f3f7;
+    border-left: 1px solid #f1f3f7;
+}
+
+.user_col .icon-eye {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color: #9b9b9b;
+    cursor: pointer;
+}
+
+.user_col .icon-eye:hover {
+    color: #5a5a5a;
+}
+
+.user_status {
+    display: inline-block;
+    position: relative;
+}
+
+.user_status .status {
+    position: absolute;
+    bottom: -3px;
+    right: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.user_status .status.green{
+   background: #7ed321;
+}
+
+.user_info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.user_info .user_name,
+.user_info .user_position {
+    display: block;
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+    color: #7d7d7d;
+}
+
+.user_info .user_position  {  
+    font-size: 0.8em;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.days_row {
+    display: table;
+    table-layout: fixed;
+    /*width: 100%;*/
+}
+
+.day_col {
+    display: table-cell;
+    position: relative;
+    border-right: 1px solid #f1f3f7; 
+    border-bottom: 1px solid #f1f3f7; 
+    width: 35px;
+    vertical-align: top;
+    height: 48px;
+}
+
+.time_status {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.time_status.green {
+    background: #b8e986;
+}
+
+.center_list {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filter_list {
+    margin: 0 !important;
+    border-bottom: 1px solid #e6e9f0;
+    margin-bottom: 10px !important;
+}
+
+.filter_list_search {
+    border-right: 1px solid #eaecf4;
+    min-width: 230px;
+    padding: 5px;
+}
+.filter_list .filter_list_select.ui.selection.dropdown {
+    min-width: 22em;
+    margin: 0;
+    border: none;
+    padding: 0;
+    float: right;
+    vertical-align: middle;
+    height: 1.8em;
+    min-height: 1.8em;
+    line-height: 1.8em !important;
+    color: #9b9b9b;
+}
+
+.filter_list .ui.multiple.dropdown>.text {
+    line-height: 1em;
+}
+
+.filter_list .ui.basic.button {
+    margin: 0;
+    padding: 4px 3px;
+    margin-left: 10px;
+}
+
+.filter_list .ui.basic.button .icon-eye{
+    margin: 0 2px;
 }
