@@ -1496,8 +1496,7 @@ ul.popup_users_paginator li.active_li {
     padding: 0;
 }
 
-.employee_time_list>.list_row:first-child .user_col,
-.employee_time_list>.list_row:first-child .day_col {
+.employee_time_list>.list_row:first-child .day_col{
    border-top: 1px solid #f1f3f7;
 }
 
@@ -1590,7 +1589,7 @@ ul.popup_users_paginator li.active_li {
 .days_row {
     display: table;
     table-layout: fixed;
-    /*width: 100%;*/
+    width: 100%;         /*100%*/
 }
 
 .day_col {
@@ -1598,7 +1597,8 @@ ul.popup_users_paginator li.active_li {
     position: relative;
     border-right: 1px solid #f1f3f7;
     border-bottom: 1px solid #f1f3f7;
-    width: 35px;
+    /*min-width: 35px;*/
+    width: 3.3%;
     vertical-align: middle;
     line-height: 0.9em;
     height: 52px;
@@ -1626,7 +1626,7 @@ ul.popup_users_paginator li.active_li {
 
 .center_list {
     display: block;
-    max-width: 1300px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -1763,12 +1763,8 @@ li.days_row:last-child .day_col.current_day {
    color: #bababc;
 }
 
-.day_col.maternity {
-
-}
-
-.maternity {
-   width: 100%;
+.days_row .day_col>.maternity {
+   width: 97.5%;
    position: absolute;
    top: 2px;
    bottom: 2px;
@@ -1777,4 +1773,9 @@ li.days_row:last-child .day_col.current_day {
    border-radius: 3px;
    border: 2px solid #ffdfcb;
    background: #fff6f0;
+   z-index: 99;
+}
+
+.days_row .day_col>.maternity.four {
+   width: 400%;
 }
