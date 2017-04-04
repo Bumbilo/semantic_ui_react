@@ -234,28 +234,38 @@ const ButtonMakeRequest = () => (
 // ============ Popup =============
 
 const PopupMaternity = () => (
-   <Popup trigger={<div className="maternity four"></div>}
-   content='Maternity'
-   position='top right'
-   hideOnScroll
-   size='mini'
+    <Popup trigger={<div className="maternity four"></div>}
+           content='Maternity'
+           position='top right'
+           hideOnScroll
+           size='mini'
     />
 );
 
 const PopupBooked = () => (
-   <Popup trigger={<div className="booked six"></div>}
-   content='Booked'
-   position='top right'
-   size='mini'
-   hideOnScroll />
+    <Popup trigger={<div className="booked six"></div>}
+           content='Booked'
+           position='top right'
+           size='mini'
+           hideOnScroll/>
 );
 
 const BankHoliday = () => (
-   <Popup trigger={<div className="day_col bank_hol_date"><div className="time_status "></div></div>}
-   content='Bank holiday'
-   position='top right'
-   size='mini'
-   hideOnScroll />
+    <Popup trigger={<div className="day_col bank_hol_date">
+        <div className="time_status "></div>
+    </div>}
+           content='Bank holiday'
+           position='top right'
+           size='mini'
+           hideOnScroll/>
+);
+
+const ShowProfile = () => (
+    <Popup trigger={<i className="icon-eye show"/>}
+           content='Show'
+           position='top right'
+           size='mini'
+           hideOnScroll/>
 );
 
 const style = {padding: 0};
@@ -289,7 +299,8 @@ const RedDays2 = () => (
 class RedDay extends React.Component {
     render() {
         return (
-            <Popup className="popup_day" trigger={<div className="time_status red"></div>} position='bottom right' on='click' style={style}>
+            <Popup className="popup_day" trigger={<div className="time_status red"></div>} position='bottom right'
+                   on='click' style={style}>
                 <div className="popup_content_day">
 
                     <div className="popup_title_day">
@@ -342,7 +353,7 @@ const YellowDays2 = () => (
 
 const YellowDay = () => (
     <Popup className="popup_day" trigger={
-               <div className="time_status yellow"></div>
+        <div className="time_status yellow"></div>
     } position='bottom right' on='click' style={style}>
         <div className="popup_content_day">
             <div className="popup_title_day">
@@ -387,7 +398,8 @@ const GreenDays2 = () => (
 class GreenDay extends React.Component {
     render() {
         return (
-            <Popup className="popup_day" trigger={<div className="time_status green"></div>} position='bottom right' on='click' style={style}>
+            <Popup className="popup_day" trigger={<div className="time_status green"></div>} position='bottom right'
+                   on='click' style={style}>
                 <div className="popup_content_day">
 
                     <div className="popup_title_day">
@@ -421,25 +433,25 @@ const EmployeeAvatar = () => (
 );
 
 const options = [
-  { key: 'design', text: 'Design', value: 'Design' },
-  { key: 'meneger', text: 'Meneger', value: 'Meneger' },
-  { key: 'engineer', text: 'Engineer', value: 'Engineer' }
+    {key: 'design', text: 'Design', value: 'Design'},
+    {key: 'meneger', text: 'Meneger', value: 'Meneger'},
+    {key: 'engineer', text: 'Engineer', value: 'Engineer'}
 ]
 
 const MultipleSelection = () => (
-  <Dropdown placeholder='Skills' multiple selection options={options} className="filter_list_select" />
+    <Dropdown placeholder='Skills' multiple selection options={options} className="filter_list_select"/>
 )
 
 const EmployeeFilterUser = () => (
     <Grid className="filter_list">
         <Grid.Row>
-            <Grid.Column mobile={3} tablet={3} computer={3} >
-                <Input transparent placeholder='Filter users' className="filter_list_search" />
+            <Grid.Column mobile={3} tablet={3} computer={3}>
+                <Input transparent placeholder='Filter users' className="filter_list_search"/>
             </Grid.Column>
             <Grid.Column mobile={13} tablet={13} computer={13}>
-                <Button basic icon='expand'  size='mini' floated='right' />
-                <Button basic icon='print'  size='mini' floated='right' />
-                <Button basic  size='mini' floated='right'><i className="icon-eye"/></Button>
+                <Button basic icon='expand' size='mini' floated='right'/>
+                <Button basic icon='print' size='mini' floated='right'/>
+                <Button basic size='mini' floated='right'><i className="icon-eye"/></Button>
                 <MultipleSelection/>
             </Grid.Column>
         </Grid.Row>
@@ -461,14 +473,14 @@ const LocationMenu = () => (
 );
 
 const days = [
-  { key: 'march', text: '01 Mar 2017 - 31 Mar 2017', value: '01 Mar 2017 - 31 Mar 2017' },
-  { key: 'april', text: '01 April 2017 - 31 April 2017', value: '01 April 2017 - 31 April 2017' },
-  { key: 'May', text: '01 May 2017 - 31 May 2017', value: '01 May 2017 - 31 May 2017' },
-  { key: 'june', text: '01 June 2017 - 31 June 2017', value: '01 June 2017 - 31 June 2017' }
+    {key: 'march', text: '01 Mar 2017 - 31 Mar 2017', value: '01 Mar 2017 - 31 Mar 2017'},
+    {key: 'april', text: '01 April 2017 - 31 April 2017', value: '01 April 2017 - 31 April 2017'},
+    {key: 'May', text: '01 May 2017 - 31 May 2017', value: '01 May 2017 - 31 May 2017'},
+    {key: 'june', text: '01 June 2017 - 31 June 2017', value: '01 June 2017 - 31 June 2017'}
 ]
 
 const DropdownSelectionMonth = () => (
-  <Dropdown placeholder='Date' fluid selection options={days} className="select_month" />
+    <Dropdown placeholder='Date' fluid selection options={days} className="select_month"/>
 )
 
 const EmployeeDaysDate = () => (
@@ -743,7 +755,7 @@ const EmployeeDaysDate = () => (
                 </span>
             </div>
         </div>
-     <div className="day_col hol_date">
+        <div className="day_col hol_date">
             <div className="days_date">
                 <span className="number">
                    28
@@ -779,92 +791,92 @@ const EmployeeDaysDate = () => (
 const EmployeeDaysAll3 = () => (
     <div className="days_row">
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
             <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
-         <BankHoliday/>
-         <div className="day_col">
-          <GreenDay/>
+        <BankHoliday/>
+        <div className="day_col">
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col current_day">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
         <div className="day_col">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
     </div>
 );
@@ -872,92 +884,92 @@ const EmployeeDaysAll3 = () => (
 const EmployeeDaysAll2 = () => (
     <div className="days_row">
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
             <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
-       <BankHoliday/>
+        <BankHoliday/>
         <div className="day_col">
-          <GreenDay/>
-        </div>
-        <div className="day_col">
-          <YellowDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-        <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <YellowDay/>
+        </div>
+        <div className="day_col">
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <PopupBooked/>
+            <PopupBooked/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col current_day">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
         <div className="day_col">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
     </div>
 );
@@ -965,31 +977,31 @@ const EmployeeDaysAll2 = () => (
 const EmployeeDaysAll = () => (
     <div className="days_row">
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
             <GreenDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status "></div>
+            <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <PopupMaternity/>
+            <PopupMaternity/>
         </div>
         <div className="day_col">
         </div>
@@ -998,97 +1010,97 @@ const EmployeeDaysAll = () => (
         <div className="day_col">
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
-       <BankHoliday/>
+        <BankHoliday/>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col clicked">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <YellowDay/>
+            <YellowDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+            <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col current_day">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <GreenDay/>
+            <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <RedDay/>
+            <RedDay/>
         </div>
         <div className="day_col ">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
         <div className="day_col">
-          <div className="time_stus"></div>
+            <div className="time_stus"></div>
         </div>
     </div>
 );
 
 const position = [
-  { key: 'design', text: 'Design', value: 'Design' },
-  { key: 'meneger', text: 'Meneger', value: 'Meneger' },
-  { key: 'engineer', text: 'Engineer', value: 'Engineer' }
-]
+    {key: 'design', text: 'Design', value: 'Design'},
+    {key: 'meneger', text: 'Meneger', value: 'Meneger'},
+    {key: 'engineer', text: 'Engineer', value: 'Engineer'}
+];
 
 const DropdownPosition = () => (
-  <Dropdown text='Design' options={position} className="filter_position" />
-)
+    <Dropdown text='Design' options={position} className="filter_position"/>
+);
 
 
 const DropdownPosition2 = () => (
-  <Dropdown text='Engineer' options={position} className="filter_position" />
-)
+    <Dropdown text='Engineer' options={position} className="filter_position"/>
+);
 
 const Employee_User = () => (
-            <div className="user_col">
-                <div className="user_status">
-                    <Image src={ava2} avatar />
-                    <div className="status green"></div>
-                </div>
-                <div className="user_info">
-                    <span className="user_name">
-                        John Smith
-                    </span>
-                    <span className="user_position">
-                        Design manager
-                    </span>
-                </div>
-                <i className="icon-eye show"/>
-            </div>
+    <div className="user_col">
+        <div className="user_status">
+            <Image src={ava2} avatar/>
+            <div className="status green"></div>
+        </div>
+        <div className="user_info">
+            <span className="user_name">
+                John Smith
+            </span>
+            <span className="user_position">
+                Design manager
+            </span>
+        </div>
+        <ShowProfile/>
+    </div>
 );
 
 const EmployeeSelectDate = () => (
-   <div className="change_date">
-      <DropdownSelectionMonth />
-   </div>
+    <div className="change_date">
+        <DropdownSelectionMonth />
+    </div>
 );
 
 const EmployeeDays = () => (
@@ -1102,7 +1114,7 @@ const EmployeeDays = () => (
 
 const EmployeeTimeList = () => (
     <ul className="employee_time_list">
-         <li> <DropdownPosition/> </li>
+        <li><DropdownPosition/></li>
         <li className="list_row">
             <Employee_User/>
             <EmployeeDaysAll/>
@@ -1116,7 +1128,7 @@ const EmployeeTimeList = () => (
 
 const EmployeeTimeList2 = () => (
     <ul className="employee_time_list">
-         <li> <DropdownPosition2/> </li>
+        <li><DropdownPosition2/></li>
         <li className="list_row">
             <Employee_User/>
             <EmployeeDaysAll2/>
@@ -1155,12 +1167,12 @@ const EmployeeTimeList2 = () => (
 // Content
 const ContentMenu = () => (
     <div className="center_list">
-          <div className="employee_time_view">
+        <div className="employee_time_view">
             <EmployeeFilterUser/>
             <EmployeeDays/>
             <EmployeeTimeList/>
             <EmployeeTimeList2/>
-          </div>
+        </div>
     </div>
 );
 

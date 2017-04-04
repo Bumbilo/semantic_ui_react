@@ -11,7 +11,6 @@ a {
     font-size: 13px;
 }
 
-
 /* ========== Semantic classes ========== */
 
 .employee_profile .ui.secondary.pointing.menu {
@@ -90,8 +89,7 @@ header .header_top_menu .item.header_title_menu {
 
 .ui.secondary.pointing.menu .item {
     color: #4a4a4a;
-    font-family: "Proxima Nova", serif;
-    ;
+    font-family: "Proxima Nova", serif;;
     font-size: 14px;
 }
 
@@ -246,7 +244,6 @@ header .header_top_menu .item.header_title_menu {
     left: 0;
 }
 
-
 /* ========== employee_profile ========== */
 
 .employee {
@@ -351,7 +348,6 @@ header .header_top_menu .item.header_title_menu {
     padding-bottom: 20px;
 }
 
-
 /* ========== employee_option ========== */
 
 .employee_option {
@@ -381,7 +377,7 @@ header .header_top_menu .item.header_title_menu {
     font-size: 15px;
 }
 
-.employee_option .ui.labeled.icon.button>.icon {
+.employee_option .ui.labeled.icon.button > .icon {
     background: none;
     color: #788668;
 }
@@ -523,7 +519,7 @@ i.input_icon {
     margin-top: 20px;
 }
 
-.input_edit .ui.multiple.dropdown>.label {
+.input_edit .ui.multiple.dropdown > .label {
     color: #927bc2;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
     font-size: 13px;
@@ -531,7 +527,7 @@ i.input_icon {
     padding: 6px 12px;
 }
 
-.input_edit .ui.label>.delete.icon {
+.input_edit .ui.label > .delete.icon {
     color: #ababab;
 }
 
@@ -540,8 +536,8 @@ i.input_icon {
     margin: 5px 0;
 }
 
-.input_edit .manager_dropdown.ui.dropdown:not(.button)>.default.text,
-.manager_dropdown.ui.dropdown>.text {
+.input_edit .manager_dropdown.ui.dropdown:not(.button) > .default.text,
+.manager_dropdown.ui.dropdown > .text {
     line-height: 1;
 }
 
@@ -567,7 +563,6 @@ i.input_icon {
     border-radius: 3px;
 }
 
-
 /* ========== progress_bar ========== */
 
 .progress_bar {
@@ -586,7 +581,7 @@ i.input_icon {
     margin: 10px 0;
 }
 
-.progress_bar>span {
+.progress_bar > span {
     height: 100%;
     display: inline-block;
     top: 0;
@@ -781,8 +776,8 @@ i.input_icon {
     color: #d82b40;
 }
 
-.modal_calenader {}
-
+.modal_calenader {
+}
 
 /* ========== Date Picker ========== */
 
@@ -880,7 +875,6 @@ i.input_icon {
     cursor: pointer;
 }
 
-
 /* ========== Accardion ========== */
 
 .today_info_item {
@@ -963,7 +957,6 @@ i.input_icon {
 .employee_profile .ui.accordion .title:not(.ui) {
     padding: 0.1em;
 }
-
 
 /*========== ProfileMonth ==========*/
 
@@ -1108,7 +1101,6 @@ button.profile_month_option i {
     position: relative;
 }
 
-
 /*========== Modal Profile Time Card ==========*/
 
 .block_center {
@@ -1143,7 +1135,6 @@ button.profile_month_option i {
 .myClass {
     border: 1px solid grey;
 }
-
 
 /*========== Employee Settings ==========*/
 
@@ -1181,8 +1172,8 @@ button.profile_month_option i {
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.employee_option_left .ui.vertical.menu>.active.item:last-child,
-.employee_option_left .ui.vertical.menu>.item:last-child {
+.employee_option_left .ui.vertical.menu > .active.item:last-child,
+.employee_option_left .ui.vertical.menu > .item:last-child {
     border-radius: 0;
 }
 
@@ -1221,7 +1212,7 @@ button.profile_month_option i {
     font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
-.employee_title_btn .ui.grid>.row>.column {
+.employee_title_btn .ui.grid > .row > .column {
     padding: 0;
 }
 
@@ -1244,7 +1235,7 @@ button.profile_month_option i {
     margin: 25px 50px;
 }
 
-.employee_settings_content .ui.grid>.row:hover .column:first-child {
+.employee_settings_content .ui.grid > .row:hover .column:first-child {
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -o-transition: all .2s linear;
@@ -1276,14 +1267,14 @@ button.profile_month_option i {
     transition: all .2s ease-in-out;
 }
 
-.employee_settings_content .ui.grid>.row {
+.employee_settings_content .ui.grid > .row {
     padding: .3rem 0;
     border-top: 1px solid #e4e5e7;
     border-bottom: 1px solid #e4e5e7;
     margin-top: -1px;
 }
 
-.employee_settings_content .ui.grid>.row>.column {
+.employee_settings_content .ui.grid > .row > .column {
     vertical-align: middle;
     padding: 0;
 }
@@ -1413,7 +1404,7 @@ span.bold {
 
 .employee_dushboard_setup .ui.basic.button.green_btn {
     padding: .7em 3.5em;
-    box-shadow: 0 0 0 1px #73d004 inset!important;
+    box-shadow: 0 0 0 1px #73d004 inset !important;
     color: #73d004 !important;
 }
 
@@ -1423,7 +1414,7 @@ span.bold {
 
 .employee_dushboard_setup .ui.basic.button.yellow_btn {
     padding: .7em 1em;
-    box-shadow: 0 0 0 1px #f5a623 inset!important;
+    box-shadow: 0 0 0 1px #f5a623 inset !important;
     color: #6a6a6a !important;
     min-width: 150px;
 }
@@ -1476,7 +1467,6 @@ ul.popup_users_paginator li.active_li {
     border-radius: 2px;
 }
 
-
 /*========== Employee_time_view ==========*/
 
 .employee_time_view {
@@ -1496,26 +1486,34 @@ ul.popup_users_paginator li.active_li {
     padding: 0;
 }
 
-.employee_time_list>.list_row:first-child .day_col{
-   border-top: 1px solid #f1f3f7;
-}
-
 .list_row {
     position: relative;
     display: table-row;
     width: 100%;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
 }
 
-.list_row:hover .user_col {
-   border-top: 1px solid #b9bec7;
-   border-bottom: 1px solid #b9bec7;
+.list_row .user_col,
+.list_row .day_col,
+.list_row .change_date {
+    border-top: 1px solid #f1f3f7;
 }
 
-.list_row:hover .day_col {
-   border-top: 1px solid #d3d7de;
-   border-bottom: 1px solid #d3d7de;
+.list_row:hover .user_col,
+.list_row:hover .day_col,
+.list_row:hover .change_date {
+    border-top: 1px solid #b9bec7;
+    border-bottom: 1px solid #b9bec7;
+
+}
+.list_row .day_col:hover span.day {
+   font-weight: bold;
+    cursor: pointer;
+}
+
+.list_row .day_col:hover span.number {
+    color: #5a5a5a;
 }
 
 .user_col {
@@ -1524,13 +1522,10 @@ ul.popup_users_paginator li.active_li {
     background: #f7f7f7;
     min-width: 225px;
     padding: 2px 5px;
-    border-bottom: 1px solid #f1f3f7;
-    border-left: 1px solid #f1f3f7;
-    border-right: 1px solid #f1f3f7;
 }
 
 .change_date {
-   display: table-cell;
+    display: table-cell;
     position: relative;
     min-width: 225px;
     padding: 2px 5px;
@@ -1541,7 +1536,7 @@ ul.popup_users_paginator li.active_li {
 .user_col .icon-eye {
     position: absolute;
     right: 10px;
-    top: 15px;
+    top: 17px;
     color: #9b9b9b;
     cursor: pointer;
 }
@@ -1565,7 +1560,7 @@ ul.popup_users_paginator li.active_li {
 }
 
 .user_status .status.green {
-   background: #7ed321;
+    background: #7ed321;
 }
 
 .user_info {
@@ -1581,7 +1576,7 @@ ul.popup_users_paginator li.active_li {
     color: #7d7d7d;
 }
 
-.user_info .user_position  {
+.user_info .user_position {
     font-size: 0.8em;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 }
@@ -1589,7 +1584,7 @@ ul.popup_users_paginator li.active_li {
 .days_row {
     display: table;
     table-layout: fixed;
-    width: 100%;         /*100%*/
+    width: 100%;
 }
 
 .day_col {
@@ -1597,8 +1592,7 @@ ul.popup_users_paginator li.active_li {
     position: relative;
     border-right: 1px solid #f1f3f7;
     border-bottom: 1px solid #f1f3f7;
-    /*min-width: 35px;*/
-    width: 3.3%;
+    min-width: 35px;
     vertical-align: middle;
     line-height: 0.9em;
     height: 52px;
@@ -1617,7 +1611,7 @@ ul.popup_users_paginator li.active_li {
     z-index: 99;
 }
 
-.time_stus{
+.time_stus {
     position: absolute;
     top: 25px;
     left: 12px;
@@ -1627,7 +1621,7 @@ ul.popup_users_paginator li.active_li {
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
     z-index: 99;
-    border:1px solid #b6bec8;
+    border: 1px solid #b6bec8;
     background: #b6bec8;
 }
 
@@ -1644,7 +1638,7 @@ ul.popup_users_paginator li.active_li {
 }
 
 .time_status.yellow:hover {
-    background: #ebcb7b;
+    border: 2px solid  #ebcb7b;
 }
 
 .time_status.red:hover {
@@ -1686,7 +1680,7 @@ ul.popup_users_paginator li.active_li {
     color: #9b9b9b;
 }
 
-.filter_list .ui.multiple.dropdown>.text {
+.filter_list .ui.multiple.dropdown > .text {
     line-height: 1em;
 }
 
@@ -1696,8 +1690,12 @@ ul.popup_users_paginator li.active_li {
     margin-left: 10px;
 }
 
-.filter_list .ui.basic.button .icon-eye{
-    margin: 0 2px;
+.filter_list .ui.basic.button .icon-eye {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1em;
+    font-size: .92em;
+    padding: 0 2px;
 }
 
 .days_date {
@@ -1714,7 +1712,6 @@ ul.popup_users_paginator li.active_li {
     display: block;
 }
 
-
 .days_date .number {
     font-family: 'ProximaNovaBold', sans-serif
 }
@@ -1725,105 +1722,105 @@ ul.popup_users_paginator li.active_li {
 }
 
 .change_date .select_month.ui.selection.dropdown {
-      padding: 0 10px;
-      margin: 0;
-      width: 100%;
-      min-width: 200px;
-      height: 1.9em;
-      min-height: 1.9em;
-      line-height: 1.5em !important;
-      font-size: .95em;
+    position: absolute;
+    padding: 2px 5px;
+    top:13px;
+    margin: 0;
+    width: 90%;
+    min-width: 200px;
+    height: 1.9em;
+    min-height: 1.9em;
+    line-height: 1.5em !important;
+    font-size: .95em;
 
 }
 
 .change_date .select_month.ui.selection.dropdown .default.text,
 .change_date .select_month.ui.selection.dropdown .text {
-   line-height: 1.7em;
+    line-height: 1.3em;
 
 }
 
-.select_month.ui.selection.dropdown>.dropdown.icon {
-   top: .5em;
-   color: #9b9b9b;
+.select_month.ui.selection.dropdown > .dropdown.icon {
+    top: .5em;
+    color: #9b9b9b;
 }
 
 .filter_position {
-   margin-left: 10px;
-   color: #7f64b5;
-   width: 100%;
+    margin-left: 10px;
+    color: #7f64b5;
+    width: 100%;
 }
 
 .day_col.hol_date {
-   background: #f6f7fa;
-   color: #bababc;
+    background: #f6f7fa;
+    color: #bababc;
 }
 
 .day_col.bank_hol_date {
-   background: #f9f7e6;
-   color: #bababc;
+    background: #f9f7e6;
+    color: #bababc;
 }
 
 .day_col.clicked {
-   border-left: 1px solid #a9deff;
-   border-right: 1px solid #a9deff;
+    border-left: 1px solid #a9deff;
+    border-right: 1px solid #a9deff;
 }
 
-
-
 .employee_time_list .days_row .day_col.current_date {
-   border-top: 4px solid #a9deff;
-   border-bottom: 2px solid #a9deff;
-   border-left: 1px solid #a9deff;
-   border-right: 1px solid #a9deff;
-   background: #ecf8ff;
+    border-top: 4px solid #a9deff;
+    border-bottom: 2px solid #a9deff;
+    border-left: 1px solid #a9deff;
+    border-right: 1px solid #a9deff;
+    background: #ecf8ff;
 }
 
 .employee_time_list .days_row .day_col.current_day {
-      border-top: 1px solid #a9deff;
-      border-left: 1px solid #a9deff;
-      border-right: 1px solid #a9deff;
-      background: #ecf8ff;
+    border-top: 1px solid #a9deff;
+    border-left: 1px solid #a9deff;
+    border-right: 1px solid #a9deff;
+    background: #ecf8ff;
 }
 
 li.days_row:last-child .day_col.current_day {
-   border-bottom: 1px solid #a9deff ;
+    border-bottom: 1px solid #a9deff;
 }
 
 .day_col.hol_date .number,
 .day_col.hol_date .day {
-   color: #bababc;
+    color: #bababc;
 }
 
-.days_row .day_col>.maternity {
-   width: 97.5%;
-   position: absolute;
-   top: 2px;
-   bottom: 2px;
-   right: 2px;
-   left: 2px;
-   border-radius: 3px;
-   border: 2px solid #ffdfcb;
-   background: #fff6f0;
-   z-index: 99;
+.days_row .day_col > .maternity {
+    width: 97.5%;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+    border-radius: 3px;
+    border: 3px solid #ffdfcb;
+    background: #fff6f0;
+    z-index: 99;
 }
 
-.days_row .day_col>.booked {
-   width: 97.5%;
-   position: absolute;
-   top: 2px;
-   bottom: 2px;
-   right: 2px;
-   left: 2px;
-   border-radius: 3px;
-   border: 2px solid #e3ddf1;
-   background: #fcf7ff;
-   z-index: 99;
-}
-.days_row .day_col>.booked.six {
-      width: 700%;
+.days_row .day_col > .booked {
+    width: 97.5%;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+    border-radius: 3px;
+    border: 3px solid #e3ddf1;
+    background: #fcf7ff;
+    z-index: 99;
 }
 
+.days_row .day_col > .booked.six {
+    width: 700%;
+}
 
-.days_row .day_col>.maternity.four {
-   width: 400%;
+.days_row .day_col > .maternity.four {
+    width: 400%;
 }
