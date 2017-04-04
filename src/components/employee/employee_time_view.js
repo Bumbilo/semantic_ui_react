@@ -234,18 +234,183 @@ const ButtonMakeRequest = () => (
 // ============ Popup =============
 
 const PopupMaternity = () => (
-   <Popup
- trigger={<div className="maternity four"></div>}
- content='Maternity'
- position='top right'
- hideOnScroll
-/>
+   <Popup trigger={<div className="maternity four"></div>}
+   content='Maternity'
+   position='top right'
+   hideOnScroll
+   size='mini'
+    />
 );
 
+const PopupBooked = () => (
+   <Popup trigger={<div className="booked six"></div>}
+   content='Booked'
+   position='top right'
+   size='mini'
+   hideOnScroll />
+);
+
+const BankHoliday = () => (
+   <Popup trigger={<div className="day_col bank_hol_date"><div className="time_status "></div></div>}
+   content='Bank holiday'
+   position='top right'
+   size='mini'
+   hideOnScroll />
+);
+
+const style = {padding: 0};
+const RedDays = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">08:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">12:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
 
 
+const RedDays2 = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">13:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">16:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
+
+class RedDay extends React.Component {
+    render() {
+        return (
+            <Popup className="popup_day" trigger={<div className="time_status red"></div>} position='bottom right' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Worked time
+                        <span className="count_hours">7h 56min</span>
+                    </div>
+                    <div className="popup_content_date">
+                        <RedDays/>
+                        <RedDays2/>
+                    </div>
+                    <div className="popup_status">
+                        <Icon circular inverted name='info' color="yellow" size="small"/>
+                        <span>Late/Not check in</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
+
+const YellowDays = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">08:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">12:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
 
 
+const YellowDays2 = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">13:04</span>
+            <span className="connect_day_status">Check in</span>
+        </div>
+        <div>
+            <span className="connect_day_date">16:30</span>
+            <span className="connect_day_status">Check out</span>
+        </div>
+    </div>
+)
+
+const YellowDay = () => (
+    <Popup className="popup_day" trigger={
+               <div className="time_status yellow"></div>
+    } position='bottom right' on='click' style={style}>
+        <div className="popup_content_day">
+            <div className="popup_title_day">
+                Worked time
+                <span className="count_hours">7h 56min</span>
+            </div>
+
+            <div className="popup_content_date">
+                <YellowDays/>
+                <YellowDays2/>
+            </div>
+
+            <div className="popup_status">
+                <a href="#">
+                    <Icon circular name='pencil' size="small"/>
+                </a>
+            </div>
+        </div>
+    </Popup>
+);
+
+const GreenDays = () => (
+    <div className="connect_day">
+        <div>
+            <span className="connect_day_date">06/02</span>
+            <span className="connect_day_status">First day off</span>
+        </div>
+        <div>
+            <span className="connect_day_date">06/02</span>
+            <span className="connect_day_status">First day off</span>
+        </div>
+    </div>
+)
+
+const GreenDays2 = () => (
+    <div className="one_day">
+        <span className="connect_day_date">06/02</span>
+        <span className="connect_day_status">First day off</span>
+    </div>
+)
+
+class GreenDay extends React.Component {
+    render() {
+        return (
+            <Popup className="popup_day" trigger={<div className="time_status green"></div>} position='bottom right' on='click' style={style}>
+                <div className="popup_content_day">
+
+                    <div className="popup_title_day">
+                        Booked holiday
+                        <span className="count_hours">5 Days</span>
+                    </div>
+
+                    <div className="popup_content_date">
+                        <GreenDays/>
+                        <GreenDays2/>
+                    </div>
+
+                    <div className="popup_status">
+                        <span>No check records</span>
+                        <a href="#">
+                            <Icon circular name='pencil' size="small"/>
+                        </a>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
 // Avatar
 const EmployeeAvatar = () => (
     <div className='employee_avatar'>
@@ -611,97 +776,188 @@ const EmployeeDaysDate = () => (
     </div>
 );
 
+const EmployeeDaysAll3 = () => (
+    <div className="days_row">
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+            <YellowDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status "></div>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <RedDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+         <BankHoliday/>
+         <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <YellowDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+        <div className="day_col ">
+          <GreenDay/>
+        </div>
+        <div className="day_col">
+          <RedDay/>
+        </div>
+        <div className="day_col">
+          <YellowDay/>
+        </div>
+        <div className="day_col">
+          <GreenDay/>
+        </div>
+        <div className="day_col current_day">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <GreenDay/>
+        </div>
+        <div className="day_col hol_date">
+          <div className="time_status"></div>
+        </div>
+        <div className="day_col ">
+          <div className="time_stus"></div>
+        </div>
+        <div className="day_col">
+          <div className="time_stus"></div>
+        </div>
+    </div>
+);
+
 const EmployeeDaysAll2 = () => (
     <div className="days_row">
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-            <div className="time_status green"></div>
+            <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <RedDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status"></div>
         </div>
-     <div className="day_col bank_hol_date">
-          <div className="time_status "></div>
+       <BankHoliday/>
+        <div className="day_col">
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+        <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
-        </div>
-        <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <div className="time_status green"></div>
+          <PopupBooked/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <div className="time_status "></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <div className="time_status "></div>
         </div>
         <div className="day_col current_day">
-          <div className="time_status green"></div>
+          <div className="time_status "></div>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <div className="time_status green"></div>
+          <div className="time_stus"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <div className="time_stus"></div>
         </div>
     </div>
 );
@@ -709,25 +965,25 @@ const EmployeeDaysAll2 = () => (
 const EmployeeDaysAll = () => (
     <div className="days_row">
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-            <div className="time_status green"></div>
+            <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <YellowDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <RedDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status "></div>
@@ -736,67 +992,62 @@ const EmployeeDaysAll = () => (
           <PopupMaternity/>
         </div>
         <div className="day_col">
-
         </div>
         <div className="day_col">
-
         </div>
         <div className="day_col">
-
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status"></div>
         </div>
-     <div className="day_col bank_hol_date">
-          <div className="time_status"></div>
-        </div>
+       <BankHoliday/>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col clicked">
-          <div className="time_status green"></div>
+          <RedDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <YellowDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
           <div className="time_status"></div>
         </div>
         <div className="day_col ">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col current_day">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status green"></div>
+          <GreenDay/>
         </div>
         <div className="day_col hol_date">
-          <div className="time_status"></div>
+          <RedDay/>
         </div>
         <div className="day_col ">
-          <div className="time_status green"></div>
+          <div className="time_stus"></div>
         </div>
         <div className="day_col">
-          <div className="time_status green"></div>
+          <div className="time_stus"></div>
         </div>
     </div>
 );
@@ -872,27 +1123,27 @@ const EmployeeTimeList2 = () => (
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>
-            <EmployeeDaysAll2/>
+            <EmployeeDaysAll3/>
         </li>
         <li className="list_row">
             <Employee_User/>

@@ -1612,12 +1612,43 @@ ul.popup_users_paginator li.active_li {
     height: 15px;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    z-index: 99;
+}
+
+.time_stus{
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    width: 10px;
+    height: 2px;
+    cursor: pointer;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    z-index: 99;
+    border:1px solid #b6bec8;
+    background: #b6bec8;
 }
 
 .time_status.green {
     background: #b8e986;
+}
+
+.time_status.red {
+    background: #deacab;
+}
+
+.time_status.yellow {
+    background: #fedd88;
+}
+
+.time_status.yellow:hover {
+    background: #ebcb7b;
+}
+
+.time_status.red:hover {
+    border: 2px solid #b48483;
 }
 
 .time_status.green:hover {
@@ -1775,6 +1806,23 @@ li.days_row:last-child .day_col.current_day {
    background: #fff6f0;
    z-index: 99;
 }
+
+.days_row .day_col>.booked {
+   width: 97.5%;
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 2px;
+   left: 2px;
+   border-radius: 3px;
+   border: 2px solid #e3ddf1;
+   background: #fcf7ff;
+   z-index: 99;
+}
+.days_row .day_col>.booked.six {
+      width: 700%;
+}
+
 
 .days_row .day_col>.maternity.four {
    width: 400%;
