@@ -1494,6 +1494,10 @@ ul.popup_users_paginator li.active_li {
     transition: all 0.1s linear;
 }
 
+.list_row .day_col {
+    border-bottom: 1px solid #f7f7f7;
+}
+
 .list_row .user_col,
 .list_row .day_col,
 .list_row .change_date {
@@ -1502,11 +1506,19 @@ ul.popup_users_paginator li.active_li {
 
 .list_row:hover .user_col,
 .list_row:hover .day_col,
-.list_row:hover .change_date {
+.list_row:hover .change_date,
+.list_row:last-child:hover .day_col {
     border-top: 1px solid #b9bec7;
     border-bottom: 1px solid #b9bec7;
-
 }
+.list_row:hover .user_col {
+   background: #ededed;
+}
+
+.user_col:hover {
+    background: #ededed;
+}
+
 .list_row .day_col:hover span.day {
    font-weight: bold;
     cursor: pointer;
@@ -1563,6 +1575,14 @@ ul.popup_users_paginator li.active_li {
     background: #7ed321;
 }
 
+.user_status .status.yellow {
+    background: #fcfe88;
+}
+
+.user_status .status.red {
+    background: #ff818f;
+}
+
 .user_info {
     display: inline-block;
     vertical-align: middle;
@@ -1591,11 +1611,13 @@ ul.popup_users_paginator li.active_li {
     display: table-cell;
     position: relative;
     border-right: 1px solid #f1f3f7;
-    border-bottom: 1px solid #f1f3f7;
     min-width: 35px;
     vertical-align: middle;
     line-height: 0.9em;
-    height: 52px;
+    height: 53px;
+}
+.list_row:last-child .day_col {
+    border-bottom: 1px solid #f1f3f7;
 }
 
 .time_status {
@@ -1690,6 +1712,10 @@ ul.popup_users_paginator li.active_li {
     margin-left: 10px;
 }
 
+.filter_list .ui.basic.button:hover {
+    background: #f7f7f7 !important;
+}
+
 .filter_list .ui.basic.button .icon-eye {
     display: inline-block;
     vertical-align: middle;
@@ -1738,7 +1764,6 @@ ul.popup_users_paginator li.active_li {
 .change_date .select_month.ui.selection.dropdown .default.text,
 .change_date .select_month.ui.selection.dropdown .text {
     line-height: 1.3em;
-
 }
 
 .select_month.ui.selection.dropdown > .dropdown.icon {
@@ -1763,8 +1788,8 @@ ul.popup_users_paginator li.active_li {
 }
 
 .day_col.clicked {
-    border-left: 1px solid #a9deff;
-    border-right: 1px solid #a9deff;
+    border: 1px solid #a9deff;
+    box-shadow: inset 0 0 1px #a9deff;
 }
 
 .employee_time_list .days_row .day_col.current_date {
@@ -1782,8 +1807,13 @@ ul.popup_users_paginator li.active_li {
     background: #ecf8ff;
 }
 
-li.days_row:last-child .day_col.current_day {
+li.list_row:last-child .day_col.current_day {
     border-bottom: 1px solid #a9deff;
+}
+
+.user_col .ui.avatar.image {
+    width: 2.5em;
+    height: 2.5em;
 }
 
 .day_col.hol_date .number,
@@ -1805,7 +1835,7 @@ li.days_row:last-child .day_col.current_day {
 }
 
 .days_row .day_col > .booked {
-    width: 97.5%;
+    width: 98%;
     position: absolute;
     top: 2px;
     bottom: 2px;
@@ -1818,9 +1848,21 @@ li.days_row:last-child .day_col.current_day {
 }
 
 .days_row .day_col > .booked.six {
-    width: 700%;
+    width: 1125%;
 }
 
 .days_row .day_col > .maternity.four {
     width: 400%;
+}
+
+.list_title {
+    width: 100%;
+}
+
+.employee_time_list .title_month {
+    display: table-cell;
+    padding-left: 280px;
+    color: #9b9b9b;
+    font-size: .8em;
+
 }

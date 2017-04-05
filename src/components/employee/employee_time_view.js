@@ -232,22 +232,25 @@ const ButtonMakeRequest = () => (
 );
 
 // ============ Popup =============
-
+const style2 = {padding: '4px 8px', fontWeight: 'bold'};
 const PopupMaternity = () => (
     <Popup trigger={<div className="maternity four"></div>}
            content='Maternity'
            position='top right'
            hideOnScroll
-           size='mini'
+           size='tiny'
+           style={style2}
     />
 );
 
 const PopupBooked = () => (
     <Popup trigger={<div className="booked six"></div>}
-           content='Booked'
+           content='Booked holiday'
            position='top right'
-           size='mini'
+           size='tiny'
+           style={style2}
            hideOnScroll/>
+
 );
 
 const BankHoliday = () => (
@@ -256,7 +259,8 @@ const BankHoliday = () => (
     </div>}
            content='Bank holiday'
            position='top right'
-           size='mini'
+           size='tiny'
+           style={style2}
            hideOnScroll/>
 );
 
@@ -264,7 +268,8 @@ const ShowProfile = () => (
     <Popup trigger={<i className="icon-eye show"/>}
            content='Show'
            position='top right'
-           size='mini'
+           size='tiny'
+           style={style2}
            hideOnScroll/>
 );
 
@@ -280,8 +285,7 @@ const RedDays = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
-
+);
 
 const RedDays2 = () => (
     <div className="connect_day">
@@ -299,10 +303,9 @@ const RedDays2 = () => (
 class RedDay extends React.Component {
     render() {
         return (
-            <Popup className="popup_day" trigger={<div className="time_status red"></div>} position='bottom right'
+            <Popup className="popup_day" trigger={<div className="time_status red"></div>} position='bottom left'
                    on='click' style={style}>
                 <div className="popup_content_day">
-
                     <div className="popup_title_day">
                         Worked time
                         <span className="count_hours">7h 56min</span>
@@ -354,18 +357,16 @@ const YellowDays2 = () => (
 const YellowDay = () => (
     <Popup className="popup_day" trigger={
         <div className="time_status yellow"></div>
-    } position='bottom right' on='click' style={style}>
+    } position='bottom left' on='click' style={style}>
         <div className="popup_content_day">
             <div className="popup_title_day">
                 Worked time
                 <span className="count_hours">7h 56min</span>
             </div>
-
             <div className="popup_content_date">
                 <YellowDays/>
                 <YellowDays2/>
             </div>
-
             <div className="popup_status">
                 <a href="#">
                     <Icon circular name='pencil' size="small"/>
@@ -386,32 +387,29 @@ const GreenDays = () => (
             <span className="connect_day_status">First day off</span>
         </div>
     </div>
-)
+);
 
 const GreenDays2 = () => (
     <div className="one_day">
         <span className="connect_day_date">06/02</span>
         <span className="connect_day_status">First day off</span>
     </div>
-)
+);
 
 class GreenDay extends React.Component {
     render() {
         return (
-            <Popup className="popup_day" trigger={<div className="time_status green"></div>} position='bottom right'
+            <Popup className="popup_day" trigger={<div className="time_status green"></div>} position='bottom left'
                    on='click' style={style}>
                 <div className="popup_content_day">
-
                     <div className="popup_title_day">
                         Booked holiday
                         <span className="count_hours">5 Days</span>
                     </div>
-
                     <div className="popup_content_date">
                         <GreenDays/>
                         <GreenDays2/>
                     </div>
-
                     <div className="popup_status">
                         <span>No check records</span>
                         <a href="#">
@@ -436,11 +434,11 @@ const options = [
     {key: 'design', text: 'Design', value: 'Design'},
     {key: 'meneger', text: 'Meneger', value: 'Meneger'},
     {key: 'engineer', text: 'Engineer', value: 'Engineer'}
-]
+];
 
 const MultipleSelection = () => (
     <Dropdown placeholder='Skills' multiple selection options={options} className="filter_list_select"/>
-)
+);
 
 const EmployeeFilterUser = () => (
     <Grid className="filter_list">
@@ -477,11 +475,11 @@ const days = [
     {key: 'april', text: '01 April 2017 - 31 April 2017', value: '01 April 2017 - 31 April 2017'},
     {key: 'May', text: '01 May 2017 - 31 May 2017', value: '01 May 2017 - 31 May 2017'},
     {key: 'june', text: '01 June 2017 - 31 June 2017', value: '01 June 2017 - 31 June 2017'}
-]
+];
 
 const DropdownSelectionMonth = () => (
     <Dropdown placeholder='Date' fluid selection options={days} className="select_month"/>
-)
+);
 
 const EmployeeDaysDate = () => (
     <div className="days_row">
@@ -933,10 +931,10 @@ const EmployeeDaysAll2 = () => (
             <YellowDay/>
         </div>
         <div className="day_col">
-            <YellowDay/>
+            <PopupBooked/>
         </div>
         <div className="day_col">
-            <GreenDay/>
+            <div className="time_status"></div>
         </div>
         <div className="day_col hol_date">
             <GreenDay/>
@@ -944,8 +942,8 @@ const EmployeeDaysAll2 = () => (
         <div className="day_col hol_date">
             <div className="time_status"></div>
         </div>
-        <div className="day_col ">
-            <PopupBooked/>
+        <div className="day_col">
+            <div className="time_status "></div>
         </div>
         <div className="day_col">
             <GreenDay/>
@@ -1097,6 +1095,41 @@ const Employee_User = () => (
     </div>
 );
 
+const Employee_User2 = () => (
+    <div className="user_col">
+        <div className="user_status">
+            <Image src={ava2} avatar/>
+            <div className="status red"></div>
+        </div>
+        <div className="user_info">
+            <span className="user_name">
+                John Smith
+            </span>
+            <span className="user_position">
+               Senior engineer
+            </span>
+        </div>
+        <ShowProfile/>
+    </div>
+);
+
+const Employee_User3 = () => (
+    <div className="user_col">
+        <div className="user_status">
+            <Image src={ava2} avatar/>
+            <div className="status yellow"></div>
+        </div>
+        <div className="user_info">
+            <span className="user_name">
+                John Smith
+            </span>
+            <span className="user_position">
+              Assistant engineer
+            </span>
+        </div>
+        <ShowProfile/>
+    </div>
+);
 const EmployeeSelectDate = () => (
     <div className="change_date">
         <DropdownSelectionMonth />
@@ -1114,7 +1147,9 @@ const EmployeeDays = () => (
 
 const EmployeeTimeList = () => (
     <ul className="employee_time_list">
-        <li><DropdownPosition/></li>
+        <li className="list_row"><DropdownPosition/>
+        <span className="title_month">8 -16 March - W13</span>
+        </li>
         <li className="list_row">
             <Employee_User/>
             <EmployeeDaysAll/>
@@ -1128,38 +1163,48 @@ const EmployeeTimeList = () => (
 
 const EmployeeTimeList2 = () => (
     <ul className="employee_time_list">
-        <li><DropdownPosition2/></li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll2/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
-        </li>
-        <li className="list_row">
-            <Employee_User/>
-            <EmployeeDaysAll3/>
+        <li className="list_row"><DropdownPosition2/>
+
         </li>
         <li className="list_row">
             <Employee_User/>
             <EmployeeDaysAll2/>
+        </li>
+        <li className="list_row">
+            <Employee_User2/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User3/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User2/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User3/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User3/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User/>
+            <EmployeeDaysAll3/>
+        </li>
+        <li className="list_row">
+            <Employee_User/>
+            <EmployeeDaysAll3/>
         </li>
     </ul>
 );
