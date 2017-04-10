@@ -41,6 +41,7 @@ import ModalPanelShift from './modal/modal_panel_shift';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
+import EmployeeProfileCalendar2 from './employee/employee_profile_calendar2';
 import EployeeForm from './employee/employee_form';
 import EmployeeCalendar from './employee/employee_calendar';
 import EployeeSetting from './employee/employee_settings';
@@ -57,7 +58,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EployeeTimeView/>)
+     return (<EmployeeProfileCalendar2/>)
     }
 }
 

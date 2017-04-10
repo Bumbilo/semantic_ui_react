@@ -961,7 +961,7 @@ i.input_icon {
 /*========== ProfileMonth ==========*/
 
 .employee_profile_calendar {
-    padding: 20px 0;
+    padding: 40px 0;
     color: #a5a5a5;
 }
 
@@ -1503,7 +1503,10 @@ ul.popup_users_paginator li.active_li {
 .list_row .change_date {
     border-top: 1px solid #f1f3f7;
 }
+.info_popup {
+    font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 
+}
 .list_row:hover .user_col,
 .list_row:hover .day_col,
 .list_row:hover .change_date,
@@ -1673,7 +1676,8 @@ ul.popup_users_paginator li.active_li {
 
 .center_list {
     display: block;
-    max-width: 1320px;
+    max-width: 1366px;
+    min-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1835,7 +1839,7 @@ li.list_row:last-child .day_col.current_day {
 }
 
 .days_row .day_col > .booked {
-    width: 98%;
+    width: 97.5%;
     position: absolute;
     top: 2px;
     bottom: 2px;
@@ -1848,7 +1852,7 @@ li.list_row:last-child .day_col.current_day {
 }
 
 .days_row .day_col > .booked.six {
-    width: 1125%;
+    width: 1115%;
 }
 
 .days_row .day_col > .maternity.four {
@@ -1865,4 +1869,64 @@ li.list_row:last-child .day_col.current_day {
     color: #9b9b9b;
     font-size: .8em;
 
+}
+
+.sidebar_block {
+    padding: 15px 0 20px 0;
+
+border-bottom: 1px solid #e6ebf0;
+    }
+
+.sidebar_block-item {
+   cursor: pointer;
+   margin-top: 20px;
+   position: relative;
+   background: #fff;
+   width: 140px;
+   height: 95px;
+   border: 1px solid #e4e5e7;
+   border-radius: 3px;
+}
+
+.sidebar_block-item i.icon {
+   color: #7f64b5;
+   font-size: 1.5em;
+   line-height: 3.5em;
+   margin-left: 30px;
+}
+
+.sidebar_block-days {
+   display: inline-block;
+   vertical-align: middle;
+   text-align: center;
+   margin-top: 20px;
+}
+
+.sidebar_days_count {
+   font-size: 1.5em;
+   display:block;
+}
+
+.sidebar_days_title {
+   display: block;
+   color: #5a5a5a;
+}
+
+.sidebar_block-footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   border-top: 1px solid #e4e5e7;
+   width: 100%;
+   text-align: center;
+   font-size: .7em;
+   font-family: 'ProximaNovaBold', sans-serif;
+   color: #5a5a5a;
+   cursor: pointer;
+}
+
+.sidebar_popup {
+   display:inline-block;
+   width: 140px;
+   color: #9b9b9b;
 }
