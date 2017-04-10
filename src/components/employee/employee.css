@@ -1930,3 +1930,32 @@ border-bottom: 1px solid #e6ebf0;
    width: 140px;
    color: #9b9b9b;
 }
+/*========== Employee_panel_hliday ==========*/
+
+.ui.selection.dropdown.change_date_holiday,
+.change_date_holiday.ui.input input{
+   padding: 3px 20px;
+   margin-right: 20px;
+   width: 18.5em;
+   height: 2em;
+   color: #919191;
+   min-height: 2em;
+   margin: 2px;
+}
+ .change_date_holiday.ui.dropdown > .text {
+    line-height: 1.2em;
+    color: #919191;
+}
+
+.change_date_holiday.ui.dropdown:not(.button) > .default.text, .ui.dropdown > .text {
+   line-height: 1.2em;
+}
+
+.change_date_holiday.ui.selection.dropdown>.dropdown.icon {
+   line-height: .6em;
+    color: #919191;
+}
+
+.employee_settings_content span.name.select {
+   line-height: 2em;
+}
