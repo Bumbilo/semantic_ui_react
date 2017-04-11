@@ -5,6 +5,7 @@ import TabletComponentProfile2 from './tablet/tablet_profile3';
 import TabletComponentNumbers from './tablet/tablet_number';
 import Login from './forms/login_form';
 import LoginForgot from './forms/forgot_form';
+import FormRegistration from './forms/registration_form';
 import Header from './header/header_main';
 import LoginReset from './forms/reset_form';
 import ModalWindow from './modal/modal';
@@ -38,6 +39,7 @@ import ModalPanelAddError2 from './modal/modal_panel_add_error2';
 import ModalPanelAbscence from './modal/modal_panel_abscence';
 import ModalPanelLocation from './modal/modal_panel_location';
 import ModalPanelShift from './modal/modal_panel_shift';
+import ModalTablet from './modal/modal_tablet';
 import EployeeAdd from './employee/employee_add';
 import EployeeAdd2 from './employee/employee_add2';
 import EmployeeProfileCalendar from './employee/employee_profile_calendar';
@@ -59,7 +61,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EployeePanelHoliday/>)
+     return (<FormRegistration/>)
     }
 }
 

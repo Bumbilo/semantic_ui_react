@@ -157,6 +157,10 @@
     padding: 40px 0 30px 0;
 }
 
+.ui.header.header_title tablet {
+padding: 30px 0;
+}
+
 h2.ui.header {
     font-size: 1.614rem;
 }
@@ -183,6 +187,10 @@ h2.ui.header {
     width: 49px;
     margin: 0 auto;
     display: block;
+}
+
+.img_header.tablet {
+   width: 40px;
 }
 
 .ui.modal > .content.modal_content {
@@ -1059,6 +1067,53 @@ i.icon.day_purple {
     padding: 20px 0;
 }
 
+/*========= Tablet Modal Window ==========*/
+
+.ui.input.input_tablet-large input {
+   height: 58px;
+   font-size: 3em;
+   text-align: center;
+   letter-spacing: .5em;
+   font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.ui.active.modal .ui.button.tablet_button {
+   padding: 1em;
+   width: 58px;
+   height: 58px;
+   margin: 0;
+   margin-top: 27px;
+}
+
+.tablet_button.ui.basic.green.button {
+   color: #7ed321!important;
+   box-shadow: 0 0 0 1px #7ed321 inset!important;
+   background: #f7fffa!important;
+}
+
+.tablet_button.ui.basic.red.button {
+   color: #deacab !important;
+   background: #fffdfd !important;
+   box-shadow: 0 0 0 1px #deacab inset!important;
+}
+
+.tablet_button.ui.basic.grey.button{
+   color: #9b9b9b !important;
+   background: #f7f8fa !important;
+   box-shadow: 0 0 0 1px #9b9b9b inset!important;
+}
+
+.tablet_button.ui.icon.button>.icon {
+   font-size: 2em;
+   line-height: .9em;
+   width: 1em;
+}
+
+.tablet_gird.ui.grid>.row>.column {
+   padding-right: 0;
+}
+
+
 /*========= Media request ==========*/
 @media (max-width: 1279px) {
 
@@ -1083,6 +1138,11 @@ i.icon.day_purple {
         padding-right: 1.8em;
     }
 
+    .ui.modal>.close {
+      top: 5px;
+      right: 5px;
+   }
+
     .floatRight .ui.selection.dropdown.dropdown_modal {
         width: 92%;
     }
@@ -1092,6 +1152,11 @@ i.icon.day_purple {
     .floatRight .ui.selection.dropdown.dropdown_modal {
         width: 95%;
     }
+
+    .ui.modal>.close {
+      top: 5px;
+      right: 5px;
+   }
 
     .ui.active.modal .ui.button.btn_center {
         float: none;
@@ -1107,4 +1172,18 @@ i.icon.day_purple {
         width: 92%;
     }
 
+    .ui.basic.segment.invalid_message {
+    background-color: #f24b60;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 8px;
+}
+
+    .ui.modal>.close {
+      top: 5px;
+      right: 5px;
+   }
 }
