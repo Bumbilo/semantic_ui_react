@@ -1198,9 +1198,17 @@ button.profile_month_option i {
 .employee_title .icon-people,
 .employee_title .icon-clock,
 .employee_title .icon-plane,
-.employee_title .icon-bell {
+.employee_title .icon-bell
+{
     position: absolute;
     top: 30px;
+    right: 35px;
+    color: #b6bec8;
+    font-size: 3em;
+}
+.employee_title i.icon.settings {
+    position: absolute;
+    top: 40px;
     right: 35px;
     color: #b6bec8;
     font-size: 3em;
@@ -1958,4 +1966,58 @@ border-bottom: 1px solid #e6ebf0;
 
 .employee_settings_content span.name.select {
    line-height: 2em;
+}
+
+.input_general_settings.ui.input input {
+    padding: 3px 10px;
+    margin-right: 20px;
+    min-width: 100%;
+    width: 100%;
+    height: 2em;
+    color: #919191;
+    min-height: 2em;
+    margin: 2px;
+    font-size: .9em;
+}
+
+.general_map {
+    border:none;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.general_company_logo {
+    background: url('../../images/logo_bradgate.png') no-repeat 50%;
+    width: 100%;
+    height: 90px;
+    border: 2px dashed #dededf;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.employee_settings_content .general_setting_info.ui.icon.button,
+.employee_settings_content .general_map_info.ui.icon.button{
+    background: #8b98a5!important;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    border-radius: 50%;
+    border:none;
+    font-size:.8em;
+    width: 15px;
+    height: 15px;
+    color: #fff !important;
+}
+.employee_settings_content .general_map_info.ui.icon.button {
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.popup_info {
+    color: #9d9d9d;
+    max-width: 110px;
+    width: 110px;
+    font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 }
