@@ -6,6 +6,7 @@ import TabletComponentNumbers from './tablet/tablet_number';
 import Login from './forms/login_form';
 import LoginForgot from './forms/forgot_form';
 import RegistrationAgreement from './forms/registration_agreement';
+import RegestrationForm2 from './forms/regestrationV2';
 import FormRegistration from './forms/registration_form';
 import Header from './header/header_main';
 import LoginReset from './forms/reset_form';
@@ -63,7 +64,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EployeeGeneralHoliday/>)
+     return (<RegestrationForm2/>)
     }
 }
 
