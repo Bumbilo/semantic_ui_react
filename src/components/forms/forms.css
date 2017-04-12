@@ -187,6 +187,7 @@
    max-width: 1920px;
    margin: 0 auto;
 }
+
 .wrapper_user_agreement {
    background: #f6f7fa;
    position: absolute;
@@ -214,9 +215,10 @@
    width: 136px;
 }
 
-
-.form_login .form_login_content.white {
+.form_wrapper.regestration .form_login .form_login_content.white,
+.form_login .form_login_content.white{
     background: #fff;
+    padding: 60px 90px;
 }
 
 .icon_input_green.ui.icon.input>i.icon {
@@ -259,3 +261,172 @@
 .slide li.li_active {
     background: #9b9b9b;
 }
+
+.slide li.li_green {
+    background: #b8e986;
+}
+
+.subtitle_regestration {
+    text-align: center;
+}
+
+.add_logo {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    border: 2px dashed #dededf;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add_logo:hover {
+    background: #F8F8F8;
+}
+.add_logo.added {
+    background: url('../../images/logo_bradgate.png') no-repeat 50%;
+}
+.add_logo:hover .add_logo_upload i.icon,
+.add_logo:hover .add_logo_upload span {
+   color: #0091ff;
+}
+
+.general_setting_info.ui.icon.button{
+    background: #8b98a5!important;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    border-radius: 50%;
+    border:none;
+    font-size:.8em;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    color: #fff !important;
+}
+
+.general_setting_info.ui.circular.button>.icon {
+    padding-right: 1px;
+}
+
+.add_logo .general_setting_info {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.label_input {
+    margin-top: 15px;
+    color: #5a5a5a;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.form_login.ui.form .form_login_content .login_btn.cont {
+    display: block;
+    height: 38px;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.company_map {
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+    height: 210px;
+    border: 1px solid #dededf;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.company_map iframe {
+    margin: 0;
+    border-radius: 0;
+}
+.company_map .company_map_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 1.5em;
+    color: #5a5a5a;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    line-height: 2.8em;
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+}
+
+.ui.form.form_login.company {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.block_subtitle {
+    padding: 60px 0 30px 0;
+}
+
+.add_logo_upload {
+    text-align: center;
+    width: 60px;
+    display: block;
+    margin: 20px auto;
+}
+
+.add_logo_upload i.icon {
+    color: #e0e1e4;
+    font-size: 1.2em;
+}
+
+.add_logo_upload span {
+    display: block;
+    color: #8c99a6;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.setting_popup_users span.popup_info_company {
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    color: #9b9b9b;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+
+.form_login.ui.form .form_login_content.white  input{
+    color: #5a5a5a!important;
+}
+
+.form_login.ui.form .form_login_content.white .ui.selection.dropdown {
+    padding: 0 10px;
+    display: inline-block;
+    width: 100%;
+    min-width: 180px;
+    margin: 0;
+    min-height: 0;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+
+.form_login.ui.form .form_login_content.white .ui.dropdown>.text{
+    line-height: 2.3em;
+}
+
+.form_login.ui.form .form_login_content.white .ui.fluid.dropdown>.dropdown.icon {
+    color: #9b9b9b;
+}
+
+.general_setting_info.position,
+i.icon.position{
+    color: #9b9b9b;
+    position: absolute;
+    top: 11px;
+    right: -30px;
+    cursor: pointer;
+}
+
+.ui.form.form_login.middle {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+

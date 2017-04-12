@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
     Grid,
-    Image,
     Header,
     Form,
     Input,
@@ -9,39 +8,11 @@ import {
 } from 'semantic-ui-react';
 import '../../CSS/fonts.css';
 import './forms.css';
-import logo from '../../images/logo_form.png';
 
-
-const InputName = () => (<Input icon='check' fluid placeholder='Name' className="icon_input_green" />);
+const InputName = () => (<Input icon='check' fluid placeholder='Name' className="icon_input_green"/>);
 const InputEmail = () => (<Input icon='check' fluid placeholder='Your Email' className="icon_input_green"/>);
 const InputCompanyName = () => (<Input icon='check' fluid placeholder='Company name' className="icon_input_green"/>)
 
-class FormExampleForm extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        this.state = {};
-    }
-
-    render() {
-        return (
-            <div className="form_wrapper regestration">
-                <div className="emptyInput"></div>
-                <Form className="form_login">
-                    <div className="form_login_content white">
-                        <InputName/>
-                        <InputEmail/>
-                        <InputCompanyName/>
-                        <Button content='Countinue'
-                                icon='chevron right'
-                                labelPosition='left'
-                                className="login_btn reg2"
-                                type='submit'/>
-                    </div>
-                </Form>
-            </div>
-        );
-    }
-}
 const TopMenu = () => (
     <div className="user_agreement_title">
         <Grid>
@@ -63,6 +34,46 @@ const TopMenu = () => (
     </div>
 );
 
+class FormExampleForm extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {};
+    }
+
+    render() {
+        return (
+            <div className="form_wrapper regestration">
+                <Grid>
+                    <Grid.Row>
+                        <Grid.Column width={16}>
+                            <Header as='h3' textAlign='center'>Hello there!</Header>
+                            <p className="subtitle_regestration center">Please provide the following details so we can set your <br/>
+                                company up in Solworks.
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column width={16}>
+                            <Form className="form_login">
+                                <div className="form_login_content white">
+                                    <InputName/>
+                                    <InputEmail/>
+                                    <InputCompanyName/>
+                                    <Button content='Countinue'
+                                            icon='chevron right'
+                                            labelPosition='left'
+                                            className="login_btn reg2"
+                                            type='submit'/>
+                                </div>
+                            </Form>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </div>
+        );
+    }
+}
+
 const GridExampleColumns = () => (
     <div>
         <TopMenu/>
@@ -73,12 +84,12 @@ const GridExampleColumns = () => (
 export default class Employees extends Component {
     state = {};
     handleItemClick = (e, {name}) => this.setState({activeItem: name});
+
     render() {
         const {activeItem} = this.state;
         return (
             <div className="wrapper_user_agreement">
                 <GridExampleColumns/>
-
             </div>
         )
     }
