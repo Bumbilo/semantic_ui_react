@@ -46,6 +46,7 @@ import ModalPanelAddError from './modal/modal_panel_add_error';
 import ModalPanelAddError2 from './modal/modal_panel_add_error2';
 import ModalPanelAbscence from './modal/modal_panel_abscence';
 import ModalPanelLocation from './modal/modal_panel_location';
+import ModalEdiBank from './modal/modal_edit_bank';
 import ModalPanelShift from './modal/modal_panel_shift';
 import ModalTablet from './modal/modal_tablet';
 import EployeeAdd from './employee/employee_add';
@@ -70,7 +71,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<RegestrationFormAvailability/>)
+     return (<ModalEdiBank/>)
     }
 }
 

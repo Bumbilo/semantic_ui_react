@@ -15,10 +15,7 @@ import ava2 from '../../images/ava3.png';
 import appImg from '../../images/apps.svg';
 import dottedImg from '../../images/dotted.svg';
 import bellImg from '../../images/bell.svg';
-import mitsy from '../../images/user_mitsy.png';
-import john from '../../images/user_jhon.png';
-import den from '../../images/user_den.png';
-import companyLogo from '../../images/logo_bradgate.png'
+import companyLogo from '../../images/company_logo.png';
 import '../../CSS/fonts.css';
 import './employee.css';
 import './timecard.css';
@@ -241,7 +238,7 @@ const EmployeeSettings = () => (
             <Grid.Row>
                 <Grid.Column>
                     <div className="title">
-                       General Settings
+                        General Settings
                     </div>
                     <div className="subtitle">
                         Configure actions and for your Page
@@ -265,7 +262,7 @@ const EmployeeCompanyDetails = () => (
                 <Grid.Row>
                     <Grid.Column width={10}>
                         <div className="title">
-                           Company details
+                            Company details
                         </div>
                         <div className="subtitle">
                             Informational text about location
@@ -300,6 +297,7 @@ const EmployeeCompanyDetails = () => (
                     <Grid.Column width={7}>
                         <InputAdress />
                         <div className="general_company_logo">
+                            <Image src={companyLogo}/>
                         </div>
                     </Grid.Column>
                 </Grid.Row>
@@ -329,6 +327,7 @@ const ContentMenu = () => (
                 <div className='employee_profile_info'>
                     <Grid columns='equal'>
                         <Grid.Column>
+                            <EmployeeSettings/>
                             <EmployeeCompanyDetails/>
                         </Grid.Column>
                     </Grid>

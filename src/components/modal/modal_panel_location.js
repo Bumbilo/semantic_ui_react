@@ -5,16 +5,10 @@ import {
     Image,
     Modal,
     Grid,
-    Segment,
-    Flag,
-    Dropdown,
-    Icon,
-    Container,
     Input
 } from 'semantic-ui-react';
 import report from '../../images/report.png';
 import '../../CSS/fonts.css';
-import ava2 from '../../images/ava3.png';
 import './modal.css';
 
 const HeaderTitle = () => (
