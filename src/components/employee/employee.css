@@ -250,6 +250,7 @@ header .header_top_menu .item.header_title_menu {
     position: relative;
     display: inline-block;
     height: 100%;
+    width: 100%;
     margin: 20px 0;
 }
 
@@ -1198,14 +1199,14 @@ button.profile_month_option i {
 .employee_title .icon-people,
 .employee_title .icon-clock,
 .employee_title .icon-plane,
-.employee_title .icon-bell
-{
+.employee_title .icon-bell {
     position: absolute;
     top: 30px;
     right: 35px;
     color: #b6bec8;
     font-size: 3em;
 }
+
 .employee_title i.icon.settings {
     position: absolute;
     top: 40px;
@@ -1511,10 +1512,12 @@ ul.popup_users_paginator li.active_li {
 .list_row .change_date {
     border-top: 1px solid #f1f3f7;
 }
+
 .info_popup {
     font-family: 'ProximaNovaBold', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 
 }
+
 .list_row:hover .user_col,
 .list_row:hover .day_col,
 .list_row:hover .change_date,
@@ -1522,8 +1525,9 @@ ul.popup_users_paginator li.active_li {
     border-top: 1px solid #b9bec7;
     border-bottom: 1px solid #b9bec7;
 }
+
 .list_row:hover .user_col {
-   background: #ededed;
+    background: #ededed;
 }
 
 .user_col:hover {
@@ -1531,7 +1535,7 @@ ul.popup_users_paginator li.active_li {
 }
 
 .list_row .day_col:hover span.day {
-   font-weight: bold;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -1627,6 +1631,7 @@ ul.popup_users_paginator li.active_li {
     line-height: 0.9em;
     height: 53px;
 }
+
 .list_row:last-child .day_col {
     border-bottom: 1px solid #f1f3f7;
 }
@@ -1671,7 +1676,7 @@ ul.popup_users_paginator li.active_li {
 }
 
 .time_status.yellow:hover {
-    border: 2px solid  #ebcb7b;
+    border: 2px solid #ebcb7b;
 }
 
 .time_status.red:hover {
@@ -1762,7 +1767,7 @@ ul.popup_users_paginator li.active_li {
 .change_date .select_month.ui.selection.dropdown {
     position: absolute;
     padding: 2px 5px;
-    top:13px;
+    top: 13px;
     margin: 0;
     width: 90%;
     min-width: 200px;
@@ -1882,90 +1887,92 @@ li.list_row:last-child .day_col.current_day {
 .sidebar_block {
     padding: 15px 0 20px 0;
 
-border-bottom: 1px solid #e6ebf0;
-    }
+    border-bottom: 1px solid #e6ebf0;
+}
 
 .sidebar_block-item {
-   cursor: pointer;
-   margin-top: 20px;
-   position: relative;
-   background: #fff;
-   width: 140px;
-   height: 95px;
-   border: 1px solid #e4e5e7;
-   border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    background: #fff;
+    width: 140px;
+    height: 95px;
+    border: 1px solid #e4e5e7;
+    border-radius: 3px;
 }
 
 .sidebar_block-item i.icon {
-   color: #7f64b5;
-   font-size: 1.5em;
-   line-height: 3.5em;
-   margin-left: 30px;
+    color: #7f64b5;
+    font-size: 1.5em;
+    line-height: 3.5em;
+    margin-left: 30px;
 }
 
 .sidebar_block-days {
-   display: inline-block;
-   vertical-align: middle;
-   text-align: center;
-   margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .sidebar_days_count {
-   font-size: 1.5em;
-   display:block;
+    font-size: 1.5em;
+    display: block;
 }
 
 .sidebar_days_title {
-   display: block;
-   color: #5a5a5a;
+    display: block;
+    color: #5a5a5a;
 }
 
 .sidebar_block-footer {
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   border-top: 1px solid #e4e5e7;
-   width: 100%;
-   text-align: center;
-   font-size: .7em;
-   font-family: 'ProximaNovaBold', sans-serif;
-   color: #5a5a5a;
-   cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #e4e5e7;
+    width: 100%;
+    text-align: center;
+    font-size: .7em;
+    font-family: 'ProximaNovaBold', sans-serif;
+    color: #5a5a5a;
+    cursor: pointer;
 }
 
 .sidebar_popup {
-   display:inline-block;
-   width: 140px;
-   color: #9b9b9b;
+    display: inline-block;
+    width: 140px;
+    color: #9b9b9b;
 }
+
 /*========== Employee_panel_hliday ==========*/
 
 .ui.selection.dropdown.change_date_holiday,
-.change_date_holiday.ui.input input{
-   padding: 3px 20px;
-   margin-right: 20px;
-   width: 18.5em;
-   height: 2em;
-   color: #919191;
-   min-height: 2em;
-   margin: 2px;
+.change_date_holiday.ui.input input {
+    padding: 3px 20px;
+    margin-right: 20px;
+    width: 18.5em;
+    height: 2em;
+    color: #919191;
+    min-height: 2em;
+    margin: 2px;
 }
- .change_date_holiday.ui.dropdown > .text {
+
+.change_date_holiday.ui.dropdown > .text {
     line-height: 1.2em;
     color: #919191;
 }
 
 .change_date_holiday.ui.dropdown:not(.button) > .default.text, .ui.dropdown > .text {
-   line-height: 1.2em;
+    line-height: 1.2em;
 }
 
-.change_date_holiday.ui.selection.dropdown>.dropdown.icon {
-   line-height: .6em;
+.change_date_holiday.ui.selection.dropdown > .dropdown.icon {
+    line-height: .6em;
     color: #919191;
 }
 
 .employee_settings_content span.name.select {
-   line-height: 2em;
+    line-height: 2em;
 }
 
 .input_general_settings.ui.input input {
@@ -1981,7 +1988,7 @@ border-bottom: 1px solid #e6ebf0;
 }
 
 .general_map {
-    border:none;
+    border: none;
     width: 100%;
     margin: 10px 0;
     border-radius: 5px;
@@ -2002,14 +2009,14 @@ border-bottom: 1px solid #e6ebf0;
 }
 
 .employee_settings_content .general_setting_info.ui.icon.button,
-.employee_settings_content .general_map_info.ui.icon.button{
-    background: #8b98a5!important;
+.employee_settings_content .general_map_info.ui.icon.button {
+    background: #8b98a5 !important;
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
     border-radius: 50%;
-    border:none;
-    font-size:.8em;
+    border: none;
+    font-size: .8em;
     width: 15px;
     height: 15px;
     color: #fff !important;
@@ -2026,4 +2033,115 @@ border-bottom: 1px solid #e6ebf0;
     max-width: 110px;
     width: 110px;
     font-family: 'ProximaNovaRegular', 'Lato', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+.employee_content {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    padding: 25px;
+    border-radius: 3px;
+    border: 1px solid #e4e5e7;
+}
+
+.employee_content.title {
+    padding: 15px;
+}
+
+.employee_content.item {
+    padding: 15px;
+    color: #4a4a4a;
+}
+
+.employee.visitor .ui.grid>.row{
+    padding: .5rem 0;
+}
+
+.employee.visitor .ui.pagination.menu {
+    width: 100%;
+}
+
+.employee_content.title span,
+.employee_content.title .ui.checkbox label {
+    color: #9b9b9b;
+    vertical-align: middle;
+}
+
+.employee_content.title .ui.checkbox label {
+    padding-left: 2em;
+}
+
+.employee_content.title span i.icon,
+.employee_content.title .ui.checkbox label i.icon {
+    font-size: .8em;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+.visitor_check {
+    display: inline-block;
+    line-height: 1.2em;
+}
+
+.visitor_item {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.option_visitor {
+    color: #757575;
+    float: right;
+    font-size: 1.2em;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.visitor_check .ui.checkbox label {
+    margin-top: 5px;
+}
+
+.visitor_check .ui.avatar.image {
+    width: 3em;
+    height: 3em;
+    margin: 0 5px 0 15px;
+}
+
+.employee.visitor .ui.compact.selection.dropdown.select_page {
+    paddin: 2px 5px;
+    margin: 0;
+    min-height: 1em;
+    height: 30px;
+    width: 5em;
+    margin-left: 10px;
+}
+
+.employee.visitor .ui.pagination.menu .item {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.ui.thin.right.sidebar {
+    width: 360px;
+    padding: 20px;
+}
+
+.ui.segment.pushable {
+    border: none;
+}
+.employee_avatar.sidebar {
+    text-align: left;
+    padding-top: 20px;
+    font-size: .9em;
+    color: #5a5a5a;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.avatar_name.sidebar {
+    font-size: 1.1em;
+}
+
+.work_info.sidebar {
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
 }
