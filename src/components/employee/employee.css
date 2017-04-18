@@ -2053,12 +2053,13 @@ li.list_row:last-child .day_col.current_day {
     color: #4a4a4a;
 }
 
-.employee.visitor .ui.grid>.row{
+.employee.visitor .ui.grid > .row {
     padding: .5rem 0;
 }
 
 .employee.visitor .ui.pagination.menu {
     width: 100%;
+    margin-bottom: 70px;
 }
 
 .employee_content.title span,
@@ -2128,6 +2129,7 @@ li.list_row:last-child .day_col.current_day {
 .ui.segment.pushable {
     border: none;
 }
+
 .employee_avatar.sidebar {
     text-align: left;
     padding-top: 20px;
@@ -2140,8 +2142,97 @@ li.list_row:last-child .day_col.current_day {
     font-size: 1.1em;
 }
 
-.work_info.sidebar {
+.work_info.sidebar, .employee_visit.sidebar {
     padding: 20px 0;
     text-align: left;
     border-bottom: 1px solid #eaeaea;
+}
+
+.work_info.sidebar .work_info-tel {
+    display: inline-block;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.work_info.sidebar h5.ui.header {
+    margin-bottom: 15px;
+}
+
+.employee_visit.sidebar {
+    border-bottom: none;
+}
+
+.employee_visit.sidebar .btn_request_item {
+    padding: 7px;
+    font-size: .8em;
+    color: #2a2a2a !important;
+    opacity: 1;
+    margin: 0;
+}
+
+.employee_visit.sidebar h5.ui.header {
+    line-height: 2em;
+}
+
+.visit_block {
+    background: #fff;
+    margin-top: 10px;
+    border: 1px solid #e4e5e7;
+    border-bottom: 2px solid #e4e5e7;
+    border-radius: 3px;
+}
+
+.visit_block.grey {
+    background: #f7f7f7;
+}
+
+.visitor_time {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+.visitor_date {
+    text-align: center;
+    font-size: .8em;
+}
+
+.visitor_time span {
+    font-size: .8em;
+}
+
+.visitor_block-status {
+    text-align: center;
+    font-size: .8em;
+    margin-top: 15px;
+    border-top: 1px solid #e4e5e7;
+    padding: 2px;
+}
+
+.employee_view {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    line-height: 2em;
+    padding-top: 15px;
+    left: 0;
+    bottom: 0;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    border-top: 1px solid #e4e5e7;
+}
+
+.ui.sidebar i.icon.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #9b9b9b;
+    cursor: pointer;
+    wdith: 20px;
+    height: 20px;
+}
+
+.ui.segment.pushable {
+    background: #f7f8fa;
 }

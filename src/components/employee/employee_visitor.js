@@ -357,6 +357,7 @@ const AvatarInfromation = () => (
         </div>
     </div>
 );
+
 const EmployeeAvatar = () => (
     <div className='employee_avatar sidebar'>
         <Image src={avaBig} size='tiny' avatar/>
@@ -371,23 +372,74 @@ const EmployeeWorkInformation = () => (
                 <Grid.Column width={16}>
                     <Header as='h5'>Work Information</Header>
                 </Grid.Column>
-                <Grid.Column width={8}>
+                <Grid.Column width={7}>
                     <span>Phone:</span>
                 </Grid.Column>
-                <Grid.Column width={8}>
-                    <span>01664 820 032</span>
+                <Grid.Column width={9}>
+                    <span className="work_info-tel">01664 820 032</span>
                 </Grid.Column>
-                <Grid.Column width={8}>
+                <Grid.Column width={7}>
                     <span>Email:</span>
                 </Grid.Column>
-                <Grid.Column width={8}>
-                    <span>annable@bradgate-bar.com</span>
+                <Grid.Column width={9}>
+                    <span className="work_info-tel">annable@bradgate-bar.com</span>
                 </Grid.Column>
-                <Grid.Column width={8}>
+                <Grid.Column width={7}>
                     <span>Car number plate:</span>
                 </Grid.Column>
-                <Grid.Column width={8}>
+                <Grid.Column width={9}>
                     <span>CD12KSM</span>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    </div>
+);
+
+const CountVisits = () => (
+    <div className="visit_block">
+        <div className="visitor_block-time">
+            <div className="visitor_time">10:30 <span>AM</span></div>
+            <div className="visitor_date">18 April</div>
+        </div>
+        <div className="visitor_block-status">
+            Ongoing visit
+        </div>
+    </div>
+);
+
+const CountVisits2 = () => (
+    <div className="visit_block grey">
+        <div className="visitor_block-time">
+            <div className="visitor_time">10:30 <span>AM</span></div>
+            <div className="visitor_date">18 April</div>
+        </div>
+        <div className="visitor_block-status">
+            Ongoing visit
+        </div>
+    </div>
+);
+
+const EmployeeViewProfile = () => (
+    <div className="employee_view">
+        <div>View Annabel's Full Profile</div>
+    </div>
+);
+
+const EmployeeVisits = () => (
+    <div className="employee_visit sidebar">
+        <Grid>
+            <Grid.Row>
+                <Grid.Column width={12}>
+                    <Header as='h5'>Visit</Header>
+                </Grid.Column>
+                <Grid.Column width={4}>
+                    <Button basic className="btn_request_item">13</Button>
+                </Grid.Column>
+                <Grid.Column width={8}>
+                    <CountVisits/>
+                </Grid.Column>
+                <Grid.Column width={8}>
+                    <CountVisits2/>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -412,8 +464,11 @@ class SidebarRight extends Component {
                         icon='labeled'
                         vertical
                     >
+                        <Icon name="close" onClick={this.toggleVisibility}/>
                         <EmployeeAvatar/>
                         <EmployeeWorkInformation/>
+                        <EmployeeVisits/>
+                        <EmployeeViewProfile/>
                     </Sidebar>
                     <Sidebar.Pusher>
                         <ContentMenu />

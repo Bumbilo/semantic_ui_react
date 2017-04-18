@@ -289,7 +289,6 @@ const TimeProgress3 = {
     background: '#e6ebf0'
 };
 
-
 const PopupTimeCard = () => (
     <Popup trigger={<span style={TimeProgress}/>} positioning='bottom center'>
         <div className="popup_content">
@@ -359,7 +358,6 @@ const YearTitle = () => (
         </button>
     </div>
 );
-
 
 const TodayInfo = () => (
     <div className="today_info">
@@ -468,14 +466,14 @@ const ConnectDay = () => (
             <span className="connect_day_status">First day off</span>
         </div>
     </div>
-)
+);
 
 const OneDay = () => (
     <div className="one_day">
         <span className="connect_day_date">06/02</span>
         <span className="connect_day_status">First day off</span>
     </div>
-)
+);
 
 class BookedHoliday extends React.Component {
     render() {
@@ -519,14 +517,14 @@ const RedDay1 = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
+);
 
 const RedDay2 = () => (
     <div className="one_day">
         <span className="connect_day_date">13:02</span>
         <span className="connect_day_status">Check in</span>
     </div>
-)
+);
 
 class RedDay extends React.Component {
     render() {
@@ -571,7 +569,7 @@ const ConnectDay4 = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
+);
 
 
 const ConnectDay41 = () => (
@@ -585,11 +583,11 @@ const ConnectDay41 = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
+);
 
 const YellowGreen = () => (
     <Popup className="popup_day" trigger={
-        <span className= "light_yellow">
+        <span className="light_yellow">
             <div className="green_day"></div>
         </span >
     } positioning='bottom left' on='click' style={style}>
@@ -616,7 +614,7 @@ const YellowGreen = () => (
 
 const YellowLight = () => (
     <Popup className="popup_day" trigger={
-        <span className= "light_yellow">
+        <span className="light_yellow">
         </span >
     } positioning='bottom left' on='click' style={style}>
         <div className="popup_content_day">
@@ -651,7 +649,7 @@ const Greenday1 = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
+);
 
 
 const GreenDay2 = () => (
@@ -665,7 +663,7 @@ const GreenDay2 = () => (
             <span className="connect_day_status">Check out</span>
         </div>
     </div>
-)
+);
 
 class YellowDay extends React.Component {
     render() {
@@ -732,7 +730,7 @@ class GreenDay extends React.Component {
 }
 
 class AccordionExampleActiveIndex extends Component {
-    state = {activeIndex: 0}
+    state = {activeIndex: 0};
 
     handleSliderChange = (e) => this.setState({
         activeIndex: Number(e.target.value),
@@ -778,14 +776,14 @@ const AccordionExampleStandard = () => (
 class LabelWeek extends React.Component {
     render() {
         return (
-               <div className="label_week">
-        <div className="title_lable_week">
-           Week {this.props.number}
-        </div>
-        <div className="subtitle_lable_week">
-            29/01-04/02
-        </div>
-    </div>
+            <div className="label_week">
+                <div className="title_lable_week">
+                    Week {this.props.number}
+                </div>
+                <div className="subtitle_lable_week">
+                    29/01-04/02
+                </div>
+            </div>
         )
     }
 }
@@ -1028,7 +1026,6 @@ const YearDays = () => (
             </li>
         </ul>
     </div>
-
 );
 
 // Content
@@ -1054,10 +1051,8 @@ const ContentMenu = () => (
                 <YearDays/>
                 <AccordionExampleActiveIndex/>
             </div>
-
             <div className="employee_option">
                 <ButtonMakeRequest/>
-
                 <SidebarTimeCard/>
             </div>
         </div>
