@@ -72,7 +72,7 @@ import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EployeeVisitor/>)
+     return (<EmployeeSettingPanel2/>)
     }
 }
 
