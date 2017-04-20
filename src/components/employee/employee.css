@@ -2107,7 +2107,8 @@ li.list_row:last-child .day_col.current_day {
     margin: 0 5px 0 15px;
 }
 
-.employee.visitor .ui.compact.selection.dropdown.select_page {
+.employee.visitor .ui.compact.selection.dropdown.select_page,
+.employee_profile_calendar.visitor .ui.compact.selection.dropdown.select_page {
     paddin: 2px 5px;
     margin: 0;
     min-height: 1em;
@@ -2116,9 +2117,15 @@ li.list_row:last-child .day_col.current_day {
     margin-left: 10px;
 }
 
-.employee.visitor .ui.pagination.menu .item {
+.employee.visitor .ui.pagination.menu .item,
+.employee_profile_calendar.visitor .ui.pagination.menu .item {
     margin: 0;
     padding: 5px 15px;
+}
+
+.employee_profile_calendar.visitor .ui.pagination.menu {
+    width: 100%;
+    margin-top: 10px;
 }
 
 .ui.thin.right.sidebar {
@@ -2236,3 +2243,77 @@ li.list_row:last-child .day_col.current_day {
 .ui.segment.pushable {
     background: #f7f8fa;
 }
+.main_info_profile {
+    color: #9b9b9b;
+    margin-top: 20px;
+}
+.employee_profile_calendar.visitor .employee_content.item {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.date_check {
+    line-height: 1em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.st_round {
+    display: inline-block;
+    margin-top: 3px;
+    line-height: 1em;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 3px;
+    border-radius: 50%;
+}
+
+.visitor_status {
+    vertical-align: middle;
+    line-height: 1em;
+    font-size: 1em;
+    color: #9c9c9c;
+}
+
+.visitor_status span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 3em;
+}
+
+.approved_status {
+    background: #b8e986;
+    border: 2px solid #b8e986;
+}
+
+.cancelled_status {
+    background: #4a4a4a;
+    border: 2px solid #4a4a4a;
+}
+
+.pending_status {
+    background: repeating-linear-gradient(-45deg, #fff, #fff 2px, #b8e986 1px, #b8e986 3px);
+    border: 2px solid #b8e986;
+}
+
+.expected_status {
+    background: repeating-linear-gradient(-45deg, #fff, #fff 2px, #48acf9 1px, #48acf9 3px);
+    border: 2px solid #48acf9;
+}
+
+.rejected_status {
+    background: #f58482;
+    border: 2px solid #f58482;
+}
+
+.awaiting_status {
+    background: repeating-linear-gradient(-45deg, #fff, #fff 2px, #f6a929 1px, #f6a929 3px);
+    border: 2px solid #f6a929;
+}
+
+.checked_status {
+    background: #7f64b5;
+    border: 2px solid #7f64b5;
+}
+
+

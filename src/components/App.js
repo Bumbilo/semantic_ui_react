@@ -68,11 +68,12 @@ import DashboardSetupGuide2 from './employee/dashboard_setup_guide2';
 import EmployeeSettingsUser from './employee/employee_settings_user';
 import EmployeeSettingsUser2 from './employee/employee_settings_user2';
 import EployeeVisitor from './employee/employee_visitor';
+import EmployeeVisitorProfile from './employee/employee_visitor_profile';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EmployeeSettingPanel2/>)
+     return (<EmployeeVisitorProfile/>)
     }
 }
 
