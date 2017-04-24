@@ -2316,4 +2316,6 @@ li.list_row:last-child .day_col.current_day {
     border: 2px solid #7f64b5;
 }
 
-
+.filter_list .filter_list_select.ui.selection.dropdown.left {
+    float: left;
+}

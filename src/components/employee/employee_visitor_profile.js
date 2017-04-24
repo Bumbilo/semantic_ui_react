@@ -6,10 +6,8 @@ import {
     Container,
     Header,
     Button,
-    Icon,
     Input,
     Menu,
-    Popup
 } from 'semantic-ui-react';
 import mainLogo from '../../images/logo.png';
 import ava2 from '../../images/ava3.png';
