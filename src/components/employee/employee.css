@@ -1491,7 +1491,7 @@ ul.popup_users_paginator li.active_li {
     display: table;
     table-layout: fixed;
     empty-cells: show;
-    margin: 20px;
+    margin: 5px 20px;
     padding: 0;
 }
 
@@ -1697,7 +1697,6 @@ ul.popup_users_paginator li.active_li {
 .filter_list {
     margin: 0 !important;
     border-bottom: 1px solid #e6e9f0;
-    margin-bottom: 10px !important;
 }
 
 .filter_list_search {
@@ -2318,4 +2317,33 @@ li.list_row:last-child .day_col.current_day {
 
 .filter_list .filter_list_select.ui.selection.dropdown.left {
     float: left;
+}
+
+ul.change_year {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #f3f5f8;
+    border-radius: 3px;
+    margin-left: 45px;
+}
+
+ul.change_year li {
+    display: inline-block;
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+    color: #808080;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #f3f5f8;
+    cursor: pointer;
+}
+
+ul.change_year li:hover {
+    background: #f6f6f6;
+    color: #7f64b5;
+}
+
+.filter_list.trans {
+    border-bottom: none;
 }

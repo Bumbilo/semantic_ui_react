@@ -428,25 +428,24 @@ const MultipleSelection = () => (
 const EmployeeChangeMongth = () => (
     <Grid className="filter_list">
         <Grid.Row>
-            <Grid.Column mobile={4} tablet={4} computer={4}>
+
+            <Grid.Column mobile={16} tablet={16} computer={16}>
                <span>01 Mar 2017 - 31 Mar 2017</span>
-            </Grid.Column>
-            <Grid.Column mobile={12} tablet={12} computer={12}>
                 <ul className="change_year">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><Icon name="caret left"/> <span>2016</span></li>
+                    <li><span>Jan</span> </li>
+                    <li><span>Feb</span></li>
+                    <li><span>Mar</span></li>
+                    <li><span>Apr</span></li>
+                    <li><span>May</span></li>
+                    <li><span>Jun</span></li>
+                    <li><span>Jul</span></li>
+                    <li><span>Aug</span></li>
+                    <li><span>Sep</span></li>
+                    <li><span>Oct</span></li>
+                    <li><span>Nov</span></li>
+                    <li><span>Dec</span></li>
+                    <li><span>2018</span> <Icon name="caret right"/> </li>
                 </ul>
             </Grid.Column>
         </Grid.Row>
@@ -454,7 +453,7 @@ const EmployeeChangeMongth = () => (
 );
 
 const EmployeeFilterUser = () => (
-    <Grid className="filter_list">
+    <Grid className="filter_list trans">
         <Grid.Row>
             <Grid.Column mobile={16} tablet={16} computer={16}>
                 <Button basic icon='expand' size='mini' floated='right'/>
@@ -1210,7 +1209,7 @@ const EmployeeTimeList2 = () => (
 const ContentMenu = () => (
     <div className="center_list">
         <div className="employee_time_view">
-
+            <EmployeeChangeMongth />
             <EmployeeFilterUser/>
             <EmployeeDays/>
             <EmployeeTimeList/>
