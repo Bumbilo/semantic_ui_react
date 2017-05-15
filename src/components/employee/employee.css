@@ -2347,3 +2347,122 @@ ul.change_year li:hover {
 .filter_list.trans {
     border-bottom: none;
 }
+
+.employee_profile_calendar.visitor {
+   padding: 20px 0;
+}
+
+.employee_profile_calendar.visitor .visitor_status {
+   display: inline;
+   vertical-align: middle;
+   padding: 5px 15px;
+   border-radius: 3px;
+   cursor: pointer;
+   transition: all linear .3s;
+}
+
+.employee_profile_calendar.visitor .visitor_status:hover {
+   border: 1px solid #d6d6d8;
+}
+
+.employee_profile_calendar.visitor .employee_content.item.visitor {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.employee_profile_calendar.visitor .employee_content.item.visitor .date_check {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.visitor_info {
+    margin-top: 10px;
+    border-top: 1px solid #d6d6d8;
+    border-bottom: 1px solid #d6d6d8;
+    padding: 10px 0;
+}
+
+.visitor_info-item {
+    padding-left: 10px;
+    color: #747474;
+}
+
+.visitor_info-item span {
+    font-family: "ProximaNovaBold", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.visitor_content {
+    padding: 20px 10px;
+    background: #f9fbfc;
+    color: #4a4a4a;
+}
+.visitor_content .ui.header {
+    color: #4a4a4a;
+}
+
+.visitor_content p {
+    font-size:.9em;
+    font-family: "ProximaNovaRegular", "Lato", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.visitor_question {
+    border-top: 1px solid #d6d6d8;
+    background: #f8fafc;
+    padding: 20px 10px;
+}
+
+.visitor_question-item {
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    color: #565656;
+}
+
+.visitor_question-item .ui.grid>.row>.column {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.visitor_question-item.green {
+    background: #f3fbf4;
+    border: 1px solid #23ce2f;
+}
+
+.visitor_question-item.green i.icon {
+   color: #23ce2f;
+    margin-left: 10px;
+}
+
+.visitor_question-item.yellow i.icon {
+   color: #f5a623;
+   margin-left: 10px;
+}
+
+.visitor_question-item.yellow {
+    background: #fbf7f3;
+    border: 1px solid #f5a623;
+}
+ .visitor_question-item .answer {
+    background: #fff;
+    margin: 0 20px;
+}
+.popup_visitor .ui.basic.button {
+   padding: 10px 0;
+   margin: 0;
+}
+
+.btn_popap.ui.basic.button.red {
+   background: #fff6f6;
+   max-width: 130px;
+   margin: 5px auto;
+}
+
+.btn_popap.ui.basic.button.green {
+   background: #fff6f6;
+   max-width: 130px;
+   margin: 5px auto;
+}
+
+.popup_top_header {
+    border-bottom: 1px solid rgba(34,36,38,.15);
+}

@@ -70,11 +70,12 @@ import EmployeeSettingsUser from './employee/employee_settings_user';
 import EmployeeSettingsUser2 from './employee/employee_settings_user2';
 import EployeeVisitor from './employee/employee_visitor';
 import EmployeeVisitorProfile from './employee/employee_visitor_profile';
+import EmployeeVisitorProfile2 from './employee/emplyee_visitor_profile2';
 import {Container} from 'semantic-ui-react';
 
 class App extends React.Component {
     render() {
-     return (<EployeeTimeView2/>)
+     return (<EmployeeVisitorProfile2 />)
     }
 }
 
